@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 class SharedData{
     
     static var phone: String?
+    static var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
 }

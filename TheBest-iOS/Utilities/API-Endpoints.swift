@@ -15,5 +15,6 @@ let MAIN_CATEGORIES_END_POINT = BASE_URL + "Main/AllCategories"
 let CATEGORIES_BY_ID_END_POINT = BASE_URL + "Main/CategoryById/"
 let PLACES_BY_CATEGORY_END_POINT = BASE_URL + "Main/RlaceByCategory/"
 let PLACE_BY_ID_END_POINT = BASE_URL + "Main/RlaceById/"
+let MENU_ITEMS_END_POINT = BASE_URL + "Main/MenuItems/"
 
 let HEADERS = ["Accept": "application/json"]

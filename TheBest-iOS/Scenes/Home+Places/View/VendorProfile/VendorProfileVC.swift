@@ -18,10 +18,13 @@ class VendorProfileVC: UIViewController {
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var filterBtnView: UIView!
     @IBOutlet weak var menuCategoriesCollection: UICollectionView!
+    @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet weak var emptyProductLabel: UILabel!
     
     var menuCategories: MenuCategories?
     var idReceived: Int?
     var vendorViewPresenter: VendorProfilePresenter?
+    var menuItems: MenuIems?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +80,58 @@ class VendorProfileVC: UIViewController {
             self.menuCategoriesCollection.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
             self.menuCategoriesCollection.reloadData()
             
+            self.vendorViewPresenter?.fetchMenuItems(id: (self.menuCategories?.items.menuesCategories[index.row].id)!)
+            
         }
+        
+    }
+    
+    func loadMenuTable(){
+        
+        let nib = UINib(nibName: "MenuTableViewCell", bundle: nil)
+        self.menuTableView.register(nib, forCellReuseIdentifier: "MenuCell")
+        
+        self.menuTableView.numberOfRows { (_) -> Int in
+            return (self.menuItems?.restaurantMenu.count)!
+        }.cellForRow { (index) -> UITableViewCell in
+            
+            let cell = self.menuTableView.dequeueReusableCell(withIdentifier: "MenuCell", for: index) as! MenuTableViewCell
+            cell.container.layer.cornerRadius = 15
+            cell.logoImage.sd_setImage(with: URL(string: (self.menuItems?.restaurantMenu[index.row].image)!))
+            cell.itemName.text = self.menuItems?.restaurantMenu[index.row].name
+            cell.desc.text = "\(self.menuItems?.restaurantMenu[index.row].price ?? 0)"
+            cell.logoImage.layer.cornerRadius = cell.logoImage.frame.height/2
+            cell.addToCartBtn.onTap {
+                
+                if (self.menuItems?.restaurantMenu[index.row].restaurantID)! == UserDefaults.init().integer(forKey: "cart_associated_vendorId") && UserDefaults.init().integer(forKey: "cart_associated_vendorId") != 0{
+                    CartServices.addToCart(vendorId: (self.menuItems?.restaurantMenu[index.row].restaurantID)!, arg: CartItemModel(id: (self.menuItems?.restaurantMenu[index.row].id)!,
+                    name: (self.menuItems?.restaurantMenu[index.row].name)!,
+                    image: (self.menuItems?.restaurantMenu[index.row].image)!,
+                    price: (self.menuItems?.restaurantMenu[index.row].price)!,
+                    quantity: 1)) { (_) in }
+                }else{
+                    let alert = UIAlertController(title: "", message: "Cart contains products from another vendor, to add this product you must clear your cart", preferredStyle: .actionSheet)
+                           alert.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { (_) in
+                               
+                               CartServices.clearCart()
+                               
+                           }))
+                           
+                           alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                           self.present(alert, animated: true, completion: nil)
+                }
+                
+            }
+            
+            return cell
+            
+        }.heightForRowAt { (_) -> CGFloat in
+            return 70
+        }.didSelectRowAt { (index) in
+            Router.toProduct(item: (self.menuItems?.restaurantMenu[index.row])!, sender: self)
+        }
+        
+        self.menuTableView.reloadData()
         
     }
     

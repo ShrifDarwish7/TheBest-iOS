@@ -59,4 +59,34 @@ class Router{
         
     }
     
+    static func toProduct(item: RestaurantMenuItem, sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let productVC = storyboard.instantiateViewController(withIdentifier: "ProductVC") as! ProductVC
+        productVC.modalPresentationStyle = .fullScreen
+        productVC.itemReceived = item
+        sender.present(productVC, animated: true, completion: nil)
+        
+    }
+    
+    static func toCart(sender: UIViewController){
+        
+        CartServices.getCartItems { (result) in
+            if let result = result{
+                
+                if result.isEmpty{
+                    sender.showAlert(title: "", message: "Your cart is empty")
+                    return
+                }
+                
+            }
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let cartVC = storyboard.instantiateViewController(withIdentifier: "CartVC") as! CartVC
+        cartVC.modalPresentationStyle = .fullScreen
+        sender.present(cartVC, animated: true, completion: nil)
+        
+    }
+   
 }

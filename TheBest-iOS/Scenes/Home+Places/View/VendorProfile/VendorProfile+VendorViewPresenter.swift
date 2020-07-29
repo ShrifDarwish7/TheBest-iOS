@@ -27,13 +27,31 @@ extension VendorProfileVC: VendorViewDelegate{
         self.bgImage.sd_setImage(with: URL(string: result.items.image)!)
         if (self.menuCategories?.items.menuesCategories.count)! > 0{
             self.menuCategories?.items.menuesCategories[0].selected = true
-            //self.storesViewPresenter?.getPlacesBy(categoryId: (self.filters?.items[0].id)!)
+            self.vendorViewPresenter?.fetchMenuItems(id: (self.menuCategories?.items.menuesCategories[0].id)!)
         }
         self.loadMenuCollection()
         
     }
     
     func didFailFetchingMenuCategories() {
+        self.showAlert(title: "", message: "Please check your network connection")
+    }
+    
+    func didSuccessfullyFetchMenuItems(_ result: MenuIems) {
+        
+        self.menuItems = result
+        if (self.menuItems?.restaurantMenu.isEmpty)!{
+            self.emptyProductLabel.isHidden = false
+            self.menuTableView.isHidden = true
+        }else{
+            self.emptyProductLabel.isHidden = true
+            self.menuTableView.isHidden = false
+            self.loadMenuTable()
+        }
+         
+    }
+    
+    func didFailFetchMenuItems() {
         self.showAlert(title: "", message: "Please check your network connection")
     }
     

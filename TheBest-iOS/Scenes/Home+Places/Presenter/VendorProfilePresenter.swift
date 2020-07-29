@@ -15,6 +15,9 @@ protocol VendorViewDelegate {
     func didSuccessfullyFetchingMenuCategories(_ result: MenuCategories)
     func didFailFetchingMenuCategories()
     
+    func didSuccessfullyFetchMenuItems(_ result: MenuIems)
+    func didFailFetchMenuItems()
+    
 }
 
 class VendorProfilePresenter{
@@ -35,6 +38,24 @@ class VendorProfilePresenter{
                 self.vendorViewDelegte?.didSuccessfullyFetchingMenuCategories(menuCategories)
             }else{
                 self.vendorViewDelegte?.didFailFetchingMenuCategories()
+            }
+            
+            self.vendorViewDelegte?.dismissSVProgress()
+            
+        }
+        
+    }
+    
+    func fetchMenuItems(id: Int){
+        
+        self.vendorViewDelegte?.showSVProgress()
+        
+        VendorServices.getMenuItems(id: id) { (menuItems) in
+            
+            if let menuItems = menuItems{
+                self.vendorViewDelegte?.didSuccessfullyFetchMenuItems(menuItems)
+            }else{
+                self.vendorViewDelegte?.didFailFetchMenuItems()
             }
             
             self.vendorViewDelegte?.dismissSVProgress()

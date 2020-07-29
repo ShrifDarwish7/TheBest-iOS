@@ -18,6 +18,7 @@ class StoresVC: UIViewController {
     @IBOutlet weak var storeTableView: UITableView!
     @IBOutlet weak var pageIcon: UIImageView!
     @IBOutlet weak var emptyCategoryLabel: UILabel!
+    @IBOutlet weak var cartItemsCount: UILabel!
     
     var pageIconReceived: String?
     var idReceived: Int?
@@ -25,11 +26,25 @@ class StoresVC: UIViewController {
     var filters: SubCategories?
     var places: Places?
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        CartServices.getCartItems { (items) in
+            if let items = items{
+                if items.count > 0{
+                    self.cartItemsCount.isHidden = false
+                    self.cartItemsCount.text = "\(items.count)"
+                }else{
+                    self.cartItemsCount.isHidden = true
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         storesViewPresenter = StoresViewPresenter(storesViewDelegate: self)
-        
+        cartItemsCount.layer.cornerRadius = cartItemsCount.frame.height/2
         upperIcon.layer.cornerRadius = upperIcon.frame.height/2
         pageIcon.sd_setImage(with: URL(string: pageIconReceived!))
         upperView.layer.cornerRadius = upperView.frame.height/2
@@ -38,6 +53,10 @@ class StoresVC: UIViewController {
         
         backBtn.onTap {
             self.dismiss(animated: true, completion: nil)
+        }
+        
+        cartBtn.onTap {
+            Router.toCart(sender: self)
         }
         
     }
