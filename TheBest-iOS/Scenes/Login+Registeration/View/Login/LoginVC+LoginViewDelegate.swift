@@ -39,6 +39,7 @@ extension LoginVC: LoginViewDelegate{
     
     func didSuccessLogin() {
        // Router.toRegister(sender: self)
+        self.loginViewPresenter?.signToApi(phone: (self.dialCode + (self.FPNTextfield?.text!)!).replacingOccurrences(of: " ", with: ""), fcm_token: "test")
     }
     
     func didFailSendingCode() {
@@ -60,6 +61,7 @@ extension LoginVC: LoginViewDelegate{
     
     func didCompleteSignToApi() {
         print("didCompleteSignToApi")
+        SharedData.phone = (self.dialCode + (self.FPNTextfield?.text!)!).replacingOccurrences(of: " ", with: "")
         Router.toHome(sender: self)
     }
     

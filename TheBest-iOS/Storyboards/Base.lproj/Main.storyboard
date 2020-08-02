@@ -819,6 +819,7 @@ ever since the 1500s</string>
                         <outlet property="popupView" destination="ggJ-ih-etr" id="0sN-7n-dst"/>
                         <outlet property="subCategories" destination="FW6-73-npn" id="Qq9-Ae-LuS"/>
                         <outlet property="upperView" destination="Am9-kO-egN" id="CZ6-fR-Vym"/>
+                        <outlet property="welcomeMsg" destination="h2I-Xu-bOt" id="iUj-mV-FAi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrb-k9-eBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2324,7 +2325,7 @@ ever since the 1500s</string>
                                 <rect key="frame" x="30" y="125.5" width="354" height="609.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gde-xm-SJ1">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="260"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="350"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7K4-KQ-7Yk">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
@@ -2353,35 +2354,8 @@ ever since the 1500s</string>
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AFn-8C-lvT">
-                                                <rect key="frame" x="0.0" y="90" width="354" height="80"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6w-3Z-Shv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
-                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5K-pb-der">
-                                                        <rect key="frame" x="0.0" y="34" width="354" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="ksX-zB-uGY"/>
-                                                        </constraints>
-                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    </textField>
-                                                    <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVg-AU-uLk">
-                                                        <rect key="frame" x="0.0" y="79" width="354" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="1" id="END-Zk-0fH"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ohg-G3-fhY">
-                                                <rect key="frame" x="0.0" y="180" width="354" height="80"/>
+                                                <rect key="frame" x="0.0" y="90" width="354" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iva-DT-YJX">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
@@ -2403,6 +2377,83 @@ ever since the 1500s</string>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="bZ6-1I-ugi"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4pW-BU-DwW">
+                                                <rect key="frame" x="0.0" y="180" width="354" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XT-qy-UJB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L9I-H3-9SG">
+                                                        <rect key="frame" x="0.0" y="34" width="354" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Xjk-Tv-hd6"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXG-yR-V8b">
+                                                        <rect key="frame" x="0.0" y="79" width="354" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="A5P-r5-Kkp"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U17-5P-Kyk">
+                                                <rect key="frame" x="0.0" y="270" width="354" height="80"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0f-Pl-7Ru">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8ky-Kk-3Wm">
+                                                        <rect key="frame" x="0.0" y="34" width="354" height="40"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ae4-xI-yFD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="GTw-xf-y0F"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-kO-1I9">
+                                                                <rect key="frame" x="119.5" y="0.0" width="115" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="Whf-j2-qkM"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ve-yt-ivk">
+                                                                <rect key="frame" x="239.5" y="0.0" width="114.5" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="ouV-vr-pJQ"/>
+                                                                </constraints>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmW-Go-wZr">
+                                                        <rect key="frame" x="0.0" y="79" width="354" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="B0C-Dl-dOU"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -2459,10 +2510,13 @@ ever since the 1500s</string>
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="zgR-Mj-5A5" id="ocg-RS-Ekq"/>
+                        <outlet property="countryTF" destination="L9I-H3-9SG" id="xOX-1p-W2b"/>
+                        <outlet property="days" destination="ae4-xI-yFD" id="G7N-Ko-GC2"/>
                         <outlet property="emailTF" destination="ROz-mZ-GEZ" id="dc1-oR-Slv"/>
+                        <outlet property="months" destination="u6X-kO-1I9" id="X71-eo-A3r"/>
                         <outlet property="nameTF" destination="thj-fZ-RcX" id="fXY-Ut-AK7"/>
-                        <outlet property="passwordTF" destination="f5K-pb-der" id="MId-tV-J6l"/>
                         <outlet property="registerBtn" destination="Z2d-IZ-Vu0" id="Pwy-b9-T9m"/>
+                        <outlet property="years" destination="7Ve-yt-ivk" id="VMg-by-wyL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAe-a3-qh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

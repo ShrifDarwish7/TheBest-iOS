@@ -12,12 +12,14 @@ import Foundation
 struct User: Codable {
     
     let massege: String?
-    let user: UserClass
+    let user: UserClass?
+    let user_: UserClass?
     let accessToken: String
     
     enum CodingKeys: String, CodingKey{
         case massege
-        case user   
+        case user
+        case user_ = "User"
         case accessToken
     }
     
@@ -30,7 +32,7 @@ struct UserClass: Codable {
     let name, email: String
     let image: String
     let fcmToken, phone: String
-    let isAdmin, isDriver: Int
+    let isAdmin, isDriver: Int?
     let lat, lng, birthDate, nationality: String?
     let status: String?
     let createdAt, updatedAt: String

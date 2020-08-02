@@ -336,6 +336,7 @@
                         <outlet property="backBtn" destination="jie-jA-qsl" id="4aM-EC-HeL"/>
                         <outlet property="blockView" destination="Z6t-Hu-8eo" id="twZ-Ja-umN"/>
                         <outlet property="drawerView" destination="ITa-s2-PA2" id="JyK-1L-peH"/>
+                        <outlet property="username" destination="BJF-ck-lFd" id="rHu-Nb-Hhz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tL5-86-XDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -25,6 +25,7 @@ class LoginVC: UIViewController , FPNTextFieldDelegate{
     @IBOutlet weak var code6: UITextField!
     @IBOutlet weak var codeView: UIView!
     
+    
     var FPNTextfield : FPNTextField?
     var dialCode = "+20"
     var selectedFPNContryCode: String?
@@ -125,14 +126,14 @@ class LoginVC: UIViewController , FPNTextFieldDelegate{
     func loadBtnsActions(){
         
         sendCodeBtn.onTap {
-//            guard !(self.FPNTextfield?.text!.isEmpty)! else{
-//                self.showAlert(title: "", message: "Please enter your phone number")
-//                return
-//            }
-//            SVProgressHUD.show()
-//            self.loginViewPresenter?.sendCodeTo(self.dialCode + self.FPNTextfield!.text!)
-            print(self.dialCode + (self.FPNTextfield?.text!)!)
-            self.loginViewPresenter?.signToApi(phone: (self.dialCode + (self.FPNTextfield?.text!)!).replacingOccurrences(of: " ", with: ""), fcm_token: "test")
+            guard !(self.FPNTextfield?.text!.isEmpty)! else{
+                self.showAlert(title: "", message: "Please enter your phone number")
+                return
+            }
+            SVProgressHUD.show()
+            self.loginViewPresenter?.sendCodeTo(self.dialCode + self.FPNTextfield!.text!)
+//            SharedData.phone = (self.dialCode + (self.FPNTextfield?.text!)!).replacingOccurrences(of: " ", with: "")
+//            self.loginViewPresenter?.signToApi(phone: (self.dialCode + (self.FPNTextfield?.text!)!).replacingOccurrences(of: " ", with: ""), fcm_token: "test")
         }
         
     }

@@ -8,8 +8,9 @@
 
 import UIKit
 import Closures
+import CoreLocation
 
-class AboutUsViewController: UIViewController {
+class AboutUsViewController: UIViewController , CLLocationManagerDelegate{
 
     @IBOutlet weak var imagesCollection: UICollectionView!
     @IBOutlet weak var header: UILabel!
@@ -20,8 +21,7 @@ class AboutUsViewController: UIViewController {
     
     @IBOutlet var covers: [UIImageView]!
     @IBOutlet var downCovers: [UIImageView]!
-    
-    
+    let locationManager = CLLocationManager()
     
     var guideContent = [Guide]()
     var currentIndex = 1
@@ -70,7 +70,26 @@ class AboutUsViewController: UIViewController {
         skipBtn.onTap {
             Router.toLogin(sender: self)
         }
+        requestLocationPermission()
+    }
+    
+    func requestLocationPermission(){
         
+        locationManager.requestAlwaysAuthorization()
+            
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations", locValue.latitude + locValue.longitude)
+        SharedData.userLat = locValue.latitude
+        SharedData.userLng = locValue.longitude
     }
     
     func loadCollection(){

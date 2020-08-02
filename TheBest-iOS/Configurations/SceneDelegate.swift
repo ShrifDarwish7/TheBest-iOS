@@ -21,15 +21,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         AppDelegate.standard.window = window
         
         if AuthServices.instance.isLogged {
-        
-                    let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
-                    let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-                    window!.rootViewController = protectedPage
-                    window!.makeKeyAndVisible()
-        
-                }
-//        let mainStoryboard = UIStoryboard(name: "Taxi" , bundle: nil)
-//        let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "TaxiOrderVC") as! TaxiOrderVC
+
+            let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+            let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            window!.rootViewController = protectedPage
+            window!.makeKeyAndVisible()
+
+        }
+//        let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+//        let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
 //        window!.rootViewController = protectedPage
 //        window!.makeKeyAndVisible()
         

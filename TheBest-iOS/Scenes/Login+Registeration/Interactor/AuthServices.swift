@@ -64,6 +64,7 @@ class AuthServices{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
                                 self.instance.user = dataModel
+                                UserDefaults.init().set(dataModel.user?.name, forKey: "username")
                                 self.instance.isLogged = true
                                 completed(true,false)
                                 
@@ -115,12 +116,15 @@ class AuthServices{
                         switch response.result{
                             
                         case .success(let data):
-                                                        
+                                   
+                            print("regJSON", try! JSON(data: data))
+                            
                             do{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
                                 print("registerDatamodel",dataModel)
                                 self.instance.isLogged = true
+                                UserDefaults.init().set(dataModel.user_?.name, forKey: "username")
                                 completed(true)
                                 
                             }catch let error{

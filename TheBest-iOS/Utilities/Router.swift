@@ -79,15 +79,14 @@ class Router{
                 if result.isEmpty{
                     sender.showAlert(title: "", message: "Your cart is empty")
                     return
+                }else{
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let cartVC = storyboard.instantiateViewController(withIdentifier: "CartVC") as! CartVC
+                    cartVC.modalPresentationStyle = .fullScreen
+                    sender.present(cartVC, animated: true, completion: nil)
                 }
-                
             }
         }
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let cartVC = storyboard.instantiateViewController(withIdentifier: "CartVC") as! CartVC
-        cartVC.modalPresentationStyle = .fullScreen
-        sender.present(cartVC, animated: true, completion: nil)
         
     }
     

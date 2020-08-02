@@ -13,6 +13,7 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var notificationBtn: UIButton!
+    @IBOutlet weak var welcomeMsg: UILabel!
     @IBOutlet weak var drawerBtn: UIButton!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var drawerPosition: NSLayoutConstraint!
@@ -30,6 +31,8 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        welcomeMsg.text = "Hey " + (UserDefaults.init().string(forKey: "username") ?? "") + ", Choose your category"
         
         homeViwPresenter = HomeViewPresenter(homeViewDelegate: self)
         
