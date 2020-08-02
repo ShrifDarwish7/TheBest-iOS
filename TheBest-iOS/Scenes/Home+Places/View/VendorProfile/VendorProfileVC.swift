@@ -9,7 +9,7 @@
 import UIKit
 
 class VendorProfileVC: UIViewController {
-
+    
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var vendorImage: UIImageView!
@@ -28,7 +28,7 @@ class VendorProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         vendorViewPresenter = VendorProfilePresenter(vendorViewDelegte: self)
         vendorViewPresenter?.fetchMenuCategories(id: idReceived!)
         
@@ -104,21 +104,25 @@ class VendorProfileVC: UIViewController {
             cell.addToCartBtn.onTap {
                 
                 if (self.menuItems?.restaurantMenu[index.row].restaurantID)! == UserDefaults.init().integer(forKey: "cart_associated_vendorId") && UserDefaults.init().integer(forKey: "cart_associated_vendorId") != 0{
-                    CartServices.addToCart(vendorId: (self.menuItems?.restaurantMenu[index.row].restaurantID)!, arg: CartItemModel(id: (self.menuItems?.restaurantMenu[index.row].id)!,
-                    name: (self.menuItems?.restaurantMenu[index.row].name)!,
-                    image: (self.menuItems?.restaurantMenu[index.row].image)!,
-                    price: (self.menuItems?.restaurantMenu[index.row].price)!,
-                    quantity: 1)) { (_) in }
+                    CartServices.addToCart(vendorId: (self.menuItems?.restaurantMenu[index.row].restaurantID)!,
+                                           vendorName: self.vendorName.text!,
+                                           vendorImage: self.menuCategories!.items.image,
+                                           deliveryFees: "20",
+                                           arg: CartItemModel(id: (self.menuItems?.restaurantMenu[index.row].id)!,
+                                                              name: (self.menuItems?.restaurantMenu[index.row].name)!,
+                                                              image: (self.menuItems?.restaurantMenu[index.row].image)!,
+                                                              price: (self.menuItems?.restaurantMenu[index.row].price)!,
+                                                              quantity: 1)) { (_) in }
                 }else{
                     let alert = UIAlertController(title: "", message: "Cart contains products from another vendor, to add this product you must clear your cart", preferredStyle: .actionSheet)
-                           alert.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { (_) in
-                               
-                               CartServices.clearCart()
-                               
-                           }))
-                           
-                           alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-                           self.present(alert, animated: true, completion: nil)
+                    alert.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { (_) in
+                        
+                        CartServices.clearCart()
+                        
+                    }))
+                    
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
                 
             }
@@ -128,12 +132,12 @@ class VendorProfileVC: UIViewController {
         }.heightForRowAt { (_) -> CGFloat in
             return 70
         }.didSelectRowAt { (index) in
-            Router.toProduct(item: (self.menuItems?.restaurantMenu[index.row])!, sender: self)
+            Router.toProduct(item: (self.menuItems?.restaurantMenu[index.row])!, vendorName: self.vendorName.text!, vendorImage: (self.menuCategories?.items.image)!, sender: self)
         }
         
         self.menuTableView.reloadData()
         
     }
     
-
+    
 }

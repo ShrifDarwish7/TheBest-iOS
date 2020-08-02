@@ -11,7 +11,7 @@ import CoreData
 
 class CartServices{
     
-    static func addToCart(vendorId: Int, arg: CartItemModel, completed: @escaping (Bool)->Void){
+    static func addToCart(vendorId: Int, vendorName: String, vendorImage: String, deliveryFees: String, arg: CartItemModel, completed: @escaping (Bool)->Void){
     
         self.getCartItems { (items) in
             if let items = items{
@@ -25,7 +25,10 @@ class CartServices{
                     newItem.setValue(arg.name, forKey: "name")
                     newItem.setValue(arg.price ?? 0, forKey: "price")
                     newItem.setValue(Int16(arg.quantity!), forKeyPath: "quantity")
-                  //  newItem.setValue(arg.vendorId, forKey: "vendorId")
+                    
+                    UserDefaults.init().set(vendorName, forKey: "cart_associated_vendor_name")
+                    UserDefaults.init().set(vendorImage, forKey: "cart_associated_vendor_image")
+                    UserDefaults.init().set(deliveryFees, forKey: "cart_associated_vendor_delivery_fees")
                     
                     do{
                         try SharedData.context.save()

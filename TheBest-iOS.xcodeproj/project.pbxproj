@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		90295440F0398DE5AE2905E3 /* Pods_TheBest_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9089EE0CE356CA811A998 /* Pods_TheBest_iOS.framework */; };
+		AA025DBB24D5F3D40067C682 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA025DBA24D5F3D40067C682 /* Taxi.swift */; };
+		AA025DBE24D5F42C0067C682 /* TripsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA025DBD24D5F42C0067C682 /* TripsServices.swift */; };
+		AA0269A224D63259008EA4F8 /* TaxiOrderVC+TaxiOrderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0269A124D63259008EA4F8 /* TaxiOrderVC+TaxiOrderViewDelegate.swift */; };
 		AA026F7C24C788CE003FFF4E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026F7B24C788CE003FFF4E /* LoginPresenter.swift */; };
 		AA026F7E24C78E24003FFF4E /* LoginVC+LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026F7D24C78E24003FFF4E /* LoginVC+LoginViewDelegate.swift */; };
 		AA026F8024C79A89003FFF4E /* API-Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA026F7F24C79A89003FFF4E /* API-Endpoints.swift */; };
@@ -16,6 +19,9 @@
 		AA0B883324CF4B320055F93E /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883224CF4B320055F93E /* ProductVC.swift */; };
 		AA0B883724CF6A2D0055F93E /* CartItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */; };
 		AA0B883824CF6A2E0055F93E /* CartItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */; };
+		AA4CB64024D5F73D00C861CA /* TaxiOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CB63F24D5F73D00C861CA /* TaxiOrderPresenter.swift */; };
+		AAA3B97A24D593FE00852404 /* Taxi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA3B97924D593FE00852404 /* Taxi.storyboard */; };
+		AAA3B97E24D595C000852404 /* TaxiOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3B97D24D595C000852404 /* TaxiOrderVC.swift */; };
 		AAB1E57724CA13D900E3E499 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1E57624CA13D900E3E499 /* RegisterVC.swift */; };
 		AAB1E57924CA1A1A00E3E499 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1E57824CA1A1A00E3E499 /* RegisterPresenter.swift */; };
 		AAB1E57B24CA1D4500E3E499 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB1E57A24CA1D4500E3E499 /* SharedData.swift */; };
@@ -79,6 +85,7 @@
 		AAE1098324D1DD2500C66670 /* ProductVC+ProductViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1098224D1DD2500C66670 /* ProductVC+ProductViewDelegate.swift */; };
 		AAE1098524D1F75800C66670 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1098424D1F75800C66670 /* CartPresenter.swift */; };
 		AAE1098724D1F97C00C66670 /* CartVC+CartViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1098624D1F97C00C66670 /* CartVC+CartViewDelegate.swift */; };
+		AAE37C8524D49AC5002CB1D0 /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37C8424D49AC5002CB1D0 /* PlaceOrder.swift */; };
 		AAF9997D24C778CC009DB374 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9997C24C778CC009DB374 /* LoginVC.swift */; };
 		AAF9997F24C779E7009DB374 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9997E24C779E7009DB374 /* Router.swift */; };
 		AAF9998224C78063009DB374 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9998024C78062009DB374 /* Alert.swift */; };
@@ -88,6 +95,9 @@
 		00C9089EE0CE356CA811A998 /* Pods_TheBest_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheBest_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0134758B5A9571EE28B59EED /* Pods-TheBest-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBest-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TheBest-iOS/Pods-TheBest-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		52F018959EDF489E8F15E64A /* Pods-TheBest-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBest-iOS.release.xcconfig"; path = "Target Support Files/Pods-TheBest-iOS/Pods-TheBest-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		AA025DBA24D5F3D40067C682 /* Taxi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
+		AA025DBD24D5F42C0067C682 /* TripsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripsServices.swift; path = "TheBest-iOS/Scenes/Taxi/Model/TripsServices.swift"; sourceTree = SOURCE_ROOT; };
+		AA0269A124D63259008EA4F8 /* TaxiOrderVC+TaxiOrderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaxiOrderVC+TaxiOrderViewDelegate.swift"; sourceTree = "<group>"; };
 		AA026F7B24C788CE003FFF4E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		AA026F7D24C78E24003FFF4E /* LoginVC+LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+LoginViewDelegate.swift"; sourceTree = "<group>"; };
 		AA026F7F24C79A89003FFF4E /* API-Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API-Endpoints.swift"; sourceTree = "<group>"; };
@@ -96,6 +106,9 @@
 		AA0B883224CF4B320055F93E /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsTableViewCell.swift; sourceTree = "<group>"; };
 		AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemsTableViewCell.xib; sourceTree = "<group>"; };
+		AA4CB63F24D5F73D00C861CA /* TaxiOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiOrderPresenter.swift; sourceTree = "<group>"; };
+		AAA3B97924D593FE00852404 /* Taxi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Taxi.storyboard; sourceTree = "<group>"; };
+		AAA3B97D24D595C000852404 /* TaxiOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiOrderVC.swift; sourceTree = "<group>"; };
 		AAB1E57624CA13D900E3E499 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		AAB1E57824CA1A1A00E3E499 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		AAB1E57A24CA1D4500E3E499 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -161,6 +174,7 @@
 		AAE1098224D1DD2500C66670 /* ProductVC+ProductViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductVC+ProductViewDelegate.swift"; sourceTree = "<group>"; };
 		AAE1098424D1F75800C66670 /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
 		AAE1098624D1F97C00C66670 /* CartVC+CartViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartVC+CartViewDelegate.swift"; sourceTree = "<group>"; };
+		AAE37C8424D49AC5002CB1D0 /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
 		AAF9997C24C778CC009DB374 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AAF9997E24C779E7009DB374 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AAF9998024C78062009DB374 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -186,6 +200,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA025DB824D5F1DF0067C682 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA025DBA24D5F3D40067C682 /* Taxi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA025DB924D5F1E70067C682 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AA4CB63F24D5F73D00C861CA /* TaxiOrderPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AA025DBC24D5F4160067C682 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AA025DBD24D5F42C0067C682 /* TripsServices.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		AA0B883124CF4B000055F93E /* Product */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +240,26 @@
 				AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		AAA3B97B24D5958E00852404 /* Taxi */ = {
+			isa = PBXGroup;
+			children = (
+				AA025DBC24D5F4160067C682 /* Interactor */,
+				AA025DB824D5F1DF0067C682 /* Model */,
+				AAA3B97C24D5959D00852404 /* View */,
+				AA025DB924D5F1E70067C682 /* Presenter */,
+			);
+			path = Taxi;
+			sourceTree = "<group>";
+		};
+		AAA3B97C24D5959D00852404 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3B97D24D595C000852404 /* TaxiOrderVC.swift */,
+				AA0269A124D63259008EA4F8 /* TaxiOrderVC+TaxiOrderViewDelegate.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AAB1E57424CA139500E3E499 /* Login */ = {
@@ -237,6 +295,7 @@
 				AAB5C73524CB108800A6B6E4 /* CategoriesServices.swift */,
 				AADD713724CB71CA00EE7FD1 /* VendorServices.swift */,
 				AAE1098024D1DBB900C66670 /* CartServices.swift */,
+				AAE37C8424D49AC5002CB1D0 /* PlaceOrder.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -400,6 +459,7 @@
 				AACA7ED924C761B6004437FC /* AboutUs */,
 				AAF9997724C7750B009DB374 /* Login+Registeration */,
 				AAC2DC5724C8A9C700378934 /* Home+Places */,
+				AAA3B97B24D5958E00852404 /* Taxi */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -410,6 +470,7 @@
 				AACA7EC124C759FC004437FC /* LaunchScreen.storyboard */,
 				AACA7EB924C759FA004437FC /* Main.storyboard */,
 				AAC2DC6624C8B6C900378934 /* Drawer.storyboard */,
+				AAA3B97924D593FE00852404 /* Taxi.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -571,6 +632,7 @@
 				AACA7EAD24C759FA004437FC /* Frameworks */,
 				AACA7EAE24C759FA004437FC /* Resources */,
 				F4CEDC623D8C5914321E144F /* [CP] Embed Pods Frameworks */,
+				EEE4702A269DA628A7D61060 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -639,6 +701,7 @@
 				AAC2DC6724C8B6C900378934 /* Drawer.storyboard in Resources */,
 				AACA7EBB24C759FA004437FC /* Main.storyboard in Resources */,
 				AAB3082F24CCB29600D8FE0C /* MenuTableViewCell.xib in Resources */,
+				AAA3B97A24D593FE00852404 /* Taxi.storyboard in Resources */,
 				AACA7EEF24C76BAE004437FC /* Lato-LightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,6 +729,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEE4702A269DA628A7D61060 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheBest-iOS/Pods-TheBest-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TheBest-iOS/Pods-TheBest-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TheBest-iOS/Pods-TheBest-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4CEDC623D8C5914321E144F /* [CP] Embed Pods Frameworks */ = {
@@ -696,6 +776,7 @@
 				AAF9998224C78063009DB374 /* Alert.swift in Sources */,
 				AAF9997F24C779E7009DB374 /* Router.swift in Sources */,
 				AAC2DC6024C8AECD00378934 /* CategoriesCollectionViewCell.swift in Sources */,
+				AA0269A224D63259008EA4F8 /* TaxiOrderVC+TaxiOrderViewDelegate.swift in Sources */,
 				AAE1098524D1F75800C66670 /* CartPresenter.swift in Sources */,
 				AACA7ECF24C760EA004437FC /* AboutUsViewController.swift in Sources */,
 				AAB5C73824CB112000A6B6E4 /* Categories.swift in Sources */,
@@ -706,6 +787,7 @@
 				AAB3082E24CCB29600D8FE0C /* MenuTableViewCell.swift in Sources */,
 				AAF9997D24C778CC009DB374 /* LoginVC.swift in Sources */,
 				AAB5C73C24CB172F00A6B6E4 /* HomeVC+HomeViewDelegate.swift in Sources */,
+				AAA3B97E24D595C000852404 /* TaxiOrderVC.swift in Sources */,
 				AAE1098324D1DD2500C66670 /* ProductVC+ProductViewDelegate.swift in Sources */,
 				AAB5C74424CB377F00A6B6E4 /* FiltersCollectionViewCell.swift in Sources */,
 				AAC2DC6324C8B0F800378934 /* AppCategory.swift in Sources */,
@@ -718,8 +800,10 @@
 				AAE1098124D1DBB900C66670 /* CartServices.swift in Sources */,
 				AAB1E57B24CA1D4500E3E499 /* SharedData.swift in Sources */,
 				AADD712C24CB3C7D00EE7FD1 /* StoresPresenter.swift in Sources */,
+				AA025DBB24D5F3D40067C682 /* Taxi.swift in Sources */,
 				AA026F8424C79DE8003FFF4E /* User.swift in Sources */,
 				AAB5C74C24CB39D600A6B6E4 /* StoresVC.swift in Sources */,
+				AAE37C8524D49AC5002CB1D0 /* PlaceOrder.swift in Sources */,
 				AACA7EB424C759FA004437FC /* AppDelegate.swift in Sources */,
 				AAE1097D24D1D2B600C66670 /* CartVC.swift in Sources */,
 				AA026F8224C79B31003FFF4E /* AuthServices.swift in Sources */,
@@ -736,7 +820,9 @@
 				AAE1097A24D1CA1200C66670 /* CartItem.swift in Sources */,
 				AAC2DC6D24C8BB7700378934 /* DrawerVC.swift in Sources */,
 				AADD713A24CB72BF00EE7FD1 /* MenuCategories.swift in Sources */,
+				AA025DBE24D5F42C0067C682 /* TripsServices.swift in Sources */,
 				AADD714124CB758300EE7FD1 /* VendorProfilePresenter.swift in Sources */,
+				AA4CB64024D5F73D00C861CA /* TaxiOrderPresenter.swift in Sources */,
 				AACA7ED224C760F8004437FC /* AboutUsCollectionViewCell.swift in Sources */,
 				AA026F8024C79A89003FFF4E /* API-Endpoints.swift in Sources */,
 				AA026F7E24C78E24003FFF4E /* LoginVC+LoginViewDelegate.swift in Sources */,

@@ -38,7 +38,7 @@ extension LoginVC: LoginViewDelegate{
     }
     
     func didSuccessLogin() {
-        Router.toRegister(sender: self)
+       // Router.toRegister(sender: self)
     }
     
     func didFailSendingCode() {
@@ -54,7 +54,18 @@ extension LoginVC: LoginViewDelegate{
         
     }
     
+    func didCompleteWithNewUser() {
+        Router.toRegister(sender: self)
+    }
     
+    func didCompleteSignToApi() {
+        print("didCompleteSignToApi")
+        Router.toHome(sender: self)
+    }
+    
+    func didCompleteSignToApiWithError() {
+        print("didCompleteSignToApiWithError")
+    }
     
     
 }

@@ -2309,6 +2309,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
    limitations under the License.
 
 
+## GoogleMaps
+
+Copyright 2020 Google
+
 ## GoogleUtilities
 
 

@@ -32,12 +32,12 @@ class AuthServices{
         }
     }
     
-    func loginWith(phone: String, password: String, completed: @escaping (Bool)->Void){
+    static func loginWith(phone: String, fcmToken: String, completed: @escaping (Bool, _ newUser: Bool)->Void){
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
             multipartFormData.append(phone.data(using: String.Encoding.utf8)!, withName: "phone")
-            multipartFormData.append(password.data(using: String.Encoding.utf8)!, withName: "password")
+            multipartFormData.append(fcmToken.data(using: String.Encoding.utf8)!, withName: "fcm_token")
             
         }, to: URL(string: LOGIN_END_POINT)!, method: .post, headers: HEADERS) { (encodingResult) in
             
@@ -51,22 +51,34 @@ class AuthServices{
                         
                     case .success(let data):
                         
+                        print("user",try? JSON(data: data))
+                        
                         do{
                             
-                            let dataModel = try JSONDecoder().decode(User.self, from: data)
-                            self.user = dataModel
-                            self.isLogged = true
-                            completed(true)
+                            if let message = try JSON(data: data)["message"].string, message == "This Phone Number Is Not Used Before"{
+                                
+                                completed(true,true)
+                                return
+                                
+                            }else{
+                                
+                                let dataModel = try JSONDecoder().decode(User.self, from: data)
+                                self.instance.user = dataModel
+                                self.instance.isLogged = true
+                                completed(true,false)
+                                
+                            }
                             
-                        }catch{
-                            self.isLogged = false
-                            completed(false)
+                        }catch let error{
+                            print("parsErrr",error)
+                            self.instance.isLogged = false
+                            completed(false,false)
                         }
                         
                     case .failure(let error):
                         
                         print("userParseError",error)
-                        completed(false)
+                        completed(false,false)
                         
                     }
                     
@@ -75,8 +87,8 @@ class AuthServices{
             case .failure(let error):
                 
                 print("error",error)
-                self.isLogged = false
-                completed(false)
+                self.instance.isLogged = false
+                completed(false,false)
                 
             }
             
@@ -84,7 +96,7 @@ class AuthServices{
         
     }
     
-    func registerWith(parameters: [String: String], completed: @escaping (Bool)->Void){
+    static func registerWith(parameters: [String: String], completed: @escaping (Bool)->Void){
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
                 
@@ -108,18 +120,18 @@ class AuthServices{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
                                 print("registerDatamodel",dataModel)
-                                self.isLogged = true
+                                self.instance.isLogged = true
                                 completed(true)
                                 
                             }catch let error{
                                 print("userParseError",error)
-                                self.isLogged = false
+                                self.instance.isLogged = false
                                 completed(false)
                             }
                             
                         case .failure(_):
                             
-                            self.isLogged = false
+                            self.instance.isLogged = false
                             completed(false)
                             
                         }

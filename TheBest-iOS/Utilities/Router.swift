@@ -59,12 +59,14 @@ class Router{
         
     }
     
-    static func toProduct(item: RestaurantMenuItem, sender: UIViewController){
+    static func toProduct(item: RestaurantMenuItem, vendorName: String, vendorImage: String, sender: UIViewController){
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let productVC = storyboard.instantiateViewController(withIdentifier: "ProductVC") as! ProductVC
         productVC.modalPresentationStyle = .fullScreen
         productVC.itemReceived = item
+        productVC.vendorName = vendorName
+        productVC.vendorImage = vendorImage
         sender.present(productVC, animated: true, completion: nil)
         
     }
@@ -86,6 +88,15 @@ class Router{
         let cartVC = storyboard.instantiateViewController(withIdentifier: "CartVC") as! CartVC
         cartVC.modalPresentationStyle = .fullScreen
         sender.present(cartVC, animated: true, completion: nil)
+        
+    }
+    
+    static func toTaxiOrder(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let taxiOrderVC = storyboard.instantiateViewController(withIdentifier: "TaxiOrderVC") as! TaxiOrderVC
+        taxiOrderVC.modalPresentationStyle = .fullScreen
+        sender.present(taxiOrderVC, animated: true, completion: nil)
         
     }
    

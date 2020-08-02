@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>    
+<dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We want your permission to access you location, in order to deliver your orders</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We want your permission to access you location, in order to deliver your orders</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -24,6 +30,14 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.88616747039-3j7kg1ikeqlnkoceuqle764bhnutl55n</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>prefs</string>
 			</array>
 		</dict>
 	</array>

@@ -26,6 +26,10 @@ class RegisterVC: UIViewController {
 
         registerBtn.layer.cornerRadius = 10
         
+        backBtn.onTap {
+            self.dismiss(animated: true, completion: nil)
+        }
+        
         registerBtn.onTap {
             
             guard !self.nameTF.text!.isEmpty, !self.passwordTF.text!.isEmpty, !self.emailTF.text!.isEmpty else{

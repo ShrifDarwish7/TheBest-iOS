@@ -21,16 +21,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         AppDelegate.standard.window = window
         
         if AuthServices.instance.isLogged {
-
-            let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
-            let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-            window!.rootViewController = protectedPage
-            window!.makeKeyAndVisible()
-
-        }
+        
+                    let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+                    let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                    window!.rootViewController = protectedPage
+                    window!.makeKeyAndVisible()
+        
+                }
+//        let mainStoryboard = UIStoryboard(name: "Taxi" , bundle: nil)
+//        let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "TaxiOrderVC") as! TaxiOrderVC
+//        window!.rootViewController = protectedPage
+//        window!.makeKeyAndVisible()
         
     }
-//
+    //
 //    func sceneDidDisconnect(_ scene: UIScene) {
 //        // Called as the scene is being released by the system.
 //        // This occurs shortly after the scene enters the background, or when its session is discarded.

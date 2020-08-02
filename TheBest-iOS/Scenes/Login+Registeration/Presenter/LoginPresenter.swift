@@ -17,6 +17,9 @@ protocol LoginViewDelegate {
     func didSuccessLogin()
     func didFailSendingCode()
     func didFailLogin()
+    func didCompleteWithNewUser()
+    func didCompleteSignToApi()
+    func didCompleteSignToApiWithError()
     
 }
 
@@ -73,6 +76,26 @@ class LoginViewPresenter{
                 }
                 
             })
+        }
+        
+    }
+    
+    func signToApi(phone: String, fcm_token: String){
+        
+        self.loginViewDelegate?.showSVProgress()
+        
+        AuthServices.loginWith(phone: phone, fcmToken: fcm_token) { (completed, newUser) in
+            
+            self.loginViewDelegate?.dismissSVProgress()
+            
+            if completed && newUser{
+                self.loginViewDelegate?.didCompleteWithNewUser()
+            }else if completed && newUser == false{
+                self.loginViewDelegate?.didCompleteSignToApi()
+            }else{
+                self.loginViewDelegate?.didCompleteSignToApiWithError()
+            }
+            
         }
         
     }

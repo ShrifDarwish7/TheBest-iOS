@@ -30,6 +30,8 @@ class ProductVC: UIViewController {
     
     var itemReceived: RestaurantMenuItem?
     var productPresenter: ProductPresenter?
+    var vendorName: String?
+    var vendorImage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +80,11 @@ class ProductVC: UIViewController {
         
         addToCartView.addTapGesture { (_) in
             
-            self.productPresenter?.addToCart(vendorId: self.itemReceived!.restaurantID, arg: CartItemModel(id: self.itemReceived!.id,
+            self.productPresenter?.addToCart(vendorId: self.itemReceived!.restaurantID,
+                                             vendorName: self.vendorName!,
+                                             vendorImage: self.vendorImage!,
+                                             deliveryFees: "20",
+                                             arg: CartItemModel(id: self.itemReceived!.id,
                                                                 name: self.itemReceived!.name,
                                                                 image: self.itemReceived!.image,
                                                                 price: self.itemReceived!.price,

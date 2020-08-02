@@ -29,7 +29,7 @@ class RegisterViewPresenter{
         
         registerViewDelegate?.showSVProgess()
         
-        AuthServices.instance.registerWith(parameters: parameters) { (completed) in
+        AuthServices.registerWith(parameters: parameters) { (completed) in
             
             self.registerViewDelegate?.dismissSVProgress()
             

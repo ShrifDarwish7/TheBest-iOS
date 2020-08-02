@@ -17,5 +17,6 @@ target 'TheBest-iOS' do
   pod 'SwiftyGif'
   pod 'SVProgressHUD'
   pod 'FlagPhoneNumber'
+  pod 'GoogleMaps'
 
 end

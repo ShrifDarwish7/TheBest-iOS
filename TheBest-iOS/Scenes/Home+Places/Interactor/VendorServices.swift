@@ -18,7 +18,7 @@ class VendorServices{
         
         let headers = [
         
-            "Authorization": "Bearer \(accessToken)",
+            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
             "Accept": "application/json"
         ]
               
@@ -55,7 +55,7 @@ class VendorServices{
         
         let headers = [
         
-            "Authorization": "Bearer \(accessToken)",
+            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
             "Accept": "application/json"
         ]
               

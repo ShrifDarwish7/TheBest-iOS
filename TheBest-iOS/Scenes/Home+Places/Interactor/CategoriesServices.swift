@@ -18,7 +18,7 @@ class CategoriesServices{
         
         let headers = [
         
-            "Authorization": "Bearer \(accessToken)",
+            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
             "Accept": "application/json"
         ]
               
@@ -53,7 +53,7 @@ class CategoriesServices{
         
         let headers = [
         
-            "Authorization": "Bearer \(accessToken)",
+            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
             "Accept": "application/json"
         ]
               
@@ -90,7 +90,7 @@ class CategoriesServices{
         
         let headers = [
         
-            "Authorization": "Bearer \(accessToken)",
+            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
             "Accept": "application/json"
         ]
               

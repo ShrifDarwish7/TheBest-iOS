@@ -39,6 +39,11 @@ PODS:
   - GoogleDataTransportCCTSupport (3.1.0):
     - GoogleDataTransport (~> 6.1)
     - nanopb (~> 1.30905.0)
+  - GoogleMaps (3.8.2):
+    - GoogleMaps/Maps (= 3.8.2)
+  - GoogleMaps/Base (3.8.2)
+  - GoogleMaps/Maps (3.8.2):
+    - GoogleMaps/Base
   - GoogleUtilities/AppDelegateSwizzler (6.6.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -76,6 +81,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - FlagPhoneNumber
+  - GoogleMaps
   - IQKeyboardManagerSwift
   - SDWebImage
   - SVProgressHUD
@@ -96,6 +102,7 @@ SPEC REPOS:
     - FlagPhoneNumber
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
+    - GoogleMaps
     - GoogleUtilities
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
@@ -120,6 +127,7 @@ SPEC CHECKSUMS:
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   GoogleDataTransport: ad884314b81cdb808fb1d23787b367ff8da4e28a
   GoogleDataTransportCCTSupport: d70a561f7d236af529fee598835caad5e25f6d3d
+  GoogleMaps: ae0efe10e9c40bcd9decd0c9fd53d947af7801a3
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
@@ -131,6 +139,6 @@ SPEC CHECKSUMS:
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 6c5a8579101dd4502ca5c7f01e03816de277d1ee
+PODFILE CHECKSUM: e7424f592f3b754396941c1a1dab899ba8246ee6
 
 COCOAPODS: 1.9.1

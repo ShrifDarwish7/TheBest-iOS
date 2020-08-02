@@ -18,6 +18,7 @@ class CartVC: UIViewController {
     @IBOutlet weak var totalOrder: UILabel!
     @IBOutlet weak var cartItemsTableView: UITableView!
     @IBOutlet weak var checkOutView: UIView!
+    @IBOutlet weak var totalOrder2: UILabel!
     
     var cartItems: [CartItemModel]?
     var cartPresenter: CartPresenter?
@@ -32,6 +33,17 @@ class CartVC: UIViewController {
         
         backBtn.onTap {
             self.dismiss(animated: true, completion: nil)
+        }
+            
+        vendorImage.layer.cornerRadius = vendorImage.frame.height/2
+        
+        vendorImage.sd_setImage(with: URL(string: UserDefaults.init().string(forKey: "cart_associated_vendor_image")!))
+        vendorName.text = UserDefaults.init().string(forKey: "cart_associated_vendor_name")
+        deliveryFees.text = UserDefaults.init().string(forKey: "cart_associated_vendor_delivery_fees")
+        updateTotalOrder()
+        
+        checkOutView.addTapGesture { (_) in
+            PlaceOrder.place()
         }
         
     }
@@ -49,13 +61,15 @@ class CartVC: UIViewController {
             cell.loadCell(item: self.cartItems![index.row])
             
             cell.add.onTap {
-                 self.cartPresenter?.updateQuantity(newValue: self.cartItems![index.row].quantity!+1, id: self.cartItems![index.row].id!)
+                self.cartPresenter?.updateQuantity(newValue: self.cartItems![index.row].quantity!+1, id: self.cartItems![index.row].id!)
+                self.updateTotalOrder()
             }
             
             cell.minus.onTap {
                 
                 if self.cartItems![index.row].quantity! > 1{
                     self.cartPresenter?.updateQuantity(newValue: self.cartItems![index.row].quantity!-1, id: self.cartItems![index.row].id!)
+                    self.updateTotalOrder()
                 }
                 
             }
@@ -67,6 +81,7 @@ class CartVC: UIViewController {
             
             let contextualAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
                 self.cartPresenter?.removeAt(id: self.cartItems![index.row].id!)
+                self.updateTotalOrder()
             }
             
             return UISwipeActionsConfiguration(actions: [contextualAction])
@@ -77,5 +92,14 @@ class CartVC: UIViewController {
         
     }
     
+    func updateTotalOrder(){
+        
+       var temp = 0
+        for item in self.cartItems!{
+            temp = temp + item.price! * item.quantity!
+        }
+        self.totalOrder.text = "\(temp) KWD"
+        self.totalOrder2.text = "\(temp) KWD"
+    }
 
 }

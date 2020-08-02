@@ -8,10 +8,14 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class SharedData{
     
     static var phone: String?
     static var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    static let goolgeApiKey = "AIzaSyDBDV-XxFpmbx79T5HLPrG9RmjDpiYshmE"
+    static var userLat: CLLocationDegrees?
+    static var userLng: CLLocationDegrees?
     
 }

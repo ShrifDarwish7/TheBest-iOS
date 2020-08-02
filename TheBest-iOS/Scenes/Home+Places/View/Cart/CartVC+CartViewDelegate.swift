@@ -13,6 +13,7 @@ extension CartVC: CartViewDelegate{
     func didCompleteFetchingItemWith(_ result: [CartItemModel]) {
         
         self.cartItems = result
+        self.itemsCount.text = "\(self.cartItems?.count ?? 1)"
         self.loadTableView()
         
     }
@@ -30,11 +31,11 @@ extension CartVC: CartViewDelegate{
     }
     
     func didRemoveItem() {
-           self.cartPresenter?.fetchItems()
-       }
-       
-       func didFailRemoveItem() {
-           
-       }
-
+        self.cartPresenter?.fetchItems()
+    }
+    
+    func didFailRemoveItem() {
+        
+    }
+    
 }

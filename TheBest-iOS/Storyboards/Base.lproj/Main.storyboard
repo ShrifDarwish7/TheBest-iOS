@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h4T-Ux-Kbd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UZy-T6-VaG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -720,11 +720,73 @@ ever since the 1500s</string>
                                     <segue destination="LtP-Cw-Xbz" kind="embed" id="pZv-oo-VKb"/>
                                 </connections>
                             </containerView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej0-ZL-qqN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7oq-Yc-fCg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggJ-ih-etr">
+                                            <rect key="frame" x="62" y="313.5" width="290" height="269"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should open your location services first" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIW-ND-oDg">
+                                                    <rect key="frame" x="25" y="78" width="240" height="46"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A7h-P3-feD">
+                                                    <rect key="frame" x="15" y="209" width="260" height="45"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ2-H6-AB6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
+                                                            <color key="backgroundColor" red="0.21568627450980393" green="0.88627450980392153" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
+                                                            <state key="normal" title="Yes">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tn-J2-alv">
+                                                            <rect key="frame" x="135" y="0.0" width="125" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
+                                                            <state key="normal" title="No">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="7IZ-sv-hvm"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="A7h-P3-feD" secondAttribute="trailing" constant="15" id="OTr-sa-lxW"/>
+                                                <constraint firstAttribute="bottom" secondItem="A7h-P3-feD" secondAttribute="bottom" constant="15" id="Svx-lz-QYU"/>
+                                                <constraint firstItem="VIW-ND-oDg" firstAttribute="leading" secondItem="ggJ-ih-etr" secondAttribute="leading" constant="25" id="cP9-8U-nbD"/>
+                                                <constraint firstItem="VIW-ND-oDg" firstAttribute="centerY" secondItem="ggJ-ih-etr" secondAttribute="centerY" multiplier="0.75" id="e1r-oE-aF2"/>
+                                                <constraint firstItem="A7h-P3-feD" firstAttribute="leading" secondItem="ggJ-ih-etr" secondAttribute="leading" constant="15" id="fgP-nn-5Cw"/>
+                                                <constraint firstAttribute="trailing" secondItem="VIW-ND-oDg" secondAttribute="trailing" constant="25" id="nmx-G9-DLG"/>
+                                                <constraint firstItem="VIW-ND-oDg" firstAttribute="centerX" secondItem="ggJ-ih-etr" secondAttribute="centerX" id="nqE-oq-sqV"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ggJ-ih-etr" firstAttribute="centerX" secondItem="7oq-Yc-fCg" secondAttribute="centerX" id="2nq-ae-LBN"/>
+                                        <constraint firstItem="ggJ-ih-etr" firstAttribute="height" secondItem="7oq-Yc-fCg" secondAttribute="height" multiplier="0.3" id="3J4-2z-YpS"/>
+                                        <constraint firstItem="ggJ-ih-etr" firstAttribute="width" secondItem="7oq-Yc-fCg" secondAttribute="width" multiplier="0.7" id="FEF-VD-nIL"/>
+                                        <constraint firstItem="ggJ-ih-etr" firstAttribute="centerY" secondItem="7oq-Yc-fCg" secondAttribute="centerY" id="TkP-lq-9bW"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
                             <constraint firstItem="YpZ-wS-o3Z" firstAttribute="trailing" secondItem="yDD-rS-1g6" secondAttribute="trailing" constant="20" id="BOa-oz-Ld4"/>
                             <constraint firstItem="Y6G-qh-Aio" firstAttribute="centerX" secondItem="uhw-GL-Zuu" secondAttribute="centerX" id="DX9-wO-rhb"/>
+                            <constraint firstItem="YpZ-wS-o3Z" firstAttribute="trailing" secondItem="ej0-ZL-qqN" secondAttribute="trailing" id="EYB-BQ-kwl"/>
                             <constraint firstItem="YpZ-wS-o3Z" firstAttribute="trailing" secondItem="Am9-kO-egN" secondAttribute="trailing" constant="20" id="EsZ-bE-KaH"/>
                             <constraint firstItem="xq7-ck-XY9" firstAttribute="leading" secondItem="YpZ-wS-o3Z" secondAttribute="leading" constant="40" id="FFe-gA-s5j"/>
                             <constraint firstItem="YpZ-wS-o3Z" firstAttribute="bottom" secondItem="yDD-rS-1g6" secondAttribute="bottom" constant="20" id="K1f-gy-St2"/>
@@ -735,19 +797,26 @@ ever since the 1500s</string>
                             <constraint firstItem="xq7-ck-XY9" firstAttribute="top" secondItem="Am9-kO-egN" secondAttribute="bottom" constant="15" id="WrW-Ut-caF"/>
                             <constraint firstItem="Y6G-qh-Aio" firstAttribute="top" secondItem="uhw-GL-Zuu" secondAttribute="top" id="WuY-XX-tqI"/>
                             <constraint firstItem="yDD-rS-1g6" firstAttribute="leading" secondItem="YpZ-wS-o3Z" secondAttribute="leading" constant="20" id="cm6-9Z-KIJ"/>
+                            <constraint firstItem="ej0-ZL-qqN" firstAttribute="top" secondItem="uhw-GL-Zuu" secondAttribute="top" id="fl3-KD-Z3s"/>
+                            <constraint firstItem="ej0-ZL-qqN" firstAttribute="leading" secondItem="YpZ-wS-o3Z" secondAttribute="leading" id="fm2-dL-9Vb"/>
                             <constraint firstAttribute="bottom" secondItem="Y6G-qh-Aio" secondAttribute="bottom" id="gts-UV-F56"/>
                             <constraint firstItem="FW6-73-npn" firstAttribute="width" secondItem="yDD-rS-1g6" secondAttribute="width" id="ikV-og-cGe"/>
                             <constraint firstItem="FW6-73-npn" firstAttribute="height" secondItem="yDD-rS-1g6" secondAttribute="height" id="koz-sr-1bS"/>
                             <constraint firstItem="Y6G-qh-Aio" firstAttribute="width" secondItem="YpZ-wS-o3Z" secondAttribute="width" id="pX4-sB-FIT"/>
+                            <constraint firstAttribute="bottom" secondItem="ej0-ZL-qqN" secondAttribute="bottom" id="x2K-JW-APM"/>
                             <constraint firstItem="Am9-kO-egN" firstAttribute="top" secondItem="YpZ-wS-o3Z" secondAttribute="top" constant="20" id="ziS-o2-piD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YpZ-wS-o3Z"/>
                     </view>
                     <connections>
+                        <outlet property="allowBtn" destination="QJ2-H6-AB6" id="YHO-pP-FMZ"/>
+                        <outlet property="blurBlockView" destination="ej0-ZL-qqN" id="Co5-ID-fuM"/>
                         <outlet property="categoriesCollectionView" destination="yDD-rS-1g6" id="zFN-fZ-sNi"/>
+                        <outlet property="denyBtn" destination="5tn-J2-alv" id="vEg-ZA-UOe"/>
                         <outlet property="drawerBtn" destination="7rW-g1-JBu" id="vcb-cb-VDf"/>
                         <outlet property="drawerPosition" destination="DX9-wO-rhb" id="8lF-t4-JYS"/>
                         <outlet property="notificationBtn" destination="bBj-ne-0Q9" id="dYQ-8j-ROh"/>
+                        <outlet property="popupView" destination="ggJ-ih-etr" id="0sN-7n-dst"/>
                         <outlet property="subCategories" destination="FW6-73-npn" id="Qq9-Ae-LuS"/>
                         <outlet property="upperView" destination="Am9-kO-egN" id="CZ6-fR-Vym"/>
                     </connections>
@@ -1705,6 +1774,7 @@ ever since the 1500s</string>
                         <outlet property="deliveryFees" destination="d6y-KB-VYM" id="Eqc-Sc-YNK"/>
                         <outlet property="itemsCount" destination="RQ7-si-SyI" id="nNP-s4-02N"/>
                         <outlet property="totalOrder" destination="ts8-kA-Rt5" id="qaF-WI-L97"/>
+                        <outlet property="totalOrder2" destination="Wo6-DZ-r7l" id="MSJ-yS-lLE"/>
                         <outlet property="vendorImage" destination="p73-Th-kDP" id="Mjx-dJ-YK4"/>
                         <outlet property="vendorName" destination="eE2-Qk-oIX" id="wyx-oQ-lti"/>
                     </connections>

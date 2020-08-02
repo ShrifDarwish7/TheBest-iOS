@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var notificationBtn: UIButton!
@@ -16,10 +17,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     @IBOutlet weak var drawerPosition: NSLayoutConstraint!
     @IBOutlet weak var subCategories: UICollectionView!
+    @IBOutlet weak var blurBlockView: UIVisualEffectView!
+    @IBOutlet weak var popupView: UIView!
+    @IBOutlet weak var allowBtn: UIButton!
+    @IBOutlet weak var denyBtn: UIButton!
     
     var appCategories = [AppCategory]()
     var homeViwPresenter: HomeViewPresenter?
     var categories: Categories?
+    let locationManager = CLLocationManager()
+    var requestingLocation = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +47,35 @@ class HomeVC: UIViewController {
         loadUI()
         loadCategoriesCollection()
         
+        requestLocationPermission()
+        
+        popupView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        popupView.layer.cornerRadius = 15
+        allowBtn.layer.cornerRadius = 15
+        denyBtn.layer.cornerRadius = 15
+        
+        denyBtn.onTap {
+            self.blurBlockView.isHidden = true
+            self.popupView.transform = CGAffineTransform(scaleX: 0, y: 0)
+            self.requestingLocation = false
+        }
+        
+        allowBtn.onTap {
+           if let BUNDLE_IDENTIFIER = Bundle.main.bundleIdentifier,
+                let url = URL(string: "\(UIApplication.openSettingsURLString)&path=LOCATION/\(BUNDLE_IDENTIFIER)") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+            self.blurBlockView.isHidden = true
+            self.popupView.transform = CGAffineTransform(scaleX: 0, y: 0    )
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        SharedData.userLat = locValue.latitude
+        SharedData.userLng = locValue.longitude
     }
     
     @objc func closeDrawer(){
@@ -54,6 +90,18 @@ class HomeVC: UIViewController {
         
         drawerBtn.onTap {
             Drawer.open(self.drawerPosition, self)
+        }
+        
+    }
+    
+    func requestLocationPermission(){
+        
+        locationManager.requestAlwaysAuthorization()
+            
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
         }
         
     }
@@ -85,6 +133,24 @@ class HomeVC: UIViewController {
             case 0:
                 
                 self.homeViwPresenter?.getMainRestaurantsCategories()
+                
+            case 1:
+                
+                switch CLLocationManager.authorizationStatus() {
+                    
+                case .authorizedAlways , .authorizedWhenInUse:
+                    Router.toTaxiOrder(sender: self)
+                default:
+                    
+                    self.blurBlockView.isHidden = false
+                    self.requestingLocation = true
+                    UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.8, options: [], animations: {
+                        self.popupView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                    }) { (_) in
+                        
+                    }
+                    
+                }
                 
             default:
                 break
