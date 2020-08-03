@@ -9,8 +9,9 @@
 import UIKit
 import CoreLocation
 
-class HomeVC: UIViewController, CLLocationManagerDelegate {
+class HomeVC: UIViewController {
 
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var notificationBtn: UIButton!
     @IBOutlet weak var welcomeMsg: UILabel!
@@ -27,7 +28,6 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
     var homeViwPresenter: HomeViewPresenter?
     var categories: Categories?
     let locationManager = CLLocationManager()
-    var requestingLocation = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +49,7 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
         
         loadUI()
         loadCategoriesCollection()
-        
-        requestLocationPermission()
-        
+                
         popupView.transform = CGAffineTransform(scaleX: 0, y: 0)
         popupView.layer.cornerRadius = 15
         allowBtn.layer.cornerRadius = 15
@@ -60,7 +58,6 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
         denyBtn.onTap {
             self.blurBlockView.isHidden = true
             self.popupView.transform = CGAffineTransform(scaleX: 0, y: 0)
-            self.requestingLocation = false
         }
         
         allowBtn.onTap {
@@ -72,15 +69,25 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
             self.popupView.transform = CGAffineTransform(scaleX: 0, y: 0    )
         }
         
+        backBtn.onTap {
+            
+            self.categoriesCollectionView.isHidden = false
+            
+            UIView.animate(withDuration: 0.1) {
+                self.backBtn.isHidden = true
+            }
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.categoriesCollectionView.alpha = 1
+                self.subCategories.alpha = 0
+                
+            }) { (_) in
+                self.subCategories.isHidden = true
+            }
+            
+        }
+        
     }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-        SharedData.userLat = locValue.latitude
-        SharedData.userLng = locValue.longitude
-    }
-    
     @objc func closeDrawer(){
         Drawer.close(drawerPosition, self)
     }
@@ -97,17 +104,6 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func requestLocationPermission(){
-        
-        locationManager.requestAlwaysAuthorization()
-            
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-        
-    }
     
     func loadCategoriesCollection(){
         
@@ -146,7 +142,6 @@ class HomeVC: UIViewController, CLLocationManagerDelegate {
                 default:
                     
                     self.blurBlockView.isHidden = false
-                    self.requestingLocation = true
                     UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.8, options: [], animations: {
                         self.popupView.transform = CGAffineTransform(scaleX: 1, y: 1)
                     }) { (_) in

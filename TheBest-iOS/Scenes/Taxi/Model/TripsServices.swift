@@ -12,6 +12,27 @@ import SwiftyJSON
 
 class TripsServices{
     
+    static func getAddressFromGoogleMapsAPI(location : String , completed: @escaping ( _ address: String )->Void) {
+        
+        Alamofire.request("https://maps.google.com/maps/api/geocode/json?language=ar&latlng=\(location)&key=\(SharedData.goolgeApiKey)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .responseData { response in
+                switch response.result {
+                    
+                case .success(let val):
+                    let json = JSON(val)
+                    print(json)
+                    if json["results"].arrayValue.count > 1 {
+                        let results = json["results"].arrayValue[0]
+                        print(results["formatted_address"].stringValue)
+                        completed(results["formatted_address"].stringValue)
+                    }
+                    
+                case .failure(let error):
+                    print(error)
+                }
+        }
+    }
+    
     static func getNearByTaxies(completed: @escaping (Taxi?)->Void){
         
         let headers = [

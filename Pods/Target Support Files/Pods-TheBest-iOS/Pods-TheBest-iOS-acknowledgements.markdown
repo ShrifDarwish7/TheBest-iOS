@@ -2313,6 +2313,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 
 Copyright 2020 Google
 
+## GooglePlaces
+
+Copyright 2020 Google
+
 ## GoogleUtilities
 
 

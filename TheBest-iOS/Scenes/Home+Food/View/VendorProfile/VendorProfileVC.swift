@@ -103,7 +103,7 @@ class VendorProfileVC: UIViewController {
             cell.logoImage.layer.cornerRadius = cell.logoImage.frame.height/2
             cell.addToCartBtn.onTap {
                 
-                if (self.menuItems?.restaurantMenu[index.row].restaurantID)! == UserDefaults.init().integer(forKey: "cart_associated_vendorId") && UserDefaults.init().integer(forKey: "cart_associated_vendorId") != 0{
+                if (self.menuItems?.restaurantMenu[index.row].restaurantID)! == UserDefaults.init().integer(forKey: "cart_associated_vendorId") || UserDefaults.init().integer(forKey: "cart_associated_vendorId") == 0{
                     CartServices.addToCart(vendorId: (self.menuItems?.restaurantMenu[index.row].restaurantID)!,
                                            vendorName: self.vendorName.text!,
                                            vendorImage: self.menuCategories!.items.image,

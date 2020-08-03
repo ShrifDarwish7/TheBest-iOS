@@ -14,6 +14,7 @@ class DrawerVC: UIViewController {
     @IBOutlet weak var drawerView: UIView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var logout: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,15 @@ class DrawerVC: UIViewController {
         }
         
         username.text = (UserDefaults.init().string(forKey: "username") ?? "")
+        loadActions()
+    }
+    
+    func loadActions(){
+        
+        logout.addTapGesture { (_) in
+            AuthServices.logout()
+            Router.toLogin(sender: self)
+        }
         
     }
     

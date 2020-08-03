@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Taxi OrderVC-->
         <scene sceneID="zWD-9R-RKJ">
@@ -18,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9m-q6-wr2" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgT-Zx-LCz">
@@ -61,36 +69,118 @@
                                     <constraint firstItem="85n-QD-cAr" firstAttribute="centerX" secondItem="ZgT-Zx-LCz" secondAttribute="centerX" id="ivU-42-PDO"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4B-zk-16N">
+                                <rect key="frame" x="15" y="493.5" width="384" height="358.5"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KE6-U4-glA">
+                                        <rect key="frame" x="15" y="155" width="354" height="188.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="etd-dw-Nbg">
+                                        <rect key="frame" x="15" y="15" width="354" height="125"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UcV-tb-zwF">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="57.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E45-nq-H4P">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your location " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfN-by-9IZ">
+                                                        <rect key="frame" x="0.0" y="29.5" width="354" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                        <color key="textColor" name="FontGrayColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ev7-ur-on6">
+                                                        <rect key="frame" x="0.0" y="56.5" width="354" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="Ymo-QI-72n"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C2V-I1-4eJ">
+                                                <rect key="frame" x="0.0" y="67.5" width="354" height="57.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-WI-mld">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your destination " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VK-Wc-b89">
+                                                        <rect key="frame" x="0.0" y="29.5" width="354" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                        <color key="textColor" name="FontGrayColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dh9-Hf-TSi">
+                                                        <rect key="frame" x="0.0" y="56.5" width="354" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="2zk-9r-zEa"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="etd-dw-Nbg" secondAttribute="trailing" constant="15" id="Hs2-Bu-7w4"/>
+                                    <constraint firstAttribute="bottom" secondItem="KE6-U4-glA" secondAttribute="bottom" constant="15" id="M5t-dZ-kQx"/>
+                                    <constraint firstAttribute="trailing" secondItem="KE6-U4-glA" secondAttribute="trailing" constant="15" id="fM1-GK-s00"/>
+                                    <constraint firstItem="KE6-U4-glA" firstAttribute="top" secondItem="etd-dw-Nbg" secondAttribute="bottom" constant="15" id="iWn-Rw-MMX"/>
+                                    <constraint firstItem="etd-dw-Nbg" firstAttribute="top" secondItem="n4B-zk-16N" secondAttribute="top" constant="15" id="oHx-9S-gM5"/>
+                                    <constraint firstItem="KE6-U4-glA" firstAttribute="leading" secondItem="n4B-zk-16N" secondAttribute="leading" constant="15" id="sXk-dJ-Z63"/>
+                                    <constraint firstItem="etd-dw-Nbg" firstAttribute="leading" secondItem="n4B-zk-16N" secondAttribute="leading" constant="15" id="syR-iQ-psE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="IjL-Ch-Pu4" firstAttribute="trailing" secondItem="F9m-q6-wr2" secondAttribute="trailing" id="1v6-BO-Hc5"/>
                             <constraint firstItem="ZgT-Zx-LCz" firstAttribute="top" secondItem="IjL-Ch-Pu4" secondAttribute="top" constant="20" id="2RB-JY-1co"/>
                             <constraint firstItem="F9m-q6-wr2" firstAttribute="leading" secondItem="IjL-Ch-Pu4" secondAttribute="leading" id="Eku-bf-JfG"/>
+                            <constraint firstItem="IjL-Ch-Pu4" firstAttribute="trailing" secondItem="n4B-zk-16N" secondAttribute="trailing" constant="15" id="I1W-sz-trd"/>
                             <constraint firstItem="F9m-q6-wr2" firstAttribute="top" secondItem="oDc-iO-wNR" secondAttribute="top" id="WX5-Mk-XLV"/>
                             <constraint firstItem="ZgT-Zx-LCz" firstAttribute="leading" secondItem="IjL-Ch-Pu4" secondAttribute="leading" constant="15" id="Yrg-BN-fkW"/>
+                            <constraint firstItem="n4B-zk-16N" firstAttribute="leading" secondItem="IjL-Ch-Pu4" secondAttribute="leading" constant="15" id="mBu-xZ-Gce"/>
                             <constraint firstItem="IjL-Ch-Pu4" firstAttribute="trailing" secondItem="ZgT-Zx-LCz" secondAttribute="trailing" constant="15" id="oFV-fb-kVc"/>
-                            <constraint firstItem="IjL-Ch-Pu4" firstAttribute="bottom" secondItem="F9m-q6-wr2" secondAttribute="bottom" id="yr5-Eg-Ok1"/>
+                            <constraint firstItem="IjL-Ch-Pu4" firstAttribute="bottom" secondItem="n4B-zk-16N" secondAttribute="bottom" constant="10" id="v7x-f3-a1q"/>
+                            <constraint firstAttribute="bottom" secondItem="F9m-q6-wr2" secondAttribute="bottom" id="yr5-Eg-Ok1"/>
+                            <constraint firstItem="n4B-zk-16N" firstAttribute="height" secondItem="oDc-iO-wNR" secondAttribute="height" multiplier="0.4" id="zyR-x0-eKh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IjL-Ch-Pu4"/>
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="gBc-MU-aJD" id="PC4-xl-Jcm"/>
+                        <outlet property="fromLbl" destination="DfN-by-9IZ" id="NAD-uG-nDu"/>
                         <outlet property="mapView" destination="F9m-q6-wr2" id="0FG-vg-Ffg"/>
+                        <outlet property="nearbyDriversTableView" destination="KE6-U4-glA" id="8oN-zt-rfu"/>
+                        <outlet property="nearbyView" destination="n4B-zk-16N" id="N3r-2l-5Vi"/>
                         <outlet property="pageTitle" destination="85n-QD-cAr" id="d5P-is-LnK"/>
                         <outlet property="upperView" destination="ZgT-Zx-LCz" id="Viq-Jv-LU2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLV-tO-YLW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="75"/>
+            <point key="canvasLocation" x="-42.028985507246382" y="75"/>
         </scene>
     </scenes>
     <resources>
         <image name="back" width="39" height="39"/>
         <image name="taxi_icon1" width="28" height="26.5"/>
+        <namedColor name="FontGrayColor">
+            <color red="0.58399999141693115" green="0.56499999761581421" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="TaxiGoldColor">
-            <color red="0.94901960784313721" green="0.78431372549019607" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94900000095367432" green="0.7839999794960022" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

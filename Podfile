@@ -18,5 +18,6 @@ target 'TheBest-iOS' do
   pod 'SVProgressHUD'
   pod 'FlagPhoneNumber'
   pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
 end

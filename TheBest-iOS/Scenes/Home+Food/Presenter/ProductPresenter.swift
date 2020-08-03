@@ -27,7 +27,7 @@ class ProductPresenter{
     
     func addToCart(vendorId: Int, vendorName: String, vendorImage: String, deliveryFees: String, arg: CartItemModel){
         
-        if vendorId == UserDefaults.init().integer(forKey: "cart_associated_vendorId") && UserDefaults.init().integer(forKey: "cart_associated_vendorId") != 0{
+        if vendorId == UserDefaults.init().integer(forKey: "cart_associated_vendorId") || UserDefaults.init().integer(forKey: "cart_associated_vendorId") == 0{
             CartServices.addToCart(vendorId: vendorId, vendorName: vendorName, vendorImage: vendorImage, deliveryFees: deliveryFees, arg: arg) { (completed) in
                 if completed{
                     self.productViewDelegate?.didCompleteAddingToCart()

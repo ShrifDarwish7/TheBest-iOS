@@ -12,6 +12,7 @@ import Firebase
 import IQKeyboardManagerSwift
 import SVProgressHUD
 import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,10 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         Auth.auth().canHandle(URL(string: "com.googleusercontent.apps.88616747039-3j7kg1ikeqlnkoceuqle764bhnutl55n")!)
         GMSServices.provideAPIKey("AIzaSyDBDV-XxFpmbx79T5HLPrG9RmjDpiYshmE")
-       // GMSPlacesClient.provideAPIKey("AIzaSyDBDV-XxFpmbx79T5HLPrG9RmjDpiYshmE")
+        GMSPlacesClient.provideAPIKey("AIzaSyDBDV-XxFpmbx79T5HLPrG9RmjDpiYshmE")
         SVProgressHUD.setDefaultMaskType(.black)
         SVProgressHUD.setDefaultAnimationType(.flat)
         SVProgressHUD.setBackgroundColor(.white)
+        
+        UINavigationBar.appearance().barTintColor = UIColor(named: "TaxiGoldColor")
+        UINavigationBar.appearance().tintColor = UIColor.white
         
         if #available(iOS 13.0, *){
             

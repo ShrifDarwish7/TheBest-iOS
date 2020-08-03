@@ -153,4 +153,12 @@ class AuthServices{
         
     }
     
+    static func logout(){
+        
+        let dictionary = AuthServices.instance.defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+                AuthServices.instance.defaults.removeObject(forKey: key)
+        }
+    }
+    
 }
