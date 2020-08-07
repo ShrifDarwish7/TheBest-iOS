@@ -94,9 +94,9 @@ class CartVC: UIViewController {
     
     func updateTotalOrder(){
         
-       var temp = 0
+        var temp = 0.0
         for item in self.cartItems!{
-            temp = temp + item.price! * item.quantity!
+            temp = temp + Double(item.price! * Double(item.quantity!))
         }
         self.totalOrder.text = "\(temp) KWD"
         self.totalOrder2.text = "\(temp) KWD"

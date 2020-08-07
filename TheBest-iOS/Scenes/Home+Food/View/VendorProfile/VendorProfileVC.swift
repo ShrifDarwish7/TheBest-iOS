@@ -99,7 +99,7 @@ class VendorProfileVC: UIViewController {
             cell.container.layer.cornerRadius = 15
             cell.logoImage.sd_setImage(with: URL(string: (self.menuItems?.restaurantMenu[index.row].image)!))
             cell.itemName.text = self.menuItems?.restaurantMenu[index.row].name
-            cell.desc.text = "\(self.menuItems?.restaurantMenu[index.row].price ?? 0)"
+            cell.desc.text = "\(self.menuItems?.restaurantMenu[index.row].price ?? "0.0")"
             cell.logoImage.layer.cornerRadius = cell.logoImage.frame.height/2
             cell.addToCartBtn.onTap {
                 
@@ -111,7 +111,7 @@ class VendorProfileVC: UIViewController {
                                            arg: CartItemModel(id: (self.menuItems?.restaurantMenu[index.row].id)!,
                                                               name: (self.menuItems?.restaurantMenu[index.row].name)!,
                                                               image: (self.menuItems?.restaurantMenu[index.row].image)!,
-                                                              price: (self.menuItems?.restaurantMenu[index.row].price)!,
+                                                              price: Double(self.menuItems?.restaurantMenu[index.row].price ?? "0.0")!,
                                                               quantity: 1)) { (_) in }
                 }else{
                     let alert = UIAlertController(title: "", message: "Cart contains products from another vendor, to add this product you must clear your cart", preferredStyle: .actionSheet)

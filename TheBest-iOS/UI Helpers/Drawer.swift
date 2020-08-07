@@ -1,10 +1,4 @@
-//
-//  Drawer.swift
-//  Tujjar
-//
-//  Created by Sherif Darwish on 6/8/20.
-//  Copyright © 2020 Sherif Darwish. All rights reserved.
-//
+
 
 import Foundation
 import UIKit

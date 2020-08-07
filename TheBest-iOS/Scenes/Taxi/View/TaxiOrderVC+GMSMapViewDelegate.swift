@@ -12,12 +12,13 @@ import GoogleMaps
 extension TaxiOrderVC: GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
-        print("Position of marker is = \(marker.position.latitude),\(marker.position.longitude)")
+        self.mapView.clear()
         SharedData.userLat = marker.position.latitude
         SharedData.userLng = marker.position.longitude
         self.taxiOrderPresenter?.getNearByTaxies()
-        marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
-        
+        self.taxiOrderPresenter?.getAddressFromGoogleMapsApi()
+        self.putMyMarker()
+        self.toLbl.text = "Select your destination "
     }
     
     func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
@@ -31,15 +32,19 @@ extension TaxiOrderVC: GMSMapViewDelegate{
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         print("didTapAt = \(coordinate.latitude),\(coordinate.longitude)")
         mapView.clear()
+        self.toLbl.text = "Select your destination "
         SharedData.userLat = coordinate.latitude
         SharedData.userLng = coordinate.longitude
         self.taxiOrderPresenter?.getNearByTaxies()
+        self.taxiOrderPresenter?.getAddressFromGoogleMapsApi()
         let camera = GMSCameraPosition.camera(withLatitude: SharedData.userLat ?? 0 , longitude: SharedData.userLng ?? 0, zoom: 15)
         let marker = GMSMarker()
         marker.isDraggable = true
         marker.position = CLLocationCoordinate2D(latitude: SharedData.userLat ?? 0, longitude: SharedData.userLng ?? 0)
         marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
-        mapView.camera = camera
+        DispatchQueue.main.async {
+            self.mapView.animate(to: camera)
+        }
         marker.map = mapView
     }
     

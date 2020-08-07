@@ -87,7 +87,7 @@ class ProductVC: UIViewController {
                                              arg: CartItemModel(id: self.itemReceived!.id,
                                                                 name: self.itemReceived!.name,
                                                                 image: self.itemReceived!.image,
-                                                                price: self.itemReceived!.price,
+                                                                price: Double(self.itemReceived!.price)!,
                                                                 quantity: Int(self.quantityNumer.text!)!))
             
         }

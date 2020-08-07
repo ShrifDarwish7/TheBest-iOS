@@ -9,26 +9,67 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import GoogleMaps
 
 class TripsServices{
     
-    static func getAddressFromGoogleMapsAPI(location : String , completed: @escaping ( _ address: String )->Void) {
+    static func getAddressFromGoogleMapsAPI(location : String , completed: @escaping ( _ address: String? )->Void) {
         
         Alamofire.request("https://maps.google.com/maps/api/geocode/json?language=ar&latlng=\(location)&key=\(SharedData.goolgeApiKey)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .responseData { response in
                 switch response.result {
                     
-                case .success(let val):
-                    let json = JSON(val)
-                    print(json)
+                case .success(let data):
+                    let json = JSON(data)
+                    //print(json)
                     if json["results"].arrayValue.count > 1 {
                         let results = json["results"].arrayValue[0]
-                        print(results["formatted_address"].stringValue)
+                        print("formatted_address",results["formatted_address"].stringValue)
                         completed(results["formatted_address"].stringValue)
+                    }else{
+                        completed(nil)
                     }
                     
                 case .failure(let error):
                     print(error)
+                    completed(nil)
+                }
+        }
+    }
+    
+    static func getDirectionFromGoogleMapsAPI(origin: String, destination: String, completed: @escaping ( _ polyline: GMSPolyline? )->Void) {
+        
+        Alamofire.request("https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=\(SharedData.goolgeApiKey)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .responseData { response in
+                switch response.result {
+                    
+                case .success(let data):
+                    
+                    do{
+                        
+                        let json = try JSON(data: data)
+                        print(json)
+                        let routes = json["routes"].arrayValue
+                        
+                        for route in routes{
+                            
+                            let overviewPolyline = route["overview_polyline"].dictionary
+                            let points  = overviewPolyline?["points"]?.string
+                            let path = GMSPath(fromEncodedPath: points ?? "")
+                            let polyline = GMSPolyline(path: path)
+                            polyline.strokeColor = UIColor(named: "TaxiGoldColor")!
+                            polyline.strokeWidth = 5
+                            completed(polyline)
+                            
+                        }
+                        
+                    }catch{
+                        completed(nil)
+                    }
+                    
+                case .failure(let error):
+                    print(error)
+                    completed(nil)
                 }
         }
     }

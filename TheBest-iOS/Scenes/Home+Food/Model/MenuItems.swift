@@ -21,7 +21,7 @@ struct MenuIems: Codable {
 struct RestaurantMenuItem: Codable {
     let id: Int
     let name: String
-    let price: Int
+    let price: String
     let image: String
     let restaurantMenuDescription: String
     let restaurantID, menuCategoryID: Int

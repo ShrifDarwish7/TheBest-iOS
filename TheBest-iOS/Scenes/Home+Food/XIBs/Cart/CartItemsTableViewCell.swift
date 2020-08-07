@@ -34,7 +34,7 @@ class CartItemsTableViewCell: UITableViewCell {
         itemImageView.sd_setImage(with: URL(string: item.image!))
         itemName.text = item.name
         quantity.text = "\(item.quantity ?? 1)"
-        price.text = "\((item.price ?? 0) * (item.quantity ?? 1))"
+        price.text = "\((item.price ?? 0) * Double(item.quantity ?? 1))"
         
     }
     

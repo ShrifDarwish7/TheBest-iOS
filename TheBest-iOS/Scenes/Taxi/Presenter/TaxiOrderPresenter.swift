@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GoogleMaps
 
 protocol TaxiOrderViewDelegate {
     
@@ -14,6 +15,10 @@ protocol TaxiOrderViewDelegate {
     func dismissSVProgress()
     func didCompleteWith(_ taxies: Taxi)
     func didCompleteWithError()
+    func didCompleteWithAddressFromGoogleMaps(_ address: String)
+    func didFailWithErrorAddressFromGoogleMaps()
+    func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline)
+    func didFailWithErrorDirectionFromGoogleMaps()
     
 }
 
@@ -37,6 +42,41 @@ class TaxiOrderPresenter{
                 self.taxiOrderViewDelegate?.didCompleteWith(taxies)
             }else{
                 self.taxiOrderViewDelegate?.didCompleteWithError()
+            }
+            
+        }
+        
+    }
+    
+    func getAddressFromGoogleMapsApi(){
+        
+        self.taxiOrderViewDelegate?.showSVProgress()
+        
+        TripsServices.getAddressFromGoogleMapsAPI(location: "\(SharedData.userLat ?? 0),\(SharedData.userLng ?? 0)") { (address) in
+            
+            self.taxiOrderViewDelegate?.dismissSVProgress()
+            
+            if let _ = address{
+                self.taxiOrderViewDelegate?.didCompleteWithAddressFromGoogleMaps(address ?? "")
+            }else{
+                self.taxiOrderViewDelegate?.didFailWithErrorAddressFromGoogleMaps()
+            }
+            print("here address",address ?? "")
+        }
+    }
+    
+    func getDirectionFromGoogleMaps(origin: String, destination: String){
+        
+        self.taxiOrderViewDelegate?.showSVProgress()
+        
+        TripsServices.getDirectionFromGoogleMapsAPI(origin: origin, destination: destination) { (polyline) in
+            
+            self.taxiOrderViewDelegate?.dismissSVProgress()
+            
+            if let _ = polyline{
+                self.taxiOrderViewDelegate?.didCompleteWithDirectionFromGoogleMaps(polyline!)
+            }else{
+                self.taxiOrderViewDelegate?.didFailWithErrorDirectionFromGoogleMaps()
             }
             
         }

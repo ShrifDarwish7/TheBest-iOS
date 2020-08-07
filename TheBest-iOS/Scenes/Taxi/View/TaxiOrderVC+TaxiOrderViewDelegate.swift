@@ -27,13 +27,29 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
             let marker = GMSMarker()
             marker.icon = UIImage(named: "Taxi-Top-Yellow-icon")
             marker.position = CLLocationCoordinate2D(latitude: taxi.lat, longitude: taxi.lng)
-            marker.map = mapView
+            marker.map = self.mapView
             
         }
         
     }
     
     func didCompleteWithError() {
+        
+    }
+    
+    func didCompleteWithAddressFromGoogleMaps(_ address: String) {
+        self.fromLbl.text = address
+    }
+    
+    func didFailWithErrorAddressFromGoogleMaps() {
+        
+    }
+    
+    func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline) {
+        polyline.map = self.mapView
+    }
+    
+    func didFailWithErrorDirectionFromGoogleMaps() {
         
     }
 

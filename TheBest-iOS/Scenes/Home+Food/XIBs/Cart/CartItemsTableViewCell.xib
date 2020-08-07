@@ -37,25 +37,25 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Big mac" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn1-0l-Xzc">
-                                <rect key="frame" x="75" y="40.5" width="92.5" height="20"/>
+                                <rect key="frame" x="75" y="40.5" width="107.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hQ3-1R-pQL">
-                                <rect key="frame" x="177.5" y="28.5" width="117.5" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hQ3-1R-pQL">
+                                <rect key="frame" x="187.5" y="28.5" width="117.5" height="44"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7GE-Lx-4O2">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7GE-Lx-4O2">
+                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxD-cP-YKk">
-                                                <rect key="frame" x="15.5" y="0.0" width="45.5" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quantity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxD-cP-YKk">
+                                                <rect key="frame" x="17.5" y="0.0" width="45.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                 <color key="textColor" name="FontGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uF7-ek-JcD">
-                                                <rect key="frame" x="0.0" y="24" width="76" height="20"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uF7-ek-JcD">
+                                                <rect key="frame" x="2.5" y="24" width="76" height="20"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZm-Dq-Cuu">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -83,17 +83,17 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-x7-tcL">
-                                        <rect key="frame" x="86" y="0.0" width="31.5" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-x7-tcL">
+                                        <rect key="frame" x="85.5" y="0.0" width="32" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnN-DW-8w4">
-                                                <rect key="frame" x="2" y="0.0" width="27.5" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnN-DW-8w4">
+                                                <rect key="frame" x="2.5" y="0.0" width="27.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                                 <color key="textColor" name="FontGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-rD-TM2">
-                                                <rect key="frame" x="0.0" y="27" width="31.5" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-rD-TM2">
+                                                <rect key="frame" x="0.0" y="27" width="32" height="17"/>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -112,10 +112,10 @@
                         <constraints>
                             <constraint firstItem="kZ5-d9-h2v" firstAttribute="leading" secondItem="oO3-mT-bh0" secondAttribute="leading" constant="15" id="8aj-tl-fr6"/>
                             <constraint firstItem="kZ5-d9-h2v" firstAttribute="centerY" secondItem="oO3-mT-bh0" secondAttribute="centerY" id="OhT-eZ-hKg"/>
-                            <constraint firstAttribute="trailing" secondItem="hQ3-1R-pQL" secondAttribute="trailing" constant="15" id="ZVM-69-Acf"/>
+                            <constraint firstAttribute="trailing" secondItem="hQ3-1R-pQL" secondAttribute="trailing" constant="5" id="ZVM-69-Acf"/>
                             <constraint firstItem="hQ3-1R-pQL" firstAttribute="centerY" secondItem="oO3-mT-bh0" secondAttribute="centerY" id="b7G-qS-T9B"/>
                             <constraint firstItem="cn1-0l-Xzc" firstAttribute="leading" secondItem="kZ5-d9-h2v" secondAttribute="trailing" constant="10" id="d2f-zX-qXw"/>
-                            <constraint firstItem="hQ3-1R-pQL" firstAttribute="leading" secondItem="cn1-0l-Xzc" secondAttribute="trailing" constant="10" id="h0j-jz-Lp5"/>
+                            <constraint firstItem="hQ3-1R-pQL" firstAttribute="leading" secondItem="cn1-0l-Xzc" secondAttribute="trailing" constant="5" id="h0j-jz-Lp5"/>
                             <constraint firstItem="cn1-0l-Xzc" firstAttribute="centerY" secondItem="oO3-mT-bh0" secondAttribute="centerY" id="mrC-jS-lfJ"/>
                         </constraints>
                     </view>
