@@ -175,7 +175,7 @@ class TripsServices{
         
     }
     
-    static func getDistance(paramteres: [String: String] , completed: @escaping (Distance?)->Void){
+    static func getDistance(completed: @escaping (Distance?)->Void){
         
         let headers = [
         
@@ -183,10 +183,17 @@ class TripsServices{
             "Accept": "application/json"
         ]
         
+        let parameters = [
+            "latitudeFrom": SharedData.userLat,
+            "longitudeFrom": SharedData.userLng,
+            "latitudeTo": SharedData.userDestinationLat,
+            "longitudeTo": SharedData.userDestinationLng
+        ]
+        
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
-            for (key,value) in paramteres{
-                multipartFormData.append(value.data(using: .utf8)!, withName: key)
+            for (key,value) in parameters{
+                multipartFormData.append("\(value ?? 0)".data(using: .utf8)!, withName: key)
             }
             
         }, to: URL(string: GET_DISTANCE_END_POINT)!, method: .post, headers: headers) { (encodingResult) in

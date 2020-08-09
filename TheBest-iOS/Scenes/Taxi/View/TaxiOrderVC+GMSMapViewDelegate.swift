@@ -12,6 +12,7 @@ import GoogleMaps
 extension TaxiOrderVC: GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        
         self.mapView.clear()
         SharedData.userLat = marker.position.latitude
         SharedData.userLng = marker.position.longitude
@@ -19,6 +20,9 @@ extension TaxiOrderVC: GMSMapViewDelegate{
         self.taxiOrderPresenter?.getAddressFromGoogleMapsApi()
         self.putMyMarker()
         self.toLbl.text = "Select your destination "
+        
+        resetConfirmBtn()
+        
     }
     
     func mapView(_ mapView: GMSMapView, didBeginDragging marker: GMSMarker) {
@@ -27,6 +31,7 @@ extension TaxiOrderVC: GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
         marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 65, height: 87))
+        resetConfirmBtn()
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -46,6 +51,8 @@ extension TaxiOrderVC: GMSMapViewDelegate{
             self.mapView.animate(to: camera)
         }
         marker.map = mapView
+        
+        resetConfirmBtn()
     }
     
     func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{

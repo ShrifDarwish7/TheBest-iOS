@@ -16,10 +16,22 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var pageTitle: UIView!
-    @IBOutlet weak var nearbyView: UIView!
-    @IBOutlet weak var nearbyDriversTableView: UITableView!
+    @IBOutlet weak var setupTripView: UIView!
     @IBOutlet weak var fromLbl: UILabel!
     @IBOutlet weak var toLbl: UILabel!
+    @IBOutlet weak var distance: UILabel!
+    @IBOutlet weak var tripFees: UILabel!
+    @IBOutlet weak var tripInfoStack: UIStackView!
+    @IBOutlet weak var confirmBtn: UIButton!
+    @IBOutlet weak var tripScrollView: UIScrollView!
+    @IBOutlet weak var driverView: UIView!
+    @IBOutlet weak var driverImage: UIImageView!
+    @IBOutlet weak var driverName: UILabel!
+    @IBOutlet weak var carModel: UILabel!
+    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var carNumber: UILabel!
+    @IBOutlet weak var cancelTripBtn: UIButton!
+    @IBOutlet weak var callDriver: UIImageView!
     
      let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
@@ -39,16 +51,18 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
             self.dismiss(animated: true, completion: nil)
         }
         
+        confirmBtn.layer.cornerRadius = 10
         upperView.layer.cornerRadius = upperView.frame.height/2
         pageTitle.layer.cornerRadius = pageTitle.frame.height/2
         upperView.setupShadow()
         
         requestLocationPermission()
         
-        nearbyView.layer.cornerRadius = 25
-        
-        loadNearbyDriversTable()
-        
+        setupTripView.layer.cornerRadius = 25
+        driverView.layer.cornerRadius = 25
+        driverImage.layer.cornerRadius = 40
+        cancelTripBtn.layer.cornerRadius = 10
+                
         marker.isDraggable = true
         
         mapView.delegate = self
@@ -68,6 +82,7 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
             self.toAutoCompleteController?.modalPresentationStyle = .fullScreen
             self.present(self.toAutoCompleteController!, animated: true, completion: nil)
         }
+        
         
     }
     
@@ -99,26 +114,59 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func loadNearbyDriversTable(){
-        
-        let nib = UINib(nibName: "DriversTableViewCell", bundle: nil)
-        nearbyDriversTableView.register(nib, forCellReuseIdentifier: "DriverCell")
-        
-        nearbyDriversTableView.numberOfRows { (_) -> Int in
-            return 5
-        }.cellForRow { (index) -> UITableViewCell in
-            
-            let cell = self.nearbyDriversTableView.dequeueReusableCell(withIdentifier: "DriverCell", for: index) as! DriversTableViewCell
-            cell.makeTripBtn.layer.cornerRadius = cell.makeTripBtn.frame.height/2
-            
-            return cell
-            
-        }.heightForRowAt { (_) -> CGFloat in
-            
-            return UITableView.automaticDimension
-            
+    func resetConfirmBtn(){
+        DispatchQueue.main.async {
+            self.confirmBtn.tag = 0
+            self.confirmBtn.setTitle("Confirm", for: .normal)
+            UIView.animate(withDuration: 0.5) {
+                self.tripInfoStack.isHidden = true
+                self.confirmBtn.isHidden = true
+            }
         }
-        
     }
+    
+    @IBAction func confirmActionBtn(_ sender: UIButton) {
+        switch sender.tag {
+            
+        case 0:
+            
+            self.taxiOrderPresenter?.getDirectionFromGoogleMaps(origin: "\(SharedData.userLat ?? 0),\(SharedData.userLng ?? 0)", destination: "\(SharedData.userDestinationLat ?? 0),\(SharedData.userDestinationLng ?? 0)")
+            let camera = GMSCameraPosition.camera(withLatitude: SharedData.userDestinationLat!, longitude: SharedData.userDestinationLng!, zoom: 12)
+            DispatchQueue.main.async {
+                self.mapView.animate(to: camera)
+            }
+            self.taxiOrderPresenter?.getDistance()
+            
+        case 1:
+            
+            self.taxiOrderPresenter?.confirmRide()
+            
+        default:
+            break
+        }
+    }
+    
+    
+//    func loadNearbyDriversTable(){
+//
+//        let nib = UINib(nibName: "DriversTableViewCell", bundle: nil)
+//        nearbyDriversTableView.register(nib, forCellReuseIdentifier: "DriverCell")
+//
+//        nearbyDriversTableView.numberOfRows { (_) -> Int in
+//            return 5
+//        }.cellForRow { (index) -> UITableViewCell in
+//
+//            let cell = self.nearbyDriversTableView.dequeueReusableCell(withIdentifier: "DriverCell", for: index) as! DriversTableViewCell
+//            cell.makeTripBtn.layer.cornerRadius = cell.makeTripBtn.frame.height/2
+//
+//            return cell
+//
+//        }.heightForRowAt { (_) -> CGFloat in
+//
+//            return UITableView.automaticDimension
+//
+//        }
+//
+//    }
 
 }

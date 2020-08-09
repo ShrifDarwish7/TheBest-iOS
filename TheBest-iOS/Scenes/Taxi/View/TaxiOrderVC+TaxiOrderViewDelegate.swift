@@ -52,5 +52,31 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
     func didFailWithErrorDirectionFromGoogleMaps() {
         
     }
+    
+    func didCompleteWithDistanceFromAPI(_ distance: Distance) {
+        self.distance.text = "\(distance.distance)"
+        self.tripFees.text = "\(distance.cost)"
+        self.confirmBtn.tag = 1
+        self.confirmBtn.setTitle("Confirm ride", for: .normal)
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.5) {
+                self.tripInfoStack.isHidden = false
+                self.confirmBtn.isHidden = false
+                self.tripScrollView.scrollToTop()
+            }
+        }
+    }
+    
+    func didCompleteWithErrorDistanceFromAPI() {
+        print("didCompleteWithErrorDistanceFromAPI")
+    }
 
+    func didCompleteConfirmRide(_ driver: Drivers) {
+        print("didCompleteConfirmRide")
+    }
+    
+    func didFailConfirmRide() {
+        print("didFailConfirmRide")
+    }
+    
 }

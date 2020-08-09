@@ -24,6 +24,7 @@
 		AA028A9524D6FBC9007255FD /* SetupPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA028A9424D6FBC9007255FD /* SetupPicker.swift */; };
 		AA028A9724D708A6007255FD /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA028A9624D708A6007255FD /* Drivers.swift */; };
 		AA028A9924D70A0B007255FD /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA028A9824D70A0B007255FD /* Distance.swift */; };
+		AA08E45924E03E83001629A0 /* Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA08E45824E03E83001629A0 /* Scroll.swift */; };
 		AA0B883324CF4B320055F93E /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883224CF4B320055F93E /* ProductVC.swift */; };
 		AA0B883724CF6A2D0055F93E /* CartItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */; };
 		AA0B883824CF6A2E0055F93E /* CartItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */; };
@@ -119,6 +120,7 @@
 		AA028A9424D6FBC9007255FD /* SetupPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPicker.swift; sourceTree = "<group>"; };
 		AA028A9624D708A6007255FD /* Drivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
 		AA028A9824D70A0B007255FD /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		AA08E45824E03E83001629A0 /* Scroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll.swift; sourceTree = "<group>"; };
 		AA0B883224CF4B320055F93E /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsTableViewCell.swift; sourceTree = "<group>"; };
 		AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemsTableViewCell.xib; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				AAF9998024C78062009DB374 /* Alert.swift */,
 				AAC2DC6824C8B71600378934 /* Gradient.swift */,
 				AA028A9424D6FBC9007255FD /* SetupPicker.swift */,
+				AA08E45824E03E83001629A0 /* Scroll.swift */,
 			);
 			path = "UI Helpers";
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				AAE1097D24D1D2B600C66670 /* CartVC.swift in Sources */,
 				AA026F8224C79B31003FFF4E /* AuthServices.swift in Sources */,
 				AA028A9324D6F21C007255FD /* Constants.swift in Sources */,
+				AA08E45924E03E83001629A0 /* Scroll.swift in Sources */,
 				AAB1E57724CA13D900E3E499 /* RegisterVC.swift in Sources */,
 				AADD713524CB6FD700EE7FD1 /* MenuFilterCollectionViewCell.swift in Sources */,
 				AADD713F24CB755D00EE7FD1 /* VendorProfile+VendorViewPresenter.swift in Sources */,

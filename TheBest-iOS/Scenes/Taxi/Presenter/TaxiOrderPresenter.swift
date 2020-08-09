@@ -19,6 +19,10 @@ protocol TaxiOrderViewDelegate {
     func didFailWithErrorAddressFromGoogleMaps()
     func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline)
     func didFailWithErrorDirectionFromGoogleMaps()
+    func didCompleteWithDistanceFromAPI(_ distance: Distance)
+    func didCompleteWithErrorDistanceFromAPI()
+    func didCompleteConfirmRide(_ driver: Drivers)
+    func didFailConfirmRide()
     
 }
 
@@ -79,6 +83,36 @@ class TaxiOrderPresenter{
                 self.taxiOrderViewDelegate?.didFailWithErrorDirectionFromGoogleMaps()
             }
             
+        }
+        
+    }
+    
+    func getDistance(){
+        
+        self.taxiOrderViewDelegate?.showSVProgress()
+        
+        TripsServices.getDistance { (distance) in
+            self.taxiOrderViewDelegate?.dismissSVProgress()
+            
+            if let _ = distance{
+                self.taxiOrderViewDelegate?.didCompleteWithDistanceFromAPI(distance!)
+            }else{
+                self.taxiOrderViewDelegate?.didCompleteWithErrorDistanceFromAPI()
+            }
+        }
+    }
+    
+    func confirmRide(){
+        
+        self.taxiOrderViewDelegate?.showSVProgress()
+        
+        TripsServices.confirmRide { (driver) in
+            self.taxiOrderViewDelegate?.dismissSVProgress()
+            if let _ = driver{
+                self.taxiOrderViewDelegate?.didCompleteConfirmRide(driver!)
+            }else{
+                self.taxiOrderViewDelegate?.didFailConfirmRide()
+            }
         }
         
     }

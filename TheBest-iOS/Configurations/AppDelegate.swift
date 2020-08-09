@@ -13,7 +13,7 @@ import IQKeyboardManagerSwift
 import SVProgressHUD
 import GoogleMaps
 import GooglePlaces
-//AIzaSyDBDV-XxFpmbx79T5HLPrG9RmjDpiYshmE
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
