@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
   - Closures (0.7)
+  - Cosmos (21.0.0)
   - Firebase/Auth (6.25.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.5.3)
@@ -80,6 +81,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Closures
+  - Cosmos
   - Firebase/Auth
   - Firebase/Database
   - FlagPhoneNumber
@@ -95,6 +97,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Closures
+    - Cosmos
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -121,6 +124,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Closures: a83b9892a5b1c4125a9dfcd53e2754db5d7f6d22
+  Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
   Firebase: 5719b4f965f76643241a1bb8244483ff6117db39
   FirebaseAuth: 7047aec89c0b17ecd924a550c853f0c27ac6015e
   FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
@@ -144,6 +148,6 @@ SPEC CHECKSUMS:
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: d58d84ab920567bb13203ad7a66da987e77e9668
+PODFILE CHECKSUM: 6272fe2b525fd1797fa71b9384dcb16f8076cee3
 
 COCOAPODS: 1.9.1

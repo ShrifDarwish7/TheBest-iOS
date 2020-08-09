@@ -38,7 +38,6 @@ class TripsServices{
     }
     
     static func getDirectionFromGoogleMapsAPI(origin: String, destination: String, completed: @escaping ( _ polyline: GMSPolyline? )->Void) {
-        
         Alamofire.request("https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=\(SharedData.goolgeApiKey)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .responseData { response in
                 switch response.result {
@@ -76,18 +75,12 @@ class TripsServices{
     
     static func getNearByTaxies(completed: @escaping (Taxi?)->Void){
         
-        let headers = [
-        
-            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
-            "Accept": "application/json"
-        ]
-        
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
             multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "lat")
             multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "lng")
             
-        }, to: URL(string: GET_TAXIES_END_POINT)!, method: .post, headers: headers) { (encodingResult) in
+        }, to: URL(string: GET_TAXIES_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
             
             switch encodingResult{
                 
@@ -126,19 +119,12 @@ class TripsServices{
     
     static func confirmRide(completed: @escaping (Drivers?)->Void){
         
-        
-        let headers = [
-        
-            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
-            "Accept": "application/json"
-        ]
-        
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
             multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "lat")
             multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "lng")
             
-        }, to: URL(string: CONFIRM_TRIP_END_POINT)!, method: .post, headers: headers) { (encodingResult) in
+        }, to: URL(string: CONFIRM_TRIP_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
             
             switch encodingResult{
                 
@@ -177,12 +163,6 @@ class TripsServices{
     
     static func getDistance(completed: @escaping (Distance?)->Void){
         
-        let headers = [
-        
-            "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
-            "Accept": "application/json"
-        ]
-        
         let parameters = [
             "latitudeFrom": SharedData.userLat,
             "longitudeFrom": SharedData.userLng,
@@ -196,7 +176,7 @@ class TripsServices{
                 multipartFormData.append("\(value ?? 0)".data(using: .utf8)!, withName: key)
             }
             
-        }, to: URL(string: GET_DISTANCE_END_POINT)!, method: .post, headers: headers) { (encodingResult) in
+        }, to: URL(string: GET_DISTANCE_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
             
             switch encodingResult{
                 
@@ -231,6 +211,53 @@ class TripsServices{
             
         }
         
+    }
+    
+    static func cancelRide(completed: @escaping (Bool)->Void ){
+        
+        print(SharedData.headers)
+        
+        Alamofire.request(URL(string: CANCEL_RIDE_END_POINT)!, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+            
+            switch response.result{
+                
+            case .success(let data):
+                
+                do{
+                    
+                    let json = try JSON(data: data)
+                    print(json)
+                    if let msg = json["message"].string , msg == "Ride Had Been Cancel"{
+                        completed(true)
+                    }else{
+                        print("1")
+                        completed(false)
+                    }
+                    
+                }catch{
+                    print("2")
+                    completed(false)
+                }
+                
+            case .failure(_):
+                print("3")
+                completed(false)
+                
+            }
+            
+        }
+    }
+    
+    static func callDriver(phoneNumber:String) {
+
+      if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+
+        let application:UIApplication = UIApplication.shared
+        if (application.canOpenURL(phoneCallURL)) {
+            application.open(phoneCallURL, options: [:], completionHandler: nil)
+        }
+        
+      }
     }
     
 }

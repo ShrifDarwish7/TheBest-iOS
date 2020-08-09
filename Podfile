@@ -19,5 +19,6 @@ target 'TheBest-iOS' do
   pod 'FlagPhoneNumber'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Cosmos'
 
 end

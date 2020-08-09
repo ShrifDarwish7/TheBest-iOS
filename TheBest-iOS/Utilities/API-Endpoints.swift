@@ -20,5 +20,6 @@ let PLACE_ORDER_END_POINT = BASE_URL + "Order/store"
 let GET_TAXIES_END_POINT = BASE_URL + "Trip/GetTaxi"
 let CONFIRM_TRIP_END_POINT = BASE_URL + "Trip/ConfirmRide"
 let GET_DISTANCE_END_POINT = BASE_URL + "Trip/GetDistance"
+let CANCEL_RIDE_END_POINT = BASE_URL + "Trip/CancelRide"
 
 let HEADERS = ["Accept": "application/json"]

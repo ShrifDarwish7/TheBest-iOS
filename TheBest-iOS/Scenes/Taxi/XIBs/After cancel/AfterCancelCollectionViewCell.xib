@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AfterCancelCell" id="gTV-IL-0wX" customClass="AfterCancelCollectionViewCell" customModule="TheBest_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="216"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="216"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will but your opinion in our consideration" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epa-vY-Lne">
+                        <rect key="frame" x="30" y="80.5" width="298" height="55.5"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="epa-vY-Lne" secondAttribute="trailing" constant="30" id="9sd-iW-a2i"/>
+                <constraint firstItem="epa-vY-Lne" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ID6-y9-V9y"/>
+                <constraint firstItem="epa-vY-Lne" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="cMO-vx-2Zs"/>
+                <constraint firstItem="epa-vY-Lne" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="vqn-Cj-uSG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="358" height="216"/>
+            <point key="canvasLocation" x="160.86956521739131" y="104.46428571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -23,6 +23,8 @@ protocol TaxiOrderViewDelegate {
     func didCompleteWithErrorDistanceFromAPI()
     func didCompleteConfirmRide(_ driver: Drivers)
     func didFailConfirmRide()
+    func didCompleteCancelRide()
+    func didFailCancelRide()
     
 }
 
@@ -112,6 +114,21 @@ class TaxiOrderPresenter{
                 self.taxiOrderViewDelegate?.didCompleteConfirmRide(driver!)
             }else{
                 self.taxiOrderViewDelegate?.didFailConfirmRide()
+            }
+        }
+        
+    }
+    
+    func cancelRide(){
+        
+        self.taxiOrderViewDelegate?.showSVProgress()
+        
+        TripsServices.cancelRide { (cancelled) in
+            self.taxiOrderViewDelegate?.dismissSVProgress()
+            if cancelled{
+                self.taxiOrderViewDelegate?.didCompleteCancelRide()
+            }else{
+                self.taxiOrderViewDelegate?.didFailCancelRide()
             }
         }
         

@@ -32,6 +32,9 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var carNumber: UILabel!
     @IBOutlet weak var cancelTripBtn: UIButton!
     @IBOutlet weak var callDriver: UIImageView!
+    @IBOutlet weak var cancelationView: UIView!
+    @IBOutlet weak var reasonsCollectionView: UICollectionView!
+    @IBOutlet weak var cancelLbl: UILabel!
     
      let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
@@ -59,8 +62,9 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
         requestLocationPermission()
         
         setupTripView.layer.cornerRadius = 25
+        cancelationView.layer.cornerRadius = 25
         driverView.layer.cornerRadius = 25
-        driverImage.layer.cornerRadius = 40
+        driverImage.layer.cornerRadius = 35
         cancelTripBtn.layer.cornerRadius = 10
                 
         marker.isDraggable = true
@@ -83,6 +87,9 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
             self.present(self.toAutoCompleteController!, animated: true, completion: nil)
         }
         
+        cancelTripBtn.onTap {
+            self.taxiOrderPresenter?.cancelRide()
+        }
         
     }
     
@@ -146,6 +153,56 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func loadReasonsCollection(){
+        
+        reasonsCollectionView.numberOfSectionsIn(handler: { () -> Int in
+            return 1
+        }).numberOfItemsInSection { (_) -> Int in
+            return 2
+        }.cellForItemAt { (index) -> UICollectionViewCell in
+            
+            switch index.row{
+                
+            case 0:
+                
+                let nib = UINib(nibName: "ReasonsCollectionViewCell", bundle: nil)
+                self.reasonsCollectionView.register(nib, forCellWithReuseIdentifier: "ReasonCell")
+                let cell = self.reasonsCollectionView.dequeueReusableCell(withReuseIdentifier: "ReasonCell", for: index) as! ReasonsCollectionViewCell
+                for btn in cell.reasonsButtons{
+                    btn.onTap {
+                        btn.setImage(UIImage(named: "reason_select"), for: .normal)
+                        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                            self.reasonsCollectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .centeredHorizontally, animated: true)
+                            UIView.animate(withDuration: 0.5) {
+                                self.cancelLbl.alpha = 0
+                            }
+                        }
+                    }
+                }
+                return cell
+                
+            case 1:
+                
+                let nib = UINib(nibName: "AfterCancelCollectionViewCell", bundle: nil)
+                self.reasonsCollectionView.register(nib, forCellWithReuseIdentifier: "AfterCancelCell")
+                let cell = self.reasonsCollectionView.dequeueReusableCell(withReuseIdentifier: "AfterCancelCell", for: index) as! AfterCancelCollectionViewCell
+                return cell
+                
+            default:
+                return UICollectionViewCell()
+                
+            }
+            
+        }/*.didSelectItemAt { (index) in
+            self.reasonsCollectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .centeredHorizontally, animated: true)
+            UIView.animate(withDuration: 0.5) {
+                self.cancelLbl.alpha = 0
+            }
+        }*/.sizeForItemAt { (_) -> CGSize in
+            return CGSize(width: self.reasonsCollectionView.frame.width, height: self.reasonsCollectionView.frame.height)
+        }
+        
+    }
     
 //    func loadNearbyDriversTable(){
 //
