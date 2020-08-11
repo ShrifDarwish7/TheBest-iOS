@@ -98,5 +98,14 @@ class Router{
         sender.present(taxiOrderVC, animated: true, completion: nil)
         
     }
+    
+    static func toCheckout(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let checkoutVC = storyboard.instantiateViewController(withIdentifier: "CheckoutVC") as! CheckoutVC
+        checkoutVC.modalPresentationStyle = .fullScreen
+        sender.present(checkoutVC, animated: true, completion: nil)
+        
+    }
    
 }

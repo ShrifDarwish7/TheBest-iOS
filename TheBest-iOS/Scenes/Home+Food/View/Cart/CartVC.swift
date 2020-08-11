@@ -43,7 +43,7 @@ class CartVC: UIViewController {
         updateTotalOrder()
         
         checkOutView.addTapGesture { (_) in
-            PlaceOrder.place()
+            Router.toCheckout(sender: self)
         }
         
     }

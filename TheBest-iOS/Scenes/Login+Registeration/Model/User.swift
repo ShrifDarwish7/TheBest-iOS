@@ -13,13 +13,11 @@ struct User: Codable {
     
     let massege: String?
     let user: UserClass?
-    let user_: UserClass?
     let accessToken: String
     
     enum CodingKeys: String, CodingKey{
         case massege
         case user
-        case user_ = "User"
         case accessToken
     }
     
@@ -33,7 +31,8 @@ struct UserClass: Codable {
     let image: String
     let fcmToken, phone: String
     let isAdmin, isDriver: Int?
-    let lat, lng, birthDate, nationality: String?
+   // let lat, lng: Double?
+    let birthDate, nationality: String?
     let status: String?
     let createdAt, updatedAt: String
 
@@ -43,7 +42,7 @@ struct UserClass: Codable {
         case phone
         case isAdmin = "is_admin"
         case isDriver = "is_driver"
-        case lat, lng
+      //  case lat, lng
         case birthDate = "birth_date"
         case nationality, status
         case createdAt = "created_at"

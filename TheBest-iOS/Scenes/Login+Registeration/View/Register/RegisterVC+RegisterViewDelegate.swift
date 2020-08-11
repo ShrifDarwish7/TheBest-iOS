@@ -28,7 +28,4 @@ extension RegisterVC: RegisterViewDelegate{
         SVProgressHUD.dismiss()
     }
     
-    
-    
-    
 }

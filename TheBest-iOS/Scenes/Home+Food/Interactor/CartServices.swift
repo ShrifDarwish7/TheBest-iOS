@@ -25,6 +25,8 @@ class CartServices{
                     newItem.setValue(arg.name, forKey: "name")
                     newItem.setValue(arg.price ?? 0, forKey: "price")
                     newItem.setValue(Int16(arg.quantity!), forKeyPath: "quantity")
+                    newItem.setValue(Int16(arg.variation!), forKeyPath: "variation")
+                    newItem.setValue(arg.notes, forKey: "notes")
                     
                     UserDefaults.init().set(vendorName, forKey: "cart_associated_vendor_name")
                     UserDefaults.init().set(vendorImage, forKey: "cart_associated_vendor_image")

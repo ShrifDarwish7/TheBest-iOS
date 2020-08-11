@@ -58,13 +58,17 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
         self.tripFees.text = "\(distance.cost)"
         self.confirmBtn.tag = 1
         self.confirmBtn.setTitle("Confirm ride", for: .normal)
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.5) {
-                self.tripInfoStack.isHidden = false
-                self.confirmBtn.isHidden = false
-                self.tripScrollView.scrollToTop()
-            }
+        UIView.animate(withDuration: 0.5) {
+            self.tripInfoStackHeight.constant = 150
+            self.view.layoutIfNeeded()
         }
+        //        DispatchQueue.main.async {
+        //            UIView.animate(withDuration: 0.5) {
+        //                self.tripInfoStack.isHidden = false
+//                self.confirmBtn.isHidden = false
+//                self.tripScrollView.scrollToTop()
+//            }
+//        }
     }
     
     func didCompleteWithErrorDistanceFromAPI() {

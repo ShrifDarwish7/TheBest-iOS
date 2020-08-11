@@ -37,14 +37,14 @@ class DrawerVC: UIViewController {
             
         }
         
-        username.text = (UserDefaults.init().string(forKey: "username") ?? "")
+        username.text = AuthServices.instance.user.user?.name
         loadActions()
     }
     
     func loadActions(){
         
         logout.addTapGesture { (_) in
-            AuthServices.logout()
+            //AuthServices.logout()
             Router.toLogin(sender: self)
         }
         

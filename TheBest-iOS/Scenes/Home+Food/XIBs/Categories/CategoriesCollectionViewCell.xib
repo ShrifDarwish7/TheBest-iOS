@@ -25,35 +25,33 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ot2-j0-UtT">
                         <rect key="frame" x="0.0" y="0.0" width="189" height="234"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ig-eu-4xz">
-                                <rect key="frame" x="0.0" y="20" width="189" height="214"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="FP3-Rf-Qf5">
-                                        <rect key="frame" x="0.0" y="0.0" width="189" height="107"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrk-LJ-cdG">
-                                        <rect key="frame" x="25" y="107" width="139" height="107"/>
-                                        <string key="text">Restaurants  
-&amp; Cafe</string>
-                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="FP3-Rf-Qf5">
+                                <rect key="frame" x="44.5" y="37" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="qrk-LJ-cdG" secondAttribute="trailing" constant="25" id="KJm-ku-0RZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="FP3-Rf-Qf5" secondAttribute="trailing" id="T1Q-lR-Cn1"/>
-                                    <constraint firstItem="FP3-Rf-Qf5" firstAttribute="leading" secondItem="5ig-eu-4xz" secondAttribute="leading" id="htM-gA-YpG"/>
-                                    <constraint firstItem="qrk-LJ-cdG" firstAttribute="leading" secondItem="5ig-eu-4xz" secondAttribute="leading" constant="25" id="vxM-3o-PQ5"/>
+                                    <constraint firstAttribute="width" constant="100" id="jic-rU-z0h"/>
+                                    <constraint firstAttribute="height" constant="100" id="v0N-hi-KDf"/>
                                 </constraints>
-                            </stackView>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrk-LJ-cdG">
+                                <rect key="frame" x="35" y="152" width="119" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jW8-yE-cTd"/>
+                                </constraints>
+                                <string key="text">Restaurants  
+&amp; Cafe</string>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5ig-eu-4xz" firstAttribute="leading" secondItem="ot2-j0-UtT" secondAttribute="leading" id="DDr-eB-RSL"/>
-                            <constraint firstAttribute="bottom" secondItem="5ig-eu-4xz" secondAttribute="bottom" id="Vqm-Yi-FKC"/>
-                            <constraint firstAttribute="trailing" secondItem="5ig-eu-4xz" secondAttribute="trailing" id="WFB-QO-GiO"/>
-                            <constraint firstItem="5ig-eu-4xz" firstAttribute="top" secondItem="ot2-j0-UtT" secondAttribute="top" constant="20" id="dIt-hk-sNM"/>
+                            <constraint firstItem="qrk-LJ-cdG" firstAttribute="leading" secondItem="ot2-j0-UtT" secondAttribute="leading" constant="35" id="9kR-Ns-KGB"/>
+                            <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerY" secondItem="ot2-j0-UtT" secondAttribute="centerY" constant="-30" id="LVR-k6-czT"/>
+                            <constraint firstItem="qrk-LJ-cdG" firstAttribute="top" secondItem="FP3-Rf-Qf5" secondAttribute="bottom" constant="15" id="mmr-BC-j4J"/>
+                            <constraint firstAttribute="trailing" secondItem="qrk-LJ-cdG" secondAttribute="trailing" constant="35" id="rZ9-du-GjI"/>
+                            <constraint firstItem="qrk-LJ-cdG" firstAttribute="centerX" secondItem="ot2-j0-UtT" secondAttribute="centerX" id="uQl-KX-9Hf"/>
+                            <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerX" secondItem="ot2-j0-UtT" secondAttribute="centerX" id="yG2-Nv-3DF"/>
                         </constraints>
                     </view>
                 </subviews>

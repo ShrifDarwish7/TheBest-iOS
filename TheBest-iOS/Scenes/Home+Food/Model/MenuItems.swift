@@ -25,8 +25,8 @@ struct RestaurantMenuItem: Codable {
     let image: String
     let restaurantMenuDescription: String
     let restaurantID, menuCategoryID: Int
-    let createdAt, updatedAt: String
-    let itemattributes: [ItemAttribute]
+    let createdAt, updatedAt, attributeTitle: String
+    var itemattributes: [ItemAttribute]
 
     enum CodingKeys: String, CodingKey {
         case id, name, price, image
@@ -36,6 +36,7 @@ struct RestaurantMenuItem: Codable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case itemattributes
+        case attributeTitle = "attribute_title"
     }
 }
 
@@ -45,6 +46,7 @@ struct ItemAttribute: Codable {
     let name: String
     let price, itemID: Int
     let createdAt, updatedAt: String
+    var selected: Bool?
 
     enum CodingKeys: String, CodingKey {
         case id, name, price

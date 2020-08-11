@@ -131,9 +131,7 @@ class LoginVC: UIViewController , FPNTextFieldDelegate{
                 return
             }
             SVProgressHUD.show()
-            self.loginViewPresenter?.sendCodeTo(self.dialCode + self.FPNTextfield!.text!)
-//            SharedData.phone = (self.dialCode + (self.FPNTextfield?.text!)!).replacingOccurrences(of: " ", with: "")
-//            self.loginViewPresenter?.signToApi(phone: (self.dialCode + (self.FPNTextfield?.text!)!).replacingOccurrences(of: " ", with: ""), fcm_token: "test")
+            self.loginViewPresenter?.sendCodeTo(self.dialCode + self.FPNTextfield!.text!.replacingOccurrences(of: " ", with: ""))
         }
         
     }

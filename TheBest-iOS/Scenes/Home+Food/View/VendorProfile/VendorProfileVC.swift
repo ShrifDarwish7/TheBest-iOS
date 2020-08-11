@@ -101,31 +101,31 @@ class VendorProfileVC: UIViewController {
             cell.itemName.text = self.menuItems?.restaurantMenu[index.row].name
             cell.desc.text = "\(self.menuItems?.restaurantMenu[index.row].price ?? "0.0")"
             cell.logoImage.layer.cornerRadius = cell.logoImage.frame.height/2
-            cell.addToCartBtn.onTap {
-                
-                if (self.menuItems?.restaurantMenu[index.row].restaurantID)! == UserDefaults.init().integer(forKey: "cart_associated_vendorId") || UserDefaults.init().integer(forKey: "cart_associated_vendorId") == 0{
-                    CartServices.addToCart(vendorId: (self.menuItems?.restaurantMenu[index.row].restaurantID)!,
-                                           vendorName: self.vendorName.text!,
-                                           vendorImage: self.menuCategories!.items.image,
-                                           deliveryFees: "20",
-                                           arg: CartItemModel(id: (self.menuItems?.restaurantMenu[index.row].id)!,
-                                                              name: (self.menuItems?.restaurantMenu[index.row].name)!,
-                                                              image: (self.menuItems?.restaurantMenu[index.row].image)!,
-                                                              price: Double(self.menuItems?.restaurantMenu[index.row].price ?? "0.0")!,
-                                                              quantity: 1)) { (_) in }
-                }else{
-                    let alert = UIAlertController(title: "", message: "Cart contains products from another vendor, to add this product you must clear your cart", preferredStyle: .actionSheet)
-                    alert.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { (_) in
-                        
-                        CartServices.clearCart()
-                        
-                    }))
-                    
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
-                
-            }
+//            cell.addToCartBtn.onTap {
+//                
+//                if (self.menuItems?.restaurantMenu[index.row].restaurantID)! == UserDefaults.init().integer(forKey: "cart_associated_vendorId") || UserDefaults.init().integer(forKey: "cart_associated_vendorId") == 0{
+//                    CartServices.addToCart(vendorId: (self.menuItems?.restaurantMenu[index.row].restaurantID)!,
+//                                           vendorName: self.vendorName.text!,
+//                                           vendorImage: self.menuCategories!.items.image,
+//                                           deliveryFees: "20",
+//                                           arg: CartItemModel(id: (self.menuItems?.restaurantMenu[index.row].id)!,
+//                                                              name: (self.menuItems?.restaurantMenu[index.row].name)!,
+//                                                              image: (self.menuItems?.restaurantMenu[index.row].image)!,
+//                                                              price: Double(self.menuItems?.restaurantMenu[index.row].price ?? "0.0")!,
+//                                                              quantity: 1)) { (_) in }
+//                }else{
+//                    let alert = UIAlertController(title: "", message: "Cart contains products from another vendor, to add this product you must clear your cart", preferredStyle: .actionSheet)
+//                    alert.addAction(UIAlertAction(title: "Clear", style: .destructive, handler: { (_) in
+//
+//                        CartServices.clearCart()
+//
+//                    }))
+//
+//                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+//                    self.present(alert, animated: true, completion: nil)
+//                }
+//
+//            }
             
             return cell
             

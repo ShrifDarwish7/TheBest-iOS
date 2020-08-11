@@ -83,12 +83,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="480"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-GB-Ds0">
-                                                <rect key="frame" x="0.0" y="0.0" width="384" height="223"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="393"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-CN-3L1">
-                                                        <rect key="frame" x="20" y="20" width="344" height="108"/>
+                                                        <rect key="frame" x="20" y="20" width="344" height="278"/>
                                                         <subviews>
-                                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Y6u-2p-ZMJ">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Y6u-2p-ZMJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="150"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8tS-pk-Lnn">
@@ -137,13 +137,13 @@
                                                                                 <rect key="frame" x="55" y="16.5" width="289" height="17.5"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1 Km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6w-Tr-ebn">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="17.5"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Away from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNO-mJ-03U">
-                                                                                        <rect key="frame" x="40.5" y="0.0" width="248.5" height="17.5"/>
+                                                                                        <rect key="frame" x="189" y="0.0" width="100" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -182,9 +182,12 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="150" id="Iv1-bF-F4p"/>
+                                                                </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="etd-dw-Nbg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="344" height="108"/>
+                                                                <rect key="frame" x="0.0" y="170" width="344" height="108"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UcV-tb-zwF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="344" height="46.5"/>
@@ -268,7 +271,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPZ-9N-NGe">
-                                                        <rect key="frame" x="96" y="153" width="200" height="45"/>
+                                                        <rect key="frame" x="96" y="323" width="200" height="45"/>
                                                         <color key="backgroundColor" name="TaxiGoldColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="HrN-YZ-36G"/>
@@ -493,6 +496,7 @@
                         <outlet property="toLbl" destination="3VK-Wc-b89" id="TYx-Y7-Iu6"/>
                         <outlet property="tripFees" destination="mCO-3i-Bxa" id="PR2-fB-UfH"/>
                         <outlet property="tripInfoStack" destination="Y6u-2p-ZMJ" id="ZZe-i4-icy"/>
+                        <outlet property="tripInfoStackHeight" destination="Iv1-bF-F4p" id="3Sy-WP-1ca"/>
                         <outlet property="tripScrollView" destination="biH-9G-sxH" id="K50-Ag-1Ib"/>
                         <outlet property="upperView" destination="ZgT-Zx-LCz" id="Viq-Jv-LU2"/>
                     </connections>

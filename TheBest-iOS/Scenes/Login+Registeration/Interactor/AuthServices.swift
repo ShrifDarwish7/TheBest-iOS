@@ -33,7 +33,7 @@ class AuthServices{
     }
     
     static func loginWith(phone: String, fcmToken: String, completed: @escaping (Bool, _ newUser: Bool)->Void){
-        
+        URLCache.shared.removeAllCachedResponses()
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
             multipartFormData.append(phone.data(using: String.Encoding.utf8)!, withName: "phone")
@@ -64,7 +64,6 @@ class AuthServices{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
                                 self.instance.user = dataModel
-                                UserDefaults.init().set(dataModel.user?.name, forKey: "username")
                                 self.instance.isLogged = true
                                 completed(true,false)
                                 
@@ -98,7 +97,7 @@ class AuthServices{
     }
     
     static func registerWith(parameters: [String: String], completed: @escaping (Bool)->Void){
-        
+        URLCache.shared.removeAllCachedResponses()
         Alamofire.upload(multipartFormData: { (multipartFormData) in
                 
             for (key,value) in parameters{
@@ -123,8 +122,8 @@ class AuthServices{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
                                 print("registerDatamodel",dataModel)
+                                self.instance.user = dataModel
                                 self.instance.isLogged = true
-                                UserDefaults.init().set(dataModel.user_?.name, forKey: "username")
                                 completed(true)
                                 
                             }catch let error{

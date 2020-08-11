@@ -30,7 +30,7 @@ extension TaxiOrderVC: GMSMapViewDelegate{
     }
     
     func mapView(_ mapView: GMSMapView, didDrag marker: GMSMarker) {
-        marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 65, height: 87))
+        marker.icon = Images.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 65, height: 87))
         resetConfirmBtn()
     }
     
@@ -46,7 +46,7 @@ extension TaxiOrderVC: GMSMapViewDelegate{
         let marker = GMSMarker()
         marker.isDraggable = true
         marker.position = CLLocationCoordinate2D(latitude: SharedData.userLat ?? 0, longitude: SharedData.userLng ?? 0)
-        marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
+        marker.icon = Images.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
         DispatchQueue.main.async {
             self.mapView.animate(to: camera)
         }
@@ -55,12 +55,5 @@ extension TaxiOrderVC: GMSMapViewDelegate{
         resetConfirmBtn()
     }
     
-    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return newImage
-    }
     
 }

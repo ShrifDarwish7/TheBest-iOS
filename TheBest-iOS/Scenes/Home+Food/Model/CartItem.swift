@@ -16,15 +16,17 @@ class CartItemModel{
     var image: String?
     var price: Double?
     var quantity: Int?
-   // var vendorId: Int?
+    var variation: Int?
+    var notes: String?
     
-    init(id: Int, name: String, image: String, price: Double, quantity: Int) {
+    init(id: Int, name: String, image: String, price: Double, quantity: Int, variation: Int, notes: String) {
         self.id = id
         self.name = name
         self.image = image
         self.price = price
         self.quantity = quantity
-       // self.vendorId = vendorId
+        self.variation = variation
+        self.notes = notes
     }
     
     init(data : NSManagedObject) {
@@ -33,7 +35,8 @@ class CartItemModel{
         price = (data.value(forKey: "price") as! Double)
         quantity = (data.value(forKey: "quantity") as! Int)
         image = data.value(forKey: "image") as? String
-       // vendorId = data.value(forKey: "vendorId") as? Int
+        variation = data.value(forKey: "variation") as? Int
+        notes = data.value(forKey: "notes") as? String
     }
     
 }

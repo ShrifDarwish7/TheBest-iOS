@@ -30,7 +30,7 @@ extension TaxiOrderVC: GMSAutocompleteViewControllerDelegate{
             self.toLbl.text = place.formattedAddress ?? ""
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-            marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
+            marker.icon = Images.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
             marker.map = mapView
             
             SharedData.userDestinationLat = place.coordinate.latitude
@@ -38,12 +38,17 @@ extension TaxiOrderVC: GMSAutocompleteViewControllerDelegate{
             
             self.confirmBtn.tag = 0
             self.confirmBtn.setTitle("Confirm", for: .normal)
-            DispatchQueue.main.async {
-                
-                UIView.animate(withDuration: 0.5) {
-                    self.confirmBtn.isHidden = false
-                    self.tripInfoStack.isHidden = true
-                }
+            //            DispatchQueue.main.async {
+            //
+            //                UIView.animate(withDuration: 0.5) {
+            //                    self.confirmBtn.isHidden = false
+            //                    self.tripInfoStack.isHidden = true
+            //                }
+            //            }
+            UIView.animate(withDuration: 0.5) {
+                self.confirmBtn.isHidden = false
+                self.tripInfoStackHeight.constant = 0
+                self.view.layoutIfNeeded()
             }
             
         }
@@ -75,7 +80,7 @@ extension TaxiOrderVC: GMSAutocompleteViewControllerDelegate{
         let marker = GMSMarker()
         marker.isDraggable = true
         marker.position = CLLocationCoordinate2D(latitude: SharedData.userLat ?? 0, longitude: SharedData.userLng ?? 0)
-        marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
+        marker.icon = Images.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
         mapView.camera = camera
         marker.map = mapView
     }

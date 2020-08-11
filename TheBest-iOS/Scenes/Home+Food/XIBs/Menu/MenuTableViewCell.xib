@@ -52,7 +52,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UU-lW-to5">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UU-lW-to5">
                                 <rect key="frame" x="265" y="49.5" width="30" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="5kd-PQ-NwI"/>

@@ -32,7 +32,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeMsg.text = "Hey " + (UserDefaults.init().string(forKey: "username") ?? "") + ", Choose your category"
+        welcomeMsg.text = "Hey " + (AuthServices.instance.user.user?.name ?? "") + ", Choose your category"
         
         homeViwPresenter = HomeViewPresenter(homeViewDelegate: self)
         

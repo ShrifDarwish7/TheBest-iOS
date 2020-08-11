@@ -35,6 +35,7 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var cancelationView: UIView!
     @IBOutlet weak var reasonsCollectionView: UICollectionView!
     @IBOutlet weak var cancelLbl: UILabel!
+    @IBOutlet weak var tripInfoStackHeight: NSLayoutConstraint!
     
      let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
@@ -71,7 +72,7 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
         
         mapView.delegate = self
         
-        marker.icon = self.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
+        marker.icon = Images.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
         
         fromLbl.addTapGesture { (_) in
             self.fromAutoCompleteController = GMSAutocompleteViewController()
@@ -90,6 +91,8 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
         cancelTripBtn.onTap {
             self.taxiOrderPresenter?.cancelRide()
         }
+        
+        tripInfoStackHeight.constant = 0
         
     }
     
@@ -126,8 +129,10 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
             self.confirmBtn.tag = 0
             self.confirmBtn.setTitle("Confirm", for: .normal)
             UIView.animate(withDuration: 0.5) {
-                self.tripInfoStack.isHidden = true
-                self.confirmBtn.isHidden = true
+                self.tripInfoStackHeight.constant = 0
+                self.view.layoutIfNeeded()
+//                self.tripInfoStack.isHidden = true
+//                self.confirmBtn.isHidden = true
             }
         }
     }
@@ -193,12 +198,7 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
                 
             }
             
-        }/*.didSelectItemAt { (index) in
-            self.reasonsCollectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .centeredHorizontally, animated: true)
-            UIView.animate(withDuration: 0.5) {
-                self.cancelLbl.alpha = 0
-            }
-        }*/.sizeForItemAt { (_) -> CGSize in
+        }.sizeForItemAt { (_) -> CGSize in
             return CGSize(width: self.reasonsCollectionView.frame.width, height: self.reasonsCollectionView.frame.height)
         }
         
