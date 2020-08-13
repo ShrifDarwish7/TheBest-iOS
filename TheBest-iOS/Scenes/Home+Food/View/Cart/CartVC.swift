@@ -76,7 +76,7 @@ class CartVC: UIViewController {
             
             return cell
         }.heightForRowAt { (_) -> CGFloat in
-            return 85
+            return UITableView.automaticDimension
         }.trailingSwipeActionsConfigurationForRowAt { (index) -> UISwipeActionsConfiguration? in
             
             let contextualAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in

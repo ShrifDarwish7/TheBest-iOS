@@ -46,7 +46,13 @@ class StoresVC: UIViewController {
         storesViewPresenter = StoresViewPresenter(storesViewDelegate: self)
         cartItemsCount.layer.cornerRadius = cartItemsCount.frame.height/2
         upperIcon.layer.cornerRadius = upperIcon.frame.height/2
-        pageIcon.sd_setImage(with: URL(string: pageIconReceived!))
+        if pageIconReceived!.isEmpty{
+            pageIcon.image = UIImage(named: "marketsIcon")
+            upperIcon.backgroundColor = UIColor(named: "MarketsColor")
+        }else{
+            pageIcon.sd_setImage(with: URL(string: pageIconReceived!))
+        }
+        
         upperView.layer.cornerRadius = upperView.frame.height/2
         
         storesViewPresenter?.getCategoriesBy(id: idReceived!)

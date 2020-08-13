@@ -21,5 +21,12 @@ let GET_TAXIES_END_POINT = BASE_URL + "Trip/GetTaxi"
 let CONFIRM_TRIP_END_POINT = BASE_URL + "Trip/ConfirmRide"
 let GET_DISTANCE_END_POINT = BASE_URL + "Trip/GetDistance"
 let CANCEL_RIDE_END_POINT = BASE_URL + "Trip/CancelRide"
+let ALL_MARKETS_END_POINT = BASE_URL + "Main/AllMarkets"
+//let MARKETS_CATEGORY_BY_ID_END_POINT = BASE_URL + "Main/CategoryById/"
+//let MARKETS_PLACE_BY_CATEGORY_END_POINT = BASE_URL + "Main/RlaceByCategory/"
+//let MARKETS_PLACE_BT_ID_END_POINT = BASE_URL + "Main/RlaceById/"
+//let MARKETS_MENU_ITEMS_END_POINT = BASE_URL + "Main/MenuItems/"
+let NEARBY_MARKETS_END_POINT = BASE_URL + "Main/nearByMarkets"
+let MARKETS_FILTER_END_POINT = BASE_URL + "Main/MarketsFilter"
 
 let HEADERS = ["Accept": "application/json"]

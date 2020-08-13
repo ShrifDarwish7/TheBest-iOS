@@ -18,7 +18,9 @@ struct Item: Codable {
     let id: Int
     let name: String
     let image: String
+    let deliverPrice: Int
     let itemDescription, address: String
+    let country, government, district: String
     let categoryID, typeID: Int
     let createdAt, updatedAt: String
 
@@ -26,8 +28,10 @@ struct Item: Codable {
         case id, name, image
         case itemDescription = "description"
         case address
+        case country, government, district
         case categoryID = "category_id"
         case typeID = "type_id"
+        case deliverPrice = "delivery_price"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }

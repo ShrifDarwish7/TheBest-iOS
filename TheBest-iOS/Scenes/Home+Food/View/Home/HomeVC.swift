@@ -136,18 +136,19 @@ class HomeVC: UIViewController {
             case 1:
                 
                 switch CLLocationManager.authorizationStatus() {
-                    
                 case .authorizedAlways , .authorizedWhenInUse:
                     Router.toTaxiOrder(sender: self)
                 default:
-                    
-                    self.blurBlockView.isHidden = false
-                    UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.8, options: [], animations: {
-                        self.popupView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                    }) { (_) in
-                        
-                    }
-                    
+                    self.askForLocationAlert()
+                }
+                
+            case 4:
+                
+                switch CLLocationManager.authorizationStatus() {
+                case .authorizedAlways , .authorizedWhenInUse:
+                    Router.toMarkets(sender: self)
+                default:
+                    self.askForLocationAlert()
                 }
                 
             default:
@@ -158,6 +159,15 @@ class HomeVC: UIViewController {
         }
         
         
+    }
+    
+    func askForLocationAlert(){
+        self.blurBlockView.isHidden = false
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.8, options: [], animations: {
+            self.popupView.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }) { (_) in
+            
+        }
     }
     
     func loadSubCategoriesCollection(){
@@ -182,7 +192,7 @@ class HomeVC: UIViewController {
             
         }.didSelectItemAt { (index) in
             
-            Router.toStores(pageIcon: (self.categories?.mainCategories[index.row].image)! , id: (self.categories?.mainCategories[index.row].id)!, sender: self)
+            Router.toStores(pageIcon: (self.categories?.mainCategories[index.row].image)! , id: (self.categories?.mainCategories[index.row].id)!, sender: self, from: "")
             
         }
         

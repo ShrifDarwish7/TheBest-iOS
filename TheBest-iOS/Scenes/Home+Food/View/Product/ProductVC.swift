@@ -24,6 +24,7 @@ class ProductVC: UIViewController {
     @IBOutlet weak var variationViewHeight: NSLayoutConstraint!
     @IBOutlet weak var variationTableHeight: NSLayoutConstraint!
     @IBOutlet weak var variationTableView: UITableView!
+    @IBOutlet weak var variationView: UIView!
     
     var itemReceived: RestaurantMenuItem?
     var productPresenter: ProductPresenter?
@@ -70,16 +71,24 @@ class ProductVC: UIViewController {
                 
             }else{
                 
+                var priceToAdd = 0.0
+                
+                if let _ = self.selectedVariationPrice{
+                    priceToAdd = Double(self.selectedVariationPrice!)
+                }else{
+                    priceToAdd = Double(self.itemReceived!.price.replacingOccurrences(of: ",", with: ".")) ?? 0.0
+                }
+                
                 self.productPresenter?.addToCart(vendorId: self.itemReceived!.restaurantID,
                 vendorName: self.vendorName!,
                 vendorImage: self.vendorImage!,
-                deliveryFees: "20",
+                deliveryFees: "0",
                 arg: CartItemModel(id: self.itemReceived!.id,
                                    name: self.itemReceived!.name,
                                    image: self.itemReceived!.image,
-                                   price: Double(self.selectedVariationPrice!),
+                                   price: priceToAdd,
                                    quantity: Int(self.quantityNumer.text!)!,
-                                   variation: self.selectedVariationIndex!,
+                                   variation: self.selectedVariationIndex ?? 0,
                                    notes: self.customerNote.text
                                    ))
                 
@@ -91,6 +100,11 @@ class ProductVC: UIViewController {
         loadVariationTableView()
         self.variationViewHeight.constant = CGFloat(((self.itemReceived?.itemattributes.count)! * 30) + 65)
         self.variationTableHeight.constant = CGFloat((self.itemReceived?.itemattributes.count)! * 30)
+        
+        if (self.itemReceived?.itemattributes.count)! == 0{
+            variationView.isHidden = true
+        }
+        
     }
 
     func loadVariationTableView(){

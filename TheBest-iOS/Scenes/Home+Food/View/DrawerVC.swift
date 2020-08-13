@@ -46,6 +46,7 @@ class DrawerVC: UIViewController {
         logout.addTapGesture { (_) in
             //AuthServices.logout()
             Router.toLogin(sender: self)
+            AuthServices.instance.isLogged = false
         }
         
     }

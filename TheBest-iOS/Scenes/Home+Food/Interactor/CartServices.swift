@@ -106,6 +106,11 @@ class CartServices{
     
     static func clearCart(){
         
+        UserDefaults.init().set("", forKey: "cart_associated_vendor_name")
+        UserDefaults.init().set("", forKey: "cart_associated_vendor_image")
+        UserDefaults.init().set("", forKey: "cart_associated_vendor_delivery_fees")
+        UserDefaults.init().setValue(0, forKey: "cart_associated_vendorId")
+        
         let fetchRequest = NSFetchRequest<NSManagedObject>.init(entityName: "CartItem")
         
         do{

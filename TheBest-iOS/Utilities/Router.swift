@@ -38,13 +38,17 @@ class Router{
         
     }
     
-    static func toStores(pageIcon: String, id: Int, sender: UIViewController){
+    static func toStores(pageIcon: String, id: Int, sender: UIViewController, from: String){
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let storesVC = storyboard.instantiateViewController(withIdentifier: "StoresVC") as! StoresVC
         storesVC.modalPresentationStyle = .fullScreen
         storesVC.idReceived = id
         storesVC.pageIconReceived = pageIcon
+//        if from == "markets"{
+//            storesVC.pageIcon.image = UIImage(named: "marketsIcon")
+//            storesVC.upperIcon.backgroundColor = UIColor(named: "MarketsColor")
+//        }
         sender.present(storesVC, animated: true, completion: nil)
         
     }
@@ -105,6 +109,24 @@ class Router{
         let checkoutVC = storyboard.instantiateViewController(withIdentifier: "CheckoutVC") as! CheckoutVC
         checkoutVC.modalPresentationStyle = .fullScreen
         sender.present(checkoutVC, animated: true, completion: nil)
+        
+    }
+    
+    static func toMarkets(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Markets", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MarketsVC") as! MarketsVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toFilterMarkets(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Markets", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FilterVC") as! FilterVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
         
     }
    

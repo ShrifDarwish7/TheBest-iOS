@@ -1429,6 +1429,7 @@ ever since the 1500s</string>
                         <outlet property="variationTableHeight" destination="PvL-5A-mwl" id="xmP-L0-FWS"/>
                         <outlet property="variationTableView" destination="q80-yX-Lnx" id="PFN-0I-gSa"/>
                         <outlet property="variationTitle" destination="CKY-fO-Pt4" id="6vb-bs-EAG"/>
+                        <outlet property="variationView" destination="Xfm-Cp-wLR" id="ah0-Cu-fBZ"/>
                         <outlet property="variationViewHeight" destination="NE9-On-UIi" id="SJ3-he-uMH"/>
                         <outletCollection property="roundView" destination="V5j-Ji-5ve" collectionClass="NSMutableArray" id="4ry-S5-Kma"/>
                         <outletCollection property="roundView" destination="Xfm-Cp-wLR" collectionClass="NSMutableArray" id="lhe-Pb-QvW"/>
