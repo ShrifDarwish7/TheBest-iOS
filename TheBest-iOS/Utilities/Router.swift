@@ -112,10 +112,11 @@ class Router{
         
     }
     
-    static func toMarkets(sender: UIViewController){
+    static func toMarkets(sender: UIViewController, id: Int){
         
         let storyboard = UIStoryboard(name: "Markets", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MarketsVC") as! MarketsVC
+        vc.catReceivedId = id
         vc.modalPresentationStyle = .fullScreen
         sender.present(vc, animated: true, completion: nil)
         

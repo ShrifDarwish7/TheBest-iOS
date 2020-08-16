@@ -38,11 +38,11 @@ class MarketsVCPresenter{
         self.marketsViewDelegate = marketsViewDelegate
     }
     
-    func getNearbyMarkets(){
+    func getNearbyMarkets(categoryId: Int){
         
         self.marketsViewDelegate?.showSVProgress()
         
-        MarketsServices.getNearByMarkets { (nearbyMarkets) in
+        MarketsServices.getNearByMarkets(categoryId: categoryId) { (nearbyMarkets) in
             self.marketsViewDelegate?.dismissSVProgress()
             if let _ = nearbyMarkets{
                 self.marketsViewDelegate?.didCompleteWithNearByMarkets(nearbyMarkets!)

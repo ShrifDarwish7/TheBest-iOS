@@ -13,6 +13,7 @@ class MarketsVC: UIViewController {
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var pageTitle: UIView!
+    @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var cartBtn: UIButton!
     @IBOutlet weak var cartItemsCount: UILabel!
     @IBOutlet weak var marketsTableView: UITableView!
@@ -22,6 +23,7 @@ class MarketsVC: UIViewController {
     var marketsVCPresenter: MarketsVCPresenter?
     var nearbyMarkets: NearByMarkets?
     var tableDataSource: [Item]?
+    var catReceivedId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class MarketsVC: UIViewController {
 
         marketsVCPresenter = MarketsVCPresenter(marketsViewDelegate: self)
         cartItemsCount.layer.cornerRadius = cartItemsCount.frame.height/2
+        upperView.layer.cornerRadius = upperView.frame.height/2
         locationManager.requestAlwaysAuthorization()
             
         if CLLocationManager.locationServicesEnabled() {

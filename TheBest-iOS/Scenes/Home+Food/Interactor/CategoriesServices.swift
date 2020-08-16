@@ -98,5 +98,33 @@ class CategoriesServices{
         
     }
     
+    static func getMarketTypes(completed: @escaping (MarketTypes?)->Void){
+     
+        Alamofire.request(URL(string: MARKET_TYPES_END_POINT)!, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+
+            switch response.result{
+
+            case .success(let data):
+
+                print("types",try! JSON(data: data))
+
+                do {
+                    let dataModel = try JSONDecoder().decode(MarketTypes.self, from: data)
+                    print("markettypesModel",dataModel)
+                    completed(dataModel)
+                } catch let error {
+                    print("parseErr",error)
+                    completed(nil)
+                }
+
+            case .failure(_):
+
+                completed(nil)
+
+            }
+
+        }
+        
+    }
     
 }

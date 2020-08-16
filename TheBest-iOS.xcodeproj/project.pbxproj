@@ -28,6 +28,7 @@
 		AA0B883324CF4B320055F93E /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883224CF4B320055F93E /* ProductVC.swift */; };
 		AA0B883724CF6A2D0055F93E /* CartItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */; };
 		AA0B883824CF6A2E0055F93E /* CartItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */; };
+		AA3239DD24E9842A009B9960 /* MarketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3239DC24E9842A009B9960 /* MarketTypes.swift */; };
 		AA4CB64024D5F73D00C861CA /* TaxiOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CB63F24D5F73D00C861CA /* TaxiOrderPresenter.swift */; };
 		AAA3B97A24D593FE00852404 /* Taxi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA3B97924D593FE00852404 /* Taxi.storyboard */; };
 		AAA3B97E24D595C000852404 /* TaxiOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3B97D24D595C000852404 /* TaxiOrderVC.swift */; };
@@ -146,6 +147,7 @@
 		AA0B883224CF4B320055F93E /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsTableViewCell.swift; sourceTree = "<group>"; };
 		AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemsTableViewCell.xib; sourceTree = "<group>"; };
+		AA3239DC24E9842A009B9960 /* MarketTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTypes.swift; sourceTree = "<group>"; };
 		AA4CB63F24D5F73D00C861CA /* TaxiOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiOrderPresenter.swift; sourceTree = "<group>"; };
 		AAA3B97924D593FE00852404 /* Taxi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Taxi.storyboard; sourceTree = "<group>"; };
 		AAA3B97D24D595C000852404 /* TaxiOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiOrderVC.swift; sourceTree = "<group>"; };
@@ -713,6 +715,7 @@
 			children = (
 				AAF6727724E590F20025C5C2 /* Markets.swift */,
 				AAF6728224E59DCD0025C5C2 /* NearByMarkets.swift */,
+				AA3239DC24E9842A009B9960 /* MarketTypes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1003,6 +1006,7 @@
 				AAB5C73A24CB115800A6B6E4 /* HomePresenter.swift in Sources */,
 				AAC2DC6924C8B71600378934 /* Gradient.swift in Sources */,
 				AA026F7C24C788CE003FFF4E /* LoginPresenter.swift in Sources */,
+				AA3239DD24E9842A009B9960 /* MarketTypes.swift in Sources */,
 				AAB3082E24CCB29600D8FE0C /* MenuTableViewCell.swift in Sources */,
 				AAF9997D24C778CC009DB374 /* LoginVC.swift in Sources */,
 				AA02858A24D898570017E35D /* TaxiOrderVC+ GMSAutocompleteViewControllerDelegate.swift in Sources */,

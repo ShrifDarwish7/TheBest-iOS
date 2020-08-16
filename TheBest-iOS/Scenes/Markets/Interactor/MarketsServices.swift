@@ -12,12 +12,15 @@ import SwiftyJSON
 
 class MarketsServices{
     
-    static func getNearByMarkets(completed: @escaping (NearByMarkets?)->Void){
+    static func getNearByMarkets(categoryId: Int, completed: @escaping (NearByMarkets?)->Void){
         
         let parameters = [
             "lat": "\(SharedData.userLat ?? 0.0)",
-            "lng": "\(SharedData.userLng ?? 0.0)"
+            "lng": "\(SharedData.userLng ?? 0.0)",
+            "category_id": "\(categoryId)"
         ]
+        
+        print("nearParm",parameters)
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             

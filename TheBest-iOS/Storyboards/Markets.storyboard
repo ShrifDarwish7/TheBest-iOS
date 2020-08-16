@@ -153,6 +153,7 @@
                         <outlet property="filterBtn" destination="SzN-un-J1S" id="jgu-xK-auI"/>
                         <outlet property="marketsTableView" destination="Eqq-sw-aI2" id="BuT-Rn-6Wk"/>
                         <outlet property="pageTitle" destination="v8Y-54-iYu" id="rQ8-6q-QiO"/>
+                        <outlet property="upperView" destination="XHU-Ge-Z1U" id="cmB-sa-Rp3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cj-4W-D4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

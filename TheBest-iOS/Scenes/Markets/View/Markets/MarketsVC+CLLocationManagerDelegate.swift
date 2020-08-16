@@ -16,7 +16,7 @@ extension MarketsVC: CLLocationManagerDelegate{
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         SharedData.userLat = locValue.latitude
         SharedData.userLng = locValue.longitude
-        marketsVCPresenter!.getNearbyMarkets()
+        marketsVCPresenter!.getNearbyMarkets(categoryId: self.catReceivedId!)
         locationManager.stopUpdatingLocation()
         
     }

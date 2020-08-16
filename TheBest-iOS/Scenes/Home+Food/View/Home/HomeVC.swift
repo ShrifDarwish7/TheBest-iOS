@@ -26,8 +26,9 @@ class HomeVC: UIViewController {
     
     var appCategories = [AppCategory]()
     var homeViwPresenter: HomeViewPresenter?
-    var categories: Categories?
+    var categories: [MainCategory]?
     let locationManager = CLLocationManager()
+    var nextView: Next = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,12 +145,7 @@ class HomeVC: UIViewController {
                 
             case 4:
                 
-                switch CLLocationManager.authorizationStatus() {
-                case .authorizedAlways , .authorizedWhenInUse:
-                    Router.toMarkets(sender: self)
-                default:
-                    self.askForLocationAlert()
-                }
+                self.homeViwPresenter?.getAllMarketsCategories()
                 
             default:
                 break
@@ -170,19 +166,20 @@ class HomeVC: UIViewController {
         }
     }
     
-    func loadSubCategoriesCollection(){
+    func loadSubCategoriesCollection(color: UIColor){
         
         let nib = UINib(nibName: "CategoriesCollectionViewCell", bundle: nil)
         subCategories.register(nib, forCellWithReuseIdentifier: "CategoryCell")
         
         subCategories.numberOfItemsInSection { (_) -> Int in
             
-            return (self.categories?.mainCategories.count)!
+            return (self.categories?.count)!
             
         }.cellForItemAt { (index) -> UICollectionViewCell in
             
             let cell = self.subCategories.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: index) as! CategoriesCollectionViewCell
-            cell.loadFrom(category: (self.categories?.mainCategories[index.row])!)
+            cell.loadFrom(category: (self.categories?[index.row])!)
+            cell.container.backgroundColor = color
 
             return cell
             
@@ -192,11 +189,32 @@ class HomeVC: UIViewController {
             
         }.didSelectItemAt { (index) in
             
-            Router.toStores(pageIcon: (self.categories?.mainCategories[index.row].image)! , id: (self.categories?.mainCategories[index.row].id)!, sender: self, from: "")
+            switch self.nextView{
+                
+            case .markets:
+                switch CLLocationManager.authorizationStatus() {
+                case .authorizedAlways , .authorizedWhenInUse:
+                    Router.toMarkets(sender: self, id: self.categories![index.row].id)
+                default:
+                    self.askForLocationAlert()
+                }
+            case .restaurants:
+                Router.toStores(pageIcon: (self.categories?[index.row].image)! , id: (self.categories?[index.row].id)!, sender: self, from: "")
+            default:
+                break
+                
+            }
             
         }
         
-        
     }
 
+}
+
+enum Next{
+    
+    case restaurants
+    case markets
+    case none
+    
 }
