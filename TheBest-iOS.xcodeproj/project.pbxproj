@@ -25,9 +25,17 @@
 		AA028A9524D6FBC9007255FD /* SetupPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA028A9424D6FBC9007255FD /* SetupPicker.swift */; };
 		AA028A9724D708A6007255FD /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA028A9624D708A6007255FD /* Drivers.swift */; };
 		AA028A9924D70A0B007255FD /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA028A9824D70A0B007255FD /* Distance.swift */; };
+		AA0A5C3A24F030CC00F61198 /* CarsTypesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A5C3824F030CC00F61198 /* CarsTypesCollectionViewCell.swift */; };
+		AA0A5C3B24F030CC00F61198 /* CarsTypesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0A5C3924F030CC00F61198 /* CarsTypesCollectionViewCell.xib */; };
+		AA0A5C3D24F0359500F61198 /* SpecialNeedCarVC+GMSAutocompleteViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A5C3C24F0359500F61198 /* SpecialNeedCarVC+GMSAutocompleteViewControllerDelegate.swift */; };
+		AA0A5C3F24F0397E00F61198 /* SpecialNeedCarVC+SpecialNeedCarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A5C3E24F0397E00F61198 /* SpecialNeedCarVC+SpecialNeedCarViewDelegate.swift */; };
+		AA0A5C4124F03A3700F61198 /* SpecialNeedCarsVC+CollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0A5C4024F03A3700F61198 /* SpecialNeedCarsVC+CollectionViewDelegates.swift */; };
 		AA0B883324CF4B320055F93E /* ProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883224CF4B320055F93E /* ProductVC.swift */; };
 		AA0B883724CF6A2D0055F93E /* CartItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */; };
 		AA0B883824CF6A2E0055F93E /* CartItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */; };
+		AA19194824EF01AC00EE080E /* SpecialNeedCarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA19194724EF01AC00EE080E /* SpecialNeedCarVC.swift */; };
+		AA19194A24EF037500EE080E /* SpecialNeedCar+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA19194924EF037500EE080E /* SpecialNeedCar+CLLocationManagerDelegate.swift */; };
+		AA19194C24EF04E100EE080E /* SpecialNeedCar+TaxiOrderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA19194B24EF04E100EE080E /* SpecialNeedCar+TaxiOrderViewDelegate.swift */; };
 		AA3239DD24E9842A009B9960 /* MarketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3239DC24E9842A009B9960 /* MarketTypes.swift */; };
 		AA4CB64024D5F73D00C861CA /* TaxiOrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4CB63F24D5F73D00C861CA /* TaxiOrderPresenter.swift */; };
 		AAA3B97A24D593FE00852404 /* Taxi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAA3B97924D593FE00852404 /* Taxi.storyboard */; };
@@ -117,6 +125,11 @@
 		AAF6728B24E5A6850025C5C2 /* Markets+MarketsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6728A24E5A6850025C5C2 /* Markets+MarketsViewDelegate.swift */; };
 		AAF6728D24E5A7020025C5C2 /* MarketsVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6728C24E5A7020025C5C2 /* MarketsVC+TableViewDelegate.swift */; };
 		AAF6729124E5AD0E0025C5C2 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6729024E5AD0E0025C5C2 /* FilterVC.swift */; };
+		AAF7F15324EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15224EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift */; };
+		AAF7F15524EF0AE200FAE7D7 /* SpecialCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15424EF0AE200FAE7D7 /* SpecialCars.swift */; };
+		AAF7F15924EF0B3300FAE7D7 /* SpecialCarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15824EF0B3300FAE7D7 /* SpecialCarResult.swift */; };
+		AAF7F15B24EF0C2500FAE7D7 /* SpecialCarsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15A24EF0C2500FAE7D7 /* SpecialCarsServices.swift */; };
+		AAF7F15D24EF0F5800FAE7D7 /* SpecialNeedCarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15C24EF0F5800FAE7D7 /* SpecialNeedCarPresenter.swift */; };
 		AAF98F6424E5B453006A1A6E /* FilterVC+MarketsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF98F6324E5B453006A1A6E /* FilterVC+MarketsViewDelegate.swift */; };
 		AAF9997D24C778CC009DB374 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9997C24C778CC009DB374 /* LoginVC.swift */; };
 		AAF9997F24C779E7009DB374 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9997E24C779E7009DB374 /* Router.swift */; };
@@ -144,9 +157,17 @@
 		AA028A9424D6FBC9007255FD /* SetupPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPicker.swift; sourceTree = "<group>"; };
 		AA028A9624D708A6007255FD /* Drivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
 		AA028A9824D70A0B007255FD /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		AA0A5C3824F030CC00F61198 /* CarsTypesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTypesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA0A5C3924F030CC00F61198 /* CarsTypesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTypesCollectionViewCell.xib; sourceTree = "<group>"; };
+		AA0A5C3C24F0359500F61198 /* SpecialNeedCarVC+GMSAutocompleteViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecialNeedCarVC+GMSAutocompleteViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		AA0A5C3E24F0397E00F61198 /* SpecialNeedCarVC+SpecialNeedCarViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecialNeedCarVC+SpecialNeedCarViewDelegate.swift"; sourceTree = "<group>"; };
+		AA0A5C4024F03A3700F61198 /* SpecialNeedCarsVC+CollectionViewDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecialNeedCarsVC+CollectionViewDelegates.swift"; sourceTree = "<group>"; };
 		AA0B883224CF4B320055F93E /* ProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVC.swift; sourceTree = "<group>"; };
 		AA0B883524CF6A2D0055F93E /* CartItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemsTableViewCell.swift; sourceTree = "<group>"; };
 		AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemsTableViewCell.xib; sourceTree = "<group>"; };
+		AA19194724EF01AC00EE080E /* SpecialNeedCarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialNeedCarVC.swift; sourceTree = "<group>"; };
+		AA19194924EF037500EE080E /* SpecialNeedCar+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecialNeedCar+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
+		AA19194B24EF04E100EE080E /* SpecialNeedCar+TaxiOrderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecialNeedCar+TaxiOrderViewDelegate.swift"; sourceTree = "<group>"; };
 		AA3239DC24E9842A009B9960 /* MarketTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTypes.swift; sourceTree = "<group>"; };
 		AA4CB63F24D5F73D00C861CA /* TaxiOrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiOrderPresenter.swift; sourceTree = "<group>"; };
 		AAA3B97924D593FE00852404 /* Taxi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Taxi.storyboard; sourceTree = "<group>"; };
@@ -238,6 +259,11 @@
 		AAF6728A24E5A6850025C5C2 /* Markets+MarketsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Markets+MarketsViewDelegate.swift"; sourceTree = "<group>"; };
 		AAF6728C24E5A7020025C5C2 /* MarketsVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketsVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		AAF6729024E5AD0E0025C5C2 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		AAF7F15224EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecialNeedCarVC+GMSMapViewDelegate.swift"; sourceTree = "<group>"; };
+		AAF7F15424EF0AE200FAE7D7 /* SpecialCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCars.swift; sourceTree = "<group>"; };
+		AAF7F15824EF0B3300FAE7D7 /* SpecialCarResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCarResult.swift; sourceTree = "<group>"; };
+		AAF7F15A24EF0C2500FAE7D7 /* SpecialCarsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCarsServices.swift; sourceTree = "<group>"; };
+		AAF7F15C24EF0F5800FAE7D7 /* SpecialNeedCarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialNeedCarPresenter.swift; sourceTree = "<group>"; };
 		AAF98F6324E5B453006A1A6E /* FilterVC+MarketsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterVC+MarketsViewDelegate.swift"; sourceTree = "<group>"; };
 		AAF9997C24C778CC009DB374 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AAF9997E24C779E7009DB374 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -309,6 +335,15 @@
 			path = Drivers;
 			sourceTree = "<group>";
 		};
+		AA0A5C3724F0309C00F61198 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				AA0A5C3824F030CC00F61198 /* CarsTypesCollectionViewCell.swift */,
+				AA0A5C3924F030CC00F61198 /* CarsTypesCollectionViewCell.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		AA0B883124CF4B000055F93E /* Product */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +360,57 @@
 				AA0B883624CF6A2D0055F93E /* CartItemsTableViewCell.xib */,
 			);
 			path = Cart;
+			sourceTree = "<group>";
+		};
+		AA19194224EEB50700EE080E /* SpecialNeedCar */ = {
+			isa = PBXGroup;
+			children = (
+				AA19194624EEB5AF00EE080E /* Interactor */,
+				AA19194324EEB54800EE080E /* Model */,
+				AA19194424EEB55200EE080E /* View */,
+				AA19194524EEB5A200EE080E /* Presenter */,
+				AA0A5C3724F0309C00F61198 /* XIBs */,
+			);
+			path = SpecialNeedCar;
+			sourceTree = "<group>";
+		};
+		AA19194324EEB54800EE080E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7F15424EF0AE200FAE7D7 /* SpecialCars.swift */,
+				AAF7F15824EF0B3300FAE7D7 /* SpecialCarResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA19194424EEB55200EE080E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA19194724EF01AC00EE080E /* SpecialNeedCarVC.swift */,
+				AA19194924EF037500EE080E /* SpecialNeedCar+CLLocationManagerDelegate.swift */,
+				AA19194B24EF04E100EE080E /* SpecialNeedCar+TaxiOrderViewDelegate.swift */,
+				AAF7F15224EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift */,
+				AA0A5C3C24F0359500F61198 /* SpecialNeedCarVC+GMSAutocompleteViewControllerDelegate.swift */,
+				AA0A5C3E24F0397E00F61198 /* SpecialNeedCarVC+SpecialNeedCarViewDelegate.swift */,
+				AA0A5C4024F03A3700F61198 /* SpecialNeedCarsVC+CollectionViewDelegates.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA19194524EEB5A200EE080E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7F15C24EF0F5800FAE7D7 /* SpecialNeedCarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AA19194624EEB5AF00EE080E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7F15A24EF0C2500FAE7D7 /* SpecialCarsServices.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		AAA3B97B24D5958E00852404 /* Taxi */ = {
@@ -533,7 +619,7 @@
 				AACA7ED824C7619A004437FC /* Configurations */,
 				AACA7ED724C76190004437FC /* Storyboards */,
 				AACA7ED624C7617C004437FC /* Scenes */,
-				AACA7ED524C76173004437FC /* UI Helpers */,
+				AACA7ED524C76173004437FC /* UI-Helpers */,
 				AACA7ED424C7610D004437FC /* Utilities */,
 			);
 			path = "TheBest-iOS";
@@ -552,7 +638,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		AACA7ED524C76173004437FC /* UI Helpers */ = {
+		AACA7ED524C76173004437FC /* UI-Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				AAC2DC6A24C8B77000378934 /* Drawer.swift */,
@@ -562,7 +648,7 @@
 				AA028A9424D6FBC9007255FD /* SetupPicker.swift */,
 				AA025ABC24E31C510018C3EE /* Images.swift */,
 			);
-			path = "UI Helpers";
+			path = "UI-Helpers";
 			sourceTree = "<group>";
 		};
 		AACA7ED624C7617C004437FC /* Scenes */ = {
@@ -571,8 +657,9 @@
 				AACA7ED924C761B6004437FC /* AboutUs */,
 				AAF9997724C7750B009DB374 /* Login+Registeration */,
 				AAC2DC5724C8A9C700378934 /* Home+Food */,
-				AAA3B97B24D5958E00852404 /* Taxi */,
 				AAF6727024E58E460025C5C2 /* Markets */,
+				AAA3B97B24D5958E00852404 /* Taxi */,
+				AA19194224EEB50700EE080E /* SpecialNeedCar */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -892,6 +979,7 @@
 				AACA7EEB24C76BAE004437FC /* Lato-Italic.ttf in Resources */,
 				AAEBD30324E1CCE10010A81E /* VariationTableViewCell.xib in Resources */,
 				AAB5C74A24CB381B00A6B6E4 /* PlacesTableViewCell.xib in Resources */,
+				AA0A5C3B24F030CC00F61198 /* CarsTypesCollectionViewCell.xib in Resources */,
 				AA02858524D869FB0017E35D /* DriversTableViewCell.xib in Resources */,
 				AA0B883824CF6A2E0055F93E /* CartItemsTableViewCell.xib in Resources */,
 				AACA7EE924C76BAE004437FC /* Lato-BlackItalic.ttf in Resources */,
@@ -988,6 +1076,7 @@
 			files = (
 				AAEBD30724E1E20C0010A81E /* CheckoutPresenter.swift in Sources */,
 				AAC2DC6B24C8B77000378934 /* Drawer.swift in Sources */,
+				AAF7F15924EF0B3300FAE7D7 /* SpecialCarResult.swift in Sources */,
 				AAF9998224C78063009DB374 /* Alert.swift in Sources */,
 				AAF9997F24C779E7009DB374 /* Router.swift in Sources */,
 				AAC2DC6024C8AECD00378934 /* CategoriesCollectionViewCell.swift in Sources */,
@@ -1000,6 +1089,7 @@
 				AAF6728B24E5A6850025C5C2 /* Markets+MarketsViewDelegate.swift in Sources */,
 				AA028A9524D6FBC9007255FD /* SetupPicker.swift in Sources */,
 				AAB5C73824CB112000A6B6E4 /* Categories.swift in Sources */,
+				AA0A5C3D24F0359500F61198 /* SpecialNeedCarVC+GMSAutocompleteViewControllerDelegate.swift in Sources */,
 				AA028A9924D70A0B007255FD /* Distance.swift in Sources */,
 				AABE304024E08A9900DFDE1B /* AfterCancelCollectionViewCell.swift in Sources */,
 				AACA7EBE24C759FA004437FC /* TheBest_iOS.xcdatamodeld in Sources */,
@@ -1015,10 +1105,13 @@
 				AAA3B97E24D595C000852404 /* TaxiOrderVC.swift in Sources */,
 				AAE1098324D1DD2500C66670 /* ProductVC+ProductViewDelegate.swift in Sources */,
 				AABE303B24E088B900DFDE1B /* ReasonsCollectionViewCell.swift in Sources */,
+				AA0A5C4124F03A3700F61198 /* SpecialNeedCarsVC+CollectionViewDelegates.swift in Sources */,
+				AAF7F15B24EF0C2500FAE7D7 /* SpecialCarsServices.swift in Sources */,
 				AAB5C74424CB377F00A6B6E4 /* FiltersCollectionViewCell.swift in Sources */,
 				AAC2DC6324C8B0F800378934 /* AppCategory.swift in Sources */,
 				AAEBD30A24E1E28E0010A81E /* CheckoutVC+CheckoutViewDelegate.swift in Sources */,
 				AAC2DC5C24C8AA5B00378934 /* HomeVC.swift in Sources */,
+				AA0A5C3A24F030CC00F61198 /* CarsTypesCollectionViewCell.swift in Sources */,
 				AAB5C74924CB381B00A6B6E4 /* PlacesTableViewCell.swift in Sources */,
 				AA02858424D869FB0017E35D /* DriversTableViewCell.swift in Sources */,
 				AADD713D24CB73D900EE7FD1 /* VendorProfileVC.swift in Sources */,
@@ -1045,24 +1138,30 @@
 				AADD713F24CB755D00EE7FD1 /* VendorProfile+VendorViewPresenter.swift in Sources */,
 				AA0B883724CF6A2D0055F93E /* CartItemsTableViewCell.swift in Sources */,
 				AADD712E24CB3DDD00EE7FD1 /* StoresVC+StoresViewDelegate.swift in Sources */,
+				AA19194C24EF04E100EE080E /* SpecialNeedCar+TaxiOrderViewDelegate.swift in Sources */,
 				AACA7ED324C760F8004437FC /* Guide.swift in Sources */,
 				AAE1097F24D1D45500C66670 /* ProductPresenter.swift in Sources */,
 				AA02858824D879580017E35D /* TaxiOrderVC+GMSMapViewDelegate.swift in Sources */,
+				AA19194A24EF037500EE080E /* SpecialNeedCar+CLLocationManagerDelegate.swift in Sources */,
 				AAEBD30224E1CCE10010A81E /* VariationTableViewCell.swift in Sources */,
 				AAB1E57924CA1A1A00E3E499 /* RegisterPresenter.swift in Sources */,
+				AAF7F15D24EF0F5800FAE7D7 /* SpecialNeedCarPresenter.swift in Sources */,
 				AA0B883324CF4B320055F93E /* ProductVC.swift in Sources */,
 				AA025ABD24E31C510018C3EE /* Images.swift in Sources */,
 				AAB3082A24CCAD9500D8FE0C /* MenuItems.swift in Sources */,
 				AAE1097A24D1CA1200C66670 /* CartItem.swift in Sources */,
 				AAF6728324E59DCD0025C5C2 /* NearByMarkets.swift in Sources */,
+				AA0A5C3F24F0397E00F61198 /* SpecialNeedCarVC+SpecialNeedCarViewDelegate.swift in Sources */,
 				AAC2DC6D24C8BB7700378934 /* DrawerVC.swift in Sources */,
 				AADD713A24CB72BF00EE7FD1 /* MenuCategories.swift in Sources */,
 				AA025DBE24D5F42C0067C682 /* TripsServices.swift in Sources */,
 				AADD714124CB758300EE7FD1 /* VendorProfilePresenter.swift in Sources */,
+				AA19194824EF01AC00EE080E /* SpecialNeedCarVC.swift in Sources */,
 				AA4CB64024D5F73D00C861CA /* TaxiOrderPresenter.swift in Sources */,
 				AACA7ED224C760F8004437FC /* AboutUsCollectionViewCell.swift in Sources */,
 				AA026F8024C79A89003FFF4E /* API-Endpoints.swift in Sources */,
 				AA026F7E24C78E24003FFF4E /* LoginVC+LoginViewDelegate.swift in Sources */,
+				AAF7F15524EF0AE200FAE7D7 /* SpecialCars.swift in Sources */,
 				AAE1098724D1F97C00C66670 /* CartVC+CartViewDelegate.swift in Sources */,
 				AACA7EB624C759FA004437FC /* SceneDelegate.swift in Sources */,
 				AAB1E57D24CA200F00E3E499 /* RegisterVC+RegisterViewDelegate.swift in Sources */,
@@ -1071,6 +1170,7 @@
 				AADD713124CB5C7700EE7FD1 /* Places.swift in Sources */,
 				AADD713824CB71CA00EE7FD1 /* VendorServices.swift in Sources */,
 				AAF6728124E59D6E0025C5C2 /* MarketsServices.swift in Sources */,
+				AAF7F15324EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

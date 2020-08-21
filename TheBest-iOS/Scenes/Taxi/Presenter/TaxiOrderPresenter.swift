@@ -28,6 +28,25 @@ protocol TaxiOrderViewDelegate {
     
 }
 
+extension TaxiOrderViewDelegate{
+    
+    func showSVProgress(){}
+    func dismissSVProgress(){}
+    func didCompleteWith(_ taxies: Taxi){}
+    func didCompleteWithError(){}
+    func didCompleteWithAddressFromGoogleMaps(_ address: String){}
+    func didFailWithErrorAddressFromGoogleMaps(){}
+    func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline){}
+    func didFailWithErrorDirectionFromGoogleMaps(){}
+    func didCompleteWithDistanceFromAPI(_ distance: Distance){}
+    func didCompleteWithErrorDistanceFromAPI(){}
+    func didCompleteConfirmRide(_ driver: Drivers){}
+    func didFailConfirmRide(){}
+    func didCompleteCancelRide(){}
+    func didFailCancelRide(){}
+    
+}
+
 class TaxiOrderPresenter{
     
     var taxiOrderViewDelegate: TaxiOrderViewDelegate?

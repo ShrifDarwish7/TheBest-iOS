@@ -46,6 +46,7 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
     }
     
     func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline) {
+        polyline.strokeColor = UIColor(named: "TaxiGoldColor")!
         polyline.map = self.mapView
     }
     
@@ -62,13 +63,7 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
             self.tripInfoStackHeight.constant = 150
             self.view.layoutIfNeeded()
         }
-        //        DispatchQueue.main.async {
-        //            UIView.animate(withDuration: 0.5) {
-        //                self.tripInfoStack.isHidden = false
-//                self.confirmBtn.isHidden = false
-//                self.tripScrollView.scrollToTop()
-//            }
-//        }
+    
     }
     
     func didCompleteWithErrorDistanceFromAPI() {

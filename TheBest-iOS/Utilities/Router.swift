@@ -130,5 +130,14 @@ class Router{
         sender.present(vc, animated: true, completion: nil)
         
     }
+    
+    static func toSpecialNeedCar(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SpecialNeedCarVC") as! SpecialNeedCarVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
    
 }

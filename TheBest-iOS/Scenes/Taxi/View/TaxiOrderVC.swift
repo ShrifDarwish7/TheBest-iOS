@@ -47,6 +47,9 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UINavigationBar.appearance().barTintColor = UIColor(named: "TaxiGoldColor")
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
         taxiOrderPresenter = TaxiOrderPresenter(taxiOrderViewDelegate: self)
         taxiOrderPresenter?.getNearByTaxies()
         taxiOrderPresenter?.getAddressFromGoogleMapsApi()

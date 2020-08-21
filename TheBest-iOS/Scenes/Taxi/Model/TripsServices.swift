@@ -56,7 +56,6 @@ class TripsServices{
                             let points  = overviewPolyline?["points"]?.string
                             let path = GMSPath(fromEncodedPath: points ?? "")
                             let polyline = GMSPolyline(path: path)
-                            polyline.strokeColor = UIColor(named: "TaxiGoldColor")!
                             polyline.strokeWidth = 5
                             completed(polyline)
                             

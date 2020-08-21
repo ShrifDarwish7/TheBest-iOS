@@ -24,5 +24,7 @@ let CANCEL_RIDE_END_POINT = BASE_URL + "Trip/CancelRide"
 let NEARBY_MARKETS_END_POINT = BASE_URL + "Main/nearByMarkets"
 let MARKETS_FILTER_END_POINT = BASE_URL + "Main/MarketsFilter"
 let MARKET_TYPES_END_POINT = BASE_URL + "Main/markettypes"
+let SPECIAL_CARS_TYPES_END_POINT = BASE_URL + "SpecialCars/SpecialCarTypes"
+let GET_SPECIAL_CAR_END_POINT = BASE_URL + "SpecialCars/GetSpecialCar"
 
 let HEADERS = ["Accept": "application/json"]

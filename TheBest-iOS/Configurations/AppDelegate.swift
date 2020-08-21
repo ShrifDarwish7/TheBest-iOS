@@ -33,9 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setDefaultAnimationType(.flat)
         SVProgressHUD.setBackgroundColor(.white)
         
-        UINavigationBar.appearance().barTintColor = UIColor(named: "TaxiGoldColor")
-        UINavigationBar.appearance().tintColor = UIColor.white
-        
         if #available(iOS 13.0, *){
             
         }else{
