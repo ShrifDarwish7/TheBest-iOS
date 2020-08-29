@@ -15,6 +15,7 @@ class DrawerVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var logout: UIStackView!
+    @IBOutlet weak var lastOrders: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,10 @@ class DrawerVC: UIViewController {
             //AuthServices.logout()
             Router.toLogin(sender: self)
             AuthServices.instance.isLogged = false
+        }
+        
+        lastOrders.addTapGesture { (_) in
+            Router.toLastOrders(sender: self)
         }
         
     }

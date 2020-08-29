@@ -10,12 +10,14 @@ import Foundation
 
 // MARK: - GetSpecialCar
 struct SpecialCarResult: Codable {
-    let data: [Datum]
+    let data: [SpecialCarData]
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct SpecialCarData: Codable {
     let id: Int
     let lat, lng, distance: Double
+    let image: String
     let cost: Int
+    var selected: Bool?
 }

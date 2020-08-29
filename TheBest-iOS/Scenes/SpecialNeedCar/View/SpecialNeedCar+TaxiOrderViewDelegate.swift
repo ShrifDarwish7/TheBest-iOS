@@ -28,35 +28,12 @@ extension SpecialNeedCarVC: TaxiOrderViewDelegate{
     func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline) {
         polyline.strokeColor = UIColor(named: "SpecialNeedCarColor")!
         polyline.map = self.mapView
-        self.confirmBtn.tag = 1
-        self.confirmBtn.setTitle("Confirm ride", for: .normal)
-        self.confirmBtn.backgroundColor = UIColor(named: "SpecialNeedCarColor")
+        self.startRide.tag = 1
+        self.startRide.setTitle("Start ride", for: .normal)
     }
     
     func didFailWithErrorAddressFromGoogleMaps() {
-        print("didFailWithErrorAddressFromGoogleMaps")
     }
     
-    func didCompleteWithDistanceFromAPI(_ distance: Distance) {
-     //   self.distance.text = "\(distance.distance)"
-     //   self.tripFees.text = "\(distance.cost)"
-        self.confirmBtn.tag = 1
-        self.confirmBtn.setTitle("Confirm ride", for: .normal)
-//        UIView.animate(withDuration: 0.5) {
-//            self.tripInfoStackHeight.constant = 150
-//            self.view.layoutIfNeeded()
-//        }
-    
-    }
-    
-    func didCompleteConfirmRide(_ driver: Drivers) {
-        self.driverImageView.sd_setImage(with: URL(string: driver.drivers.image)!)
-        self.driverName.text = " " + driver.drivers.name
-        self.carNumber.text = driver.drivers.myCar.first?.carNumber
-        self.driverView.isHidden = false
-        UIView.animate(withDuration: 0.5) {
-            self.driverView.alpha = 1
-        }
-    }
     
 }

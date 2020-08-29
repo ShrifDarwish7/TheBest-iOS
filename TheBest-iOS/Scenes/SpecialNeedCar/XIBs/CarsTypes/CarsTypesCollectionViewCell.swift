@@ -12,6 +12,7 @@ class CarsTypesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var typeImageView: UIImageView!
     @IBOutlet weak var typeName: UILabel!
+    @IBOutlet weak var container: UIView!
     
 
 }

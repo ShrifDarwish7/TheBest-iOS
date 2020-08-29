@@ -26,5 +26,12 @@ let MARKETS_FILTER_END_POINT = BASE_URL + "Main/MarketsFilter"
 let MARKET_TYPES_END_POINT = BASE_URL + "Main/markettypes"
 let SPECIAL_CARS_TYPES_END_POINT = BASE_URL + "SpecialCars/SpecialCarTypes"
 let GET_SPECIAL_CAR_END_POINT = BASE_URL + "SpecialCars/GetSpecialCar"
+let EQUIPMENTS_END_POINT = BASE_URL + "SpecialCars/RequerdEquipment"
+let GET_DISTANCE_SP_CAR_END_POINT = BASE_URL + "SpecialCars/GetDistanceSpCar"
+let CONFIRM_SP_RIDE_CAR = BASE_URL + "SpecialCars/ConfirmRideSpCar"
+let TRUCK_TYPES_END_POINT = BASE_URL + "Truck/TruckCarTypes"
+let GET_TRUCK_END_POINT = BASE_URL + "Truck/GetTruck"
+let GET_TRUCK_DISTANCE_END_POINT = BASE_URL + "Truck/GetDistanceTruck"
+let TRUCK_CONFIRM_RIDE_END_POINT = BASE_URL + "Truck/ConfirmRideTruck"
 
 let HEADERS = ["Accept": "application/json"]

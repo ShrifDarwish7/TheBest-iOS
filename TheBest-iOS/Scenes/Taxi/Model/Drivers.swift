@@ -58,7 +58,7 @@ struct MyCar: Codable {
         case id
         case carNumber = "car_number"
         case image
-        case carModel = "CarModel"
+        case carModel = "car_model"
         case userID = "user_id"
         case type
         case createdAt = "created_at"

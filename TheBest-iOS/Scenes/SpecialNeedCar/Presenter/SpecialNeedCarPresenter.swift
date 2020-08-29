@@ -15,6 +15,12 @@ protocol SpecialNeedCarViewDelegate {
     func didFailFetchSpecialCars()
     func didCompleteWithSpecialCarResult(_ result: SpecialCarResult)
     func didFailFetchSpecialCarsResult()
+    func didCompleteWithEquipments(_ result: Equipments)
+    func didFailFetchEquipments()
+    func didCompleteWithDistance(_ result: Distance)
+    func didFailFetchDistance()
+    func didCompleteConfirmRide(_ result: Drivers)
+    func didFailConfirmRide()
 }
 
 class SpecialNeedCarsPresenter{
@@ -37,9 +43,9 @@ class SpecialNeedCarsPresenter{
         }
     }
     
-    func getSpecialCarWith(id: String){
+    func getSpecialCarWith(id: String, eq: String){
         self.specialNeedCarViewDelegate?.showSVProgress()
-        SpecialCarsServices.getSpecialCar(id: id) { (specialCarResult) in
+        SpecialCarsServices.getSpecialCar(id: id, eq: eq) { (specialCarResult) in
             self.specialNeedCarViewDelegate?.dismissSVProgress()
             if let _ = specialCarResult{
                 self.specialNeedCarViewDelegate?.didCompleteWithSpecialCarResult(specialCarResult!)
@@ -47,6 +53,41 @@ class SpecialNeedCarsPresenter{
                 self.specialNeedCarViewDelegate?.didFailFetchSpecialCarsResult()
             }
         }
+    }
+    
+    func getEquipments(){
+        SpecialCarsServices.getEquipments { (equipments) in
+            if let _ = equipments{
+                self.specialNeedCarViewDelegate?.didCompleteWithEquipments(equipments!)
+            }else{
+                self.specialNeedCarViewDelegate?.didFailFetchEquipments()
+            }
+        }
+    }
+    
+    func getDistance(driverId: String){
+        self.specialNeedCarViewDelegate?.showSVProgress()
+        SpecialCarsServices.getDistance(driverId: driverId) { (distance) in
+            self.specialNeedCarViewDelegate?.dismissSVProgress()
+            if let _ = distance{
+                self.specialNeedCarViewDelegate?.didCompleteWithDistance(distance!)
+            }else{
+                self.specialNeedCarViewDelegate?.didFailFetchDistance()
+            }
+        }
+    }
+    
+    func confirmRide(){
+        self.specialNeedCarViewDelegate?.showSVProgress()
+        SpecialCarsServices.confirmRide { (driver) in
+            self.specialNeedCarViewDelegate?.dismissSVProgress()
+            if let _ = driver{
+                self.specialNeedCarViewDelegate?.didCompleteConfirmRide(driver!)
+            }else{
+                self.specialNeedCarViewDelegate?.didFailConfirmRide()
+            }
+        }
+        
     }
     
 }

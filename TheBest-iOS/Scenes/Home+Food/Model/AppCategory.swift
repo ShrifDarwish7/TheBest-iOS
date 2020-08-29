@@ -13,5 +13,6 @@ struct AppCategory{
     
     let icon: UIImage?
     let name: String?
+    var selected: Bool?
     
 }

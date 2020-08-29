@@ -79,14 +79,13 @@ class Router{
         
         CartServices.getCartItems { (result) in
             if let result = result{
-                
                 if result.isEmpty{
                     sender.showAlert(title: "", message: "Your cart is empty")
                     return
                 }else{
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let cartVC = storyboard.instantiateViewController(withIdentifier: "CartVC") as! CartVC
-                    cartVC.modalPresentationStyle = .fullScreen
+                   // cartVC.modalPresentationStyle = .fullScreen
                     sender.present(cartVC, animated: true, completion: nil)
                 }
             }
@@ -135,6 +134,24 @@ class Router{
         
         let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SpecialNeedCarVC") as! SpecialNeedCarVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toLastOrders(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LastOrdersVC") as! LastOrdersVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toFurniture(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FurnitureVC") as! FurnitureVC
         vc.modalPresentationStyle = .fullScreen
         sender.present(vc, animated: true, completion: nil)
         

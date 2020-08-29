@@ -36,11 +36,11 @@ extension SpecialNeedCarVC: GMSAutocompleteViewControllerDelegate{
             SharedData.userDestinationLat = place.coordinate.latitude
             SharedData.userDestinationLng = place.coordinate.longitude
                         
-            self.confirmBtn.setTitle("Confirm ride", for: .normal)
-            self.confirmBtn.backgroundColor = UIColor(named: "SpecialNeedCarColor")
+//            self.confirmBtn.setTitle("Confirm ride", for: .normal)
+//            self.confirmBtn.backgroundColor = UIColor(named: "SpecialNeedCarColor")
             
             UIView.animate(withDuration: 0.5) {
-                self.confirmBtn.isHidden = false
+                self.startRide.isHidden = false
                 self.view.layoutIfNeeded()
             }
             

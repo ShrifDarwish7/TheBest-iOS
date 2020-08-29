@@ -156,6 +156,15 @@ class HomeVC: UIViewController {
                 
                 self.homeViwPresenter?.getAllMarketsCategories()
                 
+            case 7:
+                
+                switch CLLocationManager.authorizationStatus() {
+                case .authorizedAlways , .authorizedWhenInUse:
+                    Router.toFurniture(sender: self)
+                default:
+                    self.askForLocationAlert()
+                }
+                
             default:
                 break
                 

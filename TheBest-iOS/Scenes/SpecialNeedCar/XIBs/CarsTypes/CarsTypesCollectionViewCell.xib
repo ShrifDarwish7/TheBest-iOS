@@ -66,6 +66,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="151" height="134"/>
             <connections>
+                <outlet property="container" destination="aDR-jc-pGS" id="vVO-X4-sXw"/>
                 <outlet property="typeImageView" destination="0up-qb-2bK" id="XcJ-du-eEA"/>
                 <outlet property="typeName" destination="eP9-a4-m1n" id="rz1-4T-YC7"/>
             </connections>

@@ -20,10 +20,15 @@ struct SpecialCars: Codable {
 // MARK: - SpecialCar
 struct SpecialCar: Codable {
     let id: Int
-    let name, createdAt, updatedAt: String
+    let name: String
+    let image: String
+    let type: Int
+    let createdAt, updatedAt: String
+    
+    var selected: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case id, name
+        case id, name, image, type, selected
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }
