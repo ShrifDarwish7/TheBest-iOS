@@ -1,8 +1,8 @@
 //
-//  FurnitureVC+TaxiOrderViewDelegate.swift
+//  CarRentVC+TaxiOrderViewDelegate.swift
 //  TheBest-iOS
 //
-//  Created by Sherif Darwish on 8/27/20.
+//  Created by Sherif Darwish on 8/31/20.
 //  Copyright © 2020 Sherif Darwish. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import SVProgressHUD
 import GooglePlaces
 import GoogleMaps
 
-extension FurnitureVC: TaxiOrderViewDelegate{
+extension CarRentVC: TaxiOrderViewDelegate{
     
     func showSVProgress() {
         SVProgressHUD.show()
@@ -26,7 +26,7 @@ extension FurnitureVC: TaxiOrderViewDelegate{
     }
     
     func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline) {
-        polyline.strokeColor = UIColor(named: "FurnitureColor")!
+        polyline.strokeColor = UIColor(named: "CarRentColor")!
         polyline.map = self.mapView
         self.startRide.tag = 1
         self.startRide.setTitle("Start ride", for: .normal)

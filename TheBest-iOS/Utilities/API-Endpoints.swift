@@ -33,5 +33,9 @@ let TRUCK_TYPES_END_POINT = BASE_URL + "Truck/TruckCarTypes"
 let GET_TRUCK_END_POINT = BASE_URL + "Truck/GetTruck"
 let GET_TRUCK_DISTANCE_END_POINT = BASE_URL + "Truck/GetDistanceTruck"
 let TRUCK_CONFIRM_RIDE_END_POINT = BASE_URL + "Truck/ConfirmRideTruck"
+let GET_CARS_END_POINT = BASE_URL + "Car/GetCars"
+let NEAREST_CARS_END_POINT = BASE_URL + "Car/NearestCars"
+let CARS_DISTNCE_END_POINT = BASE_URL + "Car/GetDistanceCar"
+let CARS_CONFIRM_RIDE_END_POINT = BASE_URL + "Car/ConfirmRideCar"
 
 let HEADERS = ["Accept": "application/json"]

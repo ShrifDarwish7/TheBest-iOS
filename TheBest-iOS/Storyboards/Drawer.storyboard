@@ -366,6 +366,7 @@
                         <outlet property="backBtn" destination="jie-jA-qsl" id="4aM-EC-HeL"/>
                         <outlet property="blockView" destination="Z6t-Hu-8eo" id="twZ-Ja-umN"/>
                         <outlet property="drawerView" destination="ITa-s2-PA2" id="JyK-1L-peH"/>
+                        <outlet property="home" destination="Lxt-Cu-tro" id="WoL-6f-RAz"/>
                         <outlet property="lastOrders" destination="rFg-ls-ljd" id="psd-dj-pjJ"/>
                         <outlet property="logout" destination="oZL-A2-lv7" id="Tgm-i0-feg"/>
                         <outlet property="username" destination="BJF-ck-lFd" id="rHu-Nb-Hhz"/>

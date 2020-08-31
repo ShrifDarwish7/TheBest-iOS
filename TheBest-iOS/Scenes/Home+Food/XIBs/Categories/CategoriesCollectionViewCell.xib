@@ -25,28 +25,41 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ot2-j0-UtT">
                         <rect key="frame" x="0.0" y="0.0" width="189" height="234"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="FP3-Rf-Qf5">
-                                <rect key="frame" x="47.5" y="49.5" width="94.5" height="95"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrk-LJ-cdG">
-                                <rect key="frame" x="25" y="149.5" width="139" height="34"/>
-                                <string key="text">Restaurants  
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mx-ir-wIQ">
+                                <rect key="frame" x="5" y="5" width="179" height="224"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="FP3-Rf-Qf5">
+                                        <rect key="frame" x="42.5" y="47" width="94.5" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrk-LJ-cdG">
+                                        <rect key="frame" x="20" y="142" width="139" height="34"/>
+                                        <string key="text">Restaurants  
 &amp; Cafe</string>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="qrk-LJ-cdG" firstAttribute="leading" secondItem="8mx-ir-wIQ" secondAttribute="leading" constant="20" id="Ctc-MD-FMt"/>
+                                    <constraint firstItem="qrk-LJ-cdG" firstAttribute="top" secondItem="FP3-Rf-Qf5" secondAttribute="bottom" constant="5" id="KCE-ii-w1Y"/>
+                                    <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerY" secondItem="8mx-ir-wIQ" secondAttribute="centerY" constant="-20" id="QZM-5R-K5e"/>
+                                    <constraint firstItem="FP3-Rf-Qf5" firstAttribute="height" secondItem="8mx-ir-wIQ" secondAttribute="height" multiplier="0.4" id="csP-zt-sDR"/>
+                                    <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerX" secondItem="8mx-ir-wIQ" secondAttribute="centerX" id="duh-Ra-Ohz"/>
+                                    <constraint firstAttribute="trailing" secondItem="qrk-LJ-cdG" secondAttribute="trailing" constant="20" id="ir7-vE-mdj"/>
+                                    <constraint firstItem="qrk-LJ-cdG" firstAttribute="centerX" secondItem="8mx-ir-wIQ" secondAttribute="centerX" id="nHJ-07-eXz"/>
+                                    <constraint firstItem="FP3-Rf-Qf5" firstAttribute="width" secondItem="8mx-ir-wIQ" secondAttribute="width" multiplier="0.5" constant="5" id="zQ4-BL-azg"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FP3-Rf-Qf5" firstAttribute="width" secondItem="ot2-j0-UtT" secondAttribute="width" multiplier="0.5" id="5rO-Uu-760"/>
-                            <constraint firstItem="qrk-LJ-cdG" firstAttribute="leading" secondItem="ot2-j0-UtT" secondAttribute="leading" constant="25" id="9kR-Ns-KGB"/>
-                            <constraint firstItem="FP3-Rf-Qf5" firstAttribute="height" secondItem="ot2-j0-UtT" secondAttribute="height" multiplier="0.4" constant="1" id="H9D-UT-7PO"/>
-                            <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerY" secondItem="ot2-j0-UtT" secondAttribute="centerY" constant="-20" id="LVR-k6-czT"/>
-                            <constraint firstItem="qrk-LJ-cdG" firstAttribute="top" secondItem="FP3-Rf-Qf5" secondAttribute="bottom" constant="5" id="mmr-BC-j4J"/>
-                            <constraint firstAttribute="trailing" secondItem="qrk-LJ-cdG" secondAttribute="trailing" constant="25" id="rZ9-du-GjI"/>
-                            <constraint firstItem="qrk-LJ-cdG" firstAttribute="centerX" secondItem="ot2-j0-UtT" secondAttribute="centerX" id="uQl-KX-9Hf"/>
-                            <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerX" secondItem="ot2-j0-UtT" secondAttribute="centerX" id="yG2-Nv-3DF"/>
+                            <constraint firstAttribute="trailing" secondItem="8mx-ir-wIQ" secondAttribute="trailing" constant="5" id="An8-kP-zwZ"/>
+                            <constraint firstItem="8mx-ir-wIQ" firstAttribute="leading" secondItem="ot2-j0-UtT" secondAttribute="leading" constant="5" id="Tyo-yM-yn5"/>
+                            <constraint firstItem="8mx-ir-wIQ" firstAttribute="top" secondItem="ot2-j0-UtT" secondAttribute="top" constant="5" id="b4K-lV-cKf"/>
+                            <constraint firstAttribute="bottom" secondItem="8mx-ir-wIQ" secondAttribute="bottom" constant="5" id="mti-Is-TSn"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -63,7 +76,7 @@
             <connections>
                 <outlet property="categoryIcon" destination="FP3-Rf-Qf5" id="z6i-b1-Ibe"/>
                 <outlet property="categoryName" destination="qrk-LJ-cdG" id="uu4-az-hlY"/>
-                <outlet property="container" destination="ot2-j0-UtT" id="QRP-Ok-1PM"/>
+                <outlet property="container" destination="8mx-ir-wIQ" id="k1Q-hM-428"/>
             </connections>
             <point key="canvasLocation" x="236.95652173913047" y="139.95535714285714"/>
         </collectionViewCell>

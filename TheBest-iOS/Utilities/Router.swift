@@ -156,5 +156,14 @@ class Router{
         sender.present(vc, animated: true, completion: nil)
         
     }
+    
+    static func toCarRent(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CarRentVC") as! CarRentVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
    
 }

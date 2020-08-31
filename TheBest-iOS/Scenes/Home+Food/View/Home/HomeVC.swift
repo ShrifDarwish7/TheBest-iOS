@@ -143,6 +143,15 @@ class HomeVC: UIViewController {
                     self.askForLocationAlert()
                 }
                 
+            case 2:
+                
+                switch CLLocationManager.authorizationStatus() {
+                case .authorizedAlways , .authorizedWhenInUse:
+                    Router.toCarRent(sender: self)
+                default:
+                    self.askForLocationAlert()
+                }
+                
             case 3:
                 
                 switch CLLocationManager.authorizationStatus() {

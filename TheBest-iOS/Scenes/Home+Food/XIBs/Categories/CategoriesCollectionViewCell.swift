@@ -37,4 +37,8 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
         
     }
     
+    func loadUI(){
+        container.layer.cornerRadius = 20
+    }
+    
 }

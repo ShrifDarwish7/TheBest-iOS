@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		90295440F0398DE5AE2905E3 /* Pods_TheBest_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9089EE0CE356CA811A998 /* Pods_TheBest_iOS.framework */; };
+		AA01469124FBDE9900F10BEC /* CarRentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01469024FBDE9900F10BEC /* CarRentServices.swift */; };
+		AA01469324FBDEB300F10BEC /* CarRentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01469224FBDEB300F10BEC /* CarRentVC.swift */; };
+		AA01469524FBDEC700F10BEC /* CarRentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01469424FBDEC700F10BEC /* CarRentPresenter.swift */; };
+		AA01469724FBDF9F00F10BEC /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01469624FBDF9F00F10BEC /* Cars.swift */; };
+		AA01469924FBE28A00F10BEC /* NearestCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA01469824FBE28A00F10BEC /* NearestCars.swift */; };
 		AA025ABD24E31C510018C3EE /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA025ABC24E31C510018C3EE /* Images.swift */; };
 		AA025DBB24D5F3D40067C682 /* Taxi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA025DBA24D5F3D40067C682 /* Taxi.swift */; };
 		AA025DBE24D5F42C0067C682 /* TripsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA025DBD24D5F42C0067C682 /* TripsServices.swift */; };
@@ -76,6 +81,11 @@
 		AABE303C24E088B900DFDE1B /* ReasonsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABE303A24E088B900DFDE1B /* ReasonsCollectionViewCell.xib */; };
 		AABE304024E08A9900DFDE1B /* AfterCancelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABE303E24E08A9900DFDE1B /* AfterCancelCollectionViewCell.swift */; };
 		AABE304124E08A9900DFDE1B /* AfterCancelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABE303F24E08A9900DFDE1B /* AfterCancelCollectionViewCell.xib */; };
+		AABEEAD524FD91F300990562 /* CarRentVC+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEAD424FD91F300990562 /* CarRentVC+CLLocationManagerDelegate.swift */; };
+		AABEEAD724FD922700990562 /* CarRentVC+TaxiOrderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEAD624FD922700990562 /* CarRentVC+TaxiOrderViewDelegate.swift */; };
+		AABEEAD924FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEAD824FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift */; };
+		AABEEADB24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEADA24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift */; };
+		AABEEADD24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEADC24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift */; };
 		AAC2DC5C24C8AA5B00378934 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2DC5B24C8AA5B00378934 /* HomeVC.swift */; };
 		AAC2DC6024C8AECD00378934 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2DC5E24C8AECD00378934 /* CategoriesCollectionViewCell.swift */; };
 		AAC2DC6124C8AECD00378934 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC2DC5F24C8AECD00378934 /* CategoriesCollectionViewCell.xib */; };
@@ -158,6 +168,11 @@
 		00C9089EE0CE356CA811A998 /* Pods_TheBest_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheBest_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0134758B5A9571EE28B59EED /* Pods-TheBest-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBest-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TheBest-iOS/Pods-TheBest-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		52F018959EDF489E8F15E64A /* Pods-TheBest-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheBest-iOS.release.xcconfig"; path = "Target Support Files/Pods-TheBest-iOS/Pods-TheBest-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		AA01469024FBDE9900F10BEC /* CarRentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentServices.swift; sourceTree = "<group>"; };
+		AA01469224FBDEB300F10BEC /* CarRentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentVC.swift; sourceTree = "<group>"; };
+		AA01469424FBDEC700F10BEC /* CarRentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentPresenter.swift; sourceTree = "<group>"; };
+		AA01469624FBDF9F00F10BEC /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
+		AA01469824FBE28A00F10BEC /* NearestCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestCars.swift; sourceTree = "<group>"; };
 		AA025ABC24E31C510018C3EE /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		AA025DBA24D5F3D40067C682 /* Taxi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taxi.swift; sourceTree = "<group>"; };
 		AA025DBD24D5F42C0067C682 /* TripsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripsServices.swift; path = "TheBest-iOS/Scenes/Taxi/Model/TripsServices.swift"; sourceTree = SOURCE_ROOT; };
@@ -226,6 +241,11 @@
 		AABE303A24E088B900DFDE1B /* ReasonsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReasonsCollectionViewCell.xib; sourceTree = "<group>"; };
 		AABE303E24E08A9900DFDE1B /* AfterCancelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCancelCollectionViewCell.swift; sourceTree = "<group>"; };
 		AABE303F24E08A9900DFDE1B /* AfterCancelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterCancelCollectionViewCell.xib; sourceTree = "<group>"; };
+		AABEEAD424FD91F300990562 /* CarRentVC+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
+		AABEEAD624FD922700990562 /* CarRentVC+TaxiOrderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+TaxiOrderViewDelegate.swift"; sourceTree = "<group>"; };
+		AABEEAD824FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+GMSMapViewDelegate.swift"; sourceTree = "<group>"; };
+		AABEEADA24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+GMSAutocompleteViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		AABEEADC24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+CarsRentViewDelegate.swift"; sourceTree = "<group>"; };
 		AAC2DC5B24C8AA5B00378934 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		AAC2DC5E24C8AECD00378934 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAC2DC5F24C8AECD00378934 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -324,6 +344,55 @@
 				00C9089EE0CE356CA811A998 /* Pods_TheBest_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA01468B24FBDE5B00F10BEC /* CarRent */ = {
+			isa = PBXGroup;
+			children = (
+				AA01468F24FBDE7E00F10BEC /* Interactor */,
+				AA01468C24FBDE6700F10BEC /* Model */,
+				AA01468D24FBDE6E00F10BEC /* View */,
+				AA01468E24FBDE7300F10BEC /* Presenter */,
+			);
+			path = CarRent;
+			sourceTree = "<group>";
+		};
+		AA01468C24FBDE6700F10BEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA01469624FBDF9F00F10BEC /* Cars.swift */,
+				AA01469824FBE28A00F10BEC /* NearestCars.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA01468D24FBDE6E00F10BEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA01469224FBDEB300F10BEC /* CarRentVC.swift */,
+				AABEEAD424FD91F300990562 /* CarRentVC+CLLocationManagerDelegate.swift */,
+				AABEEAD624FD922700990562 /* CarRentVC+TaxiOrderViewDelegate.swift */,
+				AABEEAD824FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift */,
+				AABEEADA24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift */,
+				AABEEADC24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA01468E24FBDE7300F10BEC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AA01469424FBDEC700F10BEC /* CarRentPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AA01468F24FBDE7E00F10BEC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AA01469024FBDE9900F10BEC /* CarRentServices.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		AA025DB824D5F1DF0067C682 /* Model */ = {
@@ -452,8 +521,8 @@
 		AA0BC2EB24F588AB00430FFE /* LastOrders */ = {
 			isa = PBXGroup;
 			children = (
-				AA0BC2EF24F58D4400430FFE /* XIBs */,
 				AA0BC2EC24F588C200430FFE /* View */,
+				AA0BC2EF24F58D4400430FFE /* XIBs */,
 			);
 			path = LastOrders;
 			sourceTree = "<group>";
@@ -776,6 +845,7 @@
 				AAA3B97B24D5958E00852404 /* Taxi */,
 				AA19194224EEB50700EE080E /* SpecialNeedCar */,
 				AA04D68A24F83EDB00BE4628 /* Furniture */,
+				AA01468B24FBDE5B00F10BEC /* CarRent */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1235,6 +1305,7 @@
 				AA026F7C24C788CE003FFF4E /* LoginPresenter.swift in Sources */,
 				AA3239DD24E9842A009B9960 /* MarketTypes.swift in Sources */,
 				AAB3082E24CCB29600D8FE0C /* MenuTableViewCell.swift in Sources */,
+				AA01469524FBDEC700F10BEC /* CarRentPresenter.swift in Sources */,
 				AAF9997D24C778CC009DB374 /* LoginVC.swift in Sources */,
 				AA02858A24D898570017E35D /* TaxiOrderVC+ GMSAutocompleteViewControllerDelegate.swift in Sources */,
 				AAF6729124E5AD0E0025C5C2 /* FilterVC.swift in Sources */,
@@ -1256,18 +1327,23 @@
 				AAF6728D24E5A7020025C5C2 /* MarketsVC+TableViewDelegate.swift in Sources */,
 				AAB5C73624CB108800A6B6E4 /* CategoriesServices.swift in Sources */,
 				AAEBD30524E1E0D60010A81E /* CheckoutVC.swift in Sources */,
+				AABEEADB24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift in Sources */,
 				AAC2DC6524C8B25800378934 /* CustomViews.swift in Sources */,
 				AA0D781A24F68AB900AB4ABA /* Equipments.swift in Sources */,
 				AAB5C73E24CB319F00A6B6E4 /* SubCategories.swift in Sources */,
+				AABEEAD924FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift in Sources */,
 				AAE1098124D1DBB900C66670 /* CartServices.swift in Sources */,
+				AA01469724FBDF9F00F10BEC /* Cars.swift in Sources */,
 				AAB1E57B24CA1D4500E3E499 /* SharedData.swift in Sources */,
 				AA16D44A24FA5EA40074424A /* FurnitureVC+TableViewDelegate.swift in Sources */,
 				AADD712C24CB3C7D00EE7FD1 /* StoresPresenter.swift in Sources */,
+				AABEEADD24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift in Sources */,
 				AA025DBB24D5F3D40067C682 /* Taxi.swift in Sources */,
 				AA026F8424C79DE8003FFF4E /* User.swift in Sources */,
 				AAFCC96B24F7D1FB00D1B095 /* SpecialCarsTableViewCell.swift in Sources */,
 				AA04D69824F845E300BE4628 /* FurnitureVCPresenter.swift in Sources */,
 				AAB5C74C24CB39D600A6B6E4 /* StoresVC.swift in Sources */,
+				AABEEAD524FD91F300990562 /* CarRentVC+CLLocationManagerDelegate.swift in Sources */,
 				AAE37C8524D49AC5002CB1D0 /* PlaceOrder.swift in Sources */,
 				AACA7EB424C759FA004437FC /* AppDelegate.swift in Sources */,
 				AAE1097D24D1D2B600C66670 /* CartVC.swift in Sources */,
@@ -1289,12 +1365,14 @@
 				AA02858824D879580017E35D /* TaxiOrderVC+GMSMapViewDelegate.swift in Sources */,
 				AA19194A24EF037500EE080E /* SpecialNeedCar+CLLocationManagerDelegate.swift in Sources */,
 				AAEBD30224E1CCE10010A81E /* VariationTableViewCell.swift in Sources */,
+				AABEEAD724FD922700990562 /* CarRentVC+TaxiOrderViewDelegate.swift in Sources */,
 				AAB1E57924CA1A1A00E3E499 /* RegisterPresenter.swift in Sources */,
 				AA04D69624F8450E00BE4628 /* FurnitureVC+GMSAutocompleteViewControllerDelegate.swift in Sources */,
 				AAF7F15D24EF0F5800FAE7D7 /* SpecialNeedCarPresenter.swift in Sources */,
 				AA04D69024F8435500BE4628 /* FurnitureVC+CLLocationManagerDelegate.swift in Sources */,
 				AA0B883324CF4B320055F93E /* ProductVC.swift in Sources */,
 				AA0BC2F524F58FCE00430FFE /* LastOrders+CollectionViewDelegate.swift in Sources */,
+				AA01469324FBDEB300F10BEC /* CarRentVC.swift in Sources */,
 				AA025ABD24E31C510018C3EE /* Images.swift in Sources */,
 				AAB3082A24CCAD9500D8FE0C /* MenuItems.swift in Sources */,
 				AAE1097A24D1CA1200C66670 /* CartItem.swift in Sources */,
@@ -1316,12 +1394,14 @@
 				AACA7EB624C759FA004437FC /* SceneDelegate.swift in Sources */,
 				AAB1E57D24CA200F00E3E499 /* RegisterVC+RegisterViewDelegate.swift in Sources */,
 				AA028A9724D708A6007255FD /* Drivers.swift in Sources */,
+				AA01469124FBDE9900F10BEC /* CarRentServices.swift in Sources */,
 				AAF6728724E5A2A60025C5C2 /* MarketPresenter.swift in Sources */,
 				AADD713124CB5C7700EE7FD1 /* Places.swift in Sources */,
 				AA04D69224F8439000BE4628 /* FurnitureVC+TaxiOrderViewDelegate.swift in Sources */,
 				AADD713824CB71CA00EE7FD1 /* VendorServices.swift in Sources */,
 				AAF6728124E59D6E0025C5C2 /* MarketsServices.swift in Sources */,
 				AA04D69B24F8472D00BE4628 /* TruckTypes.swift in Sources */,
+				AA01469924FBE28A00F10BEC /* NearestCars.swift in Sources */,
 				AAF7F15324EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

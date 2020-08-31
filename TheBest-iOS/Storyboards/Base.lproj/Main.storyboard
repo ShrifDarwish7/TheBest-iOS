@@ -2434,9 +2434,9 @@ ever since the 1500s</string>
                                 <rect key="frame" x="20" y="64" width="374" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-qd-hm0">
-                                        <rect key="frame" x="15" y="20" width="75" height="30"/>
+                                        <rect key="frame" x="15" y="20" width="30" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-1Z-BGs">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcq-1Z-BGs">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="DXz-Bw-XoX"/>
@@ -2445,7 +2445,7 @@ ever since the 1500s</string>
                                                 <state key="normal" image="back"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Et6-in-GdB">
-                                                <rect key="frame" x="45" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ahR-ls-Tuz"/>
                                                     <constraint firstAttribute="width" constant="30" id="ov0-7n-oOJ"/>

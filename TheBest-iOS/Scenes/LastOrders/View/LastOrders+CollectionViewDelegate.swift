@@ -30,6 +30,7 @@ extension LastOrdersVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoriesCollectionViewCell
         cell.categoryIcon.image = appCategories[indexPath.row].icon
         cell.categoryName.text = appCategories[indexPath.row].name
+        cell.categoryName.font = UIFont(name: "lato", size: 12)
         if appCategories[indexPath.row].selected ?? false{
             cell.container.backgroundColor = getColor(indexPath.row)
             cell.container.alpha = 1
@@ -40,7 +41,7 @@ extension LastOrdersVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             cell.container.alpha = 0.5
         }
         cell.container.layer.cornerRadius = 15
-        
+
         return cell
         
     }
@@ -57,7 +58,7 @@ extension LastOrdersVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 150)
+        return CGSize(width: 120, height: 120)
     }
     
     private func getColor(_ index: Int)->UIColor{
