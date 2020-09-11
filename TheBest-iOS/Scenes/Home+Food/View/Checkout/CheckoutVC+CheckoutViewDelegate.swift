@@ -44,20 +44,28 @@ extension CheckoutVC: CheckoutViewDelegate{
             }
         }
         
-        let parameters = [
+        var parameters = [
 
-            "product_id": ids,
             "lat": "\(SharedData.userLat ?? 0.0)" ,
             "lng": "\(SharedData.userLng ?? 0.0)",
             "address": addressToSend ?? "",
             "phone": AuthServices.instance.user.user?.phone ?? "",
             "total": "\(totalToSend)",
             "comment": "any comment for the order",
-            "variation_id": variations,
-            "count": "\(result.count)"
+         //   "count": "\(result.count)",
+            "cat_id": UserDefaults.init().string(forKey: "food_markets_flag")!
 
             ] as [String : Any]
         
+        for i in 0...ids.count-1{
+            parameters.updateValue(ids[i], forKey: "product_id[\(i)]")
+        }
+        
+        for i in 0...variations.count-1{
+            parameters.updateValue(variations[i], forKey: "variation_id[\(i)]")
+        }
+        
+        print("hereChekcOutPrms",parameters)
         self.checkoutParameters = parameters
         
     }
@@ -67,11 +75,23 @@ extension CheckoutVC: CheckoutViewDelegate{
     }
      
     func didCompletedPlaceOrder() {
-        
+        CartServices.clearCart()
+        self.orderDoneHint.isHidden = false
+        UIView.animate(withDuration: 0.5, animations: {
+            self.orderDoneHint.alpha = 1
+        }) { (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.orderDoneHint.alpha = 0
+                }) { (_) in
+                    self.orderDoneHint.isHidden = true
+                }
+            }
+        }
     }
     
     func didFailPlaceOrder() {
-        
+        print("didFailPlaceOrder")
     }
     
 }

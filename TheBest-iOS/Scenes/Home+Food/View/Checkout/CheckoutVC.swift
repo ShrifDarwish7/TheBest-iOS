@@ -21,6 +21,7 @@ class CheckoutVC: UIViewController {
     @IBOutlet weak var userPhone: UITextField!
     @IBOutlet var roundView: [UIView]!
     @IBOutlet weak var checkoutBtn: UIView!
+    @IBOutlet weak var orderDoneHint: UIView!
     
     var cartItems: [CartItemModel]?
     var checkoutPresenter: CheckoutPresenter?

@@ -52,7 +52,7 @@
                                             <constraint firstAttribute="height" constant="120" id="Hvi-aM-DBy"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ezt-0u-fOx">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ezt-0u-fOx">
                                         <rect key="frame" x="121" y="107" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Dsj-6f-dLL"/>
@@ -363,12 +363,17 @@
                         <viewLayoutGuide key="safeArea" id="6FZ-cX-tgv"/>
                     </view>
                     <connections>
+                        <outlet property="aboutUs" destination="JLH-1F-ghp" id="oW7-Ph-wda"/>
                         <outlet property="backBtn" destination="jie-jA-qsl" id="4aM-EC-HeL"/>
+                        <outlet property="balance" destination="qzv-7O-SOx" id="3iA-iz-VFl"/>
                         <outlet property="blockView" destination="Z6t-Hu-8eo" id="twZ-Ja-umN"/>
                         <outlet property="drawerView" destination="ITa-s2-PA2" id="JyK-1L-peH"/>
                         <outlet property="home" destination="Lxt-Cu-tro" id="WoL-6f-RAz"/>
+                        <outlet property="howToUse" destination="Mb0-OA-jFp" id="hcF-zJ-G3l"/>
                         <outlet property="lastOrders" destination="rFg-ls-ljd" id="psd-dj-pjJ"/>
                         <outlet property="logout" destination="oZL-A2-lv7" id="Tgm-i0-feg"/>
+                        <outlet property="profileImage" destination="Ezt-0u-fOx" id="Umy-Xe-EaM"/>
+                        <outlet property="share" destination="WPr-en-4nm" id="RgP-ff-3EB"/>
                         <outlet property="username" destination="BJF-ck-lFd" id="rHu-Nb-Hhz"/>
                     </connections>
                 </viewController>

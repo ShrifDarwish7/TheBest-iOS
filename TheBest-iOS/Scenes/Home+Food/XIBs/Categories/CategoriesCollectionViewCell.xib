@@ -29,11 +29,11 @@
                                 <rect key="frame" x="5" y="5" width="179" height="224"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category_icon1" translatesAutoresizingMaskIntoConstraints="NO" id="FP3-Rf-Qf5">
-                                        <rect key="frame" x="42.5" y="47" width="94.5" height="90"/>
+                                        <rect key="frame" x="42.5" y="41.5" width="94.5" height="101"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrk-LJ-cdG">
-                                        <rect key="frame" x="20" y="142" width="139" height="34"/>
+                                        <rect key="frame" x="20" y="147.5" width="139" height="34"/>
                                         <string key="text">Restaurants  
 &amp; Cafe</string>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
@@ -46,7 +46,7 @@
                                     <constraint firstItem="qrk-LJ-cdG" firstAttribute="leading" secondItem="8mx-ir-wIQ" secondAttribute="leading" constant="20" id="Ctc-MD-FMt"/>
                                     <constraint firstItem="qrk-LJ-cdG" firstAttribute="top" secondItem="FP3-Rf-Qf5" secondAttribute="bottom" constant="5" id="KCE-ii-w1Y"/>
                                     <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerY" secondItem="8mx-ir-wIQ" secondAttribute="centerY" constant="-20" id="QZM-5R-K5e"/>
-                                    <constraint firstItem="FP3-Rf-Qf5" firstAttribute="height" secondItem="8mx-ir-wIQ" secondAttribute="height" multiplier="0.4" id="csP-zt-sDR"/>
+                                    <constraint firstItem="FP3-Rf-Qf5" firstAttribute="height" secondItem="8mx-ir-wIQ" secondAttribute="height" multiplier="0.45" id="csP-zt-sDR"/>
                                     <constraint firstItem="FP3-Rf-Qf5" firstAttribute="centerX" secondItem="8mx-ir-wIQ" secondAttribute="centerX" id="duh-Ra-Ohz"/>
                                     <constraint firstAttribute="trailing" secondItem="qrk-LJ-cdG" secondAttribute="trailing" constant="20" id="ir7-vE-mdj"/>
                                     <constraint firstItem="qrk-LJ-cdG" firstAttribute="centerX" secondItem="8mx-ir-wIQ" secondAttribute="centerX" id="nHJ-07-eXz"/>

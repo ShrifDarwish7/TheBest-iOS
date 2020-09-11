@@ -13,8 +13,8 @@ class StoresVC: UIViewController {
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var cartBtn: UIButton!
-    @IBOutlet weak var upperIcon: UIView!
     @IBOutlet weak var filtersCollectionView: UICollectionView!
+    @IBOutlet weak var categoryColorView: UIView!
     @IBOutlet weak var storeTableView: UITableView!
     @IBOutlet weak var pageIcon: UIImageView!
     @IBOutlet weak var emptyCategoryLabel: UILabel!
@@ -45,12 +45,16 @@ class StoresVC: UIViewController {
 
         storesViewPresenter = StoresViewPresenter(storesViewDelegate: self)
         cartItemsCount.layer.cornerRadius = cartItemsCount.frame.height/2
-        upperIcon.layer.cornerRadius = upperIcon.frame.height/2
+        categoryColorView.layer.cornerRadius = categoryColorView.frame.height/2
         if pageIconReceived!.isEmpty{
             pageIcon.image = UIImage(named: "marketsIcon")
-            upperIcon.backgroundColor = UIColor(named: "MarketsColor")
+            categoryColorView.backgroundColor = UIColor(named: "MarketsColor")
+            categoryColorView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.462745098, blue: 0.1411764706, alpha: 1)
+            SharedData.food_markets_flag = 2
         }else{
+            SharedData.food_markets_flag = 1
             pageIcon.sd_setImage(with: URL(string: pageIconReceived!))
+            categoryColorView.backgroundColor = UIColor(named: "BtnsColor")
         }
         
         upperView.layer.cornerRadius = upperView.frame.height/2
@@ -83,8 +87,12 @@ class StoresVC: UIViewController {
             
             if self.filters?.items[index.row].selected ?? false{
                 cell.name.textColor = UIColor.black
+                cell.name.alpha = 1
+                cell.imageView.alpha = 1
             }else{
                 cell.name.textColor = UIColor(named: "FontGrayColor")
+                cell.name.alpha = 0.5
+                cell.imageView.alpha = 0.5
             }
             
             return cell

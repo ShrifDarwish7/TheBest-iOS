@@ -54,6 +54,14 @@ extension LastOrdersVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         appCategories[indexPath.row].selected = true
         catsCollectionView.reloadData()
         catsCollectionView.scrollToItem(at: IndexPath(item: indexPath.row, section: 0), at: .centeredHorizontally, animated: true)
+        switch indexPath.row{
+        case 0:
+            ordersHistoryPresenter?.getFoodOrdersHistory(id: 1)
+        case 4:
+            ordersHistoryPresenter?.getFoodOrdersHistory(id: 2)
+        default:
+            break
+        }
         
     }
     

@@ -17,6 +17,11 @@ class DrawerVC: UIViewController {
     @IBOutlet weak var logout: UIStackView!
     @IBOutlet weak var lastOrders: UIStackView!
     @IBOutlet weak var home: UIStackView!
+    @IBOutlet weak var howToUse: UIStackView!
+    @IBOutlet weak var share: UIStackView!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var balance: UIStackView!
+    @IBOutlet weak var aboutUs: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +62,26 @@ class DrawerVC: UIViewController {
         
         home.addTapGesture { (_) in
             Router.toHome(sender: self)
+        }
+        
+        howToUse.addTapGesture { (_) in
+            Router.toHowToUse(sender: self)
+        }
+        
+        share.addTapGesture { (_) in
+            Router.toShare(sender: self)
+        }
+        
+        profileImage.addTapGesture { (_) in
+            Router.toProfile(sender: self)
+        }
+        
+        balance.addTapGesture { (_) in
+            Router.toBalance(sender: self)
+        }
+        
+        aboutUs.addTapGesture { (_) in
+            Router.toTerms(sender: self)
         }
         
     }

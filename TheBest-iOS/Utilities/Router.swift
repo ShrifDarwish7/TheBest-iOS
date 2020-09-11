@@ -48,6 +48,7 @@ class Router{
 //        if from == "markets"{
 //            storesVC.pageIcon.image = UIImage(named: "marketsIcon")
 //            storesVC.upperIcon.backgroundColor = UIColor(named: "MarketsColor")
+//            SharedData.food_markets_flag = 1
 //        }
         sender.present(storesVC, animated: true, completion: nil)
         
@@ -85,7 +86,6 @@ class Router{
                 }else{
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let cartVC = storyboard.instantiateViewController(withIdentifier: "CartVC") as! CartVC
-                   // cartVC.modalPresentationStyle = .fullScreen
                     sender.present(cartVC, animated: true, completion: nil)
                 }
             }
@@ -117,6 +117,7 @@ class Router{
         let vc = storyboard.instantiateViewController(withIdentifier: "MarketsVC") as! MarketsVC
         vc.catReceivedId = id
         vc.modalPresentationStyle = .fullScreen
+        SharedData.food_markets_flag = 2
         sender.present(vc, animated: true, completion: nil)
         
     }
@@ -161,6 +162,51 @@ class Router{
         
         let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CarRentVC") as! CarRentVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toHowToUse(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HowToUseVC") as! HowToUseVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toShare(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ShareVC") as! ShareVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toProfile(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toBalance(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BalanceVC") as! BalanceVC
+        vc.modalPresentationStyle = .fullScreen
+        sender.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    static func toTerms(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TermsAndConditionsVC") as! TermsAndConditionsVC
         vc.modalPresentationStyle = .fullScreen
         sender.present(vc, animated: true, completion: nil)
         

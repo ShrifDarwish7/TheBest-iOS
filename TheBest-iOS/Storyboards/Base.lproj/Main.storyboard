@@ -854,7 +854,7 @@ ever since the 1500s</string>
                                         </constraints>
                                         <state key="normal" image="back"/>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qA6-ZQ-ALh">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qA6-ZQ-ALh">
                                         <rect key="frame" x="127" y="14" width="120" height="42"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the best logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="nl6-A1-eZa">
@@ -865,7 +865,8 @@ ever since the 1500s</string>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="BtnsColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="nl6-A1-eZa" firstAttribute="centerY" secondItem="qA6-ZQ-ALh" secondAttribute="centerY" id="8T6-pG-LrX"/>
                                             <constraint firstItem="nl6-A1-eZa" firstAttribute="centerX" secondItem="qA6-ZQ-ALh" secondAttribute="centerX" id="NmH-gv-LY1"/>
@@ -964,11 +965,11 @@ ever since the 1500s</string>
                         <outlet property="backBtn" destination="Pp7-7b-epq" id="PXc-56-MtW"/>
                         <outlet property="cartBtn" destination="sAe-QW-JA6" id="VfU-wV-m2N"/>
                         <outlet property="cartItemsCount" destination="ZCI-ug-ZDW" id="eUk-Ff-dXK"/>
+                        <outlet property="categoryColorView" destination="qA6-ZQ-ALh" id="1aa-On-GXv"/>
                         <outlet property="emptyCategoryLabel" destination="vit-T0-e93" id="mLs-hr-8oL"/>
                         <outlet property="filtersCollectionView" destination="vAx-x1-ZX6" id="41y-rJ-0M4"/>
                         <outlet property="pageIcon" destination="nl6-A1-eZa" id="3t0-zi-7rI"/>
                         <outlet property="storeTableView" destination="GWf-z5-c07" id="Wds-fY-DzB"/>
-                        <outlet property="upperIcon" destination="qA6-ZQ-ALh" id="dTG-dC-8Qg"/>
                         <outlet property="upperView" destination="AZr-S4-81Z" id="uFD-49-LVu"/>
                     </connections>
                 </viewController>
@@ -2161,13 +2162,48 @@ ever since the 1500s</string>
                                     <constraint firstAttribute="bottom" secondItem="woD-Ah-nam" secondAttribute="bottom" id="wDe-gY-7AM"/>
                                 </constraints>
                             </scrollView>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQU-He-XW5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="order_done" translatesAutoresizingMaskIntoConstraints="NO" id="USW-Hx-AyS">
+                                        <rect key="frame" x="41.5" y="334.5" width="331" height="393"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooU-EY-IQ9">
+                                        <rect key="frame" x="146" y="737.5" width="122.5" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order done successfully " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QC-bl-vbP">
+                                        <rect key="frame" x="62" y="800" width="290.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
+                                        <color key="textColor" name="FontGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="USW-Hx-AyS" firstAttribute="centerY" secondItem="jQU-He-XW5" secondAttribute="centerY" constant="-30" id="9U0-98-IFh"/>
+                                    <constraint firstItem="ooU-EY-IQ9" firstAttribute="centerX" secondItem="jQU-He-XW5" secondAttribute="centerX" id="Miq-m9-m5I"/>
+                                    <constraint firstItem="ooU-EY-IQ9" firstAttribute="top" secondItem="USW-Hx-AyS" secondAttribute="bottom" constant="10" id="ZFR-82-Akf"/>
+                                    <constraint firstItem="7QC-bl-vbP" firstAttribute="top" secondItem="ooU-EY-IQ9" secondAttribute="bottom" constant="10" id="csg-Bu-RAi"/>
+                                    <constraint firstItem="USW-Hx-AyS" firstAttribute="centerX" secondItem="jQU-He-XW5" secondAttribute="centerX" id="kKo-oV-o3I"/>
+                                    <constraint firstItem="USW-Hx-AyS" firstAttribute="height" secondItem="jQU-He-XW5" secondAttribute="height" multiplier="0.35" id="ltg-wx-Xlp"/>
+                                    <constraint firstItem="7QC-bl-vbP" firstAttribute="centerX" secondItem="jQU-He-XW5" secondAttribute="centerX" id="xCI-nl-12O"/>
+                                    <constraint firstItem="USW-Hx-AyS" firstAttribute="width" secondItem="jQU-He-XW5" secondAttribute="width" multiplier="0.8" id="xni-eg-CaN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
+                            <constraint firstItem="jQU-He-XW5" firstAttribute="leading" secondItem="IMD-4Y-zms" secondAttribute="leading" id="1oD-bM-O02"/>
+                            <constraint firstItem="IMD-4Y-zms" firstAttribute="trailing" secondItem="jQU-He-XW5" secondAttribute="trailing" id="6mX-hf-Ec8"/>
                             <constraint firstItem="iHx-i9-TPt" firstAttribute="leading" secondItem="U7G-21-sDW" secondAttribute="leading" id="9s8-Zl-Pgj"/>
                             <constraint firstItem="iHx-i9-TPt" firstAttribute="top" secondItem="VJw-Pn-ptj" secondAttribute="bottom" id="F5v-Ad-yLU"/>
                             <constraint firstAttribute="trailing" secondItem="iHx-i9-TPt" secondAttribute="trailing" id="GAX-0N-c8h"/>
                             <constraint firstItem="hTc-Ea-3F8" firstAttribute="leading" secondItem="VJw-Pn-ptj" secondAttribute="trailing" constant="25" id="JhX-ek-ypI"/>
+                            <constraint firstItem="jQU-He-XW5" firstAttribute="top" secondItem="IMD-4Y-zms" secondAttribute="top" id="PKA-KU-QMi"/>
+                            <constraint firstItem="IMD-4Y-zms" firstAttribute="bottom" secondItem="jQU-He-XW5" secondAttribute="bottom" id="PZt-4Z-40Y"/>
                             <constraint firstItem="hTc-Ea-3F8" firstAttribute="centerY" secondItem="VJw-Pn-ptj" secondAttribute="centerY" id="eBy-2d-4cM"/>
                             <constraint firstAttribute="bottom" secondItem="iHx-i9-TPt" secondAttribute="bottom" id="gRI-8z-RTm"/>
                             <constraint firstItem="VJw-Pn-ptj" firstAttribute="top" secondItem="IMD-4Y-zms" secondAttribute="top" constant="20" id="hyJ-gi-zmy"/>
@@ -2181,6 +2217,7 @@ ever since the 1500s</string>
                         <outlet property="checkoutBtn" destination="1Wi-vV-Uap" id="Pyl-Ju-DoG"/>
                         <outlet property="deliveryFees" destination="jAh-Hh-QRl" id="QnA-Y6-eU7"/>
                         <outlet property="itemsCount" destination="EVd-e8-Nl9" id="osX-zH-jeU"/>
+                        <outlet property="orderDoneHint" destination="jQU-He-XW5" id="MFX-Is-wPQ"/>
                         <outlet property="totalOrder" destination="WKI-PI-ozh" id="MOr-Yd-Djf"/>
                         <outlet property="totalOrder2" destination="i9U-QR-u6B" id="v4R-go-mK7"/>
                         <outlet property="userPhone" destination="O4m-ch-Ms2" id="vCE-3E-25Y"/>
@@ -2518,6 +2555,19 @@ ever since the 1500s</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no order history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-WH-vee">
+                                <rect key="frame" x="107" y="602" width="200" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bLP-mF-iCm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" name="FontGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B2D-ZO-2VP">
+                                <rect key="frame" x="10" y="372" width="394" height="480"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-CQ-LKR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
@@ -2527,16 +2577,22 @@ ever since the 1500s</string>
                         </subviews>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
+                            <constraint firstItem="JBr-WH-vee" firstAttribute="centerX" secondItem="sne-XX-USw" secondAttribute="centerX" id="7nb-hO-57g"/>
                             <constraint firstItem="VL9-5O-dy9" firstAttribute="top" secondItem="8ru-1y-249" secondAttribute="bottom" constant="15" id="A1q-23-vLK"/>
                             <constraint firstItem="hQV-CQ-LKR" firstAttribute="top" secondItem="sne-XX-USw" secondAttribute="top" id="BoC-A6-p2t"/>
+                            <constraint firstItem="B2D-ZO-2VP" firstAttribute="top" secondItem="T6s-mh-xYR" secondAttribute="bottom" constant="10" id="CwF-R3-pqR"/>
                             <constraint firstItem="T6s-mh-xYR" firstAttribute="leading" secondItem="Hio-9h-nB8" secondAttribute="leading" constant="15" id="G90-JO-sSw"/>
                             <constraint firstItem="VL9-5O-dy9" firstAttribute="leading" secondItem="Hio-9h-nB8" secondAttribute="leading" constant="40" id="HC9-Fo-tIP"/>
+                            <constraint firstItem="Hio-9h-nB8" firstAttribute="bottom" secondItem="B2D-ZO-2VP" secondAttribute="bottom" constant="10" id="JCc-zM-pcv"/>
+                            <constraint firstItem="Hio-9h-nB8" firstAttribute="trailing" secondItem="B2D-ZO-2VP" secondAttribute="trailing" constant="10" id="L5G-NZ-HZw"/>
                             <constraint firstItem="8ru-1y-249" firstAttribute="leading" secondItem="Hio-9h-nB8" secondAttribute="leading" constant="20" id="Mwo-vM-vaF"/>
+                            <constraint firstItem="B2D-ZO-2VP" firstAttribute="leading" secondItem="Hio-9h-nB8" secondAttribute="leading" constant="10" id="OWg-6T-N5L"/>
                             <constraint firstItem="T6s-mh-xYR" firstAttribute="top" secondItem="VL9-5O-dy9" secondAttribute="bottom" constant="15" id="P1g-cr-Pi5"/>
                             <constraint firstItem="hQV-CQ-LKR" firstAttribute="centerX" secondItem="sne-XX-USw" secondAttribute="centerX" id="ReJ-RR-Hij"/>
                             <constraint firstItem="T6s-mh-xYR" firstAttribute="height" secondItem="sne-XX-USw" secondAttribute="height" multiplier="0.17" id="eMc-zL-vM2"/>
                             <constraint firstItem="Hio-9h-nB8" firstAttribute="trailing" secondItem="T6s-mh-xYR" secondAttribute="trailing" constant="29" id="fXm-NG-48c"/>
                             <constraint firstItem="8ru-1y-249" firstAttribute="top" secondItem="Hio-9h-nB8" secondAttribute="top" constant="20" id="nig-Yw-cid"/>
+                            <constraint firstItem="JBr-WH-vee" firstAttribute="centerY" secondItem="B2D-ZO-2VP" secondAttribute="centerY" id="r3G-TH-S8A"/>
                             <constraint firstAttribute="bottom" secondItem="hQV-CQ-LKR" secondAttribute="bottom" id="v0b-F8-AdD"/>
                             <constraint firstItem="hQV-CQ-LKR" firstAttribute="width" secondItem="Hio-9h-nB8" secondAttribute="width" id="vPF-zS-X12"/>
                             <constraint firstItem="Hio-9h-nB8" firstAttribute="trailing" secondItem="8ru-1y-249" secondAttribute="trailing" constant="20" id="ym4-b8-pZp"/>
@@ -2548,6 +2604,8 @@ ever since the 1500s</string>
                         <outlet property="catsCollectionView" destination="T6s-mh-xYR" id="c6p-xr-NIk"/>
                         <outlet property="drawerBtn" destination="97R-RQ-nB8" id="up2-bj-nkD"/>
                         <outlet property="drawerPosition" destination="ReJ-RR-Hij" id="oQh-am-hr2"/>
+                        <outlet property="emptyHistory" destination="JBr-WH-vee" id="Hpa-7w-Eap"/>
+                        <outlet property="lastOrdersTable" destination="B2D-ZO-2VP" id="2tH-Ub-riJ"/>
                         <outlet property="upperView" destination="8ru-1y-249" id="xSX-cM-KOm"/>
                     </connections>
                 </viewController>
@@ -2583,6 +2641,7 @@ ever since the 1500s</string>
         <image name="minus" width="512" height="512"/>
         <image name="more.." width="46" height="41"/>
         <image name="nextIcon" width="50" height="24"/>
+        <image name="order_done" width="354" height="354"/>
         <image name="pay-icon-png-1" width="15" height="14"/>
         <image name="previousIcon" width="50" height="24"/>
         <image name="promo_code" width="17" height="17"/>

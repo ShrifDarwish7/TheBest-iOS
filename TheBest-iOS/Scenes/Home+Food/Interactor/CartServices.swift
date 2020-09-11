@@ -31,6 +31,7 @@ class CartServices{
                     UserDefaults.init().set(vendorName, forKey: "cart_associated_vendor_name")
                     UserDefaults.init().set(vendorImage, forKey: "cart_associated_vendor_image")
                     UserDefaults.init().set(deliveryFees, forKey: "cart_associated_vendor_delivery_fees")
+                    UserDefaults.init().set("\(SharedData.food_markets_flag!)", forKey: "food_markets_flag")
                     
                     do{
                         try SharedData.context.save()

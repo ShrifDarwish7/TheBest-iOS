@@ -23,5 +23,6 @@ class SharedData{
         "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
         "Accept": "application/json"
     ]
+    static var food_markets_flag: Int?
     
 }

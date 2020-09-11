@@ -18,16 +18,18 @@ class PlaceOrder{
             
             for (key,value) in parameters{
                 
-                switch key {
-                case "product_id","variation_id":
-                    
-                    for i in value as! Array<String>{
-                        multipartFormData.append(i.data(using: .utf8)!, withName: key+"[0]" )
-                    }
-                    
-                default:
-                    multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
-                }
+                multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
+                
+//                switch key {
+//                case "product_id","variation_id":
+//
+//                    for i in value as! Array<String>{
+//                        multipartFormData.append(i.data(using: .utf8)!, withName: key+"[0]" )
+//                    }
+//
+//                default:
+//                    multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
+//                }
                 
             }
             
@@ -41,13 +43,16 @@ class PlaceOrder{
                     switch response.result{
                         
                     case .success(let data):
+                        print(JSON(data))
+                        if JSON(data)["message"].string == "Done"{
+                            completed(true)
+                        }else{
+                             completed(false)
+                        }
                         
-                        print("Done", try! JSON(data: data))
-                        completed(true)
                         
-                    case .failure(let error):
+                    case .failure(_):
                         
-                        print("place error",error)
                         completed(false)
                         
                     }

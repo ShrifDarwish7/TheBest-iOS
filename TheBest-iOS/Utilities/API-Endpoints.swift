@@ -37,5 +37,6 @@ let GET_CARS_END_POINT = BASE_URL + "Car/GetCars"
 let NEAREST_CARS_END_POINT = BASE_URL + "Car/NearestCars"
 let CARS_DISTNCE_END_POINT = BASE_URL + "Car/GetDistanceCar"
 let CARS_CONFIRM_RIDE_END_POINT = BASE_URL + "Car/ConfirmRideCar"
+let FOOD_ORDERS_HISTORY_END_POINT = BASE_URL + "Order/MyOrders/"
 
 let HEADERS = ["Accept": "application/json"]
