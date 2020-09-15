@@ -40,7 +40,13 @@ extension MarketsVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Router.toStores(pageIcon: "", id: self.tableDataSource![indexPath.row].typeID, sender: self, from: "markets")
+        switch type {
+        case "markets":
+            Router.toStores(pageIcon: "", id: self.tableDataSource![indexPath.row].typeID, sender: self, from: "markets")
+        default:
+            Router.toStores(pageIcon: "", id: self.tableDataSource![indexPath.row].typeID, sender: self, from: "vegetable")
+        }
+        
     }
     
 }

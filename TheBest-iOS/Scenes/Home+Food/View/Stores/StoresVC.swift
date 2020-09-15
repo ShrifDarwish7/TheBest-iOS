@@ -25,6 +25,7 @@ class StoresVC: UIViewController {
     var storesViewPresenter: StoresViewPresenter?
     var filters: SubCategories?
     var places: Places?
+    var from: String?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -46,12 +47,26 @@ class StoresVC: UIViewController {
         storesViewPresenter = StoresViewPresenter(storesViewDelegate: self)
         cartItemsCount.layer.cornerRadius = cartItemsCount.frame.height/2
         categoryColorView.layer.cornerRadius = categoryColorView.frame.height/2
-        if pageIconReceived!.isEmpty{
+//        if pageIconReceived!.isEmpty{
+//            pageIcon.image = UIImage(named: "marketsIcon")
+//            categoryColorView.backgroundColor = UIColor(named: "MarketsColor")
+//            categoryColorView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.462745098, blue: 0.1411764706, alpha: 1)
+//            SharedData.food_markets_flag = 2
+//        }else{
+//            SharedData.food_markets_flag = 1
+//            pageIcon.sd_setImage(with: URL(string: pageIconReceived!))
+//            categoryColorView.backgroundColor = UIColor(named: "BtnsColor")
+//        }
+        switch from {
+        case "markets":
             pageIcon.image = UIImage(named: "marketsIcon")
             categoryColorView.backgroundColor = UIColor(named: "MarketsColor")
-            categoryColorView.backgroundColor = #colorLiteral(red: 0.9450980392, green: 0.462745098, blue: 0.1411764706, alpha: 1)
             SharedData.food_markets_flag = 2
-        }else{
+        case "vegetable":
+            pageIcon.image = UIImage(named: "marketsIcon")
+            categoryColorView.backgroundColor = UIColor(named: "vegColor")
+            SharedData.food_markets_flag = 3
+        default:
             SharedData.food_markets_flag = 1
             pageIcon.sd_setImage(with: URL(string: pageIconReceived!))
             categoryColorView.backgroundColor = UIColor(named: "BtnsColor")

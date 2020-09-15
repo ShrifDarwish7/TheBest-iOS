@@ -26,7 +26,7 @@ class FilterVC: UIViewController {
         detectBtn.layer.cornerRadius = 15
         
         backBtn.onTap {
-            self.dismissSVProgress()
+            self.dismiss(animated: true, completion: nil)
         }
         
         detectBtn.onTap {

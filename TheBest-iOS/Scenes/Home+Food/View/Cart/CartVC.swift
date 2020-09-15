@@ -19,6 +19,7 @@ class CartVC: UIViewController {
     @IBOutlet weak var cartItemsTableView: UITableView!
     @IBOutlet weak var checkOutView: UIView!
     @IBOutlet weak var totalOrder2: UILabel!
+    @IBOutlet var iconsViews: [UIView]!
     
     var cartItems: [CartItemModel]?
     var cartPresenter: CartPresenter?
@@ -44,6 +45,35 @@ class CartVC: UIViewController {
         
         checkOutView.addTapGesture { (_) in
             Router.toCheckout(sender: self)
+        }
+        
+        
+        for v in iconsViews{
+            v.layer.cornerRadius = v.frame.height/2
+        }
+        
+        switch UserDefaults.init().string(forKey: "food_markets_flag") {
+        case "1":
+            
+            for v in iconsViews{
+                v.backgroundColor = UIColor(named: "BtnsColor")
+            }
+            checkOutView.backgroundColor = UIColor(named: "BtnsColor")
+            
+        case "2":
+            
+            for v in iconsViews{
+                v.backgroundColor = UIColor(named: "MarketsColor")
+            }
+            checkOutView.backgroundColor = UIColor(named: "MarketsColor")
+            
+        default:
+            
+            for v in iconsViews{
+                v.backgroundColor = UIColor(named: "vegColor")
+            }
+            checkOutView.backgroundColor = UIColor(named: "vegColor")
+            
         }
         
     }

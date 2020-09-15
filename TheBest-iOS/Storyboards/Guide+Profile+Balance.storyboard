@@ -93,16 +93,16 @@
                                 <rect key="frame" x="5" y="306.5" width="414" height="584.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLk-9Q-8cn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="481"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dnA-Za-3eO">
-                                                <rect key="frame" x="10" y="5" width="352" height="471"/>
+                                                <rect key="frame" x="10" y="5" width="352" height="465"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fG2-ZI-Xh1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to demand a meal ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-tx-8tw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="204.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="214" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="7Ic-Bw-vzK"/>
                                                                 </constraints>
@@ -111,7 +111,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTE-Ev-8Vk">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -119,10 +119,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rNv-Kf-gtU">
-                                                        <rect key="frame" x="0.0" y="81" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="80" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to follow my order ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kod-JW-NQa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="211.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="214" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="www-rd-cC2"/>
                                                                 </constraints>
@@ -131,7 +131,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXP-k8-D52">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -139,10 +139,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cIh-zu-Gyh">
-                                                        <rect key="frame" x="0.0" y="162" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="160" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can I cancel my order ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqM-t3-O6o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="193.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="202.5" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="hfA-GL-1P6"/>
                                                                 </constraints>
@@ -151,7 +151,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK0-Ic-XjC">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -159,10 +159,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-xG-xUB">
-                                                        <rect key="frame" x="0.0" y="243" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="240" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want the nearest driver to me " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rd-Mw-NUb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="u50-bb-xs6"/>
                                                                 </constraints>
@@ -171,7 +171,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehA-CF-kdN">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -179,10 +179,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Id-Sl-pII">
-                                                        <rect key="frame" x="0.0" y="324" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="320" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want the nearest driver to me " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp2-Ve-a0C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="Naz-XF-WQh"/>
                                                                 </constraints>
@@ -191,7 +191,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfz-Of-c0u">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -199,10 +199,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rdd-r7-ZtZ">
-                                                        <rect key="frame" x="0.0" y="405" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="400" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want the nearest driver to me " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STk-e4-xK8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="DhL-Nb-34D"/>
                                                                 </constraints>
@@ -211,7 +211,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cum-Ox-MdC">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -243,16 +243,16 @@
                                 <rect key="frame" x="0.0" y="306.5" width="414" height="550.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-rw-ngA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="481"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="esh-Ds-5KN">
-                                                <rect key="frame" x="10" y="5" width="352" height="471"/>
+                                                <rect key="frame" x="10" y="5" width="352" height="465"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bLg-Vr-VRH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to demand a taxi car ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul0-Mw-o8l">
-                                                                <rect key="frame" x="0.0" y="0.0" width="226.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="235.5" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="h1Z-j3-Djv"/>
                                                                 </constraints>
@@ -261,7 +261,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="670-We-iob">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -269,10 +269,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LwG-ru-OZi">
-                                                        <rect key="frame" x="0.0" y="81" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="80" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to follow my driver ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbK-bx-DTL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="216" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="217" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="ACz-YC-lPQ"/>
                                                                 </constraints>
@@ -281,7 +281,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGH-sa-Vkg">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -289,10 +289,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dWU-9u-lEp">
-                                                        <rect key="frame" x="0.0" y="162" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="160" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can I cancel request ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQr-7F-rdx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="182" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="190.5" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="VVz-1R-syB"/>
                                                                 </constraints>
@@ -301,7 +301,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRT-ee-pWf">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -309,10 +309,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oxX-VA-eOM">
-                                                        <rect key="frame" x="0.0" y="243" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="240" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want the nearest driver to me " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-uE-P5e">
-                                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="QRS-FH-M2U"/>
                                                                 </constraints>
@@ -321,7 +321,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cr-5J-7ZP">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -329,10 +329,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X5I-Dm-0Nt">
-                                                        <rect key="frame" x="0.0" y="324" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="320" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want the nearest driver to me " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfW-E2-QnM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="dr7-wm-EwR"/>
                                                                 </constraints>
@@ -341,7 +341,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52g-HY-3oN">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -349,10 +349,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LzY-3O-xds">
-                                                        <rect key="frame" x="0.0" y="405" width="350.5" height="66"/>
+                                                        <rect key="frame" x="0.0" y="400" width="336" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want the nearest driver to me " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPq-0Z-OYl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="263.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="xCf-YV-L37"/>
                                                                 </constraints>
@@ -361,7 +361,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS2-Ln-Gq7">
-                                                                <rect key="frame" x="0.0" y="30" width="350.5" height="36"/>
+                                                                <rect key="frame" x="0.0" y="30" width="336" height="35"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -496,25 +496,25 @@ application on</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1d9-gw-p00">
-                                <rect key="frame" x="10" y="229" width="394" height="623"/>
+                                <rect key="frame" x="10" y="229" width="394" height="485"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-Nx-qDW">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="485"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rFI-S6-A8c">
-                                                <rect key="frame" x="5" y="5" width="384" height="608"/>
+                                                <rect key="frame" x="5" y="5" width="384" height="470"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11r-tk-Z4m">
-                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="93"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb" translatesAutoresizingMaskIntoConstraints="NO" id="aAf-55-gBW">
-                                                                <rect key="frame" x="20" y="5" width="60" height="83"/>
+                                                                <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="0EB-mx-nRR"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDS-RT-Jxu">
-                                                                <rect key="frame" x="95" y="31.5" width="109" height="30"/>
+                                                                <rect key="frame" x="95" y="20.5" width="111.5" height="29.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                                                 <color key="textColor" red="0.27843137254901962" green="0.3529411764705882" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -531,16 +531,16 @@ application on</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaU-if-Uyv">
-                                                        <rect key="frame" x="0.0" y="103" width="384" height="93"/>
+                                                        <rect key="frame" x="0.0" y="80" width="384" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="sny-O8-N8b">
-                                                                <rect key="frame" x="20" y="5" width="60" height="83"/>
+                                                                <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="C7z-gf-9Za"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO0-A1-jub">
-                                                                <rect key="frame" x="95" y="31.5" width="83" height="30"/>
+                                                                <rect key="frame" x="95" y="20.5" width="74" height="29.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                                                 <color key="textColor" red="0.31372549019607843" green="0.6705882352941176" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -557,16 +557,16 @@ application on</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3T2-z3-PUf">
-                                                        <rect key="frame" x="0.0" y="206" width="384" height="93"/>
+                                                        <rect key="frame" x="0.0" y="160" width="384" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instgram" translatesAutoresizingMaskIntoConstraints="NO" id="QFX-dx-UDN">
-                                                                <rect key="frame" x="20" y="5" width="60" height="83"/>
+                                                                <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="ZpH-tf-WwC"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instgram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRi-Q8-5nc">
-                                                                <rect key="frame" x="95" y="31.5" width="100" height="30"/>
+                                                                <rect key="frame" x="95" y="20.5" width="98.5" height="29.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                                                 <color key="textColor" red="0.75973230600357056" green="0.339922696352005" blue="0.56650805473327637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -583,16 +583,16 @@ application on</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chb-Ew-ttz">
-                                                        <rect key="frame" x="0.0" y="309" width="384" height="93"/>
+                                                        <rect key="frame" x="0.0" y="240" width="384" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="TfE-eN-mJG">
-                                                                <rect key="frame" x="20" y="5" width="60" height="83"/>
+                                                                <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="va5-ZN-90g"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mailbox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OH-YX-hrV">
-                                                                <rect key="frame" x="95" y="31.5" width="91.5" height="30"/>
+                                                                <rect key="frame" x="95" y="20.5" width="88.5" height="29.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                                                 <color key="textColor" red="1" green="0.8582729697227478" blue="0.27066561579704285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -609,16 +609,16 @@ application on</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2y-Wh-iqD">
-                                                        <rect key="frame" x="0.0" y="412" width="384" height="93"/>
+                                                        <rect key="frame" x="0.0" y="320" width="384" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-FN-Dca">
-                                                                <rect key="frame" x="20" y="5" width="60" height="83"/>
+                                                                <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="O3W-Gw-9iX"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhatsApp " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUT-Eq-6CQ">
-                                                                <rect key="frame" x="95" y="31.5" width="125" height="30"/>
+                                                                <rect key="frame" x="95" y="20.5" width="124" height="29.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                                                 <color key="textColor" red="0.37025129795074463" green="0.68640100955963135" blue="0.26086020469665527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -635,16 +635,16 @@ application on</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jz-77-ZI4">
-                                                        <rect key="frame" x="0.0" y="515" width="384" height="93"/>
+                                                        <rect key="frame" x="0.0" y="400" width="384" height="70"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_" translatesAutoresizingMaskIntoConstraints="NO" id="BwF-RY-pv7">
-                                                                <rect key="frame" x="20" y="5" width="60" height="83"/>
+                                                                <rect key="frame" x="20" y="5" width="60" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="QPd-eY-y2r"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call us " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsZ-ao-aQ6">
-                                                                <rect key="frame" x="95" y="31.5" width="78.5" height="30"/>
+                                                                <rect key="frame" x="95" y="20.5" width="83" height="29.5"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -682,7 +682,7 @@ application on</string>
                                 </constraints>
                             </scrollView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEW-vP-ofl">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
                                 <connections>
                                     <segue destination="XCB-f5-geY" kind="embed" id="ZgJ-uv-vp4"/>
                                 </connections>
@@ -748,28 +748,28 @@ application on</string>
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4E-lO-F4y">
-                                <rect key="frame" x="100" y="73" width="294" height="32.5"/>
+                                <rect key="frame" x="100" y="73.5" width="294" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ead-kY-xyY">
-                                <rect key="frame" x="30" y="155.5" width="354" height="350"/>
+                                <rect key="frame" x="30" y="155" width="354" height="346"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-vU-YIh">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="350"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="346"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eqq-lA-rAw">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="79"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxF-zd-gvW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="28"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-Rp-LsW">
-                                                        <rect key="frame" x="0.0" y="34" width="354" height="40"/>
+                                                        <rect key="frame" x="0.0" y="33" width="354" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="yl5-gm-55I"/>
                                                         </constraints>
@@ -778,7 +778,7 @@ application on</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIP-z1-e8z">
-                                                        <rect key="frame" x="0.0" y="79" width="354" height="1"/>
+                                                        <rect key="frame" x="0.0" y="78" width="354" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="w3W-FE-sdZ"/>
@@ -787,16 +787,16 @@ application on</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-U7-cou">
-                                                <rect key="frame" x="0.0" y="90" width="354" height="80"/>
+                                                <rect key="frame" x="0.0" y="89" width="354" height="79"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abg-XV-ouM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="28"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ae-Tc-xXn">
-                                                        <rect key="frame" x="0.0" y="34" width="354" height="40"/>
+                                                        <rect key="frame" x="0.0" y="33" width="354" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="oby-kU-8wQ"/>
                                                         </constraints>
@@ -805,7 +805,7 @@ application on</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-DD-3eg">
-                                                        <rect key="frame" x="0.0" y="79" width="354" height="1"/>
+                                                        <rect key="frame" x="0.0" y="78" width="354" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="bmX-ve-bR9"/>
@@ -814,16 +814,16 @@ application on</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GwL-Eh-VGi">
-                                                <rect key="frame" x="0.0" y="180" width="354" height="80"/>
+                                                <rect key="frame" x="0.0" y="178" width="354" height="79"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXq-Bm-B5Z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="28"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSr-jg-Ku8">
-                                                        <rect key="frame" x="0.0" y="34" width="354" height="40"/>
+                                                        <rect key="frame" x="0.0" y="33" width="354" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="O92-i7-X3t"/>
                                                         </constraints>
@@ -832,7 +832,7 @@ application on</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sg-R4-ptK">
-                                                        <rect key="frame" x="0.0" y="79" width="354" height="1"/>
+                                                        <rect key="frame" x="0.0" y="78" width="354" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="eA6-gl-bj5"/>
@@ -841,16 +841,16 @@ application on</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yTr-Kj-iZJ">
-                                                <rect key="frame" x="0.0" y="270" width="354" height="80"/>
+                                                <rect key="frame" x="0.0" y="267" width="354" height="79"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth (optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb1-4f-Eb5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="29"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="28"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dfj-6m-QFK">
-                                                        <rect key="frame" x="0.0" y="34" width="354" height="40"/>
+                                                        <rect key="frame" x="0.0" y="33" width="354" height="40"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tK9-m5-PmE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="40"/>
@@ -882,7 +882,7 @@ application on</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utk-cU-Wx3">
-                                                        <rect key="frame" x="0.0" y="79" width="354" height="1"/>
+                                                        <rect key="frame" x="0.0" y="78" width="354" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="tMv-4s-iMT"/>
@@ -903,7 +903,7 @@ application on</string>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-oq-bKd">
-                                <rect key="frame" x="82" y="535.5" width="250" height="50"/>
+                                <rect key="frame" x="82" y="531" width="250" height="50"/>
                                 <color key="backgroundColor" name="BtnsColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Jkd-fy-yvM"/>
@@ -1000,19 +1000,19 @@ application on</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akq-59-M55">
-                                <rect key="frame" x="70" y="204" width="145" height="30"/>
+                                <rect key="frame" x="70" y="204" width="145" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMD-Qz-sfF">
-                                <rect key="frame" x="15" y="283.5" width="384" height="150"/>
+                                <rect key="frame" x="15" y="285.5" width="384" height="146"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="125"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KWD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e84-Xb-4jr">
-                                <rect key="frame" x="182.5" y="443.5" width="49.5" height="24"/>
+                                <rect key="frame" x="184" y="441.5" width="46" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1090,13 +1090,13 @@ application on</string>
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS2-cx-FDl">
-                                <rect key="frame" x="100" y="73" width="294" height="32.5"/>
+                                <rect key="frame" x="100" y="73.5" width="294" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZT-VT-Eix">
-                                <rect key="frame" x="10" y="125.5" width="394" height="716.5"/>
+                                <rect key="frame" x="10" y="125" width="394" height="717"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wN6-0D-Cg5">
                                         <rect key="frame" x="0.0" y="5" width="394" height="890.5"/>
@@ -1133,7 +1133,7 @@ application on</string>
                                                         <rect key="frame" x="0.0" y="230.5" width="372.5" height="220.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of the service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTx-qp-cA9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="196" height="27"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="197.5" height="27"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="27" id="mYq-XT-Dhz"/>
                                                                 </constraints>
@@ -1155,7 +1155,7 @@ application on</string>
                                                         <rect key="frame" x="0.0" y="461" width="372.5" height="220.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions and rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b51-gD-74a">
-                                                                <rect key="frame" x="0.0" y="0.0" width="201.5" height="27"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="203" height="27"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="27" id="dTO-1u-dvm"/>
                                                                 </constraints>

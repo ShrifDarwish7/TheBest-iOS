@@ -16,7 +16,7 @@ protocol HomeViewDelegate {
     func didFailFetchSubCategories()
     func didCompleteFetchAllMarketsCategories(_ result: MarketTypes)
     func didFailFetchAllMarketsCategories()
-    
+    func didCompleteVegetableWith(_ result: MarketTypes?, _ error: Error?)
 }
 
 class HomeViewPresenter{
@@ -55,6 +55,21 @@ class HomeViewPresenter{
                 self.homeViewDelegate?.didCompleteFetchAllMarketsCategories(marketTypes!)
             }else{
                 self.homeViewDelegate?.didFailFetchAllMarketsCategories()
+            }
+        }
+        
+    }
+    
+    func getVegetableCategories(){
+        
+        self.homeViewDelegate?.showSVProgress()
+        
+        CategoriesServices.getMarketTypes { (marketTypes) in
+            self.homeViewDelegate?.dismissSVProgress()
+            if let _  = marketTypes{
+                self.homeViewDelegate?.didCompleteVegetableWith(marketTypes!, nil)
+            }else{
+                self.homeViewDelegate?.didCompleteVegetableWith(marketTypes!, nil)
             }
         }
         

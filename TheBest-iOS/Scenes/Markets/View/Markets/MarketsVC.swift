@@ -24,6 +24,7 @@ class MarketsVC: UIViewController {
     var nearbyMarkets: NearByMarkets?
     var tableDataSource: [Item]?
     var catReceivedId: Int?
+    var type: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,13 @@ class MarketsVC: UIViewController {
         pageTitle.setupShadow()
         
         filterBtn.layer.cornerRadius = 15
+        
+        if type == "vegetable"{
+            pageTitle.backgroundColor = UIColor(named: "vegColor")
+            
+        }else{
+            pageTitle.backgroundColor = UIColor(named: "MarketsColor")
+        }
         
     }
     

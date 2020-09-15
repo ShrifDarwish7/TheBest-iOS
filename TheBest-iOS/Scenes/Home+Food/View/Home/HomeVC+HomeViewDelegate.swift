@@ -59,4 +59,23 @@ extension HomeVC: HomeViewDelegate{
         
     }
     
+    func didCompleteVegetableWith(_ result: MarketTypes?, _ error: Error?) {
+        if let result = result{
+            
+            self.categories = result.items
+            self.loadSubCategoriesCollection(color: UIColor(named: "vegColor")!)
+            self.nextView = .vegetable
+            self.subCategories.isHidden = false
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.categoriesCollectionView.alpha = 0
+                self.subCategories.alpha = 1
+                self.backBtn.isHidden = false
+            }) { (_) in
+                self.categoriesCollectionView.isHidden = true
+            }
+            
+        }
+    }
+    
 }

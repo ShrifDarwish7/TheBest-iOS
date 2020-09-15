@@ -45,6 +45,7 @@ class Router{
         storesVC.modalPresentationStyle = .fullScreen
         storesVC.idReceived = id
         storesVC.pageIconReceived = pageIcon
+        storesVC.from = from
 //        if from == "markets"{
 //            storesVC.pageIcon.image = UIImage(named: "marketsIcon")
 //            storesVC.upperIcon.backgroundColor = UIColor(named: "MarketsColor")
@@ -111,13 +112,19 @@ class Router{
         
     }
     
-    static func toMarkets(sender: UIViewController, id: Int){
+    static func toMarkets(sender: UIViewController, id: Int, type: String){
         
         let storyboard = UIStoryboard(name: "Markets", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MarketsVC") as! MarketsVC
         vc.catReceivedId = id
         vc.modalPresentationStyle = .fullScreen
-        SharedData.food_markets_flag = 2
+        vc.type = type
+        if type == "markets"{
+            SharedData.food_markets_flag = 2
+        }else{
+            SharedData.food_markets_flag = 3
+        }
+        
         sender.present(vc, animated: true, completion: nil)
         
     }

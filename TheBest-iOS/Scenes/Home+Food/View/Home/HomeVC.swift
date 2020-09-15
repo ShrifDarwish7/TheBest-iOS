@@ -47,6 +47,7 @@ class HomeVC: UIViewController {
         appCategories.append(AppCategory(icon: UIImage(named: "category_icon6"), name: "Monthly  Account"))
         appCategories.append(AppCategory(icon: UIImage(named: "category_icon7"), name: "Road rescue services"))
         appCategories.append(AppCategory(icon: UIImage(named: "category_icon8"), name: "Furniture transporting"))
+        appCategories.append(AppCategory(icon: UIImage(named: "category_icon5"), name: "Vegetable"))
         
         loadUI()
         loadCategoriesCollection()
@@ -174,6 +175,10 @@ class HomeVC: UIViewController {
                     self.askForLocationAlert()
                 }
                 
+            case 8:
+                
+                self.homeViwPresenter?.getVegetableCategories()
+                
             default:
                 break
                 
@@ -219,14 +224,27 @@ class HomeVC: UIViewController {
             switch self.nextView{
                 
             case .markets:
+                
                 switch CLLocationManager.authorizationStatus() {
                 case .authorizedAlways , .authorizedWhenInUse:
-                    Router.toMarkets(sender: self, id: self.categories![index.row].id)
+                    Router.toMarkets(sender: self, id: self.categories![index.row].id, type: "markets")
                 default:
                     self.askForLocationAlert()
                 }
+                
             case .restaurants:
+                
                 Router.toStores(pageIcon: (self.categories?[index.row].image)! , id: (self.categories?[index.row].id)!, sender: self, from: "")
+                
+            case .vegetable:
+                
+                switch CLLocationManager.authorizationStatus() {
+                case .authorizedAlways , .authorizedWhenInUse:
+                    Router.toMarkets(sender: self, id: self.categories![index.row].id, type: "vegetable")
+                default:
+                    self.askForLocationAlert()
+                }
+                
             default:
                 break
                 
@@ -242,6 +260,7 @@ enum Next{
     
     case restaurants
     case markets
+    case vegetable
     case none
     
 }
