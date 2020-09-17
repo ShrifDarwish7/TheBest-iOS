@@ -103,6 +103,11 @@
 		AAC2DC6924C8B71600378934 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2DC6824C8B71600378934 /* Gradient.swift */; };
 		AAC2DC6B24C8B77000378934 /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2DC6A24C8B77000378934 /* Drawer.swift */; };
 		AAC2DC6D24C8BB7700378934 /* DrawerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2DC6C24C8BB7700378934 /* DrawerVC.swift */; };
+		AAC3F9202513DC570055CB03 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F91F2513DC570055CB03 /* ProfilePresenter.swift */; };
+		AAC3F9222513E5D10055CB03 /* ProfileVC+ProfileViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F9212513E5D10055CB03 /* ProfileVC+ProfileViewDelegate.swift */; };
+		AAC3F9262513EBD70055CB03 /* LastTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F9242513EBD70055CB03 /* LastTripsTableViewCell.swift */; };
+		AAC3F9272513EBD70055CB03 /* LastTripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC3F9252513EBD70055CB03 /* LastTripsTableViewCell.xib */; };
+		AAC3F9292513EC910055CB03 /* LastTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F9282513EC910055CB03 /* LastTrips.swift */; };
 		AACA7EB424C759FA004437FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA7EB324C759FA004437FC /* AppDelegate.swift */; };
 		AACA7EB624C759FA004437FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACA7EB524C759FA004437FC /* SceneDelegate.swift */; };
 		AACA7EBB24C759FA004437FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AACA7EB924C759FA004437FC /* Main.storyboard */; };
@@ -277,6 +282,11 @@
 		AAC2DC6824C8B71600378934 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		AAC2DC6A24C8B77000378934 /* Drawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
 		AAC2DC6C24C8BB7700378934 /* DrawerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerVC.swift; sourceTree = "<group>"; };
+		AAC3F91F2513DC570055CB03 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		AAC3F9212513E5D10055CB03 /* ProfileVC+ProfileViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+ProfileViewDelegate.swift"; sourceTree = "<group>"; };
+		AAC3F9242513EBD70055CB03 /* LastTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTripsTableViewCell.swift; sourceTree = "<group>"; };
+		AAC3F9252513EBD70055CB03 /* LastTripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastTripsTableViewCell.xib; sourceTree = "<group>"; };
+		AAC3F9282513EC910055CB03 /* LastTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTrips.swift; sourceTree = "<group>"; };
 		AACA7EB024C759FA004437FC /* TheBest-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TheBest-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AACA7EB324C759FA004437FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AACA7EB524C759FA004437FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -572,6 +582,7 @@
 		AA0BC2EF24F58D4400430FFE /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				AAC3F9232513EBC30055CB03 /* Trips */,
 				AA54C14A2502B4B000E31EA8 /* Food+Markets */,
 			);
 			path = XIBs;
@@ -679,6 +690,7 @@
 			isa = PBXGroup;
 			children = (
 				AA9B52D0250933A800178823 /* ProfileVC.swift */,
+				AAC3F9212513E5D10055CB03 /* ProfileVC+ProfileViewDelegate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -865,6 +877,15 @@
 			path = XIBs;
 			sourceTree = "<group>";
 		};
+		AAC3F9232513EBC30055CB03 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				AAC3F9242513EBD70055CB03 /* LastTripsTableViewCell.swift */,
+				AAC3F9252513EBD70055CB03 /* LastTripsTableViewCell.xib */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
 		AACA7EA724C759FA004437FC = {
 			isa = PBXGroup;
 			children = (
@@ -1037,6 +1058,7 @@
 			isa = PBXGroup;
 			children = (
 				AAE30DE624FFAFD300DF5B18 /* FoodOrdersHistory.swift */,
+				AAC3F9282513EC910055CB03 /* LastTrips.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1202,6 +1224,7 @@
 			children = (
 				AA026F7B24C788CE003FFF4E /* LoginPresenter.swift */,
 				AAB1E57824CA1A1A00E3E499 /* RegisterPresenter.swift */,
+				AAC3F91F2513DC570055CB03 /* ProfilePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1311,6 +1334,7 @@
 				AACA7EE924C76BAE004437FC /* Lato-BlackItalic.ttf in Resources */,
 				AACA7EEA24C76BAE004437FC /* Lato-Thin.ttf in Resources */,
 				AAF6727F24E59AD10025C5C2 /* MarketTableViewCell.xib in Resources */,
+				AAC3F9272513EBD70055CB03 /* LastTripsTableViewCell.xib in Resources */,
 				AACA7EEC24C76BAE004437FC /* Lato-Light.ttf in Resources */,
 				AA54C14E2502B4D800E31EA8 /* FoodTableViewCell.xib in Resources */,
 				AACA7EC324C759FC004437FC /* LaunchScreen.storyboard in Resources */,
@@ -1404,6 +1428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAEBD30724E1E20C0010A81E /* CheckoutPresenter.swift in Sources */,
+				AAC3F9202513DC570055CB03 /* ProfilePresenter.swift in Sources */,
 				AAC2DC6B24C8B77000378934 /* Drawer.swift in Sources */,
 				AAF7F15924EF0B3300FAE7D7 /* SpecialCarResult.swift in Sources */,
 				AAF9998224C78063009DB374 /* Alert.swift in Sources */,
@@ -1430,6 +1455,7 @@
 				AA026F7C24C788CE003FFF4E /* LoginPresenter.swift in Sources */,
 				AA3239DD24E9842A009B9960 /* MarketTypes.swift in Sources */,
 				AAB3082E24CCB29600D8FE0C /* MenuTableViewCell.swift in Sources */,
+				AAC3F9292513EC910055CB03 /* LastTrips.swift in Sources */,
 				AA01469524FBDEC700F10BEC /* CarRentPresenter.swift in Sources */,
 				AAF9997D24C778CC009DB374 /* LoginVC.swift in Sources */,
 				AA02858A24D898570017E35D /* TaxiOrderVC+ GMSAutocompleteViewControllerDelegate.swift in Sources */,
@@ -1471,6 +1497,7 @@
 				AA026F8424C79DE8003FFF4E /* User.swift in Sources */,
 				AAFCC96B24F7D1FB00D1B095 /* SpecialCarsTableViewCell.swift in Sources */,
 				AA04D69824F845E300BE4628 /* FurnitureVCPresenter.swift in Sources */,
+				AAC3F9262513EBD70055CB03 /* LastTripsTableViewCell.swift in Sources */,
 				AAB5C74C24CB39D600A6B6E4 /* StoresVC.swift in Sources */,
 				AABEEAD524FD91F300990562 /* CarRentVC+CLLocationManagerDelegate.swift in Sources */,
 				AAE37C8524D49AC5002CB1D0 /* PlaceOrder.swift in Sources */,
@@ -1494,6 +1521,7 @@
 				AA02858824D879580017E35D /* TaxiOrderVC+GMSMapViewDelegate.swift in Sources */,
 				AA19194A24EF037500EE080E /* SpecialNeedCar+CLLocationManagerDelegate.swift in Sources */,
 				AAEBD30224E1CCE10010A81E /* VariationTableViewCell.swift in Sources */,
+				AAC3F9222513E5D10055CB03 /* ProfileVC+ProfileViewDelegate.swift in Sources */,
 				AABEEAD724FD922700990562 /* CarRentVC+TaxiOrderViewDelegate.swift in Sources */,
 				AA9B52CB2508FEC900178823 /* HowToUseVC+CollectionViewDelegate.swift in Sources */,
 				AAB1E57924CA1A1A00E3E499 /* RegisterPresenter.swift in Sources */,

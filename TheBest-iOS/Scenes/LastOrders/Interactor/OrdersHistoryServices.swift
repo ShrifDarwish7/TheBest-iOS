@@ -39,4 +39,33 @@ class OrdersHistoryServices{
         
     }
     
+    static func getTripsHistory(id: Int, completed: @escaping (LastTrips?)->Void){
+        
+        URLCache.shared.removeAllCachedResponses()
+        
+        Alamofire.request(MY_TRIPS_END_POINT + "\(id)", method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+            switch response.result{
+            case .success(let data):
+                print(SharedData.headers)
+                
+                print(JSON(data))
+                do{
+                    let dataModel = try JSONDecoder().decode(LastTrips.self, from: data)
+                    if !dataModel.trips.isEmpty{
+                        completed(dataModel)
+                    }else{
+                        completed(nil)
+                    }
+                }catch let error{
+                    print(error)
+                    completed(nil)
+                }
+            case .failure(let error):
+                print(error)
+                completed(nil)
+            }
+        }
+        
+    }
+    
 }

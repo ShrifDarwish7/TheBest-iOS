@@ -23,6 +23,7 @@ extension LastOrdersVC: OrdersHistoryViewDelegate{
         self.foodOrders = result.data
         self.emptyHistory.isHidden = true
         self.lastOrdersTable.isHidden = false
+        self.lastTripsTable.isHidden = true
         self.loadLastOrders()
         self.lastOrdersTable.reloadData()
     }
@@ -32,5 +33,17 @@ extension LastOrdersVC: OrdersHistoryViewDelegate{
         self.lastOrdersTable.isHidden = true
     }
     
+    
+    func didCompleteTripsWith(_ result: LastTrips?, _ error: Bool) {
+        if let _ = result {
+            self.trips = result?.trips
+            self.loadLastTrips()
+            self.lastTripsTable.isHidden = false
+        }else{
+            self.emptyHistory.isHidden = false
+            self.lastOrdersTable.isHidden = true
+            self.lastTripsTable.isHidden = true
+        }
+    }
     
 }

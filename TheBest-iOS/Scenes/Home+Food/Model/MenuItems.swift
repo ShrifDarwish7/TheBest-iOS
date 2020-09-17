@@ -24,12 +24,14 @@ struct RestaurantMenuItem: Codable {
     let price: String
     let image: String
     let restaurantMenuDescription: String
-    let restaurantID, menuCategoryID: Int
+    let restaurantID: Int
+    let menuCategoryID: String
     let createdAt, updatedAt, attributeTitle: String
     var itemattributes: [ItemAttribute]
 
     enum CodingKeys: String, CodingKey {
-        case id, name, price, image
+        case id, name, price
+        case image = "has_image"
         case restaurantMenuDescription = "description"
         case restaurantID = "restaurant_id"
         case menuCategoryID = "menu_category_id"

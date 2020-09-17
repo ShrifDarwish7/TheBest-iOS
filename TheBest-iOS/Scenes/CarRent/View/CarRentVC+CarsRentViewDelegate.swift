@@ -19,7 +19,8 @@ extension CarRentVC: CarsRentViewDelegate{
     }
     
     func didCompleteWithCars(_ result: Cars) {
-        
+        self.cars = result
+        self.loadBrandPicker()
     }
     
     func didFailFetchCars() {

@@ -2576,6 +2576,10 @@ ever since the 1500s</string>
                                 <rect key="frame" x="10" y="372" width="394" height="480"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cni-Kh-pRw">
+                                <rect key="frame" x="10" y="372" width="394" height="480"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-CQ-LKR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <connections>
@@ -2585,10 +2589,13 @@ ever since the 1500s</string>
                         </subviews>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
+                            <constraint firstItem="cni-Kh-pRw" firstAttribute="centerX" secondItem="B2D-ZO-2VP" secondAttribute="centerX" id="40G-W0-bDQ"/>
+                            <constraint firstItem="cni-Kh-pRw" firstAttribute="centerY" secondItem="B2D-ZO-2VP" secondAttribute="centerY" id="7P9-rC-0gb"/>
                             <constraint firstItem="JBr-WH-vee" firstAttribute="centerX" secondItem="sne-XX-USw" secondAttribute="centerX" id="7nb-hO-57g"/>
                             <constraint firstItem="VL9-5O-dy9" firstAttribute="top" secondItem="8ru-1y-249" secondAttribute="bottom" constant="15" id="A1q-23-vLK"/>
                             <constraint firstItem="hQV-CQ-LKR" firstAttribute="top" secondItem="sne-XX-USw" secondAttribute="top" id="BoC-A6-p2t"/>
                             <constraint firstItem="B2D-ZO-2VP" firstAttribute="top" secondItem="T6s-mh-xYR" secondAttribute="bottom" constant="10" id="CwF-R3-pqR"/>
+                            <constraint firstItem="cni-Kh-pRw" firstAttribute="height" secondItem="B2D-ZO-2VP" secondAttribute="height" id="FEb-Wa-ueG"/>
                             <constraint firstItem="T6s-mh-xYR" firstAttribute="leading" secondItem="Hio-9h-nB8" secondAttribute="leading" constant="15" id="G90-JO-sSw"/>
                             <constraint firstItem="VL9-5O-dy9" firstAttribute="leading" secondItem="Hio-9h-nB8" secondAttribute="leading" constant="40" id="HC9-Fo-tIP"/>
                             <constraint firstItem="Hio-9h-nB8" firstAttribute="bottom" secondItem="B2D-ZO-2VP" secondAttribute="bottom" constant="10" id="JCc-zM-pcv"/>
@@ -2597,6 +2604,7 @@ ever since the 1500s</string>
                             <constraint firstItem="B2D-ZO-2VP" firstAttribute="leading" secondItem="Hio-9h-nB8" secondAttribute="leading" constant="10" id="OWg-6T-N5L"/>
                             <constraint firstItem="T6s-mh-xYR" firstAttribute="top" secondItem="VL9-5O-dy9" secondAttribute="bottom" constant="15" id="P1g-cr-Pi5"/>
                             <constraint firstItem="hQV-CQ-LKR" firstAttribute="centerX" secondItem="sne-XX-USw" secondAttribute="centerX" id="ReJ-RR-Hij"/>
+                            <constraint firstItem="cni-Kh-pRw" firstAttribute="width" secondItem="B2D-ZO-2VP" secondAttribute="width" id="ayB-Nr-i7d"/>
                             <constraint firstItem="T6s-mh-xYR" firstAttribute="height" secondItem="sne-XX-USw" secondAttribute="height" multiplier="0.17" id="eMc-zL-vM2"/>
                             <constraint firstItem="Hio-9h-nB8" firstAttribute="trailing" secondItem="T6s-mh-xYR" secondAttribute="trailing" constant="29" id="fXm-NG-48c"/>
                             <constraint firstItem="8ru-1y-249" firstAttribute="top" secondItem="Hio-9h-nB8" secondAttribute="top" constant="20" id="nig-Yw-cid"/>
@@ -2614,6 +2622,7 @@ ever since the 1500s</string>
                         <outlet property="drawerPosition" destination="ReJ-RR-Hij" id="oQh-am-hr2"/>
                         <outlet property="emptyHistory" destination="JBr-WH-vee" id="Hpa-7w-Eap"/>
                         <outlet property="lastOrdersTable" destination="B2D-ZO-2VP" id="2tH-Ub-riJ"/>
+                        <outlet property="lastTripsTable" destination="cni-Kh-pRw" id="hQG-8K-h5M"/>
                         <outlet property="upperView" destination="8ru-1y-249" id="xSX-cM-KOm"/>
                     </connections>
                 </viewController>

@@ -17,7 +17,7 @@ struct SpecialCarResult: Codable {
 struct SpecialCarData: Codable {
     let id: Int
     let lat, lng, distance: Double
-    let image: String
+    let has_image: String
     let cost: Int
     var selected: Bool?
 }

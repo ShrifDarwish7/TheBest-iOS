@@ -17,9 +17,11 @@ class LastOrdersVC: UIViewController {
     @IBOutlet weak var catsCollectionView: UICollectionView!
     @IBOutlet weak var lastOrdersTable: UITableView!
     @IBOutlet weak var emptyHistory: UILabel!
+    @IBOutlet weak var lastTripsTable: UITableView!
     
     var appCategories = [AppCategory]()
     var foodOrders: [FoodOrder]?
+    var trips: [Trip]?
     var ordersHistoryPresenter: OrdersHistoryPresenter?
     
     override func viewDidLoad() {

@@ -16,7 +16,7 @@ struct NearestCars: Codable {
 // MARK: - Datum
 struct NearestCar: Codable {
     let id: Int
-    let image: String
+    let has_image: String
     let lat, lng, distance: Double
     let cost: Int
 }

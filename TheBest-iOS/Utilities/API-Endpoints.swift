@@ -8,7 +8,7 @@
 
 import Foundation
 
-let BASE_URL = "https://phplaravel-445196-1394546.cloudwaysapps.com/api/"
+let BASE_URL = "https://thebest-solution.com/api/"
 let LOGIN_END_POINT = BASE_URL + "Auth/login"
 let REGISTER_END_POINT = BASE_URL + "Auth/register"
 let MAIN_CATEGORIES_END_POINT = BASE_URL + "Main/AllCategories"
@@ -38,5 +38,7 @@ let NEAREST_CARS_END_POINT = BASE_URL + "Car/NearestCars"
 let CARS_DISTNCE_END_POINT = BASE_URL + "Car/GetDistanceCar"
 let CARS_CONFIRM_RIDE_END_POINT = BASE_URL + "Car/ConfirmRideCar"
 let FOOD_ORDERS_HISTORY_END_POINT = BASE_URL + "Order/MyOrders/"
+let UPDATE_PROFILE_END_POINT = BASE_URL + "User/updateProfile"
+let MY_TRIPS_END_POINT = BASE_URL + "Trip/MyTripsForClient/"
 
 let HEADERS = ["Accept": "application/json"]

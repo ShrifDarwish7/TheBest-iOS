@@ -37,11 +37,12 @@ struct UserClass: Codable {
     let createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case id, name, email, image
+        case id, name, email
         case fcmToken = "fcm_token"
         case phone
         case isAdmin = "is_admin"
         case isDriver = "is_driver"
+        case image = "has_image"
       //  case lat, lng
         case birthDate = "birth_date"
         case nationality, status

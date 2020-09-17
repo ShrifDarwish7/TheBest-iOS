@@ -16,13 +16,16 @@ class CarRentServices{
         Alamofire.request(GET_CARS_END_POINT, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
             switch response.result{
             case .success(let data):
+                print(JSON(data))
                 do{
                     let dataModel = try JSONDecoder().decode(Cars.self, from: data)
                     completed(dataModel)
-                }catch{
+                }catch let err{
+                    print(err)
                     completed(nil)
                 }
-            case .failure(_):
+            case .failure(let error):
+                print(error)
                 completed(nil)
             }
         }

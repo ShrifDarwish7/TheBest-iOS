@@ -17,7 +17,7 @@ class CarRentVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var pageTitle: UIView!
     @IBOutlet weak var tripInfoView: UIView!
-    @IBOutlet weak var carsTypesCollectionView: UICollectionView!
+   // @IBOutlet weak var carsTypesCollectionView: UICollectionView!
     @IBOutlet weak var fromLbl: UILabel!
     @IBOutlet weak var toLbl: UILabel!
     @IBOutlet weak var confirmBtn: UIButton!
@@ -35,6 +35,9 @@ class CarRentVC: UIViewController {
     @IBOutlet weak var from_toView: UIView!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var driverImage: UIImageView!
+    @IBOutlet weak var brandTF: UITextField!
+    @IBOutlet weak var modelTF: UITextField!
+    @IBOutlet weak var yearTF: UITextField!
     
     let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
@@ -44,6 +47,13 @@ class CarRentVC: UIViewController {
     var fromAutoCompleteController: GMSAutocompleteViewController?
     var toAutoCompleteController: GMSAutocompleteViewController?
     var selectedDriverID: Int?
+    var cars: Cars?
+    var brandPicker = UIPickerView()
+    var modelPicker = UIPickerView()
+    var yearPicker = UIPickerView()
+    var selectedBrandIndex = 0
+    var selectedModelIndex = 0
+    var selectedYearIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +83,10 @@ class CarRentVC: UIViewController {
         from_toView.setupShadow()
         tripInfoView.setupShadow()
         driverView.setupShadow()
+        
+        setupPicker(textField: brandTF, picker: brandPicker)
+        setupPicker(textField: modelTF, picker: modelPicker)
+        setupPicker(textField: yearTF, picker: yearPicker)
         
         requestLocationPermission()
         
@@ -150,6 +164,95 @@ class CarRentVC: UIViewController {
         default:
             break
         }
+        
+    }
+    
+    func loadBrandPicker() {
+        
+        guard !self.cars!.cars.data.isEmpty else {
+            return
+        }
+        
+        self.brandPicker
+            .numberOfRowsInComponent() { _ in
+                self.cars!.cars.data.count
+        }.viewForRow(handler: { (row, _, _) -> UIView in
+            
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
+            label.numberOfLines = 0
+            label.textAlignment = .center
+            label.sizeToFit()
+            
+            label.text =  self.cars?.cars.data[row].name
+            
+            return label
+            
+        }).didSelectRow { row, component in
+            
+            self.brandTF.text = self.cars?.cars.data[row].name
+            self.selectedBrandIndex = row
+            self.loadModelPicker()
+            
+        }.reloadAllComponents()
+        
+    }
+    
+    func loadModelPicker() {
+        
+        guard !self.cars!.cars.data[self.selectedBrandIndex].carsModels.isEmpty else {
+            return
+        }
+        
+        self.modelPicker
+            .numberOfRowsInComponent() { _ in
+                self.cars!.cars.data[self.selectedBrandIndex].carsModels.count
+        }.viewForRow(handler: { (row, _, _) -> UIView in
+            
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
+            label.numberOfLines = 0
+            label.textAlignment = .center
+            label.sizeToFit()
+            
+            label.text =  self.cars!.cars.data[self.selectedBrandIndex].carsModels[row].name
+            
+            return label
+            
+        }).didSelectRow { row, component in
+            
+            self.modelTF.text = self.cars!.cars.data[self.selectedBrandIndex].carsModels[row].name
+            self.selectedModelIndex = row
+            self.loadYearPicker()
+            
+        }.reloadAllComponents()
+        
+    }
+    
+    func loadYearPicker() {
+        
+        guard !self.cars!.cars.data[self.selectedBrandIndex].carsModels[self.selectedModelIndex].carslist.isEmpty else {
+            return
+        }
+        
+        self.yearPicker
+            .numberOfRowsInComponent() { _ in
+                self.cars!.cars.data[self.selectedBrandIndex].carsModels[self.selectedModelIndex].carslist.count
+        }.viewForRow(handler: { (row, _, _) -> UIView in
+            
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
+            label.numberOfLines = 0
+            label.textAlignment = .center
+            label.sizeToFit()
+            
+            label.text =  self.cars!.cars.data[self.selectedBrandIndex].carsModels[self.selectedModelIndex].carslist[row].name
+            
+            return label
+            
+        }).didSelectRow { row, component in
+            
+            self.yearTF.text = self.cars!.cars.data[self.selectedBrandIndex].carsModels[self.selectedModelIndex].carslist[row].name
+            self.selectedYearIndex = row
+            
+        }.reloadAllComponents()
         
     }
 

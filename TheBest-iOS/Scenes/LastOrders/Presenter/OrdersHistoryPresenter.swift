@@ -13,6 +13,7 @@ protocol OrdersHistoryViewDelegate {
     func dismissProgress()
     func didCompletedWithFoodOrdersHistory(_ result: FoodOrdersHistory)
     func didFailFetchFoodOrdersHistory()
+    func didCompleteTripsWith(_ result: LastTrips?, _ error: Bool)
 }
 
 class OrdersHistoryPresenter{
@@ -31,6 +32,18 @@ class OrdersHistoryPresenter{
                 self.ordersHistoryViewDelegate?.didCompletedWithFoodOrdersHistory(result!)
             }else{
                 self.ordersHistoryViewDelegate?.didFailFetchFoodOrdersHistory()
+            }
+        }
+    }
+    
+    func getLastTripsHistory(id: Int){
+        self.ordersHistoryViewDelegate?.showProgress()
+        OrdersHistoryServices.getTripsHistory(id: id) { (lastTrips) in
+            self.ordersHistoryViewDelegate?.dismissProgress()
+            if let _ = lastTrips{
+                self.ordersHistoryViewDelegate?.didCompleteTripsWith(lastTrips!, false)
+            }else{
+                self.ordersHistoryViewDelegate?.didCompleteTripsWith(nil, true)
             }
         }
     }

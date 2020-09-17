@@ -24,7 +24,8 @@ struct Items: Codable {
     var menuesCategories: [MenuesCategory]
 
     enum CodingKeys: String, CodingKey {
-        case id, name, image
+        case id, name
+        case image = "has_image"
         case itemsDescription = "description"
         case address
         case categoryID = "category_id"

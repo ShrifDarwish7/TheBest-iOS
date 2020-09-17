@@ -28,7 +28,8 @@ struct MainCategory: Codable {
     var selected: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case id, name, image
+        case id, name
+        case image = "has_image"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case typeId = "type_id"

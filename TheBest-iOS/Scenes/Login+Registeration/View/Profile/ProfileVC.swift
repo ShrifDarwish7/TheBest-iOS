@@ -12,12 +12,12 @@ class ProfileVC: UIViewController {
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var firstNameTF: UITextField!
-    @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var countryTF: UITextField!
     @IBOutlet weak var days: UITextField!
     @IBOutlet weak var months: UITextField!
     @IBOutlet weak var years: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     
     let daysForPicker = (1...31).map({String($0)})
     let yearsForPicker = (1960...MAX_YEARS).map({String($0)})
@@ -26,9 +26,13 @@ class ProfileVC: UIViewController {
     var yearsPicker = UIPickerView()
     var countryPicker = UIPickerView()
     
+    var profilePresenter: ProfilePresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        profilePresenter = ProfilePresenter(profileViewDelegate: self)
+        
         backBtn.onTap {
             self.dismiss(animated: true, completion: nil)
         }
@@ -45,6 +49,28 @@ class ProfileVC: UIViewController {
         setupPicker(textField: days, picker: daysPicker)
         setupPicker(textField: months, picker: monthsPicker)
         setupPicker(textField: years, picker: yearsPicker)
+        
+        saveBtn.onTap {
+            
+            guard !self.firstNameTF.text!.isEmpty, !self.emailTF.text!.isEmpty, !self.countryTF.text!.isEmpty, !self.days.text!.isEmpty, !self.years.text!.isEmpty, !self.months.text!.isEmpty else{
+                self.showAlert(title: "", message: "Please fill out required fields")
+                return
+            }
+            
+            let dof = (self.years.text ?? "") + "-" + (MONTHS_EN[self.months.text!]! )
+            let dof_ = dof  + "-" + (self.days.text ?? "")
+            
+            let updateParamters = [
+                "name": self.firstNameTF.text!,
+                "image:": "",
+                "email": self.emailTF.text!,
+                "nationality": self.countryTF.text ?? "",
+                "birth_date": dof_
+                ] as [String : Any]
+            
+            self.profilePresenter?.updateProfile(parameters: updateParamters as! [String : String])
+            
+        }
         
     }
     

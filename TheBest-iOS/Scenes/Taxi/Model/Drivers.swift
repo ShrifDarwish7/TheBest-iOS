@@ -57,7 +57,7 @@ struct MyCar: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case carNumber = "car_number"
-        case image
+        case image = "has_image"
         case carModel = "car_model"
         case userID = "user_id"
         case type

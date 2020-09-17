@@ -25,7 +25,8 @@ struct Item: Codable {
     let createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
-        case id, name, image
+        case id, name
+        case image = "has_image"
         case itemDescription = "description"
         case address
         case country, government, district

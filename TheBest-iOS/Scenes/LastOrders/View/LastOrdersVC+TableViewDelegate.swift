@@ -18,14 +18,37 @@ extension LastOrdersVC: UITableViewDataSource, UITableViewDelegate{
         self.lastOrdersTable.dataSource = self
     }
     
+    func loadLastTrips(){
+        let nib = UINib(nibName: "LastTripsTableViewCell", bundle: nil)
+        self.lastTripsTable.register(nib, forCellReuseIdentifier: "LastTripsTableViewCell")
+        self.lastTripsTable.delegate = self
+        self.lastTripsTable.dataSource = self
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.foodOrders!.count
+        switch tableView {
+        case lastOrdersTable:
+            return self.foodOrders!.count
+        default:
+            return self.trips!.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodTableViewCell", for: indexPath) as! FoodTableViewCell
-        cell.loadFrom(foodOrder: self.foodOrders![indexPath.row])
-        return cell
+        
+        switch tableView {
+        case lastOrdersTable:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FoodTableViewCell", for: indexPath) as! FoodTableViewCell
+            cell.loadFrom(foodOrder: self.foodOrders![indexPath.row])
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LastTripsTableViewCell", for: indexPath) as! LastTripsTableViewCell
+            cell.loadFrom(trip: self.trips![indexPath.row])
+            return cell
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

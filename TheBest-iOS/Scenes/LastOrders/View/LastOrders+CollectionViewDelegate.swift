@@ -59,6 +59,8 @@ extension LastOrdersVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             ordersHistoryPresenter?.getFoodOrdersHistory(id: 1)
         case 4:
             ordersHistoryPresenter?.getFoodOrdersHistory(id: 2)
+        case 1,2,3,5,6:
+            ordersHistoryPresenter?.getLastTripsHistory(id: 1)
         default:
             break
         }

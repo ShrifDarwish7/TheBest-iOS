@@ -28,7 +28,8 @@ struct SpecialCar: Codable {
     var selected: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case id, name, image, type, selected
+        case id, name, type, selected
+        case image = "has_image"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }

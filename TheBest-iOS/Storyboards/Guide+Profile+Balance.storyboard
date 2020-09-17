@@ -789,7 +789,7 @@ application on</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-U7-cou">
                                                 <rect key="frame" x="0.0" y="89" width="354" height="79"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abg-XV-ouM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abg-XV-ouM">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="28"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
                                                         <nil key="textColor"/>
@@ -934,8 +934,8 @@ application on</string>
                         <outlet property="backBtn" destination="EzA-qb-blZ" id="gdy-no-BY0"/>
                         <outlet property="countryTF" destination="rSr-jg-Ku8" id="dxz-0c-hdh"/>
                         <outlet property="days" destination="tK9-m5-PmE" id="LWk-Ee-v5B"/>
+                        <outlet property="emailTF" destination="2ae-Tc-xXn" id="zr2-t7-iSE"/>
                         <outlet property="firstNameTF" destination="hbt-Rp-LsW" id="qCb-Jg-8p6"/>
-                        <outlet property="lastNameTF" destination="2ae-Tc-xXn" id="YtN-w6-ST2"/>
                         <outlet property="months" destination="ILY-ln-a8I" id="59c-N9-p3M"/>
                         <outlet property="saveBtn" destination="J05-oq-bKd" id="M9j-U4-kfK"/>
                         <outlet property="years" destination="MEm-m5-GDL" id="5GJ-Py-qau"/>

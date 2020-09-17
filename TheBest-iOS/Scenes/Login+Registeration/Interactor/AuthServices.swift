@@ -64,6 +64,7 @@ class AuthServices{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
                                 self.instance.user = dataModel
+                                print(dataModel)
                                 self.instance.isLogged = true
                                 completed(true,false)
                                 
@@ -129,6 +130,54 @@ class AuthServices{
                             }catch let error{
                                 print("userParseError",error)
                                 self.instance.isLogged = false
+                                completed(false)
+                            }
+                            
+                        case .failure(_):
+                            
+                            self.instance.isLogged = false
+                            completed(false)
+                            
+                        }
+                        
+                    }
+                    
+                case .failure(let error):
+                    
+                    print("error",error)
+                    completed(false)
+                    
+                }
+                
+            }
+        
+    }
+    
+    static func updateProfileWith(parameters: [String: String], completed: @escaping (Bool)->Void){
+        URLCache.shared.removeAllCachedResponses()
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+                
+            for (key,value) in parameters{
+                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+            }
+                
+        }, to: URL(string: UPDATE_PROFILE_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
+                
+                switch encodingResult{
+                    
+                case .success(let uploadRequest,_,_):
+                    
+                    uploadRequest.responseData { (response) in
+                        
+                        switch response.result{
+                            
+                        case .success(let data):
+                                   
+                            print("updateProfileWith", try! JSON(data: data))
+                            
+                            if JSON(data)["code"].intValue == 100{
+                                completed(true)
+                            }else{
                                 completed(false)
                             }
                             
