@@ -21,6 +21,8 @@ extension CarRentVC: CarsRentViewDelegate{
     func didCompleteWithCars(_ result: Cars) {
         self.cars = result
         self.loadBrandPicker()
+        self.brandTF.text = self.cars?.cars.data.first?.name
+        self.brandIcon.sd_setImage(with: URL(string: self.cars?.cars.data.first?.image ?? ""))
     }
     
     func didFailFetchCars() {

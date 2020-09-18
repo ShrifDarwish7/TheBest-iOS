@@ -38,6 +38,7 @@ class CarRentVC: UIViewController {
     @IBOutlet weak var brandTF: UITextField!
     @IBOutlet weak var modelTF: UITextField!
     @IBOutlet weak var yearTF: UITextField!
+    @IBOutlet weak var brandIcon: UIImageView!
     
     let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
@@ -129,6 +130,17 @@ class CarRentVC: UIViewController {
     }
     
     @IBAction func tripButtonAction(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 0:
+            
+            self.carsRentPresenter?.getNearestCarsWith(car_model: "1", car_list: "2")
+            
+        default:
+            break
+        }
+        
+        
             guard let _ = selectedDriverID else {
                 self.showAlert(title: "", message: "Select driver first")
                 return
@@ -189,9 +201,15 @@ class CarRentVC: UIViewController {
             
         }).didSelectRow { row, component in
             
-            self.brandTF.text = self.cars?.cars.data[row].name
+            self.brandTF.text = " " + (self.cars?.cars.data[row].name)!
             self.selectedBrandIndex = row
+            self.selectedModelIndex = 0
+            self.selectedYearIndex = 0
+            self.modelTF.text = ""
+            self.yearTF.text = ""
             self.loadModelPicker()
+            
+            self.brandIcon.sd_setImage(with: URL(string: (self.cars?.cars.data[row].image) ?? ""))
             
         }.reloadAllComponents()
         
@@ -221,6 +239,8 @@ class CarRentVC: UIViewController {
             
             self.modelTF.text = self.cars!.cars.data[self.selectedBrandIndex].carsModels[row].name
             self.selectedModelIndex = row
+            self.selectedYearIndex = 0
+            self.yearTF.text = ""
             self.loadYearPicker()
             
         }.reloadAllComponents()

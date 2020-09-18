@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
@@ -34,16 +37,22 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="oMN-eG-CSv">
-                                <rect key="frame" x="85" y="51" width="26" height="27"/>
+                                <rect key="frame" x="85" y="40.5" width="31.5" height="48"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYy-b8-hTe">
+                                        <rect key="frame" x="0.0" y="0.0" width="31.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09C-c6-6ix">
-                                        <rect key="frame" x="0.0" y="0.0" width="26" height="13.5"/>
+                                        <rect key="frame" x="0.0" y="16" width="31.5" height="16"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSZ-Ux-GkW">
-                                        <rect key="frame" x="0.0" y="13.5" width="26" height="13.5"/>
+                                        <rect key="frame" x="0.0" y="32" width="31.5" height="16"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -73,6 +82,7 @@
                 <outlet property="container" destination="Rmt-iD-zlm" id="HDI-9C-b2r"/>
                 <outlet property="cost" destination="HSZ-Ux-GkW" id="nCp-5I-Fxt"/>
                 <outlet property="distance" destination="09C-c6-6ix" id="Gki-1R-ZHV"/>
+                <outlet property="driverName" destination="vYy-b8-hTe" id="cgo-Mf-YZH"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="144.30803571428569"/>
         </tableViewCell>

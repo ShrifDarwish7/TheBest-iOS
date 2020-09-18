@@ -391,6 +391,7 @@
 				AA01468C24FBDE6700F10BEC /* Model */,
 				AA01468D24FBDE6E00F10BEC /* View */,
 				AA01468E24FBDE7300F10BEC /* Presenter */,
+				AAC1845B2514F11E006F1B42 /* XIBs */,
 			);
 			path = CarRent;
 			sourceTree = "<group>";
@@ -808,6 +809,13 @@
 				AABE303F24E08A9900DFDE1B /* AfterCancelCollectionViewCell.xib */,
 			);
 			path = "After cancel";
+			sourceTree = "<group>";
+		};
+		AAC1845B2514F11E006F1B42 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		AAC2DC5724C8A9C700378934 /* Home+Food */ = {

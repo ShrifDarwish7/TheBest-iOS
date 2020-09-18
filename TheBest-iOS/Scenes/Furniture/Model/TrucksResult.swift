@@ -16,8 +16,15 @@ struct TrucksResult: Codable {
 // MARK: - Datum
 struct TruckData: Codable {
     let id: Int
-    let has_image: String
+    let driverName,driverImage: String
     let lat, lng, distance: Double
     let cost: Int
     var selected: Bool?
+    
+    enum CodingKeys: String, CodingKey{
+        case id,lat,lng,distance,cost,selected
+        case driverName = "Driver name"
+        case driverImage = "Driver image"
+    }
+    
 }

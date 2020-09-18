@@ -17,7 +17,13 @@ struct SpecialCarResult: Codable {
 struct SpecialCarData: Codable {
     let id: Int
     let lat, lng, distance: Double
-    let has_image: String
+    let driverName,driverImage: String
     let cost: Int
     var selected: Bool?
+    
+    enum CodingKeys: String, CodingKey{
+        case id,lat,lng,distance,cost,selected
+        case driverName = "Driver name"
+        case driverImage = "Driver image"
+    }
 }
