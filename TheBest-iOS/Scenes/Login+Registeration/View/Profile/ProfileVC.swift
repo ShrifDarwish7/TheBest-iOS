@@ -31,6 +31,14 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        firstNameTF.text = AuthServices.instance.user.name
+        emailTF.text = AuthServices.instance.user.email
+        countryTF.text = AuthServices.instance.user.nationality
+        days.text = AuthServices.instance.user.birthDate?.components(separatedBy: "-")[2]
+        let monthNum = AuthServices.instance.user.birthDate?.components(separatedBy: "-")[1]
+        months.text = MONTHS_EN.filter({return $0.value == monthNum}).keys.first
+        years.text = AuthServices.instance.user.birthDate?.components(separatedBy: "-")[0]
+        
         profilePresenter = ProfilePresenter(profileViewDelegate: self)
         
         backBtn.onTap {

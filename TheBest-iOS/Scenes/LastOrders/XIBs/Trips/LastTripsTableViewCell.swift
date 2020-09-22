@@ -29,8 +29,11 @@ class LastTripsTableViewCell: UITableViewCell {
     }
     
     func loadFrom(trip: Trip){
+        loadUI()
         self.fromAddress.text = trip.addressFrom
         self.toAddress.text = trip.addressTo
+        self.status.text = trip.status
+        self.date.text = trip.createdAt
     }
     
 }

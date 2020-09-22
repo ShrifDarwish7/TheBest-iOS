@@ -36,6 +36,9 @@ extension CarRentVC: GMSAutocompleteViewControllerDelegate{
             SharedData.userDestinationLat = place.coordinate.latitude
             SharedData.userDestinationLng = place.coordinate.longitude
                         
+            self.startRide.tag = 0
+            self.startRide.setTitle("Catch this location", for: .normal)
+            
 //            self.confirmBtn.setTitle("Confirm ride", for: .normal)
 //            self.confirmBtn.backgroundColor = UIColor(named: "SpecialNeedCarColor")
             

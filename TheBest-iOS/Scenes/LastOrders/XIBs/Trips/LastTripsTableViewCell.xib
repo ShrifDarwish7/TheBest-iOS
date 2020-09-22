@@ -95,14 +95,14 @@
                                     <constraint firstAttribute="width" constant="20" id="2mH-Ns-yec"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITF-HE-K3x">
-                                <rect key="frame" x="55" y="28" width="36.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITF-HE-K3x">
+                                <rect key="frame" x="55" y="28" width="228" height="18"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-vb-Qu1">
-                                <rect key="frame" x="55" y="77" width="36.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGK-vb-Qu1">
+                                <rect key="frame" x="55" y="77" width="218" height="18"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -111,6 +111,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ITF-HE-K3x" firstAttribute="leading" secondItem="0ad-8m-8ic" secondAttribute="trailing" constant="20" id="7Ov-QJ-yJa"/>
+                            <constraint firstItem="gnb-Tr-1B9" firstAttribute="leading" secondItem="ITF-HE-K3x" secondAttribute="trailing" constant="15" id="7ak-iI-2l2"/>
                             <constraint firstItem="nGB-J0-O5r" firstAttribute="top" secondItem="gnb-Tr-1B9" secondAttribute="bottom" constant="5" id="EIQ-oo-BYM"/>
                             <constraint firstItem="0ad-8m-8ic" firstAttribute="leading" secondItem="cve-kd-1Qf" secondAttribute="leading" constant="15" id="Exh-bN-YbL"/>
                             <constraint firstItem="ITF-HE-K3x" firstAttribute="centerY" secondItem="jbs-hL-E8b" secondAttribute="centerY" id="JhL-J4-9zf"/>
@@ -118,6 +119,7 @@
                             <constraint firstItem="nGB-J0-O5r" firstAttribute="centerX" secondItem="gnb-Tr-1B9" secondAttribute="centerX" id="Wc2-Ji-j6D"/>
                             <constraint firstItem="kGK-vb-Qu1" firstAttribute="centerY" secondItem="m0c-Zc-QwR" secondAttribute="centerY" id="cTG-VP-Eax"/>
                             <constraint firstItem="0ad-8m-8ic" firstAttribute="centerY" secondItem="cve-kd-1Qf" secondAttribute="centerY" id="hDy-YI-tJm"/>
+                            <constraint firstItem="nGB-J0-O5r" firstAttribute="leading" secondItem="kGK-vb-Qu1" secondAttribute="trailing" constant="15" id="nZW-25-5nc"/>
                             <constraint firstItem="kGK-vb-Qu1" firstAttribute="leading" secondItem="ITF-HE-K3x" secondAttribute="leading" id="neU-VF-B9c"/>
                             <constraint firstItem="gnb-Tr-1B9" firstAttribute="centerY" secondItem="cve-kd-1Qf" secondAttribute="centerY" constant="-5" id="t0p-nK-KzV"/>
                         </constraints>

@@ -22,9 +22,9 @@ class AuthServices{
             return self.defaults.bool(forKey: "isLogged")
         }
     }
-    var user: User{
+    var user: UserModel{
         get{
-            return try! JSONDecoder().decode(User.self, from: defaults.object(forKey: "user") as? Data ?? Data())
+            return try! JSONDecoder().decode(UserModel.self, from: defaults.object(forKey: "user") as? Data ?? Data())
         }
         set{
             let userEncoded = try! JSONEncoder().encode(newValue)
@@ -63,7 +63,8 @@ class AuthServices{
                             }else{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
-                                self.instance.user = dataModel
+                                self.instance.user = dataModel.user!
+                                UserDefaults.init().set(JSON(data)["accessToken"].stringValue, forKey: "accessToken")
                                 print(dataModel)
                                 self.instance.isLogged = true
                                 completed(true,false)
@@ -123,7 +124,8 @@ class AuthServices{
                                 
                                 let dataModel = try JSONDecoder().decode(User.self, from: data)
                                 print("registerDatamodel",dataModel)
-                                self.instance.user = dataModel
+                                self.instance.user = dataModel.user!
+                                UserDefaults.init().set(JSON(data)["accessToken"].stringValue, forKey: "accessToken")
                                 self.instance.isLogged = true
                                 completed(true)
                                 
@@ -176,7 +178,18 @@ class AuthServices{
                             print("updateProfileWith", try! JSON(data: data))
                             
                             if JSON(data)["code"].intValue == 100{
-                                completed(true)
+                                
+                                do{
+                                    
+                                    
+                                    let dataModel = try JSONDecoder().decode(UpdateResponse.self, from: data)
+                                    self.instance.user = dataModel.item
+                                    completed(true)
+                                    
+                                }catch{
+                                    completed(false)
+                                }
+                                
                             }else{
                                 completed(false)
                             }

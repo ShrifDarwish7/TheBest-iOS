@@ -16,6 +16,7 @@ extension LastOrdersVC: UITableViewDataSource, UITableViewDelegate{
         self.lastOrdersTable.register(nib, forCellReuseIdentifier: "FoodTableViewCell")
         self.lastOrdersTable.delegate = self
         self.lastOrdersTable.dataSource = self
+        self.lastOrdersTable.reloadData()
     }
     
     func loadLastTrips(){
@@ -23,6 +24,7 @@ extension LastOrdersVC: UITableViewDataSource, UITableViewDelegate{
         self.lastTripsTable.register(nib, forCellReuseIdentifier: "LastTripsTableViewCell")
         self.lastTripsTable.delegate = self
         self.lastTripsTable.dataSource = self
+        self.lastTripsTable.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

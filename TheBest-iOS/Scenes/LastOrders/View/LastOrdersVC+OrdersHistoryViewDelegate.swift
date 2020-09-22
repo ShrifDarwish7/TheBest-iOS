@@ -39,6 +39,8 @@ extension LastOrdersVC: OrdersHistoryViewDelegate{
             self.trips = result?.trips
             self.loadLastTrips()
             self.lastTripsTable.isHidden = false
+            self.lastOrdersTable.isHidden = true
+            self.emptyHistory.isHidden = true
         }else{
             self.emptyHistory.isHidden = false
             self.lastOrdersTable.isHidden = true

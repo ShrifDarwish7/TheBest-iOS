@@ -49,8 +49,8 @@ class CheckoutVC: UIViewController {
         if let _ = cartItems{
             updateTotalOrder()
         }
-        username.text = AuthServices.instance.user.user?.name
-        userPhone.text = AuthServices.instance.user.user?.phone
+        username.text = AuthServices.instance.user.name
+        userPhone.text = AuthServices.instance.user.phone
         
         checkoutBtn.addTapGesture { (_) in
             guard let _ = self.checkoutParameters else{

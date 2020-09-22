@@ -94,6 +94,7 @@
 		AABEEAD924FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEAD824FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift */; };
 		AABEEADB24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEADA24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift */; };
 		AABEEADD24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEEADC24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift */; };
+		AAC1845D2515042D006F1B42 /* CarRentVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1845C2515042D006F1B42 /* CarRentVC+TableViewDelegate.swift */; };
 		AAC2DC5C24C8AA5B00378934 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2DC5B24C8AA5B00378934 /* HomeVC.swift */; };
 		AAC2DC6024C8AECD00378934 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC2DC5E24C8AECD00378934 /* CategoriesCollectionViewCell.swift */; };
 		AAC2DC6124C8AECD00378934 /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC2DC5F24C8AECD00378934 /* CategoriesCollectionViewCell.xib */; };
@@ -157,6 +158,7 @@
 		AAEBD30524E1E0D60010A81E /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEBD30424E1E0D60010A81E /* CheckoutVC.swift */; };
 		AAEBD30724E1E20C0010A81E /* CheckoutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEBD30624E1E20C0010A81E /* CheckoutPresenter.swift */; };
 		AAEBD30A24E1E28E0010A81E /* CheckoutVC+CheckoutViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEBD30924E1E28E0010A81E /* CheckoutVC+CheckoutViewDelegate.swift */; };
+		AAF39D7F251528070034DC9F /* UpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF39D7E251528070034DC9F /* UpdateResponse.swift */; };
 		AAF6727224E58EAE0025C5C2 /* Markets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF6727124E58EAE0025C5C2 /* Markets.storyboard */; };
 		AAF6727824E590F20025C5C2 /* Markets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6727724E590F20025C5C2 /* Markets.swift */; };
 		AAF6727A24E5975F0025C5C2 /* MarketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6727924E5975F0025C5C2 /* MarketsVC.swift */; };
@@ -273,6 +275,7 @@
 		AABEEAD824FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+GMSMapViewDelegate.swift"; sourceTree = "<group>"; };
 		AABEEADA24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+GMSAutocompleteViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		AABEEADC24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+CarsRentViewDelegate.swift"; sourceTree = "<group>"; };
+		AAC1845C2515042D006F1B42 /* CarRentVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRentVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		AAC2DC5B24C8AA5B00378934 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		AAC2DC5E24C8AECD00378934 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAC2DC5F24C8AECD00378934 /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -338,6 +341,7 @@
 		AAEBD30424E1E0D60010A81E /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
 		AAEBD30624E1E20C0010A81E /* CheckoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutPresenter.swift; sourceTree = "<group>"; };
 		AAEBD30924E1E28E0010A81E /* CheckoutVC+CheckoutViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckoutVC+CheckoutViewDelegate.swift"; sourceTree = "<group>"; };
+		AAF39D7E251528070034DC9F /* UpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponse.swift; sourceTree = "<group>"; };
 		AAF6727124E58EAE0025C5C2 /* Markets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Markets.storyboard; sourceTree = "<group>"; };
 		AAF6727724E590F20025C5C2 /* Markets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markets.swift; sourceTree = "<group>"; };
 		AAF6727924E5975F0025C5C2 /* MarketsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsVC.swift; sourceTree = "<group>"; };
@@ -414,6 +418,7 @@
 				AABEEAD824FD926100990562 /* CarRentVC+GMSMapViewDelegate.swift */,
 				AABEEADA24FD929A00990562 /* CarRentVC+GMSAutocompleteViewControllerDelegate.swift */,
 				AABEEADC24FD92E600990562 /* CarRentVC+CarsRentViewDelegate.swift */,
+				AAC1845C2515042D006F1B42 /* CarRentVC+TableViewDelegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1213,6 +1218,7 @@
 			isa = PBXGroup;
 			children = (
 				AA026F8324C79DE8003FFF4E /* User.swift */,
+				AAF39D7E251528070034DC9F /* UpdateResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1550,6 +1556,7 @@
 				AACFDD02250BE4B400221B7C /* BalanceVC.swift in Sources */,
 				AADD713A24CB72BF00EE7FD1 /* MenuCategories.swift in Sources */,
 				AA025DBE24D5F42C0067C682 /* TripsServices.swift in Sources */,
+				AAF39D7F251528070034DC9F /* UpdateResponse.swift in Sources */,
 				AADD714124CB758300EE7FD1 /* VendorProfilePresenter.swift in Sources */,
 				AA19194824EF01AC00EE080E /* SpecialNeedCarVC.swift in Sources */,
 				AA4CB64024D5F73D00C861CA /* TaxiOrderPresenter.swift in Sources */,
@@ -1559,6 +1566,7 @@
 				AA026F8024C79A89003FFF4E /* API-Endpoints.swift in Sources */,
 				AA9B52D1250933A800178823 /* ProfileVC.swift in Sources */,
 				AA026F7E24C78E24003FFF4E /* LoginVC+LoginViewDelegate.swift in Sources */,
+				AAC1845D2515042D006F1B42 /* CarRentVC+TableViewDelegate.swift in Sources */,
 				AAF7F15524EF0AE200FAE7D7 /* SpecialCars.swift in Sources */,
 				AAE1098724D1F97C00C66670 /* CartVC+CartViewDelegate.swift in Sources */,
 				AACA7EB624C759FA004437FC /* SceneDelegate.swift in Sources */,

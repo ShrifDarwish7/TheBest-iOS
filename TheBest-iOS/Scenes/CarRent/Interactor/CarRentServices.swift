@@ -109,7 +109,7 @@ class CarRentServices{
                     switch response.result{
                         
                     case .success(let data):
-                        
+                        print(JSON(data))
                         do{
                             
                             let dataModel = try JSONDecoder.init().decode(Distance.self, from: data)

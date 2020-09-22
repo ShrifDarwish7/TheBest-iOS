@@ -41,7 +41,7 @@ class RegisterVC: UIViewController {
         
         registerBtn.onTap {
             
-            guard !self.nameTF.text!.isEmpty, !self.emailTF.text!.isEmpty else{
+            guard !self.nameTF.text!.isEmpty, !self.emailTF.text!.isEmpty, !self.countryTF.text!.isEmpty, !self.years.text!.isEmpty, !self.months.text!.isEmpty, !self.days.text!.isEmpty else{
                 self.showAlert(title: "", message: "Please fill out all fields to continue registeration")
                 return
             }

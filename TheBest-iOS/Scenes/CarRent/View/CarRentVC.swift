@@ -39,6 +39,8 @@ class CarRentVC: UIViewController {
     @IBOutlet weak var modelTF: UITextField!
     @IBOutlet weak var yearTF: UITextField!
     @IBOutlet weak var brandIcon: UIImageView!
+    @IBOutlet weak var nearestTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var nearestTableView: UITableView!
     
     let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
@@ -55,6 +57,7 @@ class CarRentVC: UIViewController {
     var selectedBrandIndex = 0
     var selectedModelIndex = 0
     var selectedYearIndex = 0
+    var nearestCars: [NearestCar]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,30 +139,19 @@ class CarRentVC: UIViewController {
             
             self.carsRentPresenter?.getNearestCarsWith(car_model: "1", car_list: "2")
             
-        default:
-            break
-        }
-        
-        
-            guard let _ = selectedDriverID else {
-                self.showAlert(title: "", message: "Select driver first")
-                return
-            }
+        case 1:
+            
+            // self.carsRentPresenter?.getDistance(driverId: "\(self.selectedDriverID ?? 0)")
             self.from_toView.isHidden = false
             UIView.animate(withDuration: 0.5) {
                 self.from_toView.alpha = 1
             }
-    //        switch sender.tag {
-    //        case 0:
-    //            self.taxiOrderPresenter?.getDirectionFromGoogleMaps(origin: "\(SharedData.userLat ?? 0),\(SharedData.userLng ?? 0)", destination: "\(SharedData.userDestinationLat ?? 0),\(SharedData.userDestinationLng ?? 0)")
-    //            let camera = GMSCameraPosition.camera(withLatitude: SharedData.userDestinationLat!, longitude: SharedData.userDestinationLng!, zoom: 12)
-    //            DispatchQueue.main.async {
-    //                self.mapView.animate(to: camera)
-    //            }
-    //        default:
-    //            break
-    //        }
+            
+        default:
+            break
+            
         }
+    }
     
     @IBAction func startRideAction(_ sender: UIButton) {
         switch sender.tag {
@@ -169,10 +161,9 @@ class CarRentVC: UIViewController {
             DispatchQueue.main.async {
                 self.mapView.animate(to: camera)
             }
-          //  self.furniturePresenter?.getDistance(driverId: "\(self.selectedDriverID ?? 0)")
+            self.carsRentPresenter?.getDistance(driverId: "\(self.selectedDriverID ?? 0)")
         case 1:
-            print("")
-          //  self.furniturePresenter?.confirmRide()
+            self.carsRentPresenter?.confirmRide()
         default:
             break
         }
@@ -209,6 +200,12 @@ class CarRentVC: UIViewController {
             self.yearTF.text = ""
             self.loadModelPicker()
             
+            self.confirmBtn.tag = 0
+            self.confirmBtn.setTitle("Start order", for: .normal)
+            UIView.animate(withDuration: 0.5) {
+                self.nearestTableView.isHidden = true
+            }
+            
             self.brandIcon.sd_setImage(with: URL(string: (self.cars?.cars.data[row].image) ?? ""))
             
         }.reloadAllComponents()
@@ -243,6 +240,12 @@ class CarRentVC: UIViewController {
             self.yearTF.text = ""
             self.loadYearPicker()
             
+            self.confirmBtn.tag = 0
+            self.confirmBtn.setTitle("Start order", for: .normal)
+            UIView.animate(withDuration: 0.5) {
+                self.nearestTableView.isHidden = true
+            }
+            
         }.reloadAllComponents()
         
     }
@@ -271,6 +274,12 @@ class CarRentVC: UIViewController {
             
             self.yearTF.text = self.cars!.cars.data[self.selectedBrandIndex].carsModels[self.selectedModelIndex].carslist[row].name
             self.selectedYearIndex = row
+            
+            self.confirmBtn.tag = 0
+            self.confirmBtn.setTitle("Start order", for: .normal)
+            UIView.animate(withDuration: 0.5) {
+                self.nearestTableView.isHidden = true
+            }
             
         }.reloadAllComponents()
         

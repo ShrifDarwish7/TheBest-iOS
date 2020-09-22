@@ -12,7 +12,7 @@ import Foundation
 struct User: Codable {
     
     let massege: String?
-    let user: UserClass?
+    let user: UserModel?
     let accessToken: String
     
     enum CodingKeys: String, CodingKey{
@@ -24,11 +24,11 @@ struct User: Codable {
 }
 
 // MARK: - UserClass
-struct UserClass: Codable {
+struct UserModel: Codable {
     
     let id: Int
     let name, email: String
-    let image: String
+    let image: String?
     let fcmToken, phone: String
     let isAdmin, isDriver: Int?
    // let lat, lng: Double?

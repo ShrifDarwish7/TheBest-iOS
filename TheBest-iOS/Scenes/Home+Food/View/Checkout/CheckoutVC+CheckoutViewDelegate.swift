@@ -49,7 +49,7 @@ extension CheckoutVC: CheckoutViewDelegate{
             "lat": "\(SharedData.userLat ?? 0.0)" ,
             "lng": "\(SharedData.userLng ?? 0.0)",
             "address": addressToSend ?? "",
-            "phone": AuthServices.instance.user.user?.phone ?? "",
+            "phone": AuthServices.instance.user.phone ,
             "total": "\(totalToSend)",
             "comment": "any comment for the order",
          //   "count": "\(result.count)",

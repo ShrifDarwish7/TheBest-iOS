@@ -44,7 +44,7 @@ class DrawerVC: UIViewController {
             
         }
         
-        username.text = AuthServices.instance.user.user?.name
+        username.text = AuthServices.instance.user.name
         loadActions()
     }
     

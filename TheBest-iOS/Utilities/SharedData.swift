@@ -20,7 +20,7 @@ class SharedData{
     static var userDestinationLat: CLLocationDegrees?
     static var userDestinationLng: CLLocationDegrees?
     static let headers = [
-        "Authorization": "Bearer \(AuthServices.instance.user.accessToken)",
+        "Authorization": "Bearer " + (UserDefaults.init().string(forKey: "accessToken") ?? ""),
         "Accept": "application/json"
     ]
     static var food_markets_flag: Int?
