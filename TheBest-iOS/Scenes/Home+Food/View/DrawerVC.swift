@@ -52,42 +52,51 @@ class DrawerVC: UIViewController {
         
         logout.addTapGesture { (_) in
             //AuthServices.logout()
-            Router.toLogin(sender: self)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
+           Router.toLogin(sender: self)
+           // self.navigationController?.popToRootViewController(animated: true)
             AuthServices.instance.isLogged = false
         }
         
         lastOrders.addTapGesture { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
             Router.toLastOrders(sender: self)
         }
         
         home.addTapGesture { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
             Router.toHome(sender: self)
         }
         
         howToUse.addTapGesture { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
             Router.toHowToUse(sender: self)
         }
         
         share.addTapGesture { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
             Router.toShare(sender: self)
         }
         
         profileImage.addTapGesture { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
             Router.toProfile(sender: self)
         }
         
         balance.addTapGesture { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
             Router.toBalance(sender: self)
         }
         
         aboutUs.addTapGesture { (_) in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "CloseDrawer"), object: nil)
             Router.toTerms(sender: self)
         }
         
     }
     
     @objc func showBlockView(){
-        UIView.animate(withDuration: 0.2, delay: 0.35, options: [], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0.2, options: [], animations: {
              self.blockView.alpha = 0.5
         }) { (_) in
             

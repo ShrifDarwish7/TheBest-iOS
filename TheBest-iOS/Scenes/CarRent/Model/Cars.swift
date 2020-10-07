@@ -52,14 +52,14 @@ struct Datum: Codable {
     let id: Int
     let name, createdAt, updatedAt: String
     let carsModels: [CarsModel]
-    let image: String
+    let hasImage: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case carsModels = "cars_models"
-        case image = "has_image"
+        case hasImage = "has_image"
     }
 }
 

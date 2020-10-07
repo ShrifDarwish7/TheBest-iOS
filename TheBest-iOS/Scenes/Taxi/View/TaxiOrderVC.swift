@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
+class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecognizerDelegate {
 
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var upperView: UIView!
@@ -47,6 +47,9 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         UINavigationBar.appearance().barTintColor = UIColor(named: "TaxiGoldColor")
         UINavigationBar.appearance().tintColor = UIColor.white
         
@@ -55,7 +58,7 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate {
         taxiOrderPresenter?.getAddressFromGoogleMapsApi()
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         confirmBtn.layer.cornerRadius = 10

@@ -16,8 +16,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         homeVC.modalPresentationStyle = .fullScreen
-        sender.present(homeVC, animated: true, completion: nil)
-        
+        sender.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     static func toLogin(sender: UIViewController){
@@ -25,8 +24,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
         loginVC.modalPresentationStyle = .fullScreen
-        sender.present(loginVC, animated: true, completion: nil)
-        
+        sender.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     static func toRegister(sender: UIViewController){
@@ -34,7 +32,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let registerVC = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
         registerVC.modalPresentationStyle = .fullScreen
-        sender.present(registerVC, animated: true, completion: nil)
+       sender.navigationController?.pushViewController(registerVC, animated: true)
         
     }
     
@@ -51,7 +49,7 @@ class Router{
 //            storesVC.upperIcon.backgroundColor = UIColor(named: "MarketsColor")
 //            SharedData.food_markets_flag = 1
 //        }
-        sender.present(storesVC, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(storesVC, animated: true)
         
     }
     
@@ -61,7 +59,7 @@ class Router{
         let vendorProfileVC = storyboard.instantiateViewController(withIdentifier: "VendorProfileVC") as! VendorProfileVC
         vendorProfileVC.modalPresentationStyle = .fullScreen
         vendorProfileVC.idReceived = id
-        sender.present(vendorProfileVC, animated: true, completion: nil)
+       sender.navigationController?.pushViewController(vendorProfileVC, animated: true)
         
     }
     
@@ -73,7 +71,7 @@ class Router{
         productVC.itemReceived = item
         productVC.vendorName = vendorName
         productVC.vendorImage = vendorImage
-        sender.present(productVC, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(productVC, animated: true)
         
     }
     
@@ -87,7 +85,7 @@ class Router{
                 }else{
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let cartVC = storyboard.instantiateViewController(withIdentifier: "CartVC") as! CartVC
-                    sender.present(cartVC, animated: true, completion: nil)
+                    sender.navigationController?.pushViewController(cartVC, animated: true)
                 }
             }
         }
@@ -99,7 +97,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
         let taxiOrderVC = storyboard.instantiateViewController(withIdentifier: "TaxiOrderVC") as! TaxiOrderVC
         taxiOrderVC.modalPresentationStyle = .fullScreen
-        sender.present(taxiOrderVC, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(taxiOrderVC, animated: true)
         
     }
     
@@ -108,7 +106,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let checkoutVC = storyboard.instantiateViewController(withIdentifier: "CheckoutVC") as! CheckoutVC
         checkoutVC.modalPresentationStyle = .fullScreen
-        sender.present(checkoutVC, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(checkoutVC, animated: true)
         
     }
     
@@ -125,8 +123,7 @@ class Router{
             SharedData.food_markets_flag = 3
         }
         
-        sender.present(vc, animated: true, completion: nil)
-        
+        sender.navigationController?.pushViewController(vc, animated: true)
     }
     
     static func toFilterMarkets(sender: UIViewController){
@@ -134,7 +131,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Markets", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "FilterVC") as! FilterVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -143,7 +140,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SpecialNeedCarVC") as! SpecialNeedCarVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -152,7 +149,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LastOrdersVC") as! LastOrdersVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -161,7 +158,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "FurnitureVC") as! FurnitureVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -170,7 +167,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CarRentVC") as! CarRentVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -179,7 +176,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HowToUseVC") as! HowToUseVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -188,7 +185,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ShareVC") as! ShareVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -197,7 +194,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -206,7 +203,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BalanceVC") as! BalanceVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -215,7 +212,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TermsAndConditionsVC") as! TermsAndConditionsVC
         vc.modalPresentationStyle = .fullScreen
-        sender.present(vc, animated: true, completion: nil)
+        sender.navigationController?.pushViewController(vc, animated: true)
         
     }
    

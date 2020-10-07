@@ -18,7 +18,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     func loadFrom(category: MainCategory){
         
         categoryName.text = category.name
-        categoryIcon.sd_setImage(with: URL(string: category.image)!)
+        categoryIcon.sd_setImage(with: URL(string: category.hasImage ?? ""))
         container.layer.cornerRadius = 20
         categoryIcon.layer.borderWidth = 5
         categoryIcon.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)

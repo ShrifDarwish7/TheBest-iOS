@@ -41,8 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let rootViewController: UIWindow = ((UIApplication.shared.delegate?.window)!)!
                 if AuthServices.instance.isLogged{
                     let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
-                    let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-                    rootViewController.rootViewController = protectedPage
+//                    let nav = mainStoryboard.instantiateViewController(withIdentifier: "RootNav") as! UINavigationController
+//                    rootViewController.rootViewController = nav
+                    
+                    let homeVC = mainStoryboard.instantiateViewController(withIdentifier: "NavHome") as! UINavigationController
+                    //nav.pushViewController(homeVC, animated: true)
+                    rootViewController.rootViewController = homeVC
                     window!.makeKeyAndVisible()
                 }
 

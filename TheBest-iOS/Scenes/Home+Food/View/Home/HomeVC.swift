@@ -234,7 +234,7 @@ class HomeVC: UIViewController {
                 
             case .restaurants:
                 
-                Router.toStores(pageIcon: (self.categories?[index.row].image)! , id: (self.categories?[index.row].id)!, sender: self, from: "")
+                Router.toStores(pageIcon: (self.categories?[index.row].hasImage)! , id: (self.categories?[index.row].id)!, sender: self, from: "")
                 
             case .vegetable:
                 

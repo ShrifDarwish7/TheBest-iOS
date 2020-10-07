@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileVC: UIViewController {
+class ProfileVC: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var firstNameTF: UITextField!
@@ -30,6 +30,9 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
 
         firstNameTF.text = AuthServices.instance.user.name
         emailTF.text = AuthServices.instance.user.email
@@ -42,7 +45,7 @@ class ProfileVC: UIViewController {
         profilePresenter = ProfilePresenter(profileViewDelegate: self)
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         saveBtn.layer.cornerRadius = 15

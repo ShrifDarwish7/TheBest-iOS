@@ -32,7 +32,7 @@ extension SpecialNeedCarVC: UICollectionViewDataSource, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarsTypesCell", for: indexPath) as! CarsTypesCollectionViewCell
-        cell.typeImageView.sd_setImage(with: URL(string: self.carsTypes![indexPath.row].image)!)
+        cell.typeImageView.sd_setImage(with: URL(string: self.carsTypes![indexPath.row].hasImage ?? "")!)
         cell.typeName.text = self.carsTypes![indexPath.row].name
         
         if self.carsTypes![indexPath.row].selected ?? false{

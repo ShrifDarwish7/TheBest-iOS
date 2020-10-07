@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CartVC: UIViewController {
+class CartVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var vendorImage: UIImageView!
@@ -27,13 +27,16 @@ class CartVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         cartPresenter = CartPresenter(cartViewDelegate: self)
         cartPresenter?.fetchItems()
 
         checkOutView.layer.cornerRadius = 15
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
             
         vendorImage.layer.cornerRadius = vendorImage.frame.height/2

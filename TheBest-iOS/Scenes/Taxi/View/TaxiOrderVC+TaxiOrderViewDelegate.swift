@@ -73,8 +73,8 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
     func didCompleteConfirmRide(_ driver: Drivers) {
         
         self.driverName.text = driver.drivers.name
-        self.driverImage.sd_setImage(with: URL(string: driver.drivers.image ?? ""))
-        self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.image))
+        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
+        self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.hasImage ?? ""))
         self.carNumber.text = driver.drivers.myCar.first?.carNumber
         self.callDriver.addTapGesture { (_) in
             TripsServices.callDriver(phoneNumber: driver.drivers.phone)

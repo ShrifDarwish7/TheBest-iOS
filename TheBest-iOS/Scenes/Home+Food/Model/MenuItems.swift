@@ -22,7 +22,7 @@ struct RestaurantMenuItem: Codable {
     let id: Int
     let name: String
     let price: String
-    let image: String
+    let hasImage: String?
     let restaurantMenuDescription: String
     let restaurantID: Int
     let menuCategoryID: String
@@ -31,7 +31,7 @@ struct RestaurantMenuItem: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name, price
-        case image = "has_image"
+        case hasImage = "has_image"
         case restaurantMenuDescription = "description"
         case restaurantID = "restaurant_id"
         case menuCategoryID = "menu_category_id"

@@ -32,7 +32,7 @@ extension FurnitureVC: UICollectionViewDataSource, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarsTypesCell", for: indexPath) as! CarsTypesCollectionViewCell
-        cell.typeImageView.sd_setImage(with: URL(string: self.truckTypes![indexPath.row].image)!)
+        cell.typeImageView.sd_setImage(with: URL(string: self.truckTypes![indexPath.row].hasImage ?? "")!)
         cell.typeName.text = self.truckTypes![indexPath.row].name
         
         if self.truckTypes![indexPath.row].selected ?? false{

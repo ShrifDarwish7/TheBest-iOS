@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class MarketsVC: UIViewController {
+class MarketsVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var pageTitle: UIView!
@@ -29,6 +29,9 @@ class MarketsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         NotificationCenter.default.addObserver(self, selector: #selector(receivedFilteringResult(sender:)), name: NSNotification.Name(rawValue: "filter_result"), object: nil)
 
         marketsVCPresenter = MarketsVCPresenter(marketsViewDelegate: self)
@@ -43,7 +46,7 @@ class MarketsVC: UIViewController {
         }
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         cartBtn.onTap {

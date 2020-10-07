@@ -21,7 +21,7 @@ struct SpecialCars: Codable {
 struct SpecialCar: Codable {
     let id: Int
     let name: String
-    let image: String
+    let hasImage: String?
     let type: Int
     let createdAt, updatedAt: String
     
@@ -29,7 +29,7 @@ struct SpecialCar: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name, type, selected
-        case image = "has_image"
+        case hasImage = "has_image"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }

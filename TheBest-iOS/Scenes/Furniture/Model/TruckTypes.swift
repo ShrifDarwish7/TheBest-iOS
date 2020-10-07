@@ -21,14 +21,14 @@ struct TruckeTypes: Codable {
 struct TruckCarType: Codable {
     let id: Int
     let name: String
-    let image: String
+    let hasImage: String?
     let type: Int
     let createdAt, updatedAt: String
     var selected: Bool?
 
     enum CodingKeys: String, CodingKey {
         case id, name, type
-        case image = "has_image"
+        case hasImage = "has_image"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }

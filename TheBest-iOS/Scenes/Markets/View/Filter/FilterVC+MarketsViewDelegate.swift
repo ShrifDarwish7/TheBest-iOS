@@ -20,7 +20,7 @@ extension FilterVC: MarketsViewDelegate{
     }
     
     func didCompleteFiltering(_ result: Markets) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         NotificationCenter.default.post(name: NSNotification.Name("filter_result"), object: nil, userInfo: ["markets": result.markets])
     }
     

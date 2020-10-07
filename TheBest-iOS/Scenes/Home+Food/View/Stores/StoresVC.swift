@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoresVC: UIViewController {
+class StoresVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var backBtn: UIButton!
@@ -43,6 +43,9 @@ class StoresVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
 
         storesViewPresenter = StoresViewPresenter(storesViewDelegate: self)
         cartItemsCount.layer.cornerRadius = cartItemsCount.frame.height/2
@@ -77,7 +80,7 @@ class StoresVC: UIViewController {
         storesViewPresenter?.getCategoriesBy(id: idReceived!)
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         cartBtn.onTap {
@@ -96,7 +99,7 @@ class StoresVC: UIViewController {
         }).cellForItemAt { (index) -> UICollectionViewCell in
             
             let cell = self.filtersCollectionView.dequeueReusableCell(withReuseIdentifier: "FiltersCell", for: index) as! FiltersCollectionViewCell
-            cell.imageView.sd_setImage(with: URL(string: (self.filters?.items[index.row].image)!)!)
+            cell.imageView.sd_setImage(with: URL(string: (self.filters?.items[index.row].hasImage)!)!)
             cell.name.text = self.filters?.items[index.row].name
             cell.imageView.layer.cornerRadius = cell.imageView.frame.height/2
             
@@ -146,7 +149,7 @@ class StoresVC: UIViewController {
         }.cellForRow { (index) -> UITableViewCell in
             
             let cell = self.storeTableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: index) as! PlacesTableViewCell
-            cell.placeImage.sd_setImage(with: URL(string: (self.places?.items[index.row].image)!))
+            cell.placeImage.sd_setImage(with: URL(string: (self.places?.items[index.row].hasImage) ?? ""))
             cell.deliveryTime.text = "1 Hour"
             cell.placeName.text = self.places?.items[index.row].name
             cell.placeImage.layer.cornerRadius = cell.placeImage.frame.height/2

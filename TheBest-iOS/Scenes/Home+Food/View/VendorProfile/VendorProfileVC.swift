@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VendorProfileVC: UIViewController {
+class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
     
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var bgImage: UIImageView!
@@ -29,11 +29,14 @@ class VendorProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         vendorViewPresenter = VendorProfilePresenter(vendorViewDelegte: self)
         vendorViewPresenter?.fetchMenuCategories(id: idReceived!)
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         vendorImage.layer.cornerRadius = vendorImage.frame.height/2
@@ -97,7 +100,7 @@ class VendorProfileVC: UIViewController {
             
             let cell = self.menuTableView.dequeueReusableCell(withIdentifier: "MenuCell", for: index) as! MenuTableViewCell
             cell.container.layer.cornerRadius = 15
-            cell.logoImage.sd_setImage(with: URL(string: (self.menuItems?.restaurantMenu[index.row].image)!))
+            cell.logoImage.sd_setImage(with: URL(string: (self.menuItems?.restaurantMenu[index.row].hasImage)!))
             cell.itemName.text = self.menuItems?.restaurantMenu[index.row].name
             cell.desc.text = "\(self.menuItems?.restaurantMenu[index.row].price ?? "0.0")"
             cell.logoImage.layer.cornerRadius = cell.logoImage.frame.height/2
@@ -132,7 +135,7 @@ class VendorProfileVC: UIViewController {
         }.heightForRowAt { (_) -> CGFloat in
             return 70
         }.didSelectRowAt { (index) in
-            Router.toProduct(item: (self.menuItems?.restaurantMenu[index.row])!, vendorName: self.vendorName.text!, vendorImage: (self.menuCategories?.items.image)!, sender: self)
+            Router.toProduct(item: (self.menuItems?.restaurantMenu[index.row])!, vendorName: self.vendorName.text!, vendorImage: (self.menuCategories?.items.hasImage) ?? "", sender: self)
         }
         
         self.menuTableView.reloadData()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CheckoutVC: UIViewController {
+class CheckoutVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var vendorImage: UIImageView!
@@ -30,8 +30,11 @@ class CheckoutVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         for view in roundView{

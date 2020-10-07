@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We want your permission to access you location, in order to deliver your orders</string>
+	<string>We want your permission to access your location, in order to deliver your orders</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We want your permission to access you location, in order to deliver your orders</string>
+	<string>We want your permission to access your location, in order to deliver your orders</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>CFBundleDevelopmentRegion</key>

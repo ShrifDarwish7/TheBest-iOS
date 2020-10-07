@@ -16,7 +16,7 @@ class MarketTableViewCell: UITableViewCell {
   
     func loadFrom(item: Item){
         self.name.text = item.name
-        self.imagView?.sd_setImage(with: URL(string: item.image)!)
+        self.imagView?.sd_setImage(with: URL(string: item.hasImage ?? "")!)
         self.imagView?.layer.cornerRadius = (self.imagView?.frame.height)!/2
         self.container.layer.cornerRadius = 15
     }

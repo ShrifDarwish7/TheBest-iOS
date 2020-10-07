@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductVC: UIViewController {
+class ProductVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var productImageVIew: UIImageView!
     @IBOutlet weak var productName: UILabel!
@@ -36,10 +36,13 @@ class ProductVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         productPresenter = ProductPresenter(productViewDelegate: self)
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         for view in roundView{
@@ -48,7 +51,7 @@ class ProductVC: UIViewController {
         
         addToCartView.layer.cornerRadius = 15
         
-        productImageVIew.sd_setImage(with: URL(string: itemReceived?.image ?? ""))
+        productImageVIew.sd_setImage(with: URL(string: itemReceived?.hasImage ?? ""))
         productName.text = itemReceived?.name
         productDesc.text = itemReceived?.restaurantMenuDescription
         
@@ -85,7 +88,7 @@ class ProductVC: UIViewController {
                 deliveryFees: "0",
                 arg: CartItemModel(id: self.itemReceived!.id,
                                    name: self.itemReceived!.name,
-                                   image: self.itemReceived!.image,
+                                   image: self.itemReceived!.hasImage ?? "",
                                    price: priceToAdd,
                                    quantity: Int(self.quantityNumer.text!)!,
                                    variation: self.selectedVariationIndex ?? 0,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController , UIGestureRecognizerDelegate{
     
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var nameTF: UITextField!
@@ -31,12 +31,15 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         registerViewPresenter = RegisterViewPresenter(registerViewDelegate: self)
 
         registerBtn.layer.cornerRadius = 10
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         registerBtn.onTap {

@@ -23,8 +23,10 @@ extension VendorProfileVC: VendorViewDelegate{
         
         self.menuCategories = result
         self.vendorName.text = result.items.name
-        self.vendorImage.sd_setImage(with: URL(string: result.items.image)!)
-        self.bgImage.sd_setImage(with: URL(string: result.items.image)!)
+        if let _ = result.items.hasImage{
+           self.vendorImage.sd_setImage(with: URL(string: result.items.hasImage ?? "")!)
+            self.bgImage.sd_setImage(with: URL(string: result.items.hasImage ?? "")!)
+        }        
         if (self.menuCategories?.items.menuesCategories.count)! > 0{
             self.menuCategories?.items.menuesCategories[0].selected = true
             self.vendorViewPresenter?.fetchMenuItems(id: (self.menuCategories?.items.menuesCategories[0].id)!)

@@ -21,7 +21,7 @@ struct Drivers: Codable {
 struct DriversClass: Codable {
     let id: Int
     let name, email: String
-    let image: String?
+    let hasImage: String?
     let fcmToken, phone: String
     let isAdmin, isDriver: Int
     let lat, lng: Double
@@ -32,7 +32,7 @@ struct DriversClass: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name, email
-        case image = "has_image"
+        case hasImage = "has_image"
         case fcmToken = "fcm_token"
         case phone
         case isAdmin = "is_admin"
@@ -51,14 +51,14 @@ struct DriversClass: Codable {
 struct MyCar: Codable {
     let id: Int
     let carNumber: String
-    let image: String
+    let hasImage: String?
     let carModel, userID: Int
     let type, createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
         case id
         case carNumber = "car_number"
-        case image = "has_image"
+        case hasImage = "has_image"
         case carModel = "car_model"
         case userID = "user_id"
         case type

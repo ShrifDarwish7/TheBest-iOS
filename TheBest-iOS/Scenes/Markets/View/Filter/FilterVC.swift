@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterVC: UIViewController {
+class FilterVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var detectBtn: UIButton!
@@ -21,12 +21,15 @@ class FilterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         marketsVCPresenter = MarketsVCPresenter(marketsViewDelegate: self)
         
         detectBtn.layer.cornerRadius = 15
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         detectBtn.onTap {

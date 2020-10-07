@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class CarRentVC: UIViewController {
+class CarRentVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var upperView: UIView!
@@ -62,6 +62,9 @@ class CarRentVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         UINavigationBar.appearance().barTintColor = UIColor(named: "CarRentColor")
         UINavigationBar.appearance().tintColor = UIColor.white
         
@@ -72,7 +75,7 @@ class CarRentVC: UIViewController {
         carsRentPresenter?.getCars()
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         upperView.layer.cornerRadius = upperView.frame.height/2
@@ -206,7 +209,7 @@ class CarRentVC: UIViewController {
                 self.nearestTableView.isHidden = true
             }
             
-            self.brandIcon.sd_setImage(with: URL(string: (self.cars?.cars.data[row].image) ?? ""))
+            self.brandIcon.sd_setImage(with: URL(string: (self.cars?.cars.data[row].hasImage) ?? ""))
             
         }.reloadAllComponents()
         

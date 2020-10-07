@@ -8,15 +8,18 @@
 
 import UIKit
 
-class TermsAndConditionsVC: UIViewController {
+class TermsAndConditionsVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var backBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         backBtn.onTap {
-                   self.dismiss(animated: true, completion: nil)
+                   self.navigationController?.popViewController(animated: true)
                }
        
     }

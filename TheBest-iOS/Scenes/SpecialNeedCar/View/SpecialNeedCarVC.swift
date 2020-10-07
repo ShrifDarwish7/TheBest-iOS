@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class SpecialNeedCarVC: UIViewController {
+class SpecialNeedCarVC: UIViewController , UIGestureRecognizerDelegate{
 
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var upperView: UIView!
@@ -57,6 +57,9 @@ class SpecialNeedCarVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         UINavigationBar.appearance().barTintColor = UIColor(named: "SpecialNeedCarColor")
         UINavigationBar.appearance().tintColor = UIColor.white
         
@@ -68,7 +71,7 @@ class SpecialNeedCarVC: UIViewController {
         specialNeedCarsPresenter?.getEquipments()
         
         backBtn.onTap {
-            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
         
         setupPicker(textField: equipmentsTF, picker: equipmentPicker)

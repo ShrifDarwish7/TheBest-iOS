@@ -17,7 +17,7 @@ struct Places: Codable {
 struct Item: Codable {
     let id: Int
     let name: String
-    let image: String
+    let hasImage: String?
     let deliverPrice: Int
     let itemDescription, address: String
     let country, government, district: String
@@ -26,7 +26,7 @@ struct Item: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name
-        case image = "has_image"
+        case hasImage = "has_image"
         case itemDescription = "description"
         case address
         case country, government, district

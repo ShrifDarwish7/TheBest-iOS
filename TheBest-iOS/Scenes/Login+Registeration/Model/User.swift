@@ -28,7 +28,7 @@ struct UserModel: Codable {
     
     let id: Int
     let name, email: String
-    let image: String?
+    let hasImage: String?
     let fcmToken, phone: String
     let isAdmin, isDriver: Int?
    // let lat, lng: Double?
@@ -42,7 +42,7 @@ struct UserModel: Codable {
         case phone
         case isAdmin = "is_admin"
         case isDriver = "is_driver"
-        case image = "has_image"
+        case hasImage = "has_image"
       //  case lat, lng
         case birthDate = "birth_date"
         case nationality, status

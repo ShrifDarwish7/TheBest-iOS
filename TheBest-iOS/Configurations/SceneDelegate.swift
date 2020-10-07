@@ -10,9 +10,9 @@ import UIKit
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -21,52 +21,59 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         AppDelegate.standard.window = window
         
         if AuthServices.instance.isLogged {
-
-            let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
-            let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-            window!.rootViewController = protectedPage
-            window!.makeKeyAndVisible()
-
+            
+            let rootViewController: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+            if AuthServices.instance.isLogged{
+                let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+                //                    let nav = mainStoryboard.instantiateViewController(withIdentifier: "RootNav") as! UINavigationController
+                //                    rootViewController.rootViewController = nav
+                
+                let homeVC = mainStoryboard.instantiateViewController(withIdentifier: "NavHome") as! UINavigationController
+                //nav.pushViewController(homeVC, animated: true)
+                rootViewController.rootViewController = homeVC
+                window!.makeKeyAndVisible()
+            }
+            
         }
-//        let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
-//        let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
-//        window!.rootViewController = protectedPage
-//        window!.makeKeyAndVisible()
+        //        let mainStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+        //        let protectedPage = mainStoryboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
+        //        window!.rootViewController = protectedPage
+        //        window!.makeKeyAndVisible()
         
     }
     //
-//    func sceneDidDisconnect(_ scene: UIScene) {
-//        // Called as the scene is being released by the system.
-//        // This occurs shortly after the scene enters the background, or when its session is discarded.
-//        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-//        // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
-//    }
-//
-//    func sceneDidBecomeActive(_ scene: UIScene) {
-//        // Called when the scene has moved from an inactive state to an active state.
-//        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-//    }
-//
-//    func sceneWillResignActive(_ scene: UIScene) {
-//        // Called when the scene will move from an active state to an inactive state.
-//        // This may occur due to temporary interruptions (ex. an incoming phone call).
-//    }
-//
-//    func sceneWillEnterForeground(_ scene: UIScene) {
-//        // Called as the scene transitions from the background to the foreground.
-//        // Use this method to undo the changes made on entering the background.
-//    }
-//
+    //    func sceneDidDisconnect(_ scene: UIScene) {
+    //        // Called as the scene is being released by the system.
+    //        // This occurs shortly after the scene enters the background, or when its session is discarded.
+    //        // Release any resources associated with this scene that can be re-created the next time the scene connects.
+    //        // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+    //    }
+    //
+    //    func sceneDidBecomeActive(_ scene: UIScene) {
+    //        // Called when the scene has moved from an inactive state to an active state.
+    //        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    //    }
+    //
+    //    func sceneWillResignActive(_ scene: UIScene) {
+    //        // Called when the scene will move from an active state to an inactive state.
+    //        // This may occur due to temporary interruptions (ex. an incoming phone call).
+    //    }
+    //
+    //    func sceneWillEnterForeground(_ scene: UIScene) {
+    //        // Called as the scene transitions from the background to the foreground.
+    //        // Use this method to undo the changes made on entering the background.
+    //    }
+    //
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-
+        
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-//
-//}
-//
+    
+    //
+    //}
+    //
 }

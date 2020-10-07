@@ -17,7 +17,7 @@ struct MenuCategories: Codable {
 struct Items: Codable {
     let id: Int
     let name: String
-    let image: String
+    let hasImage: String?
     let itemsDescription, address: String
     let categoryID, typeID: Int
     let createdAt, updatedAt: String
@@ -25,7 +25,7 @@ struct Items: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name
-        case image = "has_image"
+        case hasImage = "has_image"
         case itemsDescription = "description"
         case address
         case categoryID = "category_id"

@@ -24,7 +24,7 @@ extension CarRentVC: CarsRentViewDelegate{
         self.loadModelPicker()
         self.loadYearPicker()
         self.brandTF.text = self.cars?.cars.data.first?.name
-        self.brandIcon.sd_setImage(with: URL(string: self.cars?.cars.data.first?.image ?? ""))
+        self.brandIcon.sd_setImage(with: URL(string: self.cars?.cars.data.first?.hasImage ?? ""))
     }
     
     func didFailFetchCars() {
@@ -68,7 +68,7 @@ extension CarRentVC: CarsRentViewDelegate{
     
     func didCompleteConfirmRide(_ driver: Drivers) {
         self.driverName.text = " " + driver.drivers.name
-        self.driverImage.sd_setImage(with: URL(string: driver.drivers.image ?? ""))
+        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
         //  self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.image))
           self.carNumber.text = driver.drivers.myCar.first?.carNumber
           self.callDriver.onTap {
