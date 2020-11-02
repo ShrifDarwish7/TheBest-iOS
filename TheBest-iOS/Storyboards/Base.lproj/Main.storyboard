@@ -24,7 +24,7 @@
         <!--About Us View Controller-->
         <scene sceneID="37u-rA-z5c">
             <objects>
-                <viewController id="UZy-T6-VaG" customClass="AboutUsViewController" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UZy-T6-VaG" customClass="AboutUsViewController" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5td-xr-J4q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AboutUsCell" id="136-lp-iM9" customClass="AboutUsCollectionViewCell" customModule="TheBest_iOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AboutUsCell" id="136-lp-iM9" customClass="AboutUsCollectionViewCell" customModule="The_Best" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-4" width="291" height="187"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MS3-1H-Wf8">
@@ -367,7 +367,7 @@ ever since the 1500s</string>
         <!--LoginVC-->
         <scene sceneID="prb-fM-2QJ">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="82f-TO-blO" customClass="LoginVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="82f-TO-blO" customClass="LoginVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P0k-xy-YCi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -603,7 +603,7 @@ ever since the 1500s</string>
         <!--HomeVC-->
         <scene sceneID="Abm-zh-hxR">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="h4T-Ux-Kbd" customClass="HomeVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="h4T-Ux-Kbd" customClass="HomeVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uhw-GL-Zuu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -660,16 +660,16 @@ ever since the 1500s</string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xq7-ck-XY9">
-                                <rect key="frame" x="40" y="149" width="276.5" height="42"/>
+                                <rect key="frame" x="40" y="149" width="270.5" height="43"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey Mohamed , Choose your category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2I-Xu-bOt">
-                                        <rect key="frame" x="0.0" y="0.0" width="276.5" height="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Each category has it's own feel and look , Enjoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-Kh-IHH">
-                                        <rect key="frame" x="0.0" y="29" width="235" height="13"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="227.5" height="13.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="11"/>
                                         <color key="textColor" name="FontGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -677,7 +677,7 @@ ever since the 1500s</string>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yDD-rS-1g6">
-                                <rect key="frame" x="20" y="226" width="374" height="616"/>
+                                <rect key="frame" x="20" y="227" width="374" height="615"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nIM-CO-skG">
                                     <size key="itemSize" width="50" height="50"/>
@@ -697,7 +697,7 @@ ever since the 1500s</string>
                                 </cells>
                             </collectionView>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FW6-73-npn">
-                                <rect key="frame" x="20" y="226" width="374" height="616"/>
+                                <rect key="frame" x="20" y="227" width="374" height="615"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B4l-kh-S4D">
                                     <size key="itemSize" width="50" height="50"/>
@@ -732,7 +732,7 @@ ever since the 1500s</string>
                                             <rect key="frame" x="62" y="313.5" width="290" height="269"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should open your location services first" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIW-ND-oDg">
-                                                    <rect key="frame" x="25" y="78.5" width="240" height="44.5"/>
+                                                    <rect key="frame" x="25" y="78" width="240" height="46"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -741,7 +741,7 @@ ever since the 1500s</string>
                                                     <rect key="frame" x="15" y="209" width="260" height="45"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ2-H6-AB6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="39"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
                                                             <color key="backgroundColor" red="0.21568627450980393" green="0.88627450980392153" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                                             <state key="normal" title="Yes">
@@ -749,7 +749,7 @@ ever since the 1500s</string>
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tn-J2-alv">
-                                                            <rect key="frame" x="135" y="0.0" width="125" height="39"/>
+                                                            <rect key="frame" x="135" y="0.0" width="125" height="40"/>
                                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                                             <state key="normal" title="No">
@@ -841,7 +841,7 @@ ever since the 1500s</string>
         <!--StoresVC-->
         <scene sceneID="BwG-az-zGM">
             <objects>
-                <viewController storyboardIdentifier="StoresVC" id="ufB-zu-OAd" customClass="StoresVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoresVC" id="ufB-zu-OAd" customClass="StoresVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpM-04-d5v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -938,7 +938,7 @@ ever since the 1500s</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No stores available in this category !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vit-T0-e93">
-                                <rect key="frame" x="107" y="426" width="200" height="44.5"/>
+                                <rect key="frame" x="107" y="425" width="200" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="asT-Fp-ZHZ"/>
                                 </constraints>
@@ -983,7 +983,7 @@ ever since the 1500s</string>
         <!--Vendor ProfileVC-->
         <scene sceneID="FDj-mQ-gqS">
             <objects>
-                <viewController storyboardIdentifier="VendorProfileVC" id="RAs-yi-RQF" customClass="VendorProfileVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VendorProfileVC" id="RAs-yi-RQF" customClass="VendorProfileVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Xx-Sc-13J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1000,14 +1000,14 @@ ever since the 1500s</string>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ikd-wS-zgh">
-                                <rect key="frame" x="132" y="94" width="150" height="150"/>
+                                <rect key="frame" x="144.5" y="94" width="125" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="073-Jn-Qhs"/>
-                                    <constraint firstAttribute="width" constant="150" id="KLe-8Y-4u8"/>
+                                    <constraint firstAttribute="height" constant="125" id="073-Jn-Qhs"/>
+                                    <constraint firstAttribute="width" constant="125" id="KLe-8Y-4u8"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCj-B8-Ga7">
-                                <rect key="frame" x="40" y="64" width="50" height="50"/>
+                                <rect key="frame" x="15" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="VoX-hD-eQh"/>
                                     <constraint firstAttribute="height" constant="50" id="rgN-ZY-iIR"/>
@@ -1015,16 +1015,16 @@ ever since the 1500s</string>
                                 <state key="normal" image="back-white-left"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X7F-2n-v5f">
-                                <rect key="frame" x="176.5" y="264" width="61.5" height="39"/>
+                                <rect key="frame" x="178" y="239" width="58.5" height="40.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="313-Oq-Aei">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="313-Oq-Aei">
+                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="22"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 - 60 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKe-0v-sOQ">
-                                        <rect key="frame" x="0.0" y="26" width="61.5" height="13"/>
+                                        <rect key="frame" x="0.0" y="27" width="58.5" height="13.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                         <color key="textColor" name="FontGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1032,7 +1032,7 @@ ever since the 1500s</string>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdV-bY-5Ac">
-                                <rect key="frame" x="10" y="318" width="394" height="534"/>
+                                <rect key="frame" x="10" y="332" width="394" height="530"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7j-we-XKu">
                                         <rect key="frame" x="20" y="20" width="95" height="40"/>
@@ -1041,13 +1041,13 @@ ever since the 1500s</string>
                                                 <rect key="frame" x="10" y="0.0" width="75" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kFE-Jm-3Gr">
-                                                        <rect key="frame" x="0.0" y="4" width="30" height="32"/>
+                                                        <rect key="frame" x="0.0" y="12" width="30" height="16"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="pMs-Qd-JnW"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-aD-MCl">
-                                                        <rect key="frame" x="35" y="12" width="40" height="16.5"/>
+                                                        <rect key="frame" x="35" y="11.5" width="40" height="17"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1066,7 +1066,7 @@ ever since the 1500s</string>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nrN-82-S5x">
-                                        <rect key="frame" x="125" y="10" width="259" height="60"/>
+                                        <rect key="frame" x="125" y="16" width="259" height="48"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nSO-6Q-7QZ">
                                             <size key="itemSize" width="50" height="50"/>
@@ -1076,7 +1076,7 @@ ever since the 1500s</string>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4AM-Mh-fQh">
-                                                <rect key="frame" x="0.0" y="5" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="-1" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2t5-FY-2w0">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1086,11 +1086,11 @@ ever since the 1500s</string>
                                         </cells>
                                     </collectionView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L4i-zx-5Ys">
-                                        <rect key="frame" x="10" y="75" width="374" height="454"/>
+                                        <rect key="frame" x="10" y="69" width="374" height="456"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No products available in this category !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-Ug-RgP">
-                                        <rect key="frame" x="97" y="245" width="200" height="44.5"/>
+                                        <rect key="frame" x="97" y="242" width="200" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="D3g-EQ-VhT"/>
                                         </constraints>
@@ -1102,6 +1102,7 @@ ever since the 1500s</string>
                                 <color key="backgroundColor" name="BG"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="nrN-82-S5x" secondAttribute="trailing" constant="10" id="30d-WF-yMt"/>
+                                    <constraint firstAttribute="height" constant="530" id="53A-eR-Kpa"/>
                                     <constraint firstItem="L4i-zx-5Ys" firstAttribute="top" secondItem="nrN-82-S5x" secondAttribute="bottom" constant="5" id="7qC-aG-AiH"/>
                                     <constraint firstItem="nrN-82-S5x" firstAttribute="leading" secondItem="e7j-we-XKu" secondAttribute="trailing" constant="10" id="9ne-wr-Dwt"/>
                                     <constraint firstAttribute="trailing" secondItem="L4i-zx-5Ys" secondAttribute="trailing" constant="10" id="F7S-hT-TGU"/>
@@ -1112,7 +1113,7 @@ ever since the 1500s</string>
                                     <constraint firstItem="LbT-Ug-RgP" firstAttribute="centerY" secondItem="qdV-bY-5Ac" secondAttribute="centerY" id="XDx-Lk-g1t"/>
                                     <constraint firstItem="L4i-zx-5Ys" firstAttribute="leading" secondItem="qdV-bY-5Ac" secondAttribute="leading" constant="10" id="Zj4-vU-sP5"/>
                                     <constraint firstItem="e7j-we-XKu" firstAttribute="leading" secondItem="qdV-bY-5Ac" secondAttribute="leading" constant="20" id="if7-3E-grt"/>
-                                    <constraint firstItem="nrN-82-S5x" firstAttribute="height" secondItem="e7j-we-XKu" secondAttribute="height" multiplier="1.5" id="ldB-RW-mhO"/>
+                                    <constraint firstItem="nrN-82-S5x" firstAttribute="height" secondItem="e7j-we-XKu" secondAttribute="height" multiplier="1.2" id="ldB-RW-mhO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1128,13 +1129,12 @@ ever since the 1500s</string>
                             <constraint firstItem="EGy-2v-Wu0" firstAttribute="leading" secondItem="nyP-kH-0ud" secondAttribute="leading" id="RYm-pE-rw1"/>
                             <constraint firstItem="ikd-wS-zgh" firstAttribute="top" secondItem="K88-uv-BDV" secondAttribute="top" constant="50" id="Xz9-Il-jGs"/>
                             <constraint firstItem="EGy-2v-Wu0" firstAttribute="bottom" secondItem="nyP-kH-0ud" secondAttribute="bottom" id="cvI-29-1WF"/>
-                            <constraint firstItem="XCj-B8-Ga7" firstAttribute="leading" secondItem="K88-uv-BDV" secondAttribute="leading" constant="40" id="dUE-RR-BLi"/>
+                            <constraint firstItem="XCj-B8-Ga7" firstAttribute="leading" secondItem="K88-uv-BDV" secondAttribute="leading" constant="15" id="dUE-RR-BLi"/>
                             <constraint firstItem="K88-uv-BDV" firstAttribute="trailing" secondItem="qdV-bY-5Ac" secondAttribute="trailing" constant="10" id="dxw-p4-Pzw"/>
                             <constraint firstItem="EGy-2v-Wu0" firstAttribute="trailing" secondItem="nyP-kH-0ud" secondAttribute="trailing" id="eY4-5i-35V"/>
                             <constraint firstItem="K88-uv-BDV" firstAttribute="trailing" secondItem="nyP-kH-0ud" secondAttribute="trailing" id="hn0-3w-wCy"/>
                             <constraint firstItem="nyP-kH-0ud" firstAttribute="top" secondItem="6Xx-Sc-13J" secondAttribute="top" id="nJb-Ao-eCW"/>
-                            <constraint firstItem="qdV-bY-5Ac" firstAttribute="top" secondItem="X7F-2n-v5f" secondAttribute="bottom" constant="15" id="pj5-Cv-Pf2"/>
-                            <constraint firstItem="K88-uv-BDV" firstAttribute="bottom" secondItem="qdV-bY-5Ac" secondAttribute="bottom" constant="10" id="qWn-f2-0XE"/>
+                            <constraint firstItem="K88-uv-BDV" firstAttribute="bottom" secondItem="qdV-bY-5Ac" secondAttribute="bottom" id="qWn-f2-0XE"/>
                             <constraint firstItem="qdV-bY-5Ac" firstAttribute="leading" secondItem="K88-uv-BDV" secondAttribute="leading" constant="10" id="tkp-Zy-Nbd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K88-uv-BDV"/>
@@ -1147,6 +1147,7 @@ ever since the 1500s</string>
                         <outlet property="filterBtnView" destination="e7j-we-XKu" id="aSc-u5-58F"/>
                         <outlet property="menuCategoriesCollection" destination="nrN-82-S5x" id="EJ4-zw-bVl"/>
                         <outlet property="menuContainer" destination="qdV-bY-5Ac" id="zgx-ph-nlP"/>
+                        <outlet property="menuContainerViewHeight" destination="53A-eR-Kpa" id="KX6-ez-ajm"/>
                         <outlet property="menuTableView" destination="L4i-zx-5Ys" id="4On-6N-2lj"/>
                         <outlet property="vendorImage" destination="ikd-wS-zgh" id="qbz-KA-PVB"/>
                         <outlet property="vendorName" destination="313-Oq-Aei" id="1sv-Qd-FDt"/>
@@ -1159,7 +1160,7 @@ ever since the 1500s</string>
         <!--ProductVC-->
         <scene sceneID="wuA-tu-BsK">
             <objects>
-                <viewController storyboardIdentifier="ProductVC" id="bTD-GZ-9m9" customClass="ProductVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductVC" id="bTD-GZ-9m9" customClass="ProductVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1eq-8F-WGW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1168,75 +1169,50 @@ ever since the 1500s</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72r-1p-9bK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1223"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="874.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FZO-44-Fjp">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="428"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NCi-a8-BHy">
-                                                <rect key="frame" x="20" y="448" width="374" height="200"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NCi-a8-BHy">
+                                                <rect key="frame" x="20" y="326" width="374" height="103.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMt-7d-BBg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="170"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMt-7d-BBg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="37"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAW-db-kWF">
-                                                        <rect key="frame" x="0.0" y="180" width="374" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAW-db-kWF">
+                                                        <rect key="frame" x="0.0" y="53.5" width="374" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkI-pO-CFM">
+                                                        <rect key="frame" x="0.0" y="83.5" width="374" height="20"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="gfx-Uw-pEM"/>
-                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QnM-jf-Vkw">
-                                                <rect key="frame" x="20" y="668" width="374" height="455"/>
+                                                <rect key="frame" x="20" y="449.5" width="374" height="325"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfm-Cp-wLR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="180"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5j-Ji-5ve">
-                                                                <rect key="frame" x="15" y="15" width="344" height="40"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKY-fO-Pt4">
-                                                                        <rect key="frame" x="156" y="10" width="32.5" height="20"/>
-                                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" name="BG"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="CKY-fO-Pt4" firstAttribute="centerY" secondItem="V5j-Ji-5ve" secondAttribute="centerY" id="9hi-jf-yra"/>
-                                                                    <constraint firstAttribute="height" constant="40" id="V1S-y0-Oa7"/>
-                                                                    <constraint firstItem="CKY-fO-Pt4" firstAttribute="centerX" secondItem="V5j-Ji-5ve" secondAttribute="centerX" id="ngV-wc-KbC"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q80-yX-Lnx">
-                                                                <rect key="frame" x="15" y="60" width="344" height="115"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="115" id="PvL-5A-mwl"/>
-                                                                </constraints>
-                                                            </tableView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lR0-Kc-H2b">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="V5j-Ji-5ve" secondAttribute="trailing" constant="15" id="6eG-J6-dVb"/>
-                                                            <constraint firstItem="V5j-Ji-5ve" firstAttribute="top" secondItem="Xfm-Cp-wLR" secondAttribute="top" constant="15" id="Cfj-nl-4yF"/>
-                                                            <constraint firstItem="q80-yX-Lnx" firstAttribute="top" secondItem="V5j-Ji-5ve" secondAttribute="bottom" constant="5" id="FEE-nD-2Yq"/>
-                                                            <constraint firstAttribute="height" constant="180" id="NE9-On-UIi"/>
-                                                            <constraint firstItem="V5j-Ji-5ve" firstAttribute="leading" secondItem="Xfm-Cp-wLR" secondAttribute="leading" constant="15" id="Ylz-dJ-4WT"/>
-                                                            <constraint firstItem="q80-yX-Lnx" firstAttribute="leading" secondItem="Xfm-Cp-wLR" secondAttribute="leading" constant="15" id="aCc-qP-VIW"/>
-                                                            <constraint firstAttribute="trailing" secondItem="q80-yX-Lnx" secondAttribute="trailing" constant="15" id="mMh-RG-VeA"/>
+                                                            <constraint firstAttribute="height" constant="50" id="12I-ry-Vy0"/>
                                                         </constraints>
-                                                    </view>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="bTD-GZ-9m9" id="N9S-Pr-sft"/>
+                                                            <outlet property="delegate" destination="bTD-GZ-9m9" id="Y92-xt-4Ff"/>
+                                                        </connections>
+                                                    </tableView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AR1-lu-TiW">
-                                                        <rect key="frame" x="0.0" y="195" width="374" height="65"/>
+                                                        <rect key="frame" x="0.0" y="65" width="374" height="65"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COM-D9-sFE">
                                                                 <rect key="frame" x="15" y="12.5" width="120" height="40"/>
@@ -1294,7 +1270,7 @@ ever since the 1500s</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bt0-ON-g6o">
-                                                        <rect key="frame" x="0.0" y="275" width="374" height="180"/>
+                                                        <rect key="frame" x="0.0" y="145" width="374" height="180"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kS-PY-5A3">
                                                                 <rect key="frame" x="15" y="15" width="344" height="40"/>
@@ -1336,7 +1312,7 @@ ever since the 1500s</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Of-E1-uNT">
-                                                <rect key="frame" x="25" y="1143" width="364" height="45"/>
+                                                <rect key="frame" x="25" y="794.5" width="364" height="45"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-W5-5Pg">
                                                         <rect key="frame" x="127" y="12.5" width="110.5" height="20"/>
@@ -1399,7 +1375,7 @@ ever since the 1500s</string>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q14-u0-FRu">
-                                <rect key="frame" x="40" y="64" width="50" height="50"/>
+                                <rect key="frame" x="15" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="oXy-dd-HnC"/>
                                     <constraint firstAttribute="height" constant="50" id="ueB-K9-sEy"/>
@@ -1414,7 +1390,7 @@ ever since the 1500s</string>
                             <constraint firstItem="gLa-wV-ASN" firstAttribute="top" secondItem="1eq-8F-WGW" secondAttribute="top" id="NBI-UU-JQN"/>
                             <constraint firstAttribute="bottom" secondItem="gLa-wV-ASN" secondAttribute="bottom" id="bgt-d8-DHL"/>
                             <constraint firstItem="gLa-wV-ASN" firstAttribute="leading" secondItem="h03-gG-IXL" secondAttribute="leading" id="exw-K4-2GQ"/>
-                            <constraint firstItem="q14-u0-FRu" firstAttribute="leading" secondItem="h03-gG-IXL" secondAttribute="leading" constant="40" id="frf-OH-ix3"/>
+                            <constraint firstItem="q14-u0-FRu" firstAttribute="leading" secondItem="h03-gG-IXL" secondAttribute="leading" constant="15" id="frf-OH-ix3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h03-gG-IXL"/>
                     </view>
@@ -1428,14 +1404,10 @@ ever since the 1500s</string>
                         <outlet property="productDesc" destination="vAW-db-kWF" id="tyS-s6-FQl"/>
                         <outlet property="productImageVIew" destination="FZO-44-Fjp" id="JfU-ja-llM"/>
                         <outlet property="productName" destination="fMt-7d-BBg" id="1WC-MF-s78"/>
+                        <outlet property="productPrice" destination="OkI-pO-CFM" id="sLV-VM-R2f"/>
                         <outlet property="quantityNumer" destination="uR9-nc-SMf" id="Db1-Yc-oXA"/>
-                        <outlet property="variationTableHeight" destination="PvL-5A-mwl" id="xmP-L0-FWS"/>
-                        <outlet property="variationTableView" destination="q80-yX-Lnx" id="PFN-0I-gSa"/>
-                        <outlet property="variationTitle" destination="CKY-fO-Pt4" id="6vb-bs-EAG"/>
-                        <outlet property="variationView" destination="Xfm-Cp-wLR" id="ah0-Cu-fBZ"/>
-                        <outlet property="variationViewHeight" destination="NE9-On-UIi" id="SJ3-he-uMH"/>
-                        <outletCollection property="roundView" destination="V5j-Ji-5ve" collectionClass="NSMutableArray" id="4ry-S5-Kma"/>
-                        <outletCollection property="roundView" destination="Xfm-Cp-wLR" collectionClass="NSMutableArray" id="lhe-Pb-QvW"/>
+                        <outlet property="variationTableHeight" destination="12I-ry-Vy0" id="aDQ-Qm-YdH"/>
+                        <outlet property="variationTableView" destination="lR0-Kc-H2b" id="Mif-lg-XF4"/>
                         <outletCollection property="roundView" destination="AR1-lu-TiW" collectionClass="NSMutableArray" id="SHq-gn-O0S"/>
                         <outletCollection property="roundView" destination="COM-D9-sFE" collectionClass="NSMutableArray" id="aXu-Ag-T7d"/>
                         <outletCollection property="roundView" destination="4kS-PY-5A3" collectionClass="NSMutableArray" id="4kF-Y9-dqE"/>
@@ -1449,13 +1421,13 @@ ever since the 1500s</string>
         <!--CartVC-->
         <scene sceneID="cKG-f3-qXD">
             <objects>
-                <viewController storyboardIdentifier="CartVC" id="5qw-MP-9gy" customClass="CartVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartVC" id="5qw-MP-9gy" customClass="CartVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="506-Uu-Pmc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsD-Pf-zDs">
-                                <rect key="frame" x="40" y="64" width="45" height="45"/>
+                                <rect key="frame" x="15" y="64" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="7f6-z9-HD5"/>
                                     <constraint firstAttribute="height" constant="45" id="HUW-qY-ZKA"/>
@@ -1463,7 +1435,7 @@ ever since the 1500s</string>
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAh-nU-1qE">
-                                <rect key="frame" x="110" y="68" width="61.5" height="37.5"/>
+                                <rect key="frame" x="75" y="68" width="61.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1605,6 +1577,12 @@ ever since the 1500s</string>
                                 <rect key="frame" x="20" y="339" width="374" height="438"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your cart is empty!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zl9-u1-8e6">
+                                <rect key="frame" x="94.5" y="432.5" width="225.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPp-Wv-wHx">
                                 <rect key="frame" x="20" y="797" width="374" height="45"/>
                                 <subviews>
@@ -1634,16 +1612,17 @@ ever since the 1500s</string>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
                             <constraint firstItem="CCt-Gi-CfB" firstAttribute="trailing" secondItem="TEv-u1-Bn6" secondAttribute="trailing" constant="20" id="2YR-JV-FLd"/>
-                            <constraint firstItem="NsD-Pf-zDs" firstAttribute="leading" secondItem="CCt-Gi-CfB" secondAttribute="leading" constant="40" id="3cW-0w-rY0"/>
+                            <constraint firstItem="NsD-Pf-zDs" firstAttribute="leading" secondItem="CCt-Gi-CfB" secondAttribute="leading" constant="15" id="3cW-0w-rY0"/>
                             <constraint firstItem="TEv-u1-Bn6" firstAttribute="top" secondItem="NsD-Pf-zDs" secondAttribute="bottom" constant="20" id="4Yf-c8-zvx"/>
                             <constraint firstItem="IOM-89-z03" firstAttribute="centerX" secondItem="EiS-hB-G2s" secondAttribute="centerX" id="4hV-ex-SFx"/>
                             <constraint firstItem="CCt-Gi-CfB" firstAttribute="bottom" secondItem="lPp-Wv-wHx" secondAttribute="bottom" constant="20" id="7u8-kf-LVh"/>
                             <constraint firstItem="CCt-Gi-CfB" firstAttribute="trailing" secondItem="lPp-Wv-wHx" secondAttribute="trailing" constant="20" id="8Xm-sQ-47n"/>
-                            <constraint firstItem="FAh-nU-1qE" firstAttribute="leading" secondItem="NsD-Pf-zDs" secondAttribute="trailing" constant="25" id="9Rd-Xs-RAy"/>
+                            <constraint firstItem="FAh-nU-1qE" firstAttribute="leading" secondItem="NsD-Pf-zDs" secondAttribute="trailing" constant="15" id="9Rd-Xs-RAy"/>
                             <constraint firstItem="p73-Th-kDP" firstAttribute="centerY" secondItem="qW6-pZ-z1J" secondAttribute="centerY" id="C9K-8a-dBj"/>
                             <constraint firstItem="ahv-v9-hbM" firstAttribute="centerX" secondItem="OFh-IQ-T7r" secondAttribute="centerX" id="Lcn-3s-mwA"/>
                             <constraint firstItem="TEv-u1-Bn6" firstAttribute="leading" secondItem="CCt-Gi-CfB" secondAttribute="leading" constant="30" id="Qjk-me-otB"/>
                             <constraint firstItem="WSn-nT-EA0" firstAttribute="centerY" secondItem="o5j-jr-NiQ" secondAttribute="centerY" id="UwE-Se-jC9"/>
+                            <constraint firstItem="Zl9-u1-8e6" firstAttribute="centerX" secondItem="506-Uu-Pmc" secondAttribute="centerX" id="WsR-oI-VCd"/>
                             <constraint firstItem="PKt-SN-1Eu" firstAttribute="leading" secondItem="CCt-Gi-CfB" secondAttribute="leading" constant="20" id="Wx7-P2-ojx"/>
                             <constraint firstItem="ahv-v9-hbM" firstAttribute="centerY" secondItem="OFh-IQ-T7r" secondAttribute="centerY" id="Z1B-d9-n63"/>
                             <constraint firstItem="IOM-89-z03" firstAttribute="centerY" secondItem="EiS-hB-G2s" secondAttribute="centerY" id="f3g-jc-8Nk"/>
@@ -1651,6 +1630,7 @@ ever since the 1500s</string>
                             <constraint firstItem="FAh-nU-1qE" firstAttribute="centerY" secondItem="NsD-Pf-zDs" secondAttribute="centerY" id="kEe-uQ-meq"/>
                             <constraint firstItem="NsD-Pf-zDs" firstAttribute="top" secondItem="CCt-Gi-CfB" secondAttribute="top" constant="20" id="lqt-7E-0fn"/>
                             <constraint firstItem="WSn-nT-EA0" firstAttribute="centerX" secondItem="o5j-jr-NiQ" secondAttribute="centerX" id="moX-7Q-Tul"/>
+                            <constraint firstItem="Zl9-u1-8e6" firstAttribute="centerY" secondItem="506-Uu-Pmc" secondAttribute="centerY" id="ncO-jP-ZKO"/>
                             <constraint firstItem="lPp-Wv-wHx" firstAttribute="top" secondItem="PKt-SN-1Eu" secondAttribute="bottom" constant="20" id="p8u-il-eZ0"/>
                             <constraint firstItem="PKt-SN-1Eu" firstAttribute="top" secondItem="TEv-u1-Bn6" secondAttribute="bottom" constant="15" id="sEV-9e-E3g"/>
                             <constraint firstItem="p73-Th-kDP" firstAttribute="centerX" secondItem="qW6-pZ-z1J" secondAttribute="centerX" id="u1g-aK-Suu"/>
@@ -1663,6 +1643,8 @@ ever since the 1500s</string>
                         <outlet property="cartItemsTableView" destination="PKt-SN-1Eu" id="RyU-Ne-WKh"/>
                         <outlet property="checkOutView" destination="lPp-Wv-wHx" id="9I5-Is-pBz"/>
                         <outlet property="deliveryFees" destination="d6y-KB-VYM" id="Eqc-Sc-YNK"/>
+                        <outlet property="detailsStack" destination="TEv-u1-Bn6" id="6tY-YN-ens"/>
+                        <outlet property="empty" destination="Zl9-u1-8e6" id="UZv-Gx-cdS"/>
                         <outlet property="itemsCount" destination="RQ7-si-SyI" id="nNP-s4-02N"/>
                         <outlet property="totalOrder" destination="ts8-kA-Rt5" id="qaF-WI-L97"/>
                         <outlet property="totalOrder2" destination="Wo6-DZ-r7l" id="MSJ-yS-lLE"/>
@@ -1672,6 +1654,10 @@ ever since the 1500s</string>
                         <outletCollection property="iconsViews" destination="OFh-IQ-T7r" collectionClass="NSMutableArray" id="uAQ-db-4wI"/>
                         <outletCollection property="iconsViews" destination="o5j-jr-NiQ" collectionClass="NSMutableArray" id="RAD-iB-ZDh"/>
                         <outletCollection property="iconsViews" destination="EiS-hB-G2s" collectionClass="NSMutableArray" id="4NM-2d-Tup"/>
+                        <outletCollection property="images" destination="p73-Th-kDP" collectionClass="NSMutableArray" id="a7e-2E-edN"/>
+                        <outletCollection property="images" destination="ahv-v9-hbM" collectionClass="NSMutableArray" id="hPH-jB-hMB"/>
+                        <outletCollection property="images" destination="WSn-nT-EA0" collectionClass="NSMutableArray" id="NGG-tx-Dfn"/>
+                        <outletCollection property="images" destination="IOM-89-z03" collectionClass="NSMutableArray" id="tg1-Ta-wF4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5M-YU-J2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1681,13 +1667,13 @@ ever since the 1500s</string>
         <!--CheckoutVC-->
         <scene sceneID="TMX-Ca-2vc">
             <objects>
-                <viewController storyboardIdentifier="CheckoutVC" id="AmX-ga-ccj" customClass="CheckoutVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckoutVC" id="AmX-ga-ccj" customClass="CheckoutVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U7G-21-sDW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJw-Pn-ptj">
-                                <rect key="frame" x="40" y="64" width="45" height="45"/>
+                                <rect key="frame" x="15" y="64" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="O9F-R7-hme"/>
                                     <constraint firstAttribute="height" constant="45" id="nPL-sT-nqK"/>
@@ -1695,7 +1681,7 @@ ever since the 1500s</string>
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-Ea-3F8">
-                                <rect key="frame" x="110" y="68" width="138.5" height="37.5"/>
+                                <rect key="frame" x="75" y="68" width="138.5" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2212,13 +2198,13 @@ ever since the 1500s</string>
                             <constraint firstItem="iHx-i9-TPt" firstAttribute="leading" secondItem="U7G-21-sDW" secondAttribute="leading" id="9s8-Zl-Pgj"/>
                             <constraint firstItem="iHx-i9-TPt" firstAttribute="top" secondItem="VJw-Pn-ptj" secondAttribute="bottom" id="F5v-Ad-yLU"/>
                             <constraint firstAttribute="trailing" secondItem="iHx-i9-TPt" secondAttribute="trailing" id="GAX-0N-c8h"/>
-                            <constraint firstItem="hTc-Ea-3F8" firstAttribute="leading" secondItem="VJw-Pn-ptj" secondAttribute="trailing" constant="25" id="JhX-ek-ypI"/>
+                            <constraint firstItem="hTc-Ea-3F8" firstAttribute="leading" secondItem="VJw-Pn-ptj" secondAttribute="trailing" constant="15" id="JhX-ek-ypI"/>
                             <constraint firstItem="jQU-He-XW5" firstAttribute="top" secondItem="IMD-4Y-zms" secondAttribute="top" id="PKA-KU-QMi"/>
                             <constraint firstItem="IMD-4Y-zms" firstAttribute="bottom" secondItem="jQU-He-XW5" secondAttribute="bottom" id="PZt-4Z-40Y"/>
                             <constraint firstItem="hTc-Ea-3F8" firstAttribute="centerY" secondItem="VJw-Pn-ptj" secondAttribute="centerY" id="eBy-2d-4cM"/>
                             <constraint firstAttribute="bottom" secondItem="iHx-i9-TPt" secondAttribute="bottom" id="gRI-8z-RTm"/>
                             <constraint firstItem="VJw-Pn-ptj" firstAttribute="top" secondItem="IMD-4Y-zms" secondAttribute="top" constant="20" id="hyJ-gi-zmy"/>
-                            <constraint firstItem="VJw-Pn-ptj" firstAttribute="leading" secondItem="IMD-4Y-zms" secondAttribute="leading" constant="40" id="kUS-kR-nsB"/>
+                            <constraint firstItem="VJw-Pn-ptj" firstAttribute="leading" secondItem="IMD-4Y-zms" secondAttribute="leading" constant="15" id="kUS-kR-nsB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IMD-4Y-zms"/>
                     </view>
@@ -2249,13 +2235,13 @@ ever since the 1500s</string>
         <!--RegisterVC-->
         <scene sceneID="LWm-RP-GAq">
             <objects>
-                <viewController storyboardIdentifier="RegisterVC" id="a5g-6g-WNw" customClass="RegisterVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" id="a5g-6g-WNw" customClass="RegisterVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zsi-hs-Wgy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-Mj-5A5">
-                                <rect key="frame" x="35" y="69" width="45" height="45"/>
+                                <rect key="frame" x="15" y="69" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="h5P-Yq-GCM"/>
                                     <constraint firstAttribute="height" constant="45" id="pOf-8I-Bcw"/>
@@ -2263,7 +2249,7 @@ ever since the 1500s</string>
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue registeration" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PQ-X0-jUM">
-                                <rect key="frame" x="100" y="73.5" width="294" height="31.5"/>
+                                <rect key="frame" x="75" y="73.5" width="319" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2439,7 +2425,7 @@ ever since the 1500s</string>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Z2d-IZ-Vu0" secondAttribute="bottom" constant="25" id="9ta-xs-xoI"/>
-                            <constraint firstItem="zgR-Mj-5A5" firstAttribute="leading" secondItem="JWt-1p-HgD" secondAttribute="leading" constant="35" id="LbA-Cy-Gf1"/>
+                            <constraint firstItem="zgR-Mj-5A5" firstAttribute="leading" secondItem="JWt-1p-HgD" secondAttribute="leading" constant="15" id="LbA-Cy-Gf1"/>
                             <constraint firstItem="Z2d-IZ-Vu0" firstAttribute="top" secondItem="LS5-hF-WLs" secondAttribute="bottom" constant="25" id="OY2-hg-7ct"/>
                             <constraint firstItem="JWt-1p-HgD" firstAttribute="trailing" secondItem="YMA-UY-XZ4" secondAttribute="trailing" constant="30" id="Q3A-r5-9aW"/>
                             <constraint firstItem="YMA-UY-XZ4" firstAttribute="top" secondItem="6PQ-X0-jUM" secondAttribute="bottom" constant="20" id="ZOb-3d-oMQ"/>
@@ -2447,7 +2433,7 @@ ever since the 1500s</string>
                             <constraint firstItem="6PQ-X0-jUM" firstAttribute="centerY" secondItem="zgR-Mj-5A5" secondAttribute="centerY" constant="-2.5" id="hMQ-31-oM4"/>
                             <constraint firstItem="zgR-Mj-5A5" firstAttribute="top" secondItem="JWt-1p-HgD" secondAttribute="top" constant="25" id="jgc-OV-Elf"/>
                             <constraint firstItem="LS5-hF-WLs" firstAttribute="leading" secondItem="YMA-UY-XZ4" secondAttribute="leading" id="mEV-3y-Y33"/>
-                            <constraint firstItem="6PQ-X0-jUM" firstAttribute="leading" secondItem="zgR-Mj-5A5" secondAttribute="trailing" constant="20" id="mgq-wO-EqR"/>
+                            <constraint firstItem="6PQ-X0-jUM" firstAttribute="leading" secondItem="zgR-Mj-5A5" secondAttribute="trailing" constant="15" id="mgq-wO-EqR"/>
                             <constraint firstItem="LS5-hF-WLs" firstAttribute="top" secondItem="YMA-UY-XZ4" secondAttribute="bottom" constant="20" id="mk7-7s-iZ0"/>
                             <constraint firstAttribute="trailing" secondItem="6PQ-X0-jUM" secondAttribute="trailing" constant="20" id="o2D-5a-HnX"/>
                             <constraint firstItem="Z2d-IZ-Vu0" firstAttribute="centerX" secondItem="zsi-hs-Wgy" secondAttribute="centerX" id="oga-3n-hoo"/>
@@ -2473,7 +2459,7 @@ ever since the 1500s</string>
         <!--Last OrdersVC-->
         <scene sceneID="Qhe-LI-uSD">
             <objects>
-                <viewController storyboardIdentifier="LastOrdersVC" id="usJ-Sa-VbX" customClass="LastOrdersVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LastOrdersVC" id="usJ-Sa-VbX" customClass="LastOrdersVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sne-XX-USw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2530,16 +2516,16 @@ ever since the 1500s</string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-5O-dy9">
-                                <rect key="frame" x="40" y="149" width="200" height="45.5"/>
+                                <rect key="frame" x="40" y="149" width="207" height="46.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22s-EY-RBr">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="22.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="23"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try filter button to more filtration criteria  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOo-IP-Kg3">
-                                        <rect key="frame" x="0.0" y="32.5" width="200" height="13"/>
+                                        <rect key="frame" x="0.0" y="33" width="207" height="13.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="11"/>
                                         <color key="textColor" name="FontGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -2547,7 +2533,7 @@ ever since the 1500s</string>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T6s-mh-xYR">
-                                <rect key="frame" x="15" y="209.5" width="370" height="152.5"/>
+                                <rect key="frame" x="15" y="210.5" width="370" height="152.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jgs-Nl-aGX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -2567,7 +2553,7 @@ ever since the 1500s</string>
                                 </cells>
                             </collectionView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no order history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-WH-vee">
-                                <rect key="frame" x="107" y="602" width="200" height="20"/>
+                                <rect key="frame" x="107" y="602" width="200" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="bLP-mF-iCm"/>
                                 </constraints>
@@ -2576,11 +2562,11 @@ ever since the 1500s</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B2D-ZO-2VP">
-                                <rect key="frame" x="10" y="372" width="394" height="480"/>
+                                <rect key="frame" x="10" y="373" width="394" height="479"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cni-Kh-pRw">
-                                <rect key="frame" x="10" y="372" width="394" height="480"/>
+                                <rect key="frame" x="10" y="373" width="394" height="479"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-CQ-LKR">

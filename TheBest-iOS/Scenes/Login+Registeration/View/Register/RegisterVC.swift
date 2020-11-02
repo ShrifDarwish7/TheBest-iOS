@@ -58,7 +58,7 @@ class RegisterVC: UIViewController , UIGestureRecognizerDelegate{
                 "lat": "\(SharedData.userLat ?? 0)",
                 "lng": "\(SharedData.userLng ?? 0)",
                 "image:": "",
-                "fcm_token": "aaaaaaaaaa",
+                "fcm_token": UserDefaults.init().string(forKey: "FCM_Token") ?? "",
                 "email": self.emailTF.text!,
                 "nationality": self.countryTF.text ?? "",
                 "birth_date": dof_

@@ -14,6 +14,7 @@ target 'TheBest-iOS' do
   pod 'Closures'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
   pod 'SwiftyGif'
   pod 'SVProgressHUD'
   pod 'FlagPhoneNumber'

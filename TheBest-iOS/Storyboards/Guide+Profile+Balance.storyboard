@@ -21,7 +21,7 @@
         <!--How To UseVC-->
         <scene sceneID="fS9-lN-gtQ">
             <objects>
-                <viewController storyboardIdentifier="HowToUseVC" id="sdf-eR-aoK" customClass="HowToUseVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HowToUseVC" id="sdf-eR-aoK" customClass="HowToUseVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bnZ-N4-QEG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,7 +436,7 @@
         <!--ShareVC-->
         <scene sceneID="nDH-cO-PuJ">
             <objects>
-                <viewController storyboardIdentifier="ShareVC" id="2xT-Um-JlM" customClass="ShareVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShareVC" id="2xT-Um-JlM" customClass="ShareVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xRA-sB-NIr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -734,13 +734,13 @@ application on</string>
         <!--ProfileVC-->
         <scene sceneID="7MH-VS-uMF">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="VqQ-3f-rk7" customClass="ProfileVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="VqQ-3f-rk7" customClass="ProfileVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="06V-y2-J5W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzA-qb-blZ">
-                                <rect key="frame" x="35" y="69" width="45" height="45"/>
+                                <rect key="frame" x="15" y="69" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="8NE-ZV-wVd"/>
                                     <constraint firstAttribute="height" constant="45" id="eUf-aa-LTu"/>
@@ -748,7 +748,7 @@ application on</string>
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4E-lO-F4y">
-                                <rect key="frame" x="100" y="73.5" width="294" height="31.5"/>
+                                <rect key="frame" x="75" y="73.5" width="319" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -921,9 +921,9 @@ application on</string>
                             <constraint firstItem="j4E-lO-F4y" firstAttribute="centerY" secondItem="EzA-qb-blZ" secondAttribute="centerY" constant="-2.5" id="4C0-ZT-yLW"/>
                             <constraint firstItem="ead-kY-xyY" firstAttribute="leading" secondItem="JQf-9h-hmn" secondAttribute="leading" constant="30" id="IdL-Xl-UPv"/>
                             <constraint firstItem="J05-oq-bKd" firstAttribute="centerX" secondItem="06V-y2-J5W" secondAttribute="centerX" id="J16-bI-KRw"/>
-                            <constraint firstItem="EzA-qb-blZ" firstAttribute="leading" secondItem="JQf-9h-hmn" secondAttribute="leading" constant="35" id="LjI-gB-0cV"/>
+                            <constraint firstItem="EzA-qb-blZ" firstAttribute="leading" secondItem="JQf-9h-hmn" secondAttribute="leading" constant="15" id="LjI-gB-0cV"/>
                             <constraint firstItem="JQf-9h-hmn" firstAttribute="trailing" secondItem="ead-kY-xyY" secondAttribute="trailing" constant="30" id="Orf-YX-dFt"/>
-                            <constraint firstItem="j4E-lO-F4y" firstAttribute="leading" secondItem="EzA-qb-blZ" secondAttribute="trailing" constant="20" id="Q9b-JC-5xX"/>
+                            <constraint firstItem="j4E-lO-F4y" firstAttribute="leading" secondItem="EzA-qb-blZ" secondAttribute="trailing" constant="15" id="Q9b-JC-5xX"/>
                             <constraint firstItem="ead-kY-xyY" firstAttribute="top" secondItem="j4E-lO-F4y" secondAttribute="bottom" constant="50" id="Rud-KK-2ru"/>
                             <constraint firstItem="J05-oq-bKd" firstAttribute="top" secondItem="ead-kY-xyY" secondAttribute="bottom" constant="30" id="aRC-YS-SQH"/>
                             <constraint firstItem="EzA-qb-blZ" firstAttribute="top" secondItem="JQf-9h-hmn" secondAttribute="top" constant="25" id="h65-zE-JNd"/>
@@ -948,7 +948,7 @@ application on</string>
         <!--BalanceVC-->
         <scene sceneID="2vc-nD-Qra">
             <objects>
-                <viewController storyboardIdentifier="BalanceVC" id="bbU-SG-hlI" customClass="BalanceVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BalanceVC" id="bbU-SG-hlI" customClass="BalanceVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FqQ-ro-sXV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1076,13 +1076,13 @@ application on</string>
         <!--Terms And ConditionsVC-->
         <scene sceneID="4yW-sC-RTM">
             <objects>
-                <viewController storyboardIdentifier="TermsAndConditionsVC" id="GbB-qo-0pu" customClass="TermsAndConditionsVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermsAndConditionsVC" id="GbB-qo-0pu" customClass="TermsAndConditionsVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2g-KV-hm4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FID-kz-r9H">
-                                <rect key="frame" x="35" y="69" width="45" height="45"/>
+                                <rect key="frame" x="15" y="69" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="FWJ-hC-hKx"/>
                                     <constraint firstAttribute="height" constant="45" id="xmJ-hB-vmu"/>
@@ -1090,7 +1090,7 @@ application on</string>
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS2-cx-FDl">
-                                <rect key="frame" x="100" y="73.5" width="294" height="31.5"/>
+                                <rect key="frame" x="75" y="73.5" width="319" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1200,14 +1200,14 @@ application on</string>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
                             <constraint firstItem="FID-kz-r9H" firstAttribute="top" secondItem="5CT-mM-6H6" secondAttribute="top" constant="25" id="0Jb-BE-76Q"/>
-                            <constraint firstItem="FID-kz-r9H" firstAttribute="leading" secondItem="5CT-mM-6H6" secondAttribute="leading" constant="35" id="63A-YC-igV"/>
+                            <constraint firstItem="FID-kz-r9H" firstAttribute="leading" secondItem="5CT-mM-6H6" secondAttribute="leading" constant="15" id="63A-YC-igV"/>
                             <constraint firstItem="UZT-VT-Eix" firstAttribute="leading" secondItem="5CT-mM-6H6" secondAttribute="leading" constant="10" id="CDP-Fb-SO4"/>
                             <constraint firstAttribute="trailing" secondItem="NS2-cx-FDl" secondAttribute="trailing" constant="20" id="I57-R3-kkL"/>
                             <constraint firstItem="PA0-wO-Mnp" firstAttribute="height" secondItem="V2g-KV-hm4" secondAttribute="height" multiplier="0.2" id="ZG2-fh-3CI"/>
                             <constraint firstItem="UZT-VT-Eix" firstAttribute="top" secondItem="NS2-cx-FDl" secondAttribute="bottom" constant="20" id="jRL-Xt-sGr"/>
                             <constraint firstItem="5CT-mM-6H6" firstAttribute="trailing" secondItem="UZT-VT-Eix" secondAttribute="trailing" constant="10" id="k0I-38-ZVK"/>
                             <constraint firstItem="5CT-mM-6H6" firstAttribute="bottom" secondItem="UZT-VT-Eix" secondAttribute="bottom" constant="20" id="k3L-99-wCB"/>
-                            <constraint firstItem="NS2-cx-FDl" firstAttribute="leading" secondItem="FID-kz-r9H" secondAttribute="trailing" constant="20" id="vTu-cp-Rd2"/>
+                            <constraint firstItem="NS2-cx-FDl" firstAttribute="leading" secondItem="FID-kz-r9H" secondAttribute="trailing" constant="15" id="vTu-cp-Rd2"/>
                             <constraint firstItem="NS2-cx-FDl" firstAttribute="centerY" secondItem="FID-kz-r9H" secondAttribute="centerY" constant="-2.5" id="yfz-bX-1Jo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5CT-mM-6H6"/>

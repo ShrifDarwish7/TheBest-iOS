@@ -36,7 +36,9 @@ extension VendorProfileVC: VendorViewDelegate{
     }
     
     func didFailFetchingMenuCategories() {
-        self.showAlert(title: "", message: "Please check your network connection")
+       // self.showAlert(title: "", message: "Please check your network connection")
+        self.emptyProductLabel.isHidden = false
+        self.menuTableView.isHidden = true
     }
     
     func didSuccessfullyFetchMenuItems(_ result: MenuIems) {
@@ -54,7 +56,9 @@ extension VendorProfileVC: VendorViewDelegate{
     }
     
     func didFailFetchMenuItems() {
-        self.showAlert(title: "", message: "Please check your network connection")
+       // self.showAlert(title: "", message: "Please check your network connection")
+        self.emptyProductLabel.isHidden = false
+        self.menuTableView.isHidden = true
     }
     
 }

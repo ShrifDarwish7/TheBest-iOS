@@ -17,6 +17,10 @@ class CartItemsTableViewCell: UITableViewCell {
     @IBOutlet weak var minus: UIButton!
     @IBOutlet weak var quantity: UILabel!
     @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var attributeOne: UILabel!
+    @IBOutlet weak var attributeTwo: UILabel!
+    @IBOutlet weak var attributeThree: UILabel!
+    @IBOutlet weak var attributesStack: UIStackView!
     
     func loadUI(){
         
@@ -34,7 +38,27 @@ class CartItemsTableViewCell: UITableViewCell {
         itemImageView.sd_setImage(with: URL(string: item.image!))
         itemName.text = item.name
         quantity.text = "\(item.quantity ?? 1)"
-        price.text = "\((item.price ?? 0) * Double(item.quantity ?? 1))"
+        
+        let temp = (item.attributeOnePrice ?? 0.0) + (item.attributeTwoPrice ?? 0.0)
+        let totalVariationsPrice =  temp + (item.attributeThreePrice ?? 0.0)
+        
+        price.text = "\((item.price! + totalVariationsPrice) * Double(item.quantity ?? 1))"
+        
+        if let _ = item.attributeOneName, let _ = item.attributeOnePrice, let _ = item.attributeOne{
+            self.attributeOne.isHidden = false
+            self.attributesStack.isHidden = false
+            self.attributeOne.text = "\(item.attributeOneName!): \(item.attributeOnePrice!) KWD"
+        }
+        if let _ = item.attributeTwoName, let _ = item.attributeTwoPrice, let _ = item.attributeTwo{
+            self.attributeTwo.isHidden = false
+            self.attributesStack.isHidden = false
+            self.attributeTwo.text = "\(item.attributeTwoName!): \(item.attributeTwoPrice!) KWD"
+        }
+        if let _ = item.attributeThreeName, let _ = item.attributeThreePrice, let _ = item.attributeThree{
+            self.attributeThree.isHidden = false
+            self.attributesStack.isHidden = false
+            self.attributeThree.text = "\(item.attributeThreeName!): \(item.attributeThreePrice!) KWD"
+        }
         
     }
     

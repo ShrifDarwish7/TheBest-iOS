@@ -19,7 +19,7 @@
         <!--DrawerVC-->
         <scene sceneID="Hjt-Jq-WIq">
             <objects>
-                <viewController id="lpM-e6-O0p" customClass="DrawerVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lpM-e6-O0p" customClass="DrawerVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h3L-CR-2gY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -22,39 +22,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="102" height="44"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jA0-Fg-Vny">
-                        <rect key="frame" x="0.0" y="0.0" width="102" height="44"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-pp-Lqk">
-                                <rect key="frame" x="31.5" y="12.5" width="39" height="19.5"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJo-qr-NC9">
-                                <rect key="frame" x="31.5" y="42" width="39" height="3"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="3" id="eK8-Y7-2Cq"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOy-pp-Lqk">
+                        <rect key="frame" x="0.0" y="0.0" width="102" height="39"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJo-qr-NC9">
+                        <rect key="frame" x="0.0" y="41" width="102" height="3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NJo-qr-NC9" firstAttribute="centerX" secondItem="jA0-Fg-Vny" secondAttribute="centerX" id="Vl7-kb-MID"/>
-                            <constraint firstItem="NJo-qr-NC9" firstAttribute="width" secondItem="nOy-pp-Lqk" secondAttribute="width" id="ahi-OR-C74"/>
-                            <constraint firstItem="NJo-qr-NC9" firstAttribute="top" secondItem="nOy-pp-Lqk" secondAttribute="bottom" constant="10" id="pZb-6n-Ble"/>
-                            <constraint firstItem="nOy-pp-Lqk" firstAttribute="centerX" secondItem="jA0-Fg-Vny" secondAttribute="centerX" id="rtl-Ch-KZC"/>
-                            <constraint firstItem="nOy-pp-Lqk" firstAttribute="centerY" secondItem="jA0-Fg-Vny" secondAttribute="centerY" id="wfK-gU-n1y"/>
+                            <constraint firstAttribute="height" constant="3" id="eK8-Y7-2Cq"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="jA0-Fg-Vny" secondAttribute="trailing" id="OUK-GM-45y"/>
-                <constraint firstItem="jA0-Fg-Vny" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b3R-0z-aav"/>
-                <constraint firstAttribute="bottom" secondItem="jA0-Fg-Vny" secondAttribute="bottom" id="jyB-Um-YFb"/>
-                <constraint firstItem="jA0-Fg-Vny" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kg9-xu-IfF"/>
+                <constraint firstItem="nOy-pp-Lqk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2ga-LV-hb5"/>
+                <constraint firstItem="NJo-qr-NC9" firstAttribute="width" secondItem="nOy-pp-Lqk" secondAttribute="width" id="Upn-yh-WPs"/>
+                <constraint firstAttribute="trailing" secondItem="nOy-pp-Lqk" secondAttribute="trailing" id="ax1-qe-4Nc"/>
+                <constraint firstAttribute="bottom" secondItem="NJo-qr-NC9" secondAttribute="bottom" id="jt7-t1-yFj"/>
+                <constraint firstItem="NJo-qr-NC9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="k5E-ac-0l5"/>
+                <constraint firstItem="nOy-pp-Lqk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="poy-UO-A1L"/>
+                <constraint firstAttribute="bottom" secondItem="nOy-pp-Lqk" secondAttribute="bottom" constant="5" id="ugR-6g-k29"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="102" height="44"/>

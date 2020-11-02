@@ -1,5 +1,5 @@
 //
-//  VariationTableViewCell.swift
+//  VariationBodyTableViewCell.swift
 //  TheBest-iOS
 //
 //  Created by Sherif Darwish on 8/10/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VariationTableViewCell: UITableViewCell {
+class VariationBodyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var check: UIButton!
     @IBOutlet weak var variationName: UILabel!

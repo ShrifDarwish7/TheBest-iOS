@@ -13,6 +13,7 @@ import IQKeyboardManagerSwift
 import SVProgressHUD
 import GoogleMaps
 import GooglePlaces
+import FirebaseMessaging
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,12 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
-        Auth.auth().canHandle(URL(string: "com.googleusercontent.apps.88616747039-3j7kg1ikeqlnkoceuqle764bhnutl55n")!)
+        Auth.auth().canHandle(URL(string: "com.googleusercontent.apps.88616747039-42d5n786a8p2mijp1necs5v0u5fo0ag7")!)
         GMSServices.provideAPIKey("AIzaSyDBDV-XxFpmbx79T5HLPrG9RmjDpiYshmE")
         GMSPlacesClient.provideAPIKey("AIzaSyDBDV-XxFpmbx79T5HLPrG9RmjDpiYshmE")
-        SVProgressHUD.setDefaultMaskType(.black)
-        SVProgressHUD.setDefaultAnimationType(.flat)
-        SVProgressHUD.setBackgroundColor(.white)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.setDefaultAnimationType(.native)
+       // SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setCornerRadius(10)
+        SVProgressHUD.setMinimumSize(CGSize(width: 75, height: 75))
+        SVProgressHUD.setForegroundColor(UIColor.white)
+         SVProgressHUD.setBackgroundColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75))
         
         if #available(iOS 13.0, *){
             
@@ -53,22 +58,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        if #available(iOS 10.0, *) {
+          // For iOS 10 display notification (sent via APNS)
+          UNUserNotificationCenter.current().delegate = self
+
+          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+          UNUserNotificationCenter.current().requestAuthorization(
+            options: authOptions,
+            completionHandler: {_, _ in })
+        } else {
+          let settings: UIUserNotificationSettings =
+          UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+          application.registerUserNotificationSettings(settings)
+        }
+
+        application.registerForRemoteNotifications()
+        Messaging.messaging().delegate = self
+                
         return true
     }
-//
-//    // MARK: UISceneSession Lifecycle
-//
-//    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-//        // Called when a new scene session is being created.
-//        // Use this method to select a configuration to create the new scene with.
-//        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-//    }
-//
-//    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-//        // Called when the user discards a scene session.
-//        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-//        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-//    }
 
     // MARK: - Core Data stack
 
@@ -98,3 +106,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken
+    }
+}
+
+extension AppDelegate: MessagingDelegate{
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("fcmTokenHere",fcmToken)
+        UserDefaults.init().set(fcmToken, forKey: "FCM_Token")
+    }
+}

@@ -19,7 +19,7 @@ struct Items: Codable {
     let name: String
     let hasImage: String?
     let itemsDescription, address: String
-    let categoryID, typeID: Int
+  //  let categoryID, typeID: Int
     let createdAt, updatedAt: String
     var menuesCategories: [MenuesCategory]
 
@@ -28,8 +28,8 @@ struct Items: Codable {
         case hasImage = "has_image"
         case itemsDescription = "description"
         case address
-        case categoryID = "category_id"
-        case typeID = "type_id"
+      //  case categoryID = "category_id"
+        //case typeID = "type_id"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case menuesCategories = "menues_categories"

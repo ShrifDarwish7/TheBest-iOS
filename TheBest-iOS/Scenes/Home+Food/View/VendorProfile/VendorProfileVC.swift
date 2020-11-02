@@ -20,6 +20,7 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
     @IBOutlet weak var menuCategoriesCollection: UICollectionView!
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var emptyProductLabel: UILabel!
+    @IBOutlet weak var menuContainerViewHeight: NSLayoutConstraint!
     
     var menuCategories: MenuCategories?
     var idReceived: Int?
@@ -33,7 +34,7 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
         vendorViewPresenter = VendorProfilePresenter(vendorViewDelegte: self)
-        vendorViewPresenter?.fetchMenuCategories(id: idReceived!)
+        vendorViewPresenter?.fetchMenuCategories(id: idReceived == 3 ? 42 : idReceived!)
         
         backBtn.onTap {
             self.navigationController?.popViewController(animated: true)
@@ -48,6 +49,7 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
         filterBtnView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         filterBtnView.layer.borderWidth = 1
         
+        menuContainerViewHeight.constant = self.view.frame.height - UIApplication.shared.statusBarFrame.height - 280
     }
     
     func loadMenuCollection(){
@@ -60,6 +62,7 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
         }.cellForItemAt { (index) -> UICollectionViewCell in
             
             let cell  = self.menuCategoriesCollection.dequeueReusableCell(withReuseIdentifier: "MenuFilterCell", for: index) as! MenuFilterCollectionViewCell
+            cell.underLine.layer.cornerRadius = 1.5
             if self.menuCategories?.items.menuesCategories[index.row].selected ?? false{
                 cell.underLine.isHidden = false
                 cell.menuCategory.textColor =  UIColor.black
@@ -71,9 +74,9 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
             
             return cell
             
-        }.sizeForItemAt { (_) -> CGSize in
+        }/*.sizeForItemAt { (_) -> CGSize in
             return CGSize(width: 80, height:  60)
-        }.didSelectItemAt { (index) in
+        }*/.didSelectItemAt { (index) in
             
             for i in 0...(self.menuCategories?.items.menuesCategories.count)!-1{
                 self.menuCategories?.items.menuesCategories[i].selected = false
@@ -85,6 +88,10 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
             
             self.vendorViewPresenter?.fetchMenuItems(id: (self.menuCategories?.items.menuesCategories[index.row].id)!)
             
+        }
+        
+        if let flowLayout = menuCategoriesCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
+           flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
         
     }
@@ -136,6 +143,24 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
             return 70
         }.didSelectRowAt { (index) in
             Router.toProduct(item: (self.menuItems?.restaurantMenu[index.row])!, vendorName: self.vendorName.text!, vendorImage: (self.menuCategories?.items.hasImage) ?? "", sender: self)
+        }.didScroll { (scroller) in
+            let maxHeight: CGFloat = self.view.frame.height - UIApplication.shared.statusBarFrame.height - 30
+            let minHeight: CGFloat = self.view.frame.height - UIApplication.shared.statusBarFrame.height - 280
+            let y: CGFloat = scroller.contentOffset.y
+            let newViewHeight = self.menuContainerViewHeight.constant + y
+            if newViewHeight > maxHeight{
+                self.menuContainerViewHeight.constant = maxHeight
+            }else if newViewHeight < minHeight{
+                self.menuContainerViewHeight.constant = minHeight
+            }else{
+                self.menuContainerViewHeight.constant = newViewHeight
+                scroller.contentOffset.y = 0
+            }
+        }.didScrollToTop { (_) in
+            self.menuContainerViewHeight.constant = self.view.frame.height - UIApplication.shared.statusBarFrame.height - 280
+            UIView.animate(withDuration: 0.2) {
+                self.view.layoutIfNeeded()
+            }
         }
         
         self.menuTableView.reloadData()

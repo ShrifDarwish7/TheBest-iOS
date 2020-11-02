@@ -26,6 +26,7 @@ class CheckoutVC: UIViewController , UIGestureRecognizerDelegate{
     var cartItems: [CartItemModel]?
     var checkoutPresenter: CheckoutPresenter?
     var checkoutParameters: [String: Any]?
+    var receivedTotal: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +50,10 @@ class CheckoutVC: UIViewController , UIGestureRecognizerDelegate{
         vendorImage.sd_setImage(with: URL(string: UserDefaults.init().string(forKey: "cart_associated_vendor_image")!))
         vendorName.text = UserDefaults.init().string(forKey: "cart_associated_vendor_name")
         deliveryFees.text = UserDefaults.init().string(forKey: "cart_associated_vendor_delivery_fees")
-        if let _ = cartItems{
-            updateTotalOrder()
-        }
+        
+        totalOrder.text = "\(receivedTotal!) KWD"
+        totalOrder2.text = "\(receivedTotal!) KWD"
+        
         username.text = AuthServices.instance.user.name
         userPhone.text = AuthServices.instance.user.phone
         
@@ -65,14 +67,5 @@ class CheckoutVC: UIViewController , UIGestureRecognizerDelegate{
         
     }
     
-    func updateTotalOrder(){
-        
-        var temp = 0.0
-        for item in self.cartItems!{
-            temp = temp + Double(item.price! * Double(item.quantity!))
-        }
-        self.totalOrder.text = "\(temp) KWD"
-        self.totalOrder2.text = "\(temp) KWD"
-    }
     
 }

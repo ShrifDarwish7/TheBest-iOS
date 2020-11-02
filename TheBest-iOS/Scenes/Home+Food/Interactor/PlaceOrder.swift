@@ -18,19 +18,8 @@ class PlaceOrder{
             
             for (key,value) in parameters{
                 
-                multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
-                
-//                switch key {
-//                case "product_id","variation_id":
-//
-//                    for i in value as! Array<String>{
-//                        multipartFormData.append(i.data(using: .utf8)!, withName: key+"[0]" )
-//                    }
-//
-//                default:
-//                    multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
-//                }
-                
+                multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
+ 
             }
             
         }, to: URL(string: PLACE_ORDER_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
@@ -44,12 +33,17 @@ class PlaceOrder{
                         
                     case .success(let data):
                         print(JSON(data))
-                        if JSON(data)["message"].string == "Done"{
+                        //                        if JSON(data)["message"].string == "Done"{
+                        //                            completed(true)
+                        //                        }else{
+                        //                             completed(false)
+                        //                        }
+                        do{
+                            let _ = try JSONDecoder.init().decode(PlaceOrderResponse.self, from: data)
                             completed(true)
-                        }else{
-                             completed(false)
+                        }catch{
+                            completed(false)
                         }
-                        
                         
                     case .failure(_):
                         

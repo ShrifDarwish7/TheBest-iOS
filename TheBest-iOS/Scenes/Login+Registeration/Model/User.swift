@@ -29,7 +29,7 @@ struct UserModel: Codable {
     let id: Int
     let name, email: String
     let hasImage: String?
-    let fcmToken, phone: String
+    let fcmToken, phone: String?
     let isAdmin, isDriver: Int?
    // let lat, lng: Double?
     let birthDate, nationality: String?

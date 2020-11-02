@@ -20,7 +20,7 @@
         <!--MarketsVC-->
         <scene sceneID="SaC-de-D9l">
             <objects>
-                <viewController storyboardIdentifier="MarketsVC" id="y6g-GD-Q5p" customClass="MarketsVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MarketsVC" id="y6g-GD-Q5p" customClass="MarketsVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pmo-Kl-0nl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,7 +164,7 @@
         <!--FilterVC-->
         <scene sceneID="abJ-gY-P82">
             <objects>
-                <viewController storyboardIdentifier="FilterVC" id="X0m-rc-YnW" customClass="FilterVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FilterVC" id="X0m-rc-YnW" customClass="FilterVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JQi-y7-n3z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,7 +256,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwf-IH-tYu">
-                                <rect key="frame" x="35" y="69" width="45" height="45"/>
+                                <rect key="frame" x="15" y="69" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="LI0-Bd-jk7"/>
                                     <constraint firstAttribute="height" constant="45" id="M2n-Wu-OYV"/>
@@ -264,7 +264,7 @@
                                 <state key="normal" image="back"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose region" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofq-Yq-d6F">
-                                <rect key="frame" x="100" y="73.5" width="176.5" height="31.5"/>
+                                <rect key="frame" x="75" y="73.5" width="176.5" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -286,8 +286,8 @@
                             <constraint firstItem="n6w-UI-45q" firstAttribute="leading" secondItem="SbO-n7-rUa" secondAttribute="leading" constant="25" id="6ge-UM-ZEO"/>
                             <constraint firstItem="SbO-n7-rUa" firstAttribute="trailing" secondItem="gnE-sP-9QS" secondAttribute="trailing" constant="30" id="Jmx-Na-vV3"/>
                             <constraint firstItem="Ofq-Yq-d6F" firstAttribute="centerY" secondItem="Rwf-IH-tYu" secondAttribute="centerY" constant="-2.5" id="Qiu-ao-Pdz"/>
-                            <constraint firstItem="Rwf-IH-tYu" firstAttribute="leading" secondItem="SbO-n7-rUa" secondAttribute="leading" constant="35" id="RsQ-U4-8KA"/>
-                            <constraint firstItem="Ofq-Yq-d6F" firstAttribute="leading" secondItem="Rwf-IH-tYu" secondAttribute="trailing" constant="20" id="TYF-rs-ub6"/>
+                            <constraint firstItem="Rwf-IH-tYu" firstAttribute="leading" secondItem="SbO-n7-rUa" secondAttribute="leading" constant="15" id="RsQ-U4-8KA"/>
+                            <constraint firstItem="Ofq-Yq-d6F" firstAttribute="leading" secondItem="Rwf-IH-tYu" secondAttribute="trailing" constant="15" id="TYF-rs-ub6"/>
                             <constraint firstItem="SbO-n7-rUa" firstAttribute="bottom" secondItem="n6w-UI-45q" secondAttribute="bottom" constant="35" id="dpC-S7-hbL"/>
                             <constraint firstItem="SbO-n7-rUa" firstAttribute="trailing" secondItem="n6w-UI-45q" secondAttribute="trailing" constant="25" id="gQ5-os-pTx"/>
                             <constraint firstItem="gnE-sP-9QS" firstAttribute="top" secondItem="Rwf-IH-tYu" secondAttribute="bottom" constant="35" id="nxZ-kP-uQI"/>

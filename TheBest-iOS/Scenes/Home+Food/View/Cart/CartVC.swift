@@ -20,18 +20,25 @@ class CartVC: UIViewController , UIGestureRecognizerDelegate{
     @IBOutlet weak var checkOutView: UIView!
     @IBOutlet weak var totalOrder2: UILabel!
     @IBOutlet var iconsViews: [UIView]!
+    @IBOutlet weak var empty: UILabel!
+    @IBOutlet var images: [UIImageView]!
+    @IBOutlet weak var detailsStack: UIStackView!
     
     var cartItems: [CartItemModel]?
     var cartPresenter: CartPresenter?
+    var total: Double = 0.0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        cartPresenter = CartPresenter(cartViewDelegate: self)
+        cartPresenter?.fetchItems()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        
-        cartPresenter = CartPresenter(cartViewDelegate: self)
-        cartPresenter?.fetchItems()
 
         checkOutView.layer.cornerRadius = 15
         
@@ -44,10 +51,9 @@ class CartVC: UIViewController , UIGestureRecognizerDelegate{
         vendorImage.sd_setImage(with: URL(string: UserDefaults.init().string(forKey: "cart_associated_vendor_image")!))
         vendorName.text = UserDefaults.init().string(forKey: "cart_associated_vendor_name")
         deliveryFees.text = UserDefaults.init().string(forKey: "cart_associated_vendor_delivery_fees")
-        updateTotalOrder()
         
         checkOutView.addTapGesture { (_) in
-            Router.toCheckout(sender: self)
+            Router.toCheckout(sender: self, total: self.total)
         }
         
         
@@ -94,14 +100,14 @@ class CartVC: UIViewController , UIGestureRecognizerDelegate{
             cell.loadCell(item: self.cartItems![index.row])
             
             cell.add.onTap {
-                self.cartPresenter?.updateQuantity(newValue: self.cartItems![index.row].quantity!+1, id: self.cartItems![index.row].id!)
+                self.cartPresenter?.updateQuantity(newValue: self.cartItems![index.row].quantity!+1, id: Int(self.cartItems![index.row].cartItemId!)!)
                 self.updateTotalOrder()
             }
             
             cell.minus.onTap {
                 
                 if self.cartItems![index.row].quantity! > 1{
-                    self.cartPresenter?.updateQuantity(newValue: self.cartItems![index.row].quantity!-1, id: self.cartItems![index.row].id!)
+                    self.cartPresenter?.updateQuantity(newValue: self.cartItems![index.row].quantity!-1, id: Int(self.cartItems![index.row].cartItemId!)!)
                     self.updateTotalOrder()
                 }
                 
@@ -113,7 +119,7 @@ class CartVC: UIViewController , UIGestureRecognizerDelegate{
         }.trailingSwipeActionsConfigurationForRowAt { (index) -> UISwipeActionsConfiguration? in
             
             let contextualAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
-                self.cartPresenter?.removeAt(id: self.cartItems![index.row].id!)
+                self.cartPresenter?.removeAt(id: Int(self.cartItems![index.row].cartItemId!)!)
                 self.updateTotalOrder()
             }
             
@@ -127,12 +133,15 @@ class CartVC: UIViewController , UIGestureRecognizerDelegate{
     
     func updateTotalOrder(){
         
-        var temp = 0.0
+        var total = 0.0
         for item in self.cartItems!{
-            temp = temp + Double(item.price! * Double(item.quantity!))
+            let temp = (item.attributeOnePrice ?? 0.0) + (item.attributeTwoPrice ?? 0.0)
+            let totalVariationsPrice =  temp + (item.attributeThreePrice ?? 0.0)
+            total = total + Double((item.price! + totalVariationsPrice) * Double(item.quantity!))
         }
-        self.totalOrder.text = "\(temp) KWD"
-        self.totalOrder2.text = "\(temp) KWD"
+        self.total = total
+        self.totalOrder.text = "\(total) KWD"
+        self.totalOrder2.text = "\(total) KWD"
     }
 
 }

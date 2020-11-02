@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VariationTableViewCell" rowHeight="144" id="KGk-i7-Jjw" customClass="VariationTableViewCell" customModule="TheBest_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="367" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAR-hY-Hi6">
+                        <rect key="frame" x="5" y="5" width="357" height="134"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLL-Hp-4BU">
+                                <rect key="frame" x="15" y="15" width="327" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-u4-ijB">
+                                        <rect key="frame" x="147.5" y="10" width="32.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BG"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BJr-HN-VNd"/>
+                                    <constraint firstItem="fcI-u4-ijB" firstAttribute="centerX" secondItem="uLL-Hp-4BU" secondAttribute="centerX" id="QuT-6S-ibS"/>
+                                    <constraint firstItem="fcI-u4-ijB" firstAttribute="centerY" secondItem="uLL-Hp-4BU" secondAttribute="centerY" id="qef-HZ-ojt"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uik-6C-fA1">
+                                <rect key="frame" x="15" y="60" width="327" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8MG-dQ-A29"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uik-6C-fA1" firstAttribute="leading" secondItem="BAR-hY-Hi6" secondAttribute="leading" constant="15" id="75Y-Hg-wsA"/>
+                            <constraint firstItem="uik-6C-fA1" firstAttribute="top" secondItem="uLL-Hp-4BU" secondAttribute="bottom" constant="5" id="8gW-EI-Dmn"/>
+                            <constraint firstItem="uLL-Hp-4BU" firstAttribute="top" secondItem="BAR-hY-Hi6" secondAttribute="top" constant="15" id="SG3-Sg-gvV"/>
+                            <constraint firstItem="uLL-Hp-4BU" firstAttribute="leading" secondItem="BAR-hY-Hi6" secondAttribute="leading" constant="15" id="kfm-83-BiY"/>
+                            <constraint firstAttribute="trailing" secondItem="uLL-Hp-4BU" secondAttribute="trailing" constant="15" id="ogX-tC-JjF"/>
+                            <constraint firstAttribute="trailing" secondItem="uik-6C-fA1" secondAttribute="trailing" constant="15" id="xxP-KU-bBF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BAR-hY-Hi6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="APG-Vn-s2i"/>
+                    <constraint firstAttribute="bottom" secondItem="BAR-hY-Hi6" secondAttribute="bottom" constant="5" id="J2w-ek-YId"/>
+                    <constraint firstAttribute="trailing" secondItem="BAR-hY-Hi6" secondAttribute="trailing" constant="5" id="KGL-LB-HsS"/>
+                    <constraint firstItem="BAR-hY-Hi6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="xV8-yO-WS2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="BAR-hY-Hi6" id="hLY-D1-X4B"/>
+                <outlet property="variationBodyTBHeightCnst" destination="8MG-dQ-A29" id="9h0-zv-Pub"/>
+                <outlet property="variationBodyTableView" destination="uik-6C-fA1" id="wyM-lW-Jdo"/>
+                <outlet property="variationName" destination="fcI-u4-ijB" id="Wse-Ep-DL9"/>
+                <outlet property="viewTop" destination="uLL-Hp-4BU" id="EKd-CT-InC"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="141.29464285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BG">
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

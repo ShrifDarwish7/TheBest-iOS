@@ -20,19 +20,12 @@ extension CheckoutVC: CheckoutViewDelegate{
     }
     
     func didCompleteFetchingItemWith(_ result: [CartItemModel]) {
+        
         self.cartItems = result
         self.itemsCount.text = "\(result.count)"
         
         var addressToSend: String?
         var totalToSend = 0.0
-        var ids = [String]()
-        var variations = [String]()
-        
-        for item in result{
-            totalToSend = totalToSend + Double(item.price! * Double(item.quantity!))
-            ids.append("\(item.id ?? 0)")
-            variations.append("\(item.variation ?? 0)")
-        }
         
         if let _ = SharedData.userLat, let _ = SharedData.userLng{
             SVProgressHUD.show()
@@ -49,21 +42,33 @@ extension CheckoutVC: CheckoutViewDelegate{
             "lat": "\(SharedData.userLat ?? 0.0)" ,
             "lng": "\(SharedData.userLng ?? 0.0)",
             "address": addressToSend ?? "",
-            "phone": AuthServices.instance.user.phone ,
-            "total": "\(totalToSend)",
+            "phone": AuthServices.instance.user.phone ?? "" ,
             "comment": "any comment for the order",
          //   "count": "\(result.count)",
             "cat_id": UserDefaults.init().string(forKey: "food_markets_flag")!
 
             ] as [String : Any]
         
-        for i in 0...ids.count-1{
-            parameters.updateValue(ids[i], forKey: "product_id[\(i)]")
+        for i in 0...result.count-1{
+            let temp = (result[i].attributeOnePrice ?? 0.0) + (result[i].attributeTwoPrice ?? 0.0)
+            let totalVariationsPrice =  temp + (result[i].attributeThreePrice ?? 0.0)
+            totalToSend = totalToSend + Double((result[i].price! + totalVariationsPrice) * Double(result[i].quantity!))
+            parameters.updateValue(result[i].id!, forKey: "product_id[\(i)]")
+            
+            if let _ = result[i].attributeOne{
+                parameters.updateValue(result[i].attributeOne!, forKey: "attribute_body[\(i)]")
+            }
+            if let _ = result[i].attributeTwo{
+                parameters.updateValue(result[i].attributeTwo!, forKey: "attribute_body_two[\(i)]")
+            }
+            if let _ = result[i].attributeThree{
+                parameters.updateValue(result[i].attributeThree!, forKey: "attribute_body_three[\(i)]")
+            }
+            parameters.updateValue(result[i].quantity ?? 1, forKey: "count[\(i)]")
+            
         }
         
-        for i in 0...variations.count-1{
-            parameters.updateValue(variations[i], forKey: "variation_id[\(i)]")
-        }
+        parameters.updateValue("\(totalToSend)", forKey: "total")
         
         print("hereChekcOutPrms",parameters)
         self.checkoutParameters = parameters

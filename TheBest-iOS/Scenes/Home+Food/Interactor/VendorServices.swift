@@ -41,7 +41,7 @@ class VendorServices{
         
     }
     
-    static func getMenuItems(id: Int, completed: @escaping (MenuIems?)->Void){
+    static func getMenuItems(id: Int, completed: @escaping (inout MenuIems)->Void, failed: @escaping(Bool)->Void){
 
         Alamofire.request(URL(string: MENU_ITEMS_END_POINT + "\(id)")!, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
 
@@ -52,20 +52,24 @@ class VendorServices{
                 print("MenuIems",try! JSON(data: data))
 
                 do {
-                    let dataModel = try JSONDecoder().decode(MenuIems.self, from: data)
+                    var dataModel = try JSONDecoder().decode(MenuIems.self, from: data)
                     print("MenuIems",dataModel)
-                    completed(dataModel)
+                    if !dataModel.restaurantMenu.isEmpty{
+                        completed(&dataModel)
+                    }else{
+                        failed(true)
+                    }
+                    
                 } catch let error {
                     print("parseErr",error)
-                    completed(nil)
+                    failed(true)
                 }
-
+                
             case .failure(_):
-
-                completed(nil)
-
+                failed(true)
+                
             }
-
+            
         }
         
     }

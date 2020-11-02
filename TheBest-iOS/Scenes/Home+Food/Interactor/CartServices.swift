@@ -16,17 +16,27 @@ class CartServices{
         self.getCartItems { (items) in
             if let items = items{
                 
-                if items.filter({ return $0.id == arg.id }).isEmpty{
+                if items.filter({ return $0.cartItemId == arg.cartItemId }).isEmpty{
                     
                     let entity = NSEntityDescription.entity(forEntityName: "CartItem", in: SharedData.context)!
                     let newItem = NSManagedObject(entity: entity, insertInto: SharedData.context)
+                    newItem.setValue(arg.cartItemId, forKey: "cartItemId")
                     newItem.setValue(Int16(arg.id!), forKey: "id")
                     newItem.setValue(arg.image, forKey: "image")
                     newItem.setValue(arg.name, forKey: "name")
                     newItem.setValue(arg.price ?? 0, forKey: "price")
                     newItem.setValue(Int16(arg.quantity!), forKeyPath: "quantity")
-                    newItem.setValue(Int16(arg.variation!), forKeyPath: "variation")
+                    //newItem.setValue(Int16(arg.variation!), forKeyPath: "variation")
                     newItem.setValue(arg.notes, forKey: "notes")
+                    newItem.setValue(arg.attributeOne, forKey: "attributeOne")
+                    newItem.setValue(arg.attributeTwo, forKey: "attributeTwo")
+                    newItem.setValue(arg.attributeThree, forKey: "attributeThree")
+                    newItem.setValue(arg.attributeOnePrice, forKey: "attributeOnePrice")
+                    newItem.setValue(arg.attributeTwoPrice, forKey: "attributeTwoPrice")
+                    newItem.setValue(arg.attributeThreePrice, forKey: "attributeThreePrice")
+                    newItem.setValue(arg.attributeOneName, forKey: "attributeOneName")
+                    newItem.setValue(arg.attributeTwoName, forKey: "attributeTwoName")
+                    newItem.setValue(arg.attributeThreeName, forKey: "attributeThreeName")
                     
                     UserDefaults.init().set(vendorName, forKey: "cart_associated_vendor_name")
                     UserDefaults.init().set(vendorImage, forKey: "cart_associated_vendor_image")
@@ -71,7 +81,7 @@ class CartServices{
     static func updateQuantity(newValue: Int, id: Int, completed: @escaping (Bool)->Void){
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CartItem")
-        fetchRequest.predicate = NSPredicate(format: "id == %i", id)
+        fetchRequest.predicate = NSPredicate(format: "cartItemId == %i", id)
         
         do{
             
@@ -90,7 +100,7 @@ class CartServices{
     static func removeAt(id: Int, removed: @escaping (Bool)->Void){
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CartItem")
-        fetchRequest.predicate = NSPredicate(format: "id == %i", id)
+        fetchRequest.predicate = NSPredicate(format: "cartItemId == %i", id)
         
         do{
             

@@ -101,11 +101,12 @@ class Router{
         
     }
     
-    static func toCheckout(sender: UIViewController){
+    static func toCheckout(sender: UIViewController, total: Double){
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let checkoutVC = storyboard.instantiateViewController(withIdentifier: "CheckoutVC") as! CheckoutVC
         checkoutVC.modalPresentationStyle = .fullScreen
+        checkoutVC.receivedTotal = total
         sender.navigationController?.pushViewController(checkoutVC, animated: true)
         
     }

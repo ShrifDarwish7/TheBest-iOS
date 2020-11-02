@@ -27,7 +27,7 @@
         <!--Taxi OrderVC-->
         <scene sceneID="zWD-9R-RKJ">
             <objects>
-                <viewController storyboardIdentifier="TaxiOrderVC" id="lZZ-eo-n6M" customClass="TaxiOrderVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaxiOrderVC" id="lZZ-eo-n6M" customClass="TaxiOrderVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oDc-iO-wNR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,13 +137,13 @@
                                                                                 <rect key="frame" x="55" y="21.5" width="289" height="17.5"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1 Km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6w-Tr-ebn">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="17.5"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Away from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNO-mJ-03U">
-                                                                                        <rect key="frame" x="189" y="0.0" width="100" height="17.5"/>
+                                                                                        <rect key="frame" x="40.5" y="0.0" width="248.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -508,7 +508,7 @@
         <!--Special Need CarVC-->
         <scene sceneID="NMI-3B-bVI">
             <objects>
-                <viewController storyboardIdentifier="SpecialNeedCarVC" id="BQI-GY-FQV" customClass="SpecialNeedCarVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpecialNeedCarVC" id="BQI-GY-FQV" customClass="SpecialNeedCarVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tyA-61-VoQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -830,13 +830,13 @@
                                                                                 <rect key="frame" x="55" y="16.5" width="289" height="17.5"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1 Km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-PD-R0Q">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="17.5"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Away from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4N-58-pxi">
-                                                                                        <rect key="frame" x="189" y="0.0" width="100" height="17.5"/>
+                                                                                        <rect key="frame" x="40.5" y="0.0" width="248.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1095,7 +1095,7 @@
         <!--FurnitureVC-->
         <scene sceneID="0cC-yD-OYH">
             <objects>
-                <viewController storyboardIdentifier="FurnitureVC" id="S05-j2-hIp" customClass="FurnitureVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FurnitureVC" id="S05-j2-hIp" customClass="FurnitureVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mug-uI-zIi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1388,13 +1388,13 @@
                                                                                 <rect key="frame" x="55" y="16.5" width="289" height="17.5"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1 Km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-vM-oDy">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="17.5"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Away from you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWv-80-Gzh">
-                                                                                        <rect key="frame" x="189" y="0.0" width="100" height="17.5"/>
+                                                                                        <rect key="frame" x="40.5" y="0.0" width="248.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1650,7 +1650,7 @@
         <!--Car RentVC-->
         <scene sceneID="bd4-d9-hhH">
             <objects>
-                <viewController storyboardIdentifier="CarRentVC" id="hDF-GW-osb" customClass="CarRentVC" customModule="TheBest_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CarRentVC" id="hDF-GW-osb" customClass="CarRentVC" customModule="The_Best" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KtE-XA-9df">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2052,13 +2052,13 @@
                                                                                 <rect key="frame" x="55" y="16.5" width="289" height="17.5"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total fees required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9n-Lt-Hcr">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="228.5" height="17.5"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 KWD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10x-w1-gNc">
-                                                                                        <rect key="frame" x="233.5" y="0.0" width="55.5" height="17.5"/>
+                                                                                        <rect key="frame" x="128.5" y="0.0" width="160.5" height="17.5"/>
                                                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
