@@ -21,11 +21,11 @@ protocol TaxiOrderViewDelegate {
     func didFailWithErrorDirectionFromGoogleMaps()
     func didCompleteWithDistanceFromAPI(_ distance: Distance)
     func didCompleteWithErrorDistanceFromAPI()
-    func didCompleteConfirmRide(_ driver: Drivers)
+    func didCompleteConfirmRide()
     func didFailConfirmRide()
     func didCompleteCancelRide()
     func didFailCancelRide()
-    
+    func didAcceptRideFromDriver(_ driver: Driver?)
 }
 
 extension TaxiOrderViewDelegate{
@@ -40,10 +40,11 @@ extension TaxiOrderViewDelegate{
     func didFailWithErrorDirectionFromGoogleMaps(){}
     func didCompleteWithDistanceFromAPI(_ distance: Distance){}
     func didCompleteWithErrorDistanceFromAPI(){}
-    func didCompleteConfirmRide(_ driver: Drivers){}
+    func didCompleteConfirmRide(){}
     func didFailConfirmRide(){}
     func didCompleteCancelRide(){}
     func didFailCancelRide(){}
+    func didAcceptRideFromDriver(_ driver: Driver?){}
     
 }
 
@@ -127,10 +128,10 @@ class TaxiOrderPresenter{
         
         self.taxiOrderViewDelegate?.showSVProgress()
         
-        TripsServices.confirmRide { (driver) in
+        TripsServices.confirmRide { (completed) in
             self.taxiOrderViewDelegate?.dismissSVProgress()
-            if let _ = driver{
-                self.taxiOrderViewDelegate?.didCompleteConfirmRide(driver!)
+            if completed{
+                self.taxiOrderViewDelegate?.didCompleteConfirmRide()
             }else{
                 self.taxiOrderViewDelegate?.didFailConfirmRide()
             }
@@ -151,6 +152,18 @@ class TaxiOrderPresenter{
             }
         }
         
+    }
+    
+    func getDriverBy(id: Int){
+        //self.taxiOrderViewDelegate?.showSVProgress()
+        TripsServices.getDriverBy(id: id) { (response) in
+           // self.taxiOrderViewDelegate?.dismissSVProgress()
+            if let _ = response{
+                self.taxiOrderViewDelegate?.didAcceptRideFromDriver(response?.driver)
+            }else{
+                self.taxiOrderViewDelegate?.didAcceptRideFromDriver(nil)
+            }
+        }
     }
     
 }

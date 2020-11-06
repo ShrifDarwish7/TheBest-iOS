@@ -116,7 +116,7 @@ class TripsServices{
         
     }
     
-    static func confirmRide(completed: @escaping (Drivers?)->Void){
+    static func confirmRide(completed: @escaping (Bool)->Void){
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
@@ -136,24 +136,25 @@ class TripsServices{
                     case .success(let data):
                         
                         print("confirmRide", try! JSON(data: data))
-                        do{
-                            
-                            let dataModel = try JSONDecoder.init().decode(Drivers.self, from: data)
-                            completed(dataModel)
-                            
-                        }catch let error{
-                            print("confirmRideParsErr",error)
-                            completed(nil)
-                        }
+                        completed(true)
+//                        do{
+//
+//                            let dataModel = try JSONDecoder.init().decode(Drivers.self, from: data)
+//                            completed(dataModel)
+//
+//                        }catch let error{
+//                            print("confirmRideParsErr",error)
+//                            completed(nil)
+//                        }
                         
                     case .failure(_):
-                        completed(nil)
+                        completed(false)
                     }
                     
                 }
                 
             case .failure(_):
-                completed(nil)
+                completed(false)
             }
             
         }
@@ -257,6 +258,28 @@ class TripsServices{
         }
         
       }
+    }
+    
+    static func getDriverBy(id: Int, completed: @escaping (DriverByIDResponse?)->Void){
+        
+        Alamofire.request(DRIVER_BY_ID_END_POINT + "\(id)", method: .get, headers: SharedData.headers).responseData { (response) in
+            switch response.result{
+            case .success(let data):
+                print(JSON(data))
+                
+                do{
+                    let dataModel = try JSONDecoder().decode(DriverByIDResponse.self, from: data)
+                    print("getDriverByModel",dataModel)
+                    completed(dataModel)
+                }catch let error{
+                    print("driverParseErr",error)
+                    completed(nil)
+                }
+            case .failure(_):
+                completed(nil)
+            }
+        }
+        
     }
     
 }

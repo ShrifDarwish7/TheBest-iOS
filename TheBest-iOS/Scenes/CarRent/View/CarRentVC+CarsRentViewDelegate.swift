@@ -67,12 +67,12 @@ extension CarRentVC: CarsRentViewDelegate{
     }
     
     func didCompleteConfirmRide(_ driver: Drivers) {
-        self.driverName.text = " " + driver.drivers.name
+        self.driverName.text = " " + (driver.drivers.name ?? "")
         self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
         //  self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.image))
-          self.carNumber.text = driver.drivers.myCar.first?.carNumber
+        self.carNumber.text = driver.drivers.myCar?.first?.carNumber
           self.callDriver.onTap {
-              TripsServices.callDriver(phoneNumber: driver.drivers.phone)
+            TripsServices.callDriver(phoneNumber: driver.drivers.phone ?? "")
           }
           self.driverView.isHidden = false
           UIView.animate(withDuration: 0.5) {

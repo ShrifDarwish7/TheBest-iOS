@@ -9,6 +9,8 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Lottie
+import SVProgressHUD
 
 class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecognizerDelegate {
 
@@ -36,6 +38,8 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
     @IBOutlet weak var reasonsCollectionView: UICollectionView!
     @IBOutlet weak var cancelLbl: UILabel!
     @IBOutlet weak var tripInfoStackHeight: NSLayoutConstraint!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var lottieContainerView: UIView!
     
      let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
@@ -43,10 +47,14 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
     var camera: GMSCameraPosition?
     var fromAutoCompleteController: GMSAutocompleteViewController?
     var toAutoCompleteController: GMSAutocompleteViewController?
+    var lottie: AnimationView?
+    var receivedDriverId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NotificationCenter.default.addObserver(self, selector: #selector(receivedDriverId(sender:)), name: NSNotification.Name("ReceivedConfirmationFromDriver"), object: nil)
+        
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
@@ -70,12 +78,24 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
         
         setupTripView.layer.cornerRadius = 25
         cancelationView.layer.cornerRadius = 25
+        loadingView.layer.cornerRadius = 25
         driverView.layer.cornerRadius = 25
         driverImage.layer.cornerRadius = 35
         cancelTripBtn.layer.cornerRadius = 10
+        
+        lottie = AnimationView(name: "wait_driver_acceptance")
+        lottie!.loopMode = .loop
+        let width = self.lottieContainerView.frame.width
+        let height = self.lottieContainerView.frame.height
+        lottie!.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        lottie!.contentMode = .scaleToFill
+        lottie?.sizeToFit()
+        lottieContainerView.addSubview(lottie!)
+        lottie?.play()
+        self.lottieContainerView.isHidden = false
                 
         marker.isDraggable = true
-        
+                
         mapView.delegate = self
         
         marker.icon = Images.imageWithImage(image: UIImage(named: "location-icon-png")!, scaledToSize: CGSize(width: 40, height: 55))
@@ -100,12 +120,24 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
         
         tripInfoStackHeight.constant = 0
         
+        if let _ = receivedDriverId{
+            SVProgressHUD.show()
+            taxiOrderPresenter?.getDriverBy(id: Int(receivedDriverId!)!)
+        }
+        
+    }
+    
+    @objc func receivedDriverId(sender: NSNotification){
+        
+        guard let _ = sender.userInfo else { return }
+        taxiOrderPresenter?.getDriverBy(id: Int(sender.userInfo!["driver_id"] as! String)!)
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-          guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-          SharedData.userLat = locValue.latitude
-          SharedData.userLng = locValue.longitude
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        SharedData.userLat = locValue.latitude
+        SharedData.userLng = locValue.longitude
         
         camera = GMSCameraPosition.camera(withLatitude: SharedData.userLat ?? 0 , longitude: SharedData.userLng ?? 0, zoom: 15)
         mapView.camera = camera!

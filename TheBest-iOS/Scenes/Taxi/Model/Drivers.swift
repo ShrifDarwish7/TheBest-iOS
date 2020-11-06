@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Drivers
 struct Drivers: Codable {
-    let drivers: DriversClass
+    let drivers: Driver
 
     enum CodingKeys: String, CodingKey {
         case drivers = "Drivers"
@@ -18,17 +18,17 @@ struct Drivers: Codable {
 }
 
 // MARK: - DriversClass
-struct DriversClass: Codable {
-    let id: Int
-    let name, email: String
+struct Driver: Codable {
+    let id: Int?
+    let name, email: String?
     let hasImage: String?
-    let fcmToken, phone: String
-    let isAdmin, isDriver: Int
-    let lat, lng: Double
+    let fcmToken, phone: String?
+    let isAdmin, isDriver: Int?
+    let lat, lng: Double?
     let birthDate, nationality: String?
-    let status, createdAt, updatedAt: String
-    let distance: Double
-    let myCar: [MyCar]
+    let status, createdAt, updatedAt: String?
+    let distance: Double?
+    let myCar: [MyCar]?
 
     enum CodingKeys: String, CodingKey {
         case id, name, email
@@ -53,7 +53,7 @@ struct MyCar: Codable {
     let carNumber: String
     let hasImage: String?
     let carModel, userID: Int
-    let type, createdAt, updatedAt: String
+    let type, createdAt, updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id

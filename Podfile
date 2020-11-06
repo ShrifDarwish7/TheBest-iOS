@@ -21,5 +21,6 @@ target 'TheBest-iOS' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'Cosmos'
+  pod 'lottie-ios'
 
 end

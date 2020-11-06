@@ -405,7 +405,7 @@ ever since the 1500s</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFJ-E3-onD">
-                                        <rect key="frame" x="27.5" y="5" width="299" height="62.5"/>
+                                        <rect key="frame" x="27.5" y="5" width="299" height="61"/>
                                         <string key="text">Please enter your number
  to login</string>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="26"/>
@@ -440,7 +440,7 @@ ever since the 1500s</string>
                                 <rect key="frame" x="30" y="287" width="354" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-qO-G0w">
-                                        <rect key="frame" x="85" y="5" width="184" height="31.5"/>
+                                        <rect key="frame" x="84.5" y="5" width="185" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -660,16 +660,16 @@ ever since the 1500s</string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xq7-ck-XY9">
-                                <rect key="frame" x="40" y="149" width="270.5" height="43"/>
+                                <rect key="frame" x="40" y="149" width="276.5" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey Mohamed , Choose your category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2I-Xu-bOt">
-                                        <rect key="frame" x="0.0" y="0.0" width="270.5" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="276.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Each category has it's own feel and look , Enjoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAd-Kh-IHH">
-                                        <rect key="frame" x="0.0" y="29.5" width="227.5" height="13.5"/>
+                                        <rect key="frame" x="0.0" y="29" width="235" height="13"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="11"/>
                                         <color key="textColor" name="FontGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -677,7 +677,7 @@ ever since the 1500s</string>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yDD-rS-1g6">
-                                <rect key="frame" x="20" y="227" width="374" height="615"/>
+                                <rect key="frame" x="20" y="226" width="374" height="616"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nIM-CO-skG">
                                     <size key="itemSize" width="50" height="50"/>
@@ -697,7 +697,7 @@ ever since the 1500s</string>
                                 </cells>
                             </collectionView>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FW6-73-npn">
-                                <rect key="frame" x="20" y="227" width="374" height="615"/>
+                                <rect key="frame" x="20" y="226" width="374" height="616"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B4l-kh-S4D">
                                     <size key="itemSize" width="50" height="50"/>
@@ -732,7 +732,7 @@ ever since the 1500s</string>
                                             <rect key="frame" x="62" y="313.5" width="290" height="269"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should open your location services first" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIW-ND-oDg">
-                                                    <rect key="frame" x="25" y="78" width="240" height="46"/>
+                                                    <rect key="frame" x="25" y="78.5" width="240" height="44.5"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -741,7 +741,7 @@ ever since the 1500s</string>
                                                     <rect key="frame" x="15" y="209" width="260" height="45"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ2-H6-AB6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="39"/>
                                                             <color key="backgroundColor" red="0.21568627450980393" green="0.88627450980392153" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                                             <state key="normal" title="Yes">
@@ -749,7 +749,7 @@ ever since the 1500s</string>
                                                             </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tn-J2-alv">
-                                                            <rect key="frame" x="135" y="0.0" width="125" height="40"/>
+                                                            <rect key="frame" x="135" y="0.0" width="125" height="39"/>
                                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="23"/>
                                                             <state key="normal" title="No">
@@ -938,7 +938,7 @@ ever since the 1500s</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No stores available in this category !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vit-T0-e93">
-                                <rect key="frame" x="107" y="425" width="200" height="46"/>
+                                <rect key="frame" x="107" y="426" width="200" height="44.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="asT-Fp-ZHZ"/>
                                 </constraints>
@@ -1015,16 +1015,16 @@ ever since the 1500s</string>
                                 <state key="normal" image="back-white-left"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X7F-2n-v5f">
-                                <rect key="frame" x="178" y="239" width="58.5" height="40.5"/>
+                                <rect key="frame" x="176.5" y="239" width="61.5" height="39"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="313-Oq-Aei">
-                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 - 60 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKe-0v-sOQ">
-                                        <rect key="frame" x="0.0" y="27" width="58.5" height="13.5"/>
+                                        <rect key="frame" x="0.0" y="26" width="61.5" height="13"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                         <color key="textColor" name="FontGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -1041,13 +1041,13 @@ ever since the 1500s</string>
                                                 <rect key="frame" x="10" y="0.0" width="75" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter_icon" translatesAutoresizingMaskIntoConstraints="NO" id="kFE-Jm-3Gr">
-                                                        <rect key="frame" x="0.0" y="12" width="30" height="16"/>
+                                                        <rect key="frame" x="0.0" y="4" width="30" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="pMs-Qd-JnW"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-aD-MCl">
-                                                        <rect key="frame" x="35" y="11.5" width="40" height="17"/>
+                                                        <rect key="frame" x="35" y="12" width="40" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1090,7 +1090,7 @@ ever since the 1500s</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No products available in this category !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-Ug-RgP">
-                                        <rect key="frame" x="97" y="242" width="200" height="46"/>
+                                        <rect key="frame" x="97" y="243" width="200" height="44.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="D3g-EQ-VhT"/>
                                         </constraints>
@@ -1406,6 +1406,7 @@ ever since the 1500s</string>
                         <outlet property="productName" destination="fMt-7d-BBg" id="1WC-MF-s78"/>
                         <outlet property="productPrice" destination="OkI-pO-CFM" id="sLV-VM-R2f"/>
                         <outlet property="quantityNumer" destination="uR9-nc-SMf" id="Db1-Yc-oXA"/>
+                        <outlet property="scroller" destination="gLa-wV-ASN" id="hD8-3C-hQh"/>
                         <outlet property="variationTableHeight" destination="12I-ry-Vy0" id="aDQ-Qm-YdH"/>
                         <outlet property="variationTableView" destination="lR0-Kc-H2b" id="Mif-lg-XF4"/>
                         <outletCollection property="roundView" destination="AR1-lu-TiW" collectionClass="NSMutableArray" id="SHq-gn-O0S"/>
@@ -2516,16 +2517,16 @@ ever since the 1500s</string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VL9-5O-dy9">
-                                <rect key="frame" x="40" y="149" width="207" height="46.5"/>
+                                <rect key="frame" x="40" y="149" width="200" height="45.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22s-EY-RBr">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try filter button to more filtration criteria  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOo-IP-Kg3">
-                                        <rect key="frame" x="0.0" y="33" width="207" height="13.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="200" height="13"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="11"/>
                                         <color key="textColor" name="FontGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -2533,7 +2534,7 @@ ever since the 1500s</string>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T6s-mh-xYR">
-                                <rect key="frame" x="15" y="210.5" width="370" height="152.5"/>
+                                <rect key="frame" x="15" y="209.5" width="370" height="152.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jgs-Nl-aGX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -2553,7 +2554,7 @@ ever since the 1500s</string>
                                 </cells>
                             </collectionView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no order history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-WH-vee">
-                                <rect key="frame" x="107" y="602" width="200" height="20.5"/>
+                                <rect key="frame" x="107" y="602" width="200" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="bLP-mF-iCm"/>
                                 </constraints>
@@ -2562,11 +2563,11 @@ ever since the 1500s</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B2D-ZO-2VP">
-                                <rect key="frame" x="10" y="373" width="394" height="479"/>
+                                <rect key="frame" x="10" y="372" width="394" height="480"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cni-Kh-pRw">
-                                <rect key="frame" x="10" y="373" width="394" height="479"/>
+                                <rect key="frame" x="10" y="372" width="394" height="480"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-CQ-LKR">

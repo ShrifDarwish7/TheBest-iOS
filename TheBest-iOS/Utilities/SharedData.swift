@@ -24,5 +24,4 @@ class SharedData{
         "Accept": "application/json"
     ]
     static var food_markets_flag: Int?
-    
 }

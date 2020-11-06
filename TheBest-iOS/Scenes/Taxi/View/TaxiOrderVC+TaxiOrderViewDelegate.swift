@@ -70,18 +70,42 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
         print("didCompleteWithErrorDistanceFromAPI")
     }
 
-    func didCompleteConfirmRide(_ driver: Drivers) {
-        
-        self.driverName.text = driver.drivers.name
-        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
-        self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.hasImage ?? ""))
-        self.carNumber.text = driver.drivers.myCar.first?.carNumber
-        self.callDriver.addTapGesture { (_) in
-            TripsServices.callDriver(phoneNumber: driver.drivers.phone)
+    func didCompleteConfirmRide() {
+        lottie?.play()
+        loadingView.isHidden = false
+        UIView.animate(withDuration: 0.2) {
+            self.loadingView.alpha = 1
         }
-        self.driverView.isHidden = false
-        UIView.animate(withDuration: 0.5) {
-            self.driverView.alpha = 1
+//        self.driverName.text = driver.drivers.name
+//        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
+//        self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar?.first!.hasImage ?? ""))
+//        self.carNumber.text = driver.drivers.myCar?.first?.carNumber
+//        self.callDriver.addTapGesture { (_) in
+//            TripsServices.callDriver(phoneNumber: driver.drivers.phone ?? "")
+//        }
+//        self.driverView.isHidden = false
+//        UIView.animate(withDuration: 0.5) {
+//            self.driverView.alpha = 1
+//        }
+    }
+    
+    func didAcceptRideFromDriver(_ driver: Driver?) {
+        SVProgressHUD.dismiss()
+        if let _ = driver{
+            self.driverName.text = driver?.name
+            self.driverImage.sd_setImage(with: URL(string: driver?.hasImage ?? ""))
+            self.carImage.sd_setImage(with: URL(string: driver?.myCar?.first!.hasImage ?? ""))
+            self.carNumber.text = driver?.myCar?.first?.carNumber
+            self.callDriver.addTapGesture { (_) in
+                TripsServices.callDriver(phoneNumber: driver?.phone ?? "")
+            }
+            self.driverView.isHidden = false
+            UIView.animate(withDuration: 0.2, animations: {
+                self.loadingView.alpha = 0
+                self.driverView.alpha = 1
+            }) { (_) in
+                self.loadingView.isHidden = true
+            }
         }
     }
     

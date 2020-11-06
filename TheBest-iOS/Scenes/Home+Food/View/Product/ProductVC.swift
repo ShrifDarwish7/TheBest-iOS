@@ -23,6 +23,7 @@ class ProductVC: UIViewController , UIGestureRecognizerDelegate{
     @IBOutlet weak var variationTableHeight: NSLayoutConstraint!
     @IBOutlet weak var variationTableView: UITableView!
     @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var scroller: UIScrollView!
     
     var itemReceived: RestaurantMenuItem?
     var productPresenter: ProductPresenter?
@@ -61,7 +62,11 @@ class ProductVC: UIViewController , UIGestureRecognizerDelegate{
         productImageVIew.sd_setImage(with: URL(string: itemReceived?.hasImage ?? ""))
         productName.text = itemReceived?.name
         productDesc.text = itemReceived?.descriptionEn
-        productPrice.text = (itemReceived?.price ?? "") + " " + "KWD"
+        if let price = itemReceived?.price, price != "0.0", price != "0"{
+            productPrice.text = (itemReceived?.price ?? "") + " " + "KWD"
+        }else{
+            productPrice.isHidden = true
+        }
         
         plus.onTap {
             let count = Int(self.quantityNumer.text!)!

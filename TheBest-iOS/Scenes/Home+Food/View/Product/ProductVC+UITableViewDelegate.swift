@@ -73,11 +73,16 @@ extension ProductVC: UITableViewDataSource, UITableViewDelegate{
                 break
             }
             self.variationTableView.reloadData()
-            //self.viewDidLayoutSubviews()
+            self.view.layoutIfNeeded()
+            self.viewDidLayoutSubviews()
         }
+        
         cell.variationBodyTBHeightCnst.constant = CGFloat(30 * (self.itemReceived?.variations![indexPath.row].body.count)!)
+         let contentOffset = scroller.contentOffset
         cell.variationBodyTableView.reloadData()
-        self.viewWillLayoutSubviews()
+        self.view.layoutIfNeeded()
+        self.viewDidLayoutSubviews()
+        scroller.setContentOffset(contentOffset, animated: false)
         return cell
         
     }

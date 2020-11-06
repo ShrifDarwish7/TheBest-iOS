@@ -110,6 +110,33 @@ extension AppDelegate: UNUserNotificationCenterDelegate{
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
     }
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        let navController = self.window?.rootViewController as! UINavigationController
+//        if !(navController.visibleViewController?.isKind(of: TaxiOrderVC.self))!{
+//            completionHandler([.alert, .sound, .badge])
+//            print("aaaaaaaaa")
+//        }else{
+//
+//            completionHandler(UNNotificationPresentationOptions(rawValue: 0))
+//
+//        }
+        completionHandler([.alert, .sound, .badge])
+    }
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("didReceiveRemoteNotification")
+        if let _ = userInfo["driver_id"] {
+            let navController = self.window?.rootViewController as! UINavigationController
+            if !(navController.visibleViewController?.isKind(of: TaxiOrderVC.self))!{
+                let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+                let taxiVC = storyboard.instantiateViewController(withIdentifier: "TaxiOrderVC") as! TaxiOrderVC
+                taxiVC.receivedDriverId = (userInfo["driver_id"] as! String)
+                navController.pushViewController(taxiVC, animated: true)
+            }
+            NotificationCenter.default.post(name: NSNotification.Name("ReceivedConfirmationFromDriver"), object: nil, userInfo: userInfo)
+        }
+    }
 }
 
 extension AppDelegate: MessagingDelegate{

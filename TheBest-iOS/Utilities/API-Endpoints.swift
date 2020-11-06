@@ -40,5 +40,5 @@ let CARS_CONFIRM_RIDE_END_POINT = BASE_URL + "Car/ConfirmRideCar"
 let FOOD_ORDERS_HISTORY_END_POINT = BASE_URL + "Order/MyOrders/"
 let UPDATE_PROFILE_END_POINT = BASE_URL + "User/updateProfile"
 let MY_TRIPS_END_POINT = BASE_URL + "Trip/MyTripsForClient/"
-
+let DRIVER_BY_ID_END_POINT = BASE_URL + "User/DriverById/"
 let HEADERS = ["Accept": "application/json"]

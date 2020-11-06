@@ -175,6 +175,8 @@
 		AAF6728B24E5A6850025C5C2 /* Markets+MarketsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6728A24E5A6850025C5C2 /* Markets+MarketsViewDelegate.swift */; };
 		AAF6728D24E5A7020025C5C2 /* MarketsVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6728C24E5A7020025C5C2 /* MarketsVC+TableViewDelegate.swift */; };
 		AAF6729124E5AD0E0025C5C2 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF6729024E5AD0E0025C5C2 /* FilterVC.swift */; };
+		AAF7080025540B2600BEC5B1 /* DriverByIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF707FF25540B2600BEC5B1 /* DriverByIdResponse.swift */; };
+		AAF7080325541EB800BEC5B1 /* wait_driver_acceptance.json in Resources */ = {isa = PBXBuildFile; fileRef = AAF7080225541EB800BEC5B1 /* wait_driver_acceptance.json */; };
 		AAF7F15324EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15224EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift */; };
 		AAF7F15524EF0AE200FAE7D7 /* SpecialCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15424EF0AE200FAE7D7 /* SpecialCars.swift */; };
 		AAF7F15924EF0B3300FAE7D7 /* SpecialCarResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7F15824EF0B3300FAE7D7 /* SpecialCarResult.swift */; };
@@ -363,6 +365,8 @@
 		AAF6728A24E5A6850025C5C2 /* Markets+MarketsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Markets+MarketsViewDelegate.swift"; sourceTree = "<group>"; };
 		AAF6728C24E5A7020025C5C2 /* MarketsVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketsVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		AAF6729024E5AD0E0025C5C2 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		AAF707FF25540B2600BEC5B1 /* DriverByIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverByIdResponse.swift; sourceTree = "<group>"; };
+		AAF7080225541EB800BEC5B1 /* wait_driver_acceptance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wait_driver_acceptance.json; sourceTree = "<group>"; };
 		AAF7F15224EF06BB00FAE7D7 /* SpecialNeedCarVC+GMSMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecialNeedCarVC+GMSMapViewDelegate.swift"; sourceTree = "<group>"; };
 		AAF7F15424EF0AE200FAE7D7 /* SpecialCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCars.swift; sourceTree = "<group>"; };
 		AAF7F15824EF0B3300FAE7D7 /* SpecialCarResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCarResult.swift; sourceTree = "<group>"; };
@@ -454,6 +458,7 @@
 				AA025DBA24D5F3D40067C682 /* Taxi.swift */,
 				AA028A9624D708A6007255FD /* Drivers.swift */,
 				AA028A9824D70A0B007255FD /* Distance.swift */,
+				AAF707FF25540B2600BEC5B1 /* DriverByIdResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -944,8 +949,9 @@
 		AACA7ED424C7610D004437FC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				AAF9997624C774F4009DB374 /* Fonts */,
 				AAF9997E24C779E7009DB374 /* Router.swift */,
+				AAF7080125541EA100BEC5B1 /* GIFs */,
+				AAF9997624C774F4009DB374 /* Fonts */,
 				AA026F7F24C79A89003FFF4E /* API-Endpoints.swift */,
 				AACA7EBC24C759FA004437FC /* TheBest_iOS.xcdatamodeld */,
 				AAB1E57A24CA1D4500E3E499 /* SharedData.swift */,
@@ -1216,6 +1222,14 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
+		AAF7080125541EA100BEC5B1 /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7080225541EB800BEC5B1 /* wait_driver_acceptance.json */,
+			);
+			path = GIFs;
+			sourceTree = "<group>";
+		};
 		AAF9997624C774F4009DB374 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1401,6 +1415,7 @@
 				AACA7EBB24C759FA004437FC /* Main.storyboard in Resources */,
 				AAB3082F24CCB29600D8FE0C /* MenuTableViewCell.xib in Resources */,
 				AAA3B97A24D593FE00852404 /* Taxi.storyboard in Resources */,
+				AAF7080325541EB800BEC5B1 /* wait_driver_acceptance.json in Resources */,
 				AACA7EEF24C76BAE004437FC /* Lato-LightItalic.ttf in Resources */,
 				AAF6727224E58EAE0025C5C2 /* Markets.storyboard in Resources */,
 			);
@@ -1576,6 +1591,7 @@
 				AA04D69624F8450E00BE4628 /* FurnitureVC+GMSAutocompleteViewControllerDelegate.swift in Sources */,
 				AAF7F15D24EF0F5800FAE7D7 /* SpecialNeedCarPresenter.swift in Sources */,
 				AA04D69024F8435500BE4628 /* FurnitureVC+CLLocationManagerDelegate.swift in Sources */,
+				AAF7080025540B2600BEC5B1 /* DriverByIdResponse.swift in Sources */,
 				AA0B883324CF4B320055F93E /* ProductVC.swift in Sources */,
 				AA0BC2F524F58FCE00430FFE /* LastOrders+CollectionViewDelegate.swift in Sources */,
 				AA01469324FBDEB300F10BEC /* CarRentVC.swift in Sources */,
@@ -1763,7 +1779,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "TheBest-iOS/The Best.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 3Z2NC2D4N3;
 				INFOPLIST_FILE = "TheBest-iOS/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -1785,7 +1801,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "TheBest-iOS/The Best.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 3Z2NC2D4N3;
 				INFOPLIST_FILE = "TheBest-iOS/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
