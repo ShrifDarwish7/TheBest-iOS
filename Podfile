@@ -22,5 +22,7 @@ target 'TheBest-iOS' do
   pod 'GooglePlaces'
   pod 'Cosmos'
   pod 'lottie-ios'
-
+  pod 'Toast-Swift'
+  pod 'SwiftToast'
+  pod 'MOLH'
 end

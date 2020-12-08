@@ -122,6 +122,12 @@ class TripsServices{
             
             multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "lat")
             multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "lng")
+            multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "from_lat")
+            multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "from_lng")
+            multipartFormData.append("\(SharedData.userDestinationLat ?? 0)".data(using: .utf8)!, withName: "to_lat")
+            multipartFormData.append("\(SharedData.userDestinationLng ?? 0)".data(using: .utf8)!, withName: "to_lng")
+            multipartFormData.append("\(SharedData.userFromAddress ?? "")".data(using: .utf8)!, withName: "address_from")
+            multipartFormData.append("\(SharedData.userToAddress ?? "")".data(using: .utf8)!, withName: "address_to")
             
         }, to: URL(string: CONFIRM_TRIP_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
             

@@ -21,6 +21,7 @@ extension TaxiOrderVC: GMSAutocompleteViewControllerDelegate{
             self.mapView.clear()
             self.putMyMarker()
             self.fromLbl.text = place.formattedAddress ?? ""
+            SharedData.userFromAddress = place.formattedAddress ?? ""
             resetConfirmBtn()
             
         }else{
@@ -28,6 +29,7 @@ extension TaxiOrderVC: GMSAutocompleteViewControllerDelegate{
             self.mapView.clear()
             self.putMyMarker()
             self.toLbl.text = place.formattedAddress ?? ""
+            SharedData.userToAddress = place.formattedAddress ?? ""
             
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)

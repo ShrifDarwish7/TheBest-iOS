@@ -22,6 +22,8 @@ class DrawerVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var balance: UIStackView!
     @IBOutlet weak var aboutUs: UIStackView!
+    @IBOutlet weak var changeLang: UIStackView!
+    @IBOutlet weak var chngeLngLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class DrawerVC: UIViewController {
         }
         
         drawerView.setupShadow()
+        chngeLngLbl.text = "Change language".localized
         
         backBtn.onTap {
             
@@ -56,6 +59,17 @@ class DrawerVC: UIViewController {
            Router.toLogin(sender: self)
            // self.navigationController?.popToRootViewController(animated: true)
             AuthServices.instance.isLogged = false
+        }
+        
+        changeLang.addTapGesture { (_) in
+            let alert = UIAlertController(title: "", message: "Choose language".localized, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "English US".localized, style: .default, handler: { (_) in
+                AppDelegate.changeLangTo("en")
+            }))
+            alert.addAction(UIAlertAction(title: "Arabic".localized, style: .default, handler: { (_) in
+                AppDelegate.changeLangTo("ar")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
         
         lastOrders.addTapGesture { (_) in

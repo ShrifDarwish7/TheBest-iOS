@@ -1,0 +1,201 @@
+
+/* Class = "UILabel"; text = "Nationality (optional)"; ObjectID = "0XT-qy-UJB"; */
+"0XT-qy-UJB.text" = "الجنسية (إختياري)";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "0vG-7z-N3P"; */
+"0vG-7z-N3P.text" = "الإجمالي";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "16P-po-jq3"; */
+"16P-po-jq3.text" = "الإجمالي";
+
+/* Class = "UILabel"; text = "Last orders"; ObjectID = "22s-EY-RBr"; */
+"22s-EY-RBr.text" = "الطلبات السابقة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "313-Oq-Aei"; */
+"313-Oq-Aei.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Send code"; ObjectID = "4OQ-y2-dk5"; */
+"4OQ-y2-dk5.normalTitle" = "إرسال رمز التحقق";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "5tn-J2-alv"; */
+"5tn-J2-alv.normalTitle" = "لا";
+
+/* Class = "UILabel"; text = "Continue registeration"; ObjectID = "6PQ-X0-jUM"; */
+"6PQ-X0-jUM.text" = "إكمال التسجيل";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6dw-dl-4yz"; */
+"6dw-dl-4yz.text" = "Label";
+
+/* Class = "UILabel"; text = "Your order done successfully "; ObjectID = "7QC-bl-vbP"; */
+"7QC-bl-vbP.text" = "تم إكمال طلبك بنجاح ";
+
+/* Class = "UILabel"; text = "No of items"; ObjectID = "7tu-ah-ah7"; */
+"7tu-ah-ah7.text" = "عدد العناصر";
+
+/* Class = "UIButton"; normalTitle = "Validate"; ObjectID = "Bgj-z1-5JQ"; */
+"Bgj-z1-5JQ.normalTitle" = "تحقق";
+
+/* Class = "UILabel"; text = "Add to cart"; ObjectID = "DTg-U5-Ndq"; */
+"DTg-U5-Ndq.text" = "إضافة إلي السلة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EVd-e8-Nl9"; */
+"EVd-e8-Nl9.text" = "Label";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "EXO-Db-10p"; */
+"EXO-Db-10p.text" = "الإسم";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "FAh-nU-1qE"; */
+"FAh-nU-1qE.text" = "سلة المشتريات";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "FwJ-Gt-yHl"; */
+"FwJ-Gt-yHl.text" = "ملاحظات";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "HiH-bx-tnC"; */
+"HiH-bx-tnC.normalTitle" = "تخطي";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Iva-DT-YJX"; */
+"Iva-DT-YJX.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "You have no order history"; ObjectID = "JBr-WH-vee"; */
+"JBr-WH-vee.text" = "لا يوجد لديك طلبات سابقة";
+
+/* Class = "UILabel"; text = "On clicking accept & procced you will accept our terms"; ObjectID = "LS5-hF-WLs"; */
+"LS5-hF-WLs.text" = "عند الضغط علي قبول ومتابعة ، فإنك توافق على شروطنا";
+
+/* Class = "UILabel"; text = "No products available in this category !"; ObjectID = "LbT-Ug-RgP"; */
+"LbT-Ug-RgP.text" = "لا يوجد منتجات متاحة في هذا التصنيف";
+
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "Lpu-ZN-6kU"; */
+"Lpu-ZN-6kU.text" = "تأكيد";
+
+/* Class = "UILabel"; text = "Delivery fees"; ObjectID = "OIU-iA-GXo"; */
+"OIU-iA-GXo.text" = "رسوم التوصيل";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OkI-pO-CFM"; */
+"OkI-pO-CFM.text" = "Label";
+
+/* Class = "UILabel"; text = "Credit"; ObjectID = "OtD-1n-xFy"; */
+"OtD-1n-xFy.text" = "بطاقة الائتمان";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "QJ2-H6-AB6"; */
+"QJ2-H6-AB6.normalTitle" = "نعم";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RQ7-si-SyI"; */
+"RQ7-si-SyI.text" = "Label";
+
+/* Class = "UILabel"; text = "Checkout cart of"; ObjectID = "T3K-hb-kes"; */
+"T3K-hb-kes.text" = "تنفيذ الطلب من";
+
+/* Class = "UILabel"; text = "Date of birth (optional)"; ObjectID = "U0f-Pl-7Ru"; */
+"U0f-Pl-7Ru.text" = "تاريخ الميلاد (إختياري)";
+
+/* Class = "UILabel"; text = "You should open your location services first"; ObjectID = "VIW-ND-oDg"; */
+"VIW-ND-oDg.text" = "يجب عليك فتح خدمات الموقع الخاص بك أولاً";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WKI-PI-ozh"; */
+"WKI-PI-ozh.text" = "Label";
+
+/* Class = "UILabel"; text = "36 KWD"; ObjectID = "Wo6-DZ-r7l"; */
+"Wo6-DZ-r7l.text" = "36 KWD";
+
+/* Class = "UILabel"; text = "Filter"; ObjectID = "YPe-aD-MCl"; */
+"YPe-aD-MCl.text" = "تصنيف بواسطة";
+
+/* Class = "UIButton"; normalTitle = "Accept & Proceed"; ObjectID = "Z2d-IZ-Vu0"; */
+"Z2d-IZ-Vu0.normalTitle" = "قبول والمتابعة";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "ZCI-ug-ZDW"; */
+"ZCI-ug-ZDW.text" = "1";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "ZGn-sr-Qt0"; */
+"ZGn-sr-Qt0.text" = "الإسم";
+
+/* Class = "UILabel"; text = "No of items"; ObjectID = "Zbc-Ou-oZS"; */
+"Zbc-Ou-oZS.text" = "عدد العناصر";
+
+/* Class = "UILabel"; text = "Your cart is empty!"; ObjectID = "Zl9-u1-8e6"; */
+"Zl9-u1-8e6.text" = "سلة المشتريات فارغة";
+
+/* Class = "UILabel"; text = "Quantity"; ObjectID = "a3C-mX-oqD"; */
+"a3C-mX-oqD.text" = "الكمية";
+
+/* Class = "UILabel"; text = "Delivery fees"; ObjectID = "cAy-AQ-4Mo"; */
+"cAy-AQ-4Mo.text" = "رسوم التوصيل";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "d6y-KB-VYM"; */
+"d6y-KB-VYM.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eE2-Qk-oIX"; */
+"eE2-Qk-oIX.text" = "Label";
+
+/* Class = "UILabel"; text = "Promo code"; ObjectID = "eTf-Xu-Av5"; */
+"eTf-Xu-Av5.text" = "برومو كود";
+
+/* Class = "UILabel"; text = "Each category has it's own feel and look , Enjoy"; ObjectID = "fAd-Kh-IHH"; */
+"fAd-Kh-IHH.text" = "كل فئة لها طابعها الخاص ومظهرها ، استمتع بها";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fMt-7d-BBg"; */
+"fMt-7d-BBg.text" = "Label";
+
+/* Class = "UILabel"; text = "Checkout cart of"; ObjectID = "gDZ-ff-Lxn"; */
+"gDZ-ff-Lxn.text" = "تنفيذ الطلب من";
+
+/* Class = "UILabel"; text = "Cash on delivery"; ObjectID = "gT0-NV-vqK"; */
+"gT0-NV-vqK.text" = "نقدا عند الإستلام";
+
+/* Class = "UILabel"; text = "Retaurants & Cafe"; ObjectID = "gnN-wj-TGT"; */
+"gnN-wj-TGT.text" = "مطاعم وكافيهات";
+
+/* Class = "UILabel"; text = "Hey Mohamed , Choose your category"; ObjectID = "h2I-Xu-bOt"; */
+"h2I-Xu-bOt.text" = "اهلا محمد ، اختر فئتك";
+
+/* Class = "UILabel"; text = "50 - 60 mins"; ObjectID = "hKe-0v-sOQ"; */
+"hKe-0v-sOQ.text" = "50 - 60 mins";
+
+/* Class = "UILabel"; text = "Checkout"; ObjectID = "hTc-Ea-3F8"; */
+"hTc-Ea-3F8.text" = "تنفيذ الطلب";
+
+/* Class = "UILabel"; text = "Payment"; ObjectID = "hw7-vo-xZH"; */
+"hw7-vo-xZH.text" = "الدفع";
+
+/* Class = "UILabel"; text = "36 KWD"; ObjectID = "i9U-QR-u6B"; */
+"i9U-QR-u6B.text" = "36 KWD";
+
+/* Class = "UITextField"; placeholder = "Write extra notes here"; ObjectID = "iJD-EJ-7cJ"; */
+"iJD-EJ-7cJ.placeholder" = "اكتب ملاحظات إضافية هنا";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jAh-Hh-QRl"; */
+"jAh-Hh-QRl.text" = "Label";
+
+/* Class = "UILabel"; text = "Please enter your number\n to login"; ObjectID = "jFJ-E3-onD"; */
+"jFJ-E3-onD.text" = "من فضلك ادخل رقم هاتفك لتسجيل الدخول";
+
+/* Class = "UILabel"; text = "Try filter button to more filtration criteria  "; ObjectID = "nOo-IP-Kg3"; */
+"nOo-IP-Kg3.text" = "Try filter button to more filtration criteria  ";
+
+/* Class = "UILabel"; text = "Great!"; ObjectID = "ooU-EY-IQ9"; */
+"ooU-EY-IQ9.text" = "رائع";
+
+/* Class = "UILabel"; text = "Enter your code"; ObjectID = "p3g-qO-G0w"; */
+"p3g-qO-G0w.text" = "ادخل الرمز";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ts8-kA-Rt5"; */
+"ts8-kA-Rt5.text" = "Label";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "uR9-nc-SMf"; */
+"uR9-nc-SMf.text" = "1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vAW-db-kWF"; */
+"vAW-db-kWF.text" = "Label";
+
+/* Class = "UILabel"; text = "Checkout"; ObjectID = "vbX-Ub-Jt0"; */
+"vbX-Ub-Jt0.text" = "تنفيذ الطلب";
+
+/* Class = "UILabel"; text = "No stores available in this category !"; ObjectID = "vit-T0-e93"; */
+"vit-T0-e93.text" = "لا يوجد متاجر متاحة في هذا التصنيف";
+
+/* Class = "UILabel"; text = "Telephone number"; ObjectID = "wpC-lo-AzR"; */
+"wpC-lo-AzR.text" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the \nprinting and typesetting industry. Lorem Ipsum \nhas been the industry's standard dummy text \never since the 1500s"; ObjectID = "xte-MO-goM"; */
+"xte-MO-goM.text" = "Lorem Ipsum is simply dummy text of the \nprinting and typesetting industry. Lorem Ipsum \nhas been the industry's standard dummy text \never since the 1500s";

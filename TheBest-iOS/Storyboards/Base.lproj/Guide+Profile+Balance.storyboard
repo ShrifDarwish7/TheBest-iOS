@@ -49,7 +49,7 @@
                                             <constraint firstAttribute="height" constant="60" id="fGN-V4-Jgc"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neW-Ku-Sn8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neW-Ku-Sn8" customClass="LocalizedBtn" customModule="The_Best" customModuleProvider="target">
                                         <rect key="frame" x="329" y="20" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DzP-nv-LwI"/>
@@ -464,7 +464,7 @@
                                             <constraint firstAttribute="width" constant="60" id="lbK-mj-bt6"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1Z-6Q-N2E">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1Z-6Q-N2E" customClass="LocalizedBtn" customModule="The_Best" customModuleProvider="target">
                                         <rect key="frame" x="329" y="20" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="SGG-C2-MdK"/>
@@ -739,7 +739,7 @@ application on</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzA-qb-blZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzA-qb-blZ" customClass="LocalizedBtn" customModule="The_Best" customModuleProvider="target">
                                 <rect key="frame" x="15" y="69" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="8NE-ZV-wVd"/>
@@ -979,7 +979,7 @@ application on</string>
                                             <constraint firstAttribute="height" constant="60" id="icf-aN-Q8C"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aR-i2-2qm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aR-i2-2qm" customClass="LocalizedBtn" customModule="The_Best" customModuleProvider="target">
                                         <rect key="frame" x="329" y="20" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Scx-20-A4T"/>
@@ -1081,7 +1081,7 @@ application on</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FID-kz-r9H">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FID-kz-r9H" customClass="LocalizedBtn" customModule="The_Best" customModuleProvider="target">
                                 <rect key="frame" x="15" y="69" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="FWJ-hC-hKx"/>

@@ -1,0 +1,144 @@
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "3pI-aM-avY"; */
+"3pI-aM-avY.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "52g-HY-3oN"; */
+"52g-HY-3oN.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "Mailbox"; ObjectID = "5OH-YX-hrV"; */
+"5OH-YX-hrV.text" = "صندوق بريد";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "670-We-iob"; */
+"670-We-iob.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "I want the nearest driver to me "; ObjectID = "6Rd-Mw-NUb"; */
+"6Rd-Mw-NUb.text" = "اريد اقرب سائق لي";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "9Cr-5J-7ZP"; */
+"9Cr-5J-7ZP.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "email"; ObjectID = "Abg-XV-ouM"; */
+"Abg-XV-ouM.text" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Your balance"; ObjectID = "Akq-59-M55"; */
+"Akq-59-M55.text" = "رصيدك";
+
+/* Class = "UILabel"; text = "Facebook"; ObjectID = "CDS-RT-Jxu"; */
+"CDS-RT-Jxu.text" = "فيسبوك";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "Cum-Ox-MdC"; */
+"Cum-Ox-MdC.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "DTE-Ev-8Vk"; */
+"DTE-Ev-8Vk.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "250"; ObjectID = "EMD-Qz-sfF"; */
+"EMD-Qz-sfF.text" = "250";
+
+/* Class = "UILabel"; text = "Twitter"; ObjectID = "HO0-A1-jub"; */
+"HO0-A1-jub.text" = "تويتر";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "J05-oq-bKd"; */
+"J05-oq-bKd.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "About us"; ObjectID = "JEX-pO-4vX"; */
+"JEX-pO-4vX.text" = "من نحن";
+
+/* Class = "UILabel"; text = "Terms of the service"; ObjectID = "JTx-qp-cA9"; */
+"JTx-qp-cA9.text" = "شروط الخدمة";
+
+/* Class = "UILabel"; text = "Can I cancel request ?"; ObjectID = "NQr-7F-rdx"; */
+"NQr-7F-rdx.text" = "هل يمكنني إلغاء الطلب؟";
+
+/* Class = "UILabel"; text = "Terms & Conditions"; ObjectID = "NS2-cx-FDl"; */
+"NS2-cx-FDl.text" = "البنود و الظروف";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "SRT-ee-pWf"; */
+"SRT-ee-pWf.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "I want the nearest driver to me "; ObjectID = "STk-e4-xK8"; */
+"STk-e4-xK8.text" = "اريد اقرب سائق لي";
+
+/* Class = "UILabel"; text = "How to demand a meal ?"; ObjectID = "TFW-tx-8tw"; */
+"TFW-tx-8tw.text" = "كيف تطلب وجبة؟";
+
+/* Class = "UILabel"; text = "How to demand a taxi car ?"; ObjectID = "Ul0-Mw-o8l"; */
+"Ul0-Mw-o8l.text" = "كيف تطلب سيارة أجرة؟";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "V4D-pU-hBm"; */
+"V4D-pU-hBm.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "WhatsApp "; ObjectID = "VUT-Eq-6CQ"; */
+"VUT-Eq-6CQ.text" = "واتس";
+
+/* Class = "UILabel"; text = "I want the nearest driver to me "; ObjectID = "VfW-E2-QnM"; */
+"VfW-E2-QnM.text" = "اريد اقرب سائق لي";
+
+/* Class = "UILabel"; text = "I want the nearest driver to me "; ObjectID = "Vp2-Ve-a0C"; */
+"Vp2-Ve-a0C.text" = "اريد اقرب سائق لي";
+
+/* Class = "UIButton"; normalTitle = "Add to my balance"; ObjectID = "WFB-Kv-qgf"; */
+"WFB-Kv-qgf.normalTitle" = "أضف إلى رصيدي";
+
+/* Class = "UILabel"; text = "I want the nearest driver to me "; ObjectID = "YPq-0Z-OYl"; */
+"YPq-0Z-OYl.text" = "اريد اقرب سائق لي";
+
+/* Class = "UILabel"; text = "Conditions and rules"; ObjectID = "b51-gD-74a"; */
+"b51-gD-74a.text" = "الشروط والقواعد";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "d1F-1v-pxj"; */
+"d1F-1v-pxj.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "First name"; ObjectID = "dxF-zd-gvW"; */
+"dxF-zd-gvW.text" = "الإسم الاول";
+
+/* Class = "UILabel"; text = "KWD"; ObjectID = "e84-Xb-4jr"; */
+"e84-Xb-4jr.text" = "KWD";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "ehA-CF-kdN"; */
+"ehA-CF-kdN.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "fGH-sa-Vkg"; */
+"fGH-sa-Vkg.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "Nationality (optional)"; ObjectID = "fXq-Bm-B5Z"; */
+"fXq-Bm-B5Z.text" = "الجنسية (إختياري)";
+
+/* Class = "UILabel"; text = "Will be pleased you share our \napplication on"; ObjectID = "fcB-7l-Svi"; */
+"fcB-7l-Svi.text" = "سوف يسعدك مشاركة التطبيق الخاص بك على";
+
+/* Class = "UILabel"; text = "Call us "; ObjectID = "hsZ-ao-aQ6"; */
+"hsZ-ao-aQ6.text" = "إتصل بنا";
+
+/* Class = "UILabel"; text = "I want the nearest driver to me "; ObjectID = "ihq-uE-P5e"; */
+"ihq-uE-P5e.text" = "اريد اقرب سائق لي";
+
+/* Class = "UILabel"; text = "My account"; ObjectID = "j4E-lO-F4y"; */
+"j4E-lO-F4y.text" = "حسابي";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "jK0-Ic-XjC"; */
+"jK0-Ic-XjC.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "How to follow my order ?"; ObjectID = "kod-JW-NQa"; */
+"kod-JW-NQa.text" = "كيف أتابع طلبي؟";
+
+/* Class = "UILabel"; text = "Instgram"; ObjectID = "pRi-Q8-5nc"; */
+"pRi-Q8-5nc.text" = "انستجرام";
+
+/* Class = "UILabel"; text = "How to follow my driver ?"; ObjectID = "qbK-bx-DTL"; */
+"qbK-bx-DTL.text" = "كيف اتابع سائقي؟";
+
+/* Class = "UILabel"; text = "Can I cancel my order ?"; ObjectID = "qqM-t3-O6o"; */
+"qqM-t3-O6o.text" = "هل يمكنني إلغاء طلبي؟";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "tS2-Ln-Gq7"; */
+"tS2-Ln-Gq7.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "Date of birth (optional)"; ObjectID = "vb1-4f-Eb5"; */
+"vb1-4f-Eb5.text" = "تاريخ الميلاد (إختياري)";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "yXP-k8-D52"; */
+"yXP-k8-D52.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";
+
+/* Class = "UILabel"; text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum"; ObjectID = "zfz-Of-c0u"; */
+"zfz-Of-c0u.text" = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum";

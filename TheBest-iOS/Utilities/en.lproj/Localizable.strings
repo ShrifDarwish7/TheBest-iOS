@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  TheBest-iOS
+
+  Created by Sherif Darwish on 11/24/20.
+  Copyright © 2020 Sherif Darwish. All rights reserved.
+*/
+
+"lang" = "en";
+"Hey " = "Hey ";
+", Choose your category" = ", Choose your category";
+"Restaurants & Cafe" = "Restaurants & Cafe";
+"Taxi services" = "Taxi services";
+"Car rent" = "Car rent";
+"Special need car" = "Special need car";
+"Markets & Associations" = "Markets & Associations";
+"Monthly  Account" = "Monthly  Account";
+"Road rescue services" = "Road rescue services";
+"Furniture transporting" = "Furniture transporting";
+"Vegetable" = "Vegetable";
+"Change language" = "Change language";
+"Choose language" = "Choose language";
+"English US" = "English US";
+"Arabic" = "Arabic";

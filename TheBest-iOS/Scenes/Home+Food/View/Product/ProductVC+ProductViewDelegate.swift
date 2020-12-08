@@ -12,7 +12,7 @@ import UIKit
 extension ProductVC: ProductViewDelegate{
     
     func didCompleteAddingToCart() {
-        print("didCompleteAddingToCart")
+        self.showAlert(title: "", message: "Product added successfully")
     }
     
     func didFailAddingToCart() {

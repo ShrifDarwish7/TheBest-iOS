@@ -62,6 +62,8 @@ class CarRentVC: UIViewController , UIGestureRecognizerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.setStyle()
+        
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         

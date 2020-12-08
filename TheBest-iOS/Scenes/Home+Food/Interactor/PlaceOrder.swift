@@ -41,7 +41,8 @@ class PlaceOrder{
                         do{
                             let _ = try JSONDecoder.init().decode(PlaceOrderResponse.self, from: data)
                             completed(true)
-                        }catch{
+                        }catch let err{
+                            print(err)
                             completed(false)
                         }
                         

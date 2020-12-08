@@ -9,7 +9,6 @@
 import Foundation
 
 protocol HomeViewDelegate {
-    
     func showSVProgress()
     func dismissSVProgress()
     func didSuccessfulyFetchSubCategories(_ categories: Categories)

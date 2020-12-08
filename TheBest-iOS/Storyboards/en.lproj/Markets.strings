@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Filter by region"; ObjectID = "7IU-Tj-rGX"; */
+"7IU-Tj-rGX.text" = "Filter by region";
+
+/* Class = "UILabel"; text = "Near you"; ObjectID = "DVM-oo-Wwc"; */
+"DVM-oo-Wwc.text" = "Near you";
+
+/* Class = "UILabel"; text = "District"; ObjectID = "EsS-Ud-eIQ"; */
+"EsS-Ud-eIQ.text" = "District";
+
+/* Class = "UILabel"; text = "Governorate"; ObjectID = "KxE-d5-M6F"; */
+"KxE-d5-M6F.text" = "Governorate";
+
+/* Class = "UILabel"; text = "Choose region"; ObjectID = "Ofq-Yq-d6F"; */
+"Ofq-Yq-d6F.text" = "Choose region";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "iQ8-Rs-kha"; */
+"iQ8-Rs-kha.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "Detect"; ObjectID = "n6w-UI-45q"; */
+"n6w-UI-45q.normalTitle" = "Detect";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "tJw-sg-ehW"; */
+"tJw-sg-ehW.text" = "Country";

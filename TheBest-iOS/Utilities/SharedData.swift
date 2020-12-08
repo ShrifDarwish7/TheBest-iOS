@@ -19,6 +19,9 @@ class SharedData{
     static var userLng: CLLocationDegrees?
     static var userDestinationLat: CLLocationDegrees?
     static var userDestinationLng: CLLocationDegrees?
+    static var userFromAddress: String?
+    static var userToAddress: String?
+    static var receivedDriverId: String?
     static let headers = [
         "Authorization": "Bearer " + (UserDefaults.init().string(forKey: "accessToken") ?? ""),
         "Accept": "application/json"

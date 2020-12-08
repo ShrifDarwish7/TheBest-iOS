@@ -16,6 +16,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         homeVC.modalPresentationStyle = .fullScreen
+        guard !(sender.navigationController?.topViewController?.isKind(of: HomeVC.self))! else { return }
         sender.navigationController?.pushViewController(homeVC, animated: true)
     }
     
@@ -32,7 +33,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let registerVC = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
         registerVC.modalPresentationStyle = .fullScreen
-       sender.navigationController?.pushViewController(registerVC, animated: true)
+        sender.navigationController?.pushViewController(registerVC, animated: true)
         
     }
     
@@ -44,11 +45,11 @@ class Router{
         storesVC.idReceived = id
         storesVC.pageIconReceived = pageIcon
         storesVC.from = from
-//        if from == "markets"{
-//            storesVC.pageIcon.image = UIImage(named: "marketsIcon")
-//            storesVC.upperIcon.backgroundColor = UIColor(named: "MarketsColor")
-//            SharedData.food_markets_flag = 1
-//        }
+        //        if from == "markets"{
+        //            storesVC.pageIcon.image = UIImage(named: "marketsIcon")
+        //            storesVC.upperIcon.backgroundColor = UIColor(named: "MarketsColor")
+        //            SharedData.food_markets_flag = 1
+        //        }
         sender.navigationController?.pushViewController(storesVC, animated: true)
         
     }
@@ -59,7 +60,7 @@ class Router{
         let vendorProfileVC = storyboard.instantiateViewController(withIdentifier: "VendorProfileVC") as! VendorProfileVC
         vendorProfileVC.modalPresentationStyle = .fullScreen
         vendorProfileVC.idReceived = id
-       sender.navigationController?.pushViewController(vendorProfileVC, animated: true)
+        sender.navigationController?.pushViewController(vendorProfileVC, animated: true)
         
     }
     
@@ -150,6 +151,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LastOrdersVC") as! LastOrdersVC
         vc.modalPresentationStyle = .fullScreen
+        guard !(sender.navigationController?.topViewController?.isKind(of: HowToUseVC.self))! else { return }
         sender.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -177,6 +179,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HowToUseVC") as! HowToUseVC
         vc.modalPresentationStyle = .fullScreen
+        guard !(sender.navigationController?.topViewController?.isKind(of: HowToUseVC.self))! else { return }
         sender.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -186,6 +189,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ShareVC") as! ShareVC
         vc.modalPresentationStyle = .fullScreen
+        guard !(sender.navigationController?.topViewController?.isKind(of: ShareVC.self))! else { return }
         sender.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -204,6 +208,7 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BalanceVC") as! BalanceVC
         vc.modalPresentationStyle = .fullScreen
+        guard !(sender.navigationController?.topViewController?.isKind(of: BalanceVC.self))! else { return }
         sender.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -213,8 +218,9 @@ class Router{
         let storyboard = UIStoryboard(name: "Guide+Profile+Balance", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TermsAndConditionsVC") as! TermsAndConditionsVC
         vc.modalPresentationStyle = .fullScreen
+        guard !(sender.navigationController?.topViewController?.isKind(of: TermsAndConditionsVC.self))! else { return }
         sender.navigationController?.pushViewController(vc, animated: true)
         
     }
-   
+    
 }

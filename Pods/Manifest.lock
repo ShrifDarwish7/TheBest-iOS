@@ -91,6 +91,7 @@ PODS:
   - IQKeyboardManagerSwift (6.5.5)
   - leveldb-library (1.22)
   - lottie-ios (3.1.8)
+  - MOLH (1.3)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -102,8 +103,10 @@ PODS:
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
   - SVProgressHUD (2.2.5)
+  - SwiftToast (1.1.3)
   - SwiftyGif (5.3.0)
   - SwiftyJSON (5.0.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -117,10 +120,13 @@ DEPENDENCIES:
   - GooglePlaces
   - IQKeyboardManagerSwift
   - lottie-ios
+  - MOLH
   - SDWebImage
   - SVProgressHUD
+  - SwiftToast
   - SwiftyGif
   - SwiftyJSON
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -148,13 +154,16 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - leveldb-library
     - lottie-ios
+    - MOLH
     - nanopb
     - PromisesObjC
     - Protobuf
     - SDWebImage
     - SVProgressHUD
+    - SwiftToast
     - SwiftyGif
     - SwiftyJSON
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -181,14 +190,17 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  MOLH: a31ef0b87351074d81253606a96b290f9eca161a
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftToast: 029cbeda85c04fb3fa5df774ba461b19971bc6c5
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 3db373dd5e9d8f24b5a24e1388386c1c2c8bfd58
+PODFILE CHECKSUM: bbcd0347b1536e354ae8bacea6ce5dfe2c73ff1c
 
 COCOAPODS: 1.9.1

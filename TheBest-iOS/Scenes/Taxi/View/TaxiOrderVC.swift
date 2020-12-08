@@ -48,7 +48,7 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
     var fromAutoCompleteController: GMSAutocompleteViewController?
     var toAutoCompleteController: GMSAutocompleteViewController?
     var lottie: AnimationView?
-    var receivedDriverId: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +60,8 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
         
         UINavigationBar.appearance().barTintColor = UIColor(named: "TaxiGoldColor")
         UINavigationBar.appearance().tintColor = UIColor.white
+        
+        mapView.setStyle()
         
         taxiOrderPresenter = TaxiOrderPresenter(taxiOrderViewDelegate: self)
         taxiOrderPresenter?.getNearByTaxies()
@@ -120,9 +122,9 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
         
         tripInfoStackHeight.constant = 0
         
-        if let _ = receivedDriverId{
+        if let _ = SharedData.receivedDriverId{
             SVProgressHUD.show()
-            taxiOrderPresenter?.getDriverBy(id: Int(receivedDriverId!)!)
+            taxiOrderPresenter?.getDriverBy(id: Int(SharedData.receivedDriverId!)!)
         }
         
     }

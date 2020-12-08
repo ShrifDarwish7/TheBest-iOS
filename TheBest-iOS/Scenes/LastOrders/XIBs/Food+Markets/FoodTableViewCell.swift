@@ -23,12 +23,12 @@ class FoodTableViewCell: UITableViewCell {
         vendorImage.layer.cornerRadius = vendorImage.frame.height/2
     }
     
-    func loadFrom(foodOrder: FoodOrder){
-        loadUI()
-        status.text = foodOrder.status
-        date.text = foodOrder.orderDate
-        vendorImage.sd_setImage(with: URL(string: foodOrder.orderItems?.first?.restaurantImage ?? ""))
-        vendorName.text = foodOrder.orderItems?.first?.restaurantName ?? ""
-    }
+//    func loadFrom(foodOrder: FoodOrder){
+//        loadUI()
+//        status.text = foodOrder.status
+//        date.text = foodOrder.orderDate
+//        vendorImage.sd_setImage(with: URL(string: foodOrder.orderItems?.first?.restaurantImage ?? ""))
+//        vendorName.text = foodOrder.orderItems?.first?.restaurantName ?? ""
+//    }
     
 }

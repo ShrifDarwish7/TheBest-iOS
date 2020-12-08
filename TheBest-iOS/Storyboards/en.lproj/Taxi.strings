@@ -1,0 +1,246 @@
+
+/* Class = "UILabel"; text = " Kia"; ObjectID = "0sN-Qm-Xys"; */
+"0sN-Qm-Xys.text" = " Kia";
+
+/* Class = "UILabel"; text = "15 KWD"; ObjectID = "10x-w1-gNc"; */
+"10x-w1-gNc.text" = "15 KWD";
+
+/* Class = "UILabel"; text = "Van deisel"; ObjectID = "36G-bw-kQ8"; */
+"36G-bw-kQ8.text" = "Van deisel";
+
+/* Class = "UILabel"; text = "Select your destination "; ObjectID = "3VK-Wc-b89"; */
+"3VK-Wc-b89.text" = "Select your destination ";
+
+/* Class = "UILabel"; text = "Select your location "; ObjectID = "3vV-zh-PrD"; */
+"3vV-zh-PrD.text" = "Select your location ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "4JC-2d-4DL"; */
+"4JC-2d-4DL.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Select your location "; ObjectID = "5Rc-g9-M2b"; */
+"5Rc-g9-M2b.text" = "Select your location ";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "5T1-CY-9Iu"; */
+"5T1-CY-9Iu.text" = "From";
+
+/* Class = "UIButton"; normalTitle = "Confirm ride"; ObjectID = "7td-GR-QVC"; */
+"7td-GR-QVC.normalTitle" = "Confirm ride";
+
+/* Class = "UILabel"; text = "Payment type"; ObjectID = "8cX-ck-ZPC"; */
+"8cX-ck-ZPC.text" = "Payment type";
+
+/* Class = "UILabel"; text = "Payment type"; ObjectID = "8t3-jr-OWg"; */
+"8t3-jr-OWg.text" = "Payment type";
+
+/* Class = "UIButton"; normalTitle = "Start order"; ObjectID = "9nW-oq-7Z6"; */
+"9nW-oq-7Z6.normalTitle" = "Start order";
+
+/* Class = "UILabel"; text = "Total fees required"; ObjectID = "A9n-Lt-Hcr"; */
+"A9n-Lt-Hcr.text" = "Total fees required";
+
+/* Class = "UILabel"; text = " Ahmed"; ObjectID = "AVe-ik-9yv"; */
+"AVe-ik-9yv.text" = " Ahmed";
+
+/* Class = "UIButton"; normalTitle = "Start order"; ObjectID = "Bil-hP-7Ij"; */
+"Bil-hP-7Ij.normalTitle" = "Start order";
+
+/* Class = "UILabel"; text = "Your captain is"; ObjectID = "BrM-zh-sY5"; */
+"BrM-zh-sY5.text" = "Your captain is";
+
+/* Class = "UILabel"; text = "Van deisel"; ObjectID = "D9q-TV-wxu"; */
+"D9q-TV-wxu.text" = "Van deisel";
+
+/* Class = "UILabel"; text = "Select your location "; ObjectID = "DfN-by-9IZ"; */
+"DfN-by-9IZ.text" = "Select your location ";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "E45-nq-H4P"; */
+"E45-nq-H4P.text" = "From";
+
+/* Class = "UILabel"; text = "Cash"; ObjectID = "E9c-D5-vLM"; */
+"E9c-D5-vLM.text" = "Cash";
+
+/* Class = "UILabel"; text = "Driver"; ObjectID = "EzK-4p-zNt"; */
+"EzK-4p-zNt.text" = "Driver";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "FsU-22-MDF"; */
+"FsU-22-MDF.text" = "To";
+
+/* Class = "UILabel"; text = "1111"; ObjectID = "G7s-Ag-fhK"; */
+"G7s-Ag-fhK.text" = "1111";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "I3X-jb-xyY"; */
+"I3X-jb-xyY.text" = "To";
+
+/* Class = "UILabel"; text = "Away from you"; ObjectID = "JNO-mJ-03U"; */
+"JNO-mJ-03U.text" = "Away from you";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "Kq0-WI-mld"; */
+"Kq0-WI-mld.text" = "To";
+
+/* Class = "UILabel"; text = "1111"; ObjectID = "LPC-D2-PTx"; */
+"LPC-D2-PTx.text" = "1111";
+
+/* Class = "UILabel"; text = "Select your destination "; ObjectID = "LpO-iu-Vjs"; */
+"LpO-iu-Vjs.text" = "Select your destination ";
+
+/* Class = "UILabel"; text = "Total fees required"; ObjectID = "M4d-bJ-nuf"; */
+"M4d-bJ-nuf.text" = "Total fees required";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Mok-mm-I3G"; */
+"Mok-mm-I3G.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Cash"; ObjectID = "N3G-Xj-CHI"; */
+"N3G-Xj-CHI.text" = "Cash";
+
+/* Class = "UILabel"; text = "Payment type"; ObjectID = "N87-ka-sal"; */
+"N87-ka-sal.text" = "Payment type";
+
+/* Class = "UILabel"; text = "Year"; ObjectID = "NP6-Qm-vJo"; */
+"NP6-Qm-vJo.text" = "Year";
+
+/* Class = "UILabel"; text = "Select your location "; ObjectID = "NZI-A6-u5W"; */
+"NZI-A6-u5W.text" = "Select your location ";
+
+/* Class = "UILabel"; text = "Select your destination "; ObjectID = "OJj-1C-9PX"; */
+"OJj-1C-9PX.text" = "Select your destination ";
+
+/* Class = "UILabel"; text = "Away from you"; ObjectID = "Obw-ac-uiR"; */
+"Obw-ac-uiR.text" = "Away from you";
+
+/* Class = "UILabel"; text = " Kia"; ObjectID = "P5q-AX-xDx"; */
+"P5q-AX-xDx.text" = " Kia";
+
+/* Class = "UILabel"; text = "Your captain is"; ObjectID = "Rqt-hu-3yT"; */
+"Rqt-hu-3yT.text" = "Your captain is";
+
+/* Class = "UILabel"; text = " Kia"; ObjectID = "SAU-WK-Fcb"; */
+"SAU-WK-Fcb.text" = " Kia";
+
+/* Class = "UILabel"; text = "Choose car type"; ObjectID = "SMi-Rm-aGB"; */
+"SMi-Rm-aGB.text" = "Choose car type";
+
+/* Class = "UILabel"; text = "Cash"; ObjectID = "T7l-ay-Iie"; */
+"T7l-ay-Iie.text" = "Cash";
+
+/* Class = "UILabel"; text = "BMW"; ObjectID = "TSg-g0-us4"; */
+"TSg-g0-us4.text" = "BMW";
+
+/* Class = "UILabel"; text = "Payment type"; ObjectID = "Tw8-fu-67v"; */
+"Tw8-fu-67v.text" = "Payment type";
+
+/* Class = "UILabel"; text = "Driver"; ObjectID = "UBR-n1-XLK"; */
+"UBR-n1-XLK.text" = "Driver";
+
+/* Class = "UILabel"; text = "1 Km"; ObjectID = "UWd-vM-oDy"; */
+"UWd-vM-oDy.text" = "1 Km";
+
+/* Class = "UILabel"; text = "Away from you"; ObjectID = "UWv-80-Gzh"; */
+"UWv-80-Gzh.text" = "Away from you";
+
+/* Class = "UILabel"; text = "Your captain is"; ObjectID = "Vu1-zk-OV4"; */
+"Vu1-zk-OV4.text" = "Your captain is";
+
+/* Class = "UILabel"; text = "Total fees required"; ObjectID = "WUu-fY-MGB"; */
+"WUu-fY-MGB.text" = "Total fees required";
+
+/* Class = "UILabel"; text = "Your driver is"; ObjectID = "WaC-5f-Lei"; */
+"WaC-5f-Lei.text" = "Your driver is";
+
+/* Class = "UILabel"; text = "15 KWD"; ObjectID = "Xge-zQ-MEu"; */
+"Xge-zQ-MEu.text" = "15 KWD";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "XkA-w0-RfT"; */
+"XkA-w0-RfT.text" = "To";
+
+/* Class = "UILabel"; text = " Ahmed"; ObjectID = "Xlj-2t-GBc"; */
+"Xlj-2t-GBc.text" = " Ahmed";
+
+/* Class = "UILabel"; text = "Brand"; ObjectID = "Zwq-W4-E9l"; */
+"Zwq-W4-E9l.text" = "Brand";
+
+/* Class = "UILabel"; text = "Away from you"; ObjectID = "a4N-58-pxi"; */
+"a4N-58-pxi.text" = "Away from you";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "aif-Sz-PuT"; */
+"aif-Sz-PuT.text" = "From";
+
+/* Class = "UIButton"; normalTitle = "Start order"; ObjectID = "b2X-GH-1qx"; */
+"b2X-GH-1qx.normalTitle" = "Start order";
+
+/* Class = "UILabel"; text = "Van deisel"; ObjectID = "bCA-AV-d85"; */
+"bCA-AV-d85.text" = "Van deisel";
+
+/* Class = "UILabel"; text = "Your cancelation reason"; ObjectID = "c6M-Cm-K4A"; */
+"c6M-Cm-K4A.text" = "Your cancelation reason";
+
+/* Class = "UILabel"; text = "Cash"; ObjectID = "daX-Ip-2S9"; */
+"daX-Ip-2S9.text" = "Cash";
+
+/* Class = "UILabel"; text = "Total fees required"; ObjectID = "g7H-FX-u9f"; */
+"g7H-FX-u9f.text" = "Total fees required";
+
+/* Class = "UILabel"; text = "Van deisel"; ObjectID = "h9d-CL-KxQ"; */
+"h9d-CL-KxQ.text" = "Van deisel";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "i2k-vX-yNV"; */
+"i2k-vX-yNV.text" = "From";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "iPZ-9N-NGe"; */
+"iPZ-9N-NGe.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "15 KWD"; ObjectID = "jYT-PN-lR0"; */
+"jYT-PN-lR0.text" = "15 KWD";
+
+/* Class = "UILabel"; text = "Requesting driver, please wait for driver acceptance"; ObjectID = "ktl-rw-chK"; */
+"ktl-rw-chK.text" = "Requesting driver, please wait for driver acceptance";
+
+/* Class = "UILabel"; text = "Your driver is"; ObjectID = "l4l-gt-LdP"; */
+"l4l-gt-LdP.text" = "Your driver is";
+
+/* Class = "UILabel"; text = "1 Km"; ObjectID = "m6w-Tr-ebn"; */
+"m6w-Tr-ebn.text" = "1 Km";
+
+/* Class = "UILabel"; text = "15 KWD"; ObjectID = "mCO-3i-Bxa"; */
+"mCO-3i-Bxa.text" = "15 KWD";
+
+/* Class = "UILabel"; text = "Your driver is"; ObjectID = "mSZ-qQ-Gfr"; */
+"mSZ-qQ-Gfr.text" = "Your driver is";
+
+/* Class = "UILabel"; text = "Choose car type"; ObjectID = "mnC-ux-ofP"; */
+"mnC-ux-ofP.text" = "Choose car type";
+
+/* Class = "UIButton"; normalTitle = "Confirm ride"; ObjectID = "njf-dM-q3V"; */
+"njf-dM-q3V.normalTitle" = "Confirm ride";
+
+/* Class = "UIButton"; normalTitle = "Confirm ride"; ObjectID = "oed-YW-D8l"; */
+"oed-YW-D8l.normalTitle" = "Confirm ride";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "qkE-R3-v5I"; */
+"qkE-R3-v5I.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "1 Km"; ObjectID = "rbE-B8-VpR"; */
+"rbE-B8-VpR.text" = "1 Km";
+
+/* Class = "UILabel"; text = "Model"; ObjectID = "suH-pe-QcY"; */
+"suH-pe-QcY.text" = "Model";
+
+/* Class = "UILabel"; text = "Select your destination "; ObjectID = "t2F-SO-FGo"; */
+"t2F-SO-FGo.text" = "Select your destination ";
+
+/* Class = "UILabel"; text = " Ahmed"; ObjectID = "uJW-jF-3my"; */
+"uJW-jF-3my.text" = " Ahmed";
+
+/* Class = "UILabel"; text = "Your driver is"; ObjectID = "wZS-JO-m1U"; */
+"wZS-JO-m1U.text" = "Your driver is";
+
+/* Class = "UILabel"; text = "Required equipment  "; ObjectID = "weF-uZ-175"; */
+"weF-uZ-175.text" = "Required equipment  ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "wgq-YE-cgp"; */
+"wgq-YE-cgp.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "1111"; ObjectID = "zUf-53-GZM"; */
+"zUf-53-GZM.text" = "1111";
+
+/* Class = "UILabel"; text = "1 Km"; ObjectID = "zvI-PD-R0Q"; */
+"zvI-PD-R0Q.text" = "1 Km";
