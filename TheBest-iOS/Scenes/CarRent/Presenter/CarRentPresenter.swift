@@ -17,7 +17,7 @@ protocol CarsRentViewDelegate {
     func didFailFethNearesrCars()
     func didCompleteWithDistance(_ result: Distance)
     func didFailFetchDistance()
-    func didCompleteConfirmRide(_ result: Drivers)
+    func didCompleteConfirmRide()
     func didFailConfirmRide()
 }
 
@@ -54,9 +54,9 @@ class CarsRentPresenter{
         }
     }
     
-    func getDistance(driverId: String){
+    func getDistance(_ parameters: [String:Any]){
         self.carsRentViewDelegate?.ShowProgress()
-        CarRentServices.getDistance(driverId: driverId) { (distance) in
+        CarRentServices.getDistance(parameters) { (distance) in
             self.carsRentViewDelegate?.dismissProgress()
             if let _ = distance{
                 self.carsRentViewDelegate?.didCompleteWithDistance(distance!)
@@ -66,16 +66,15 @@ class CarsRentPresenter{
         }
     }
     
-    func confirmRide(){
+    func confirmRide(_ parameters: [String:Any]){
         self.carsRentViewDelegate?.ShowProgress()
-        CarRentServices.confirmRide { (driver) in
+        CarRentServices.confirmRide(parameters) { (done) in
             self.carsRentViewDelegate?.dismissProgress()
-            if let _ = driver{
-                self.carsRentViewDelegate?.didCompleteConfirmRide(driver!)
+            if done{
+                self.carsRentViewDelegate?.didCompleteConfirmRide()
             }else{
                 self.carsRentViewDelegate?.didFailConfirmRide()
             }
         }
-        
     }
 }

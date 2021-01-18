@@ -82,20 +82,20 @@ class CarRentServices{
         
     }
     
-    static func getDistance(driverId: String, completed: @escaping (Distance?)->Void){
+    static func getDistance(_ parameters: [String: Any], completed: @escaping (Distance?)->Void){
         
-        let parameters = [
-            "latitudeFrom": SharedData.userLat ?? 0.0,
-            "longitudeFrom": SharedData.userLng ?? 0.0,
-            "latitudeTo": SharedData.userDestinationLat ?? 0.0,
-            "longitudeTo": SharedData.userDestinationLng ?? 0.0,
-            "driver_id": driverId
-        ] as [String: Any]
+//        let parameters = [
+//            "latitudeFrom": SharedData.userLat ?? 0.0,
+//            "longitudeFrom": SharedData.userLng ?? 0.0,
+//            "latitudeTo": SharedData.userDestinationLat ?? 0.0,
+//            "longitudeTo": SharedData.userDestinationLng ?? 0.0,
+//            "driver_id": driverId
+//        ] as [String: Any]
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
             for (key,value) in parameters{
-                multipartFormData.append("\(value )".data(using: .utf8)!, withName: key)
+                multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
             }
             
         }, to: URL(string: CARS_DISTNCE_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
@@ -134,12 +134,15 @@ class CarRentServices{
         
     }
     
-    static func confirmRide(completed: @escaping (Drivers?)->Void){
+    static func confirmRide(_ parameters: [String: Any], completed: @escaping (Bool)->Void){
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            
-            multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "lat")
-            multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "lng")
+//
+//            multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "lat")
+//            multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "lng")
+            for (key,value) in parameters{
+                multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
+            }
             
         }, to: URL(string: CARS_CONFIRM_RIDE_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
             
@@ -151,31 +154,43 @@ class CarRentServices{
                     
                     switch response.result{
                         
-                    case .success(let data):
+                    case .success(_):
                         
-                        print("confirmRide", try! JSON(data: data))
-                        do{
-                            
-                            let dataModel = try JSONDecoder.init().decode(Drivers.self, from: data)
-                            completed(dataModel)
-                            
-                        }catch let error{
-                            print("confirmRideParsErr",error)
-                            completed(nil)
-                        }
+                        UserDefaults.init().setValue(21, forKey: "ride_type")
+                       completed(true)
                         
                     case .failure(_):
-                        completed(nil)
+                        completed(false)
                     }
                     
                 }
                 
             case .failure(_):
-                completed(nil)
+                completed(false)
             }
             
         }
         
+    }
+    
+    static func cancelRide(completed: @escaping (Bool)->Void ){
+                
+        Alamofire.request(URL(string: CARS_CANCEL_RIDE)!, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+            
+            switch response.result{
+                
+            case .success(let data):
+                
+                let json = JSON(data)
+                print(json)
+                completed(true)
+                
+            case .failure(_):
+                completed(false)
+                
+            }
+            
+        }
     }
     
 }

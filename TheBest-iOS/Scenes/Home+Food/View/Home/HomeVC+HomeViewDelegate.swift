@@ -59,10 +59,10 @@ extension HomeVC: HomeViewDelegate{
         
     }
     
-    func didCompleteVegetableWith(_ result: MarketTypes?, _ error: Error?) {
+    func didCompleteVegetableWith(_ result: [MainCategory]?, _ error: Error?) {
         if let result = result{
             
-            self.categories = result.items
+            self.categories = result
             self.loadSubCategoriesCollection(color: UIColor(named: "vegColor")!)
             self.nextView = .vegetable
             self.subCategories.isHidden = false
@@ -75,6 +75,23 @@ extension HomeVC: HomeViewDelegate{
                 self.categoriesCollectionView.isHidden = true
             }
             
+        }
+    }
+    
+    func didCompleteWithRoadServicesCategories(_ categories: RoadServicesCategoriesResponse?) {
+        if let _ = categories{
+            self.categories = categories?.categories
+            self.loadSubCategoriesCollection(color: UIColor(named: "RoadServicesColor")!)
+            self.nextView = .roadServices
+            self.subCategories.isHidden = false
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.categoriesCollectionView.alpha = 0
+                self.subCategories.alpha = 1
+                self.backBtn.isHidden = false
+            }) { (_) in
+                self.categoriesCollectionView.isHidden = true
+            }
         }
     }
     

@@ -57,8 +57,10 @@ extension FurnitureVC: UICollectionViewDataSource, UICollectionViewDelegate, UIC
         self.truckTypes![indexPath.row].selected = true
         self.carsTypesCollectionView.reloadData()
         self.carsTypesCollectionView.scrollToItem(at: IndexPath(row: indexPath.row, section: 0), at: .centeredHorizontally, animated: true  )
-        self.selectedDriverID = nil
+      //  self.selectedDriverID = nil
         self.furniturePresenter?.getTruckResultsWith(id: "\(self.truckTypes![indexPath.row].id)")
+        self.selectedCarTypeId = self.truckTypes![indexPath.row].id
+        self.selectedServiceImage = self.truckTypes![indexPath.row].hasImage
       //  self.specialNeedCarsPresenter?.getSpecialCarWith(id: "\(self.carsTypes![indexPath.row].id)", eq: "\(self.selectedEquipmentID ?? 0)")
         
     }

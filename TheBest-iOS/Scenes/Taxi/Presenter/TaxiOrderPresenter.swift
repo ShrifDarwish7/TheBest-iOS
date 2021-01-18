@@ -15,7 +15,7 @@ protocol TaxiOrderViewDelegate {
     func dismissSVProgress()
     func didCompleteWith(_ taxies: Taxi)
     func didCompleteWithError()
-    func didCompleteWithAddressFromGoogleMaps(_ address: String)
+    func didCompleteWithAddressFromGoogleMaps(_ address: GoogleMapsGeocodeAddress)
     func didFailWithErrorAddressFromGoogleMaps()
     func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline)
     func didFailWithErrorDirectionFromGoogleMaps()
@@ -83,7 +83,7 @@ class TaxiOrderPresenter{
             self.taxiOrderViewDelegate?.dismissSVProgress()
             
             if let _ = address{
-                self.taxiOrderViewDelegate?.didCompleteWithAddressFromGoogleMaps(address ?? "")
+                self.taxiOrderViewDelegate?.didCompleteWithAddressFromGoogleMaps(address!)
             }else{
                 self.taxiOrderViewDelegate?.didFailWithErrorAddressFromGoogleMaps()
             }
@@ -158,10 +158,12 @@ class TaxiOrderPresenter{
         //self.taxiOrderViewDelegate?.showSVProgress()
         TripsServices.getDriverBy(id: id) { (response) in
            // self.taxiOrderViewDelegate?.dismissSVProgress()
-            if let _ = response{
+            if let _ = response?.driver{
                 self.taxiOrderViewDelegate?.didAcceptRideFromDriver(response?.driver)
+                
             }else{
                 self.taxiOrderViewDelegate?.didAcceptRideFromDriver(nil)
+                
             }
         }
     }

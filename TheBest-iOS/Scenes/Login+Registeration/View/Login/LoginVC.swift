@@ -54,7 +54,7 @@ class LoginVC: UIViewController , FPNTextFieldDelegate{
         FPNTextfield = FPNTextField(frame: CGRect(x: 50, y: 0, width: self.view.frame.width - 40, height: FPNContainer.frame.height))
        // FPNTextfield!.font = "Lang".Localized == "ar" ? UIFont(name: FONT_AR, size: 14) : UIFont(name: FONT_EN, size: 14)
         FPNTextfield!.delegate = self
-        FPNTextfield!.setCountries(excluding: [FPNCountryCode.IL,FPNCountryCode.QA])
+        FPNTextfield!.setCountries(excluding: [FPNCountryCode.IL])
         FPNTextfield!.setFlag(countryCode: FPNCountryCode.EG)
         FPNTextfield!.keyboardType = .asciiCapableNumberPad
         FPNTextfield!.hasPhoneNumberExample = true

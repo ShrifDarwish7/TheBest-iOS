@@ -19,7 +19,7 @@ protocol SpecialNeedCarViewDelegate {
     func didFailFetchEquipments()
     func didCompleteWithDistance(_ result: Distance)
     func didFailFetchDistance()
-    func didCompleteConfirmRide(_ result: Drivers)
+    func didCompleteConfirmRide()
     func didFailConfirmRide()
 }
 
@@ -65,9 +65,9 @@ class SpecialNeedCarsPresenter{
         }
     }
     
-    func getDistance(driverId: String){
+    func getDistance(_ parameters: [String: Any]){
         self.specialNeedCarViewDelegate?.showSVProgress()
-        SpecialCarsServices.getDistance(driverId: driverId) { (distance) in
+        SpecialCarsServices.getDistance(parameters: parameters) { (distance) in
             self.specialNeedCarViewDelegate?.dismissSVProgress()
             if let _ = distance{
                 self.specialNeedCarViewDelegate?.didCompleteWithDistance(distance!)
@@ -77,12 +77,12 @@ class SpecialNeedCarsPresenter{
         }
     }
     
-    func confirmRide(){
+    func confirmRide(carType: String, requiredEquipment: String, priceMethod: String){
         self.specialNeedCarViewDelegate?.showSVProgress()
-        SpecialCarsServices.confirmRide { (driver) in
+        SpecialCarsServices.confirmRide(carType, requiredEquipment, priceMethod) { (done) in
             self.specialNeedCarViewDelegate?.dismissSVProgress()
-            if let _ = driver{
-                self.specialNeedCarViewDelegate?.didCompleteConfirmRide(driver!)
+            if done{
+                self.specialNeedCarViewDelegate?.didCompleteConfirmRide()
             }else{
                 self.specialNeedCarViewDelegate?.didFailConfirmRide()
             }

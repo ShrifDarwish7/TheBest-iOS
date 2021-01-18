@@ -16,8 +16,8 @@ struct TrucksResult: Codable {
 // MARK: - Datum
 struct TruckData: Codable {
     let id: Int
-    let driverName,driverImage: String
-    let lat, lng, distance: Double
+    let driverName,driverImage: String?
+    let lat, lng, distance: Double?
     let cost: Int
     var selected: Bool?
     

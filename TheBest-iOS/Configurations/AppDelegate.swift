@@ -15,6 +15,7 @@ import GoogleMaps
 import GooglePlaces
 import FirebaseMessaging
 import MOLH
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var standard: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
+    static var player: AVAudioPlayer?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -37,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setCornerRadius(10)
         SVProgressHUD.setMinimumSize(CGSize(width: 75, height: 75))
         SVProgressHUD.setForegroundColor(UIColor.white)
-         SVProgressHUD.setBackgroundColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75))
+        SVProgressHUD.setBackgroundColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75))
         
         MOLH.shared.activate(true)
         
@@ -79,6 +81,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Messaging.messaging().delegate = self
                 
         return true
+    }
+    
+    static func playSound() {
+        guard let url = Bundle.main.url(forResource: "loud_alert", withExtension: "mp3") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            player = try AVAudioPlayer(contentsOf: url)
+            player!.numberOfLoops =  -1
+            player!.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 
     // MARK: - Core Data stack
@@ -127,6 +145,125 @@ extension AppDelegate: UNUserNotificationCenterDelegate{
 ////        }
 //        completionHandler([.alert, .sound, .badge])
 //    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let actionIdentifier = response.actionIdentifier
+        
+        switch actionIdentifier {
+        case UNNotificationDismissActionIdentifier: // Notification was dismissed by user
+            // Do something
+            completionHandler()
+        case UNNotificationDefaultActionIdentifier: // App was opened from notification
+            // Do something
+            
+            let userInfo = response.notification.request.content.userInfo
+            let navController = self.window?.rootViewController as! UINavigationController
+            
+            print("userInfo",userInfo)
+            
+            if let _ = userInfo["driver_id"] {
+                
+                if let tripID = userInfo["trip_id"]{
+                    SharedData.receivedTripID = Int(tripID as! String)
+                    var ref: DatabaseReference!
+                    ref = Database.database().reference()
+                    ref.child("Orders").child(tripID as! String).observe(.value) { (snapshot) in
+                      //  NotificationCenter.default.post(name: NSNotification.Name("ReceivedTripId"), object: nil, userInfo: ["ReceivedTripId": tripID])
+                        if let dic = snapshot.value as? [String : AnyObject]{
+                            if dic["is_user"]?.boolValue == false{
+                                AppDelegate.playSound()
+                                let alert = UIAlertController(title: "Trip has been canceled", message: "Your driver has canceled your trip, due to " + ((dic["reason"]!) as! String), preferredStyle: .alert)
+                                let action = UIAlertAction(title: "Done", style: .cancel) { (_) in
+                                    AppDelegate.player?.stop()
+                                }
+                                alert.addAction(action)
+                                navController.visibleViewController?.present(alert, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                    
+                }
+                
+                switch UserDefaults.init().integer(forKey: "ride_type") {
+                case 1:
+                    
+                    if !(navController.visibleViewController?.isKind(of: TaxiOrderVC.self))!{
+                        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+                        let taxiVC = storyboard.instantiateViewController(withIdentifier: "TaxiOrderVC") as! TaxiOrderVC
+                        navController.pushViewController(taxiVC, animated: true)
+                    }
+                    
+                case 4:
+                    
+                    if !(navController.visibleViewController?.isKind(of: SpecialNeedCarVC.self))!{
+                        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "SpecialNeedCarVC") as! SpecialNeedCarVC
+                        navController.pushViewController(vc, animated: true)
+                    }
+                    
+                case 16:
+                    
+                    if !(navController.visibleViewController?.isKind(of: FurnitureVC.self))!{
+                        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "FurnitureVC") as! FurnitureVC
+                        navController.pushViewController(vc, animated: true)
+                    }
+                    
+                case 21:
+                    
+                    if !(navController.visibleViewController?.isKind(of: CarRentVC.self))!{
+                        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "CarRentVC") as! CarRentVC
+                        navController.pushViewController(vc, animated: true)
+                    }
+                    
+                case 15:
+                    
+                    if !(navController.visibleViewController?.isKind(of: RoadServicesVC.self))!{
+                        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "RoadServicesVC") as! RoadServicesVC
+                        navController.pushViewController(vc, animated: true)
+                    }
+                    
+                case 17:
+                    
+                    if !(navController.visibleViewController?.isKind(of: SubscriptVC.self))!{
+                        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "SubscriptVC") as! SubscriptVC
+                        navController.pushViewController(vc, animated: true)
+                    }
+                    
+                default:
+                    break
+                }
+                
+                SVProgressHUD.show()
+                TripsServices.getDriverBy(id: Int(userInfo["driver_id"] as! String)!) { (response) in
+                    SVProgressHUD.dismiss()
+                    if let _ = response?.driver{
+                        NotificationCenter.default.post(name: NSNotification.Name("ReceivedConfirmationFromDriver"), object: nil, userInfo: ["driver": response!.driver as Driver])
+                    }
+                }
+                
+
+            }
+            
+            if response.notification.request.content.body == "Your Trip is over!",
+               let tripId = userInfo["trip_id"] as? String
+               {
+                SVProgressHUD.show()
+                TripsServices.getTripBy(tripId) { (response) in
+                    SVProgressHUD.dismiss()
+                    if let _ = response{
+                        Router.toTripInfo(navController.topViewController!, trip: response!.trip)
+                    }
+                }
+            }
+            
+            completionHandler()
+        default:
+            completionHandler()
+        }
+    }
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         if let _ = userInfo["driver_id"] {

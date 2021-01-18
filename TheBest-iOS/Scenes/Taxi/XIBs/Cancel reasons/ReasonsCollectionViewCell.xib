@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReasonCell" id="gTV-IL-0wX" customClass="ReasonsCollectionViewCell" customModule="TheBest_iOS" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReasonCell" id="gTV-IL-0wX" customClass="ReasonsCollectionViewCell" customModule="The_Best" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="286" height="217"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -224,13 +224,13 @@
                     </scrollView>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="gdw-A4-2Zx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2WY-CT-dZa"/>
                 <constraint firstAttribute="trailing" secondItem="gdw-A4-2Zx" secondAttribute="trailing" id="QKO-TJ-gIR"/>
                 <constraint firstItem="gdw-A4-2Zx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QYy-mk-z6M"/>
                 <constraint firstAttribute="bottom" secondItem="gdw-A4-2Zx" secondAttribute="bottom" id="gum-FW-sK9"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="286" height="217"/>
             <connections>
                 <outletCollection property="reasonsButtons" destination="D7t-lP-m4A" collectionClass="NSMutableArray" id="Ade-r2-bar"/>

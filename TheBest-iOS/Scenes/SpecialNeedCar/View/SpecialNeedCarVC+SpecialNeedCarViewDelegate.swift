@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
 extension SpecialNeedCarVC: SpecialNeedCarViewDelegate{
     
@@ -22,15 +23,28 @@ extension SpecialNeedCarVC: SpecialNeedCarViewDelegate{
     }
     
     func didCompleteWithSpecialCarResult(_ result: SpecialCarResult) {
-        self.specialCarData = result.data
-        self.specialCarsTableView.isHidden = false
-        self.confirmBtn.isHidden = false
-        self.loadTableView()
-        self.specialCarsTableView.reloadData()
+       // self.specialCarData = result.data
+        //self.specialCarsTableView.isHidden = false
+        for i in 0...(result.data.count)-1{
+            if let lat = result.data[i].lat,
+               let lng = result.data[i].lng{
+                let marker = GMSMarker()
+                marker.icon = Images.imageWithImage(image: UIImage(named: "car-marker")!, scaledToSize: CGSize(width: 40, height: 55))
+                marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+                marker.map = mapView
+                                    
+            }
+        }
         UIView.animate(withDuration: 0.5) {
-            self.tableViewHeight.constant = CGFloat((self.specialCarData?.count)! * 60 + 15)
+            self.confirmBtn.isHidden = false
             self.view.layoutIfNeeded()
         }
+       // self.loadTableView()
+      //  self.specialCarsTableView.reloadData()
+//        UIView.animate(withDuration: 0.5) {
+//            self.tableViewHeight.constant = CGFloat((self.specialCarData?.count)! * 60 + 15)
+//            self.view.layoutIfNeeded()
+//        }
 //        UIView.animate(withDuration: 0.5) {
 //            self.tripInfoStackHeight.constant = 100
 //            self.fromToStack.isHidden = false
@@ -69,8 +83,9 @@ extension SpecialNeedCarVC: SpecialNeedCarViewDelegate{
     }
     
     func didCompleteWithDistance(_ result: Distance) {
+        UserDefaults.init().setValue(result.cost, forKey: "trip_total")
         self.distanceLbl.text = "\(result.distance )" + " Km"
-        self.costLbl.text = "\(result.cost )" + " KWD"
+        self.costLbl.text = "\(result.cost )" + " KWT"
         UIView.animate(withDuration: 0.5) {
             self.fromToStack.isHidden = false
             self.view.layoutIfNeeded()
@@ -81,18 +96,23 @@ extension SpecialNeedCarVC: SpecialNeedCarViewDelegate{
         
     }
     
-    func didCompleteConfirmRide(_ driver: Drivers) {
-        self.driverName.text = " " + (driver.drivers.name ?? "")
-        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
-      //  self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.image))
-        self.carNumber.text = driver.drivers.myCar?.first?.carNumber
-        self.callDriver.onTap {
-            TripsServices.callDriver(phoneNumber: driver.drivers.phone ?? "")
+    func didCompleteConfirmRide() {
+        loadingView.isHidden = false
+        UIView.animate(withDuration: 0.2) {
+            self.loadingView.alpha = 1
         }
-        self.driverView.isHidden = false
-        UIView.animate(withDuration: 0.5) {
-            self.driverView.alpha = 1
-        }
+        self.lottieContainerView.addLottieLoader()
+//        self.driverName.text = " " + (driver.drivers.name ?? "")
+//        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
+//      //  self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.image))
+//        self.carNumber.text = driver.drivers.myCar?.first?.carNumber
+//        self.callDriver.onTap {
+//            TripsServices.callDriver(phoneNumber: driver.drivers.phone ?? "")
+//        }
+//        self.driverView.isHidden = false
+//        UIView.animate(withDuration: 0.5) {
+//            self.driverView.alpha = 1
+//        }
     }
     
     func didFailConfirmRide() {

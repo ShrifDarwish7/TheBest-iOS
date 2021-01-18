@@ -37,8 +37,8 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
         
     }
     
-    func didCompleteWithAddressFromGoogleMaps(_ address: String) {
-        self.fromLbl.text = address
+    func didCompleteWithAddressFromGoogleMaps(_ address: GoogleMapsGeocodeAddress) {
+        self.fromLbl.text = address.formattedAddress
     }
     
     func didFailWithErrorAddressFromGoogleMaps() {
@@ -55,12 +55,13 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
     }
     
     func didCompleteWithDistanceFromAPI(_ distance: Distance) {
+        UserDefaults.init().setValue(distance.cost, forKey: "trip_total")
         self.distance.text = "\(distance.distance)"
         self.tripFees.text = "\(distance.cost)"
         self.confirmBtn.tag = 1
         self.confirmBtn.setTitle("Confirm ride", for: .normal)
         UIView.animate(withDuration: 0.5) {
-            self.tripInfoStackHeight.constant = 150
+            self.tripInfoStackHeight.constant = 70
             self.view.layoutIfNeeded()
         }
     
@@ -71,11 +72,12 @@ extension TaxiOrderVC: TaxiOrderViewDelegate{
     }
 
     func didCompleteConfirmRide() {
-        lottie?.play()
+       // lottie?.play()
         loadingView.isHidden = false
         UIView.animate(withDuration: 0.2) {
             self.loadingView.alpha = 1
         }
+        self.lottieContainerView.addLottieLoader()
 //        self.driverName.text = driver.drivers.name
 //        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
 //        self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar?.first!.hasImage ?? ""))

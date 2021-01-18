@@ -21,8 +21,8 @@ extension FurnitureVC: TaxiOrderViewDelegate{
         SVProgressHUD.dismiss()
     }
     
-    func didCompleteWithAddressFromGoogleMaps(_ address: String) {
-        self.fromLbl.text = address
+    func didCompleteWithAddressFromGoogleMaps(_ address: GoogleMapsGeocodeAddress) {
+        self.fromLbl.text = address.formattedAddress
     }
     
     func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline) {

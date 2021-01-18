@@ -23,13 +23,38 @@ class CheckoutVC: UIViewController , UIGestureRecognizerDelegate{
     @IBOutlet weak var checkoutBtn: UIView!
     @IBOutlet weak var orderDoneHint: UIView!
     
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var area: UILabel!
+    @IBOutlet weak var street: UILabel!
+    @IBOutlet weak var landmark: UILabel!
+    @IBOutlet weak var building: UILabel!
+    @IBOutlet weak var floor: UILabel!
+    @IBOutlet weak var flat: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var notesTV: UITextView!
+    
+    
     var cartItems: [CartItemModel]?
     var checkoutPresenter: CheckoutPresenter?
     var checkoutParameters: [String: Any]?
     var receivedTotal: Double?
+    var userAddressStr: String?
+    var userAddress: UserAddress?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userAddressStr = UserDefaults.init().string(forKey: "user_address")
+        userAddress = try! JSONDecoder.init().decode(UserAddress.self, from: (userAddressStr?.data(using: .utf8))!)
+        
+        city.text = userAddress?.city
+        area.text = userAddress?.area
+        street.text = userAddress?.street
+        landmark.text = userAddress?.landmark
+        building.text = "Building: ".localized + userAddress!.building
+        floor.text = "Floor: ".localized + userAddress!.floor
+        flat.text = "Flat: ".localized + userAddress!.flat
+        phone.text = "Phone: ".localized + userAddress!.phone
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true

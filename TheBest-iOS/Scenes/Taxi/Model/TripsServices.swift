@@ -13,19 +13,48 @@ import GoogleMaps
 
 class TripsServices{
     
-    static func getAddressFromGoogleMapsAPI(location : String , completed: @escaping ( _ address: String? )->Void) {
+    static func getTripBy(_ id: String, _ completed: @escaping (TripByIDResponse?)->Void){
+        Alamofire.request(URL(string: GET_TRIP_BY_ID + id)!, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+            switch response.result{
+            case .success(let data):
+                do{
+                    
+                    let json = JSON(data)
+                    print(json)
+                    
+                    if json["status"].intValue == 200{
+                        let dataModel = try JSONDecoder().decode(TripByIDResponse.self, from: data)
+                        completed(dataModel)
+                    }else{
+                        completed(nil)
+                    }
+                    
+                }catch let error{
+                    print(error)
+                    
+                    completed(nil)
+                }
+            case .failure(let error):
+                print(error)
+                
+                completed(nil)
+            }
+        }
+    }
+    
+    static func getAddressFromGoogleMapsAPI(location : String , completed: @escaping ( _ address: GoogleMapsGeocodeAddress? )->Void) {
         
-        Alamofire.request("https://maps.google.com/maps/api/geocode/json?language=ar&latlng=\(location)&key=\(SharedData.goolgeApiKey)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+        Alamofire.request("https://maps.google.com/maps/api/geocode/json?language=\("lang".localized)&latlng=\(location)&key=\(SharedData.goolgeApiKey)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .responseData { response in
                 switch response.result {
                     
                 case .success(let data):
                     let json = JSON(data)
-                    //print(json)
-                    if json["results"].arrayValue.count > 1 {
-                        let results = json["results"].arrayValue[0]
-                        print("formatted_address",results["formatted_address"].stringValue)
-                        completed(results["formatted_address"].stringValue)
+                    print(json)
+                    if let result = JSON(data)["results"].array,
+                        result.count > 0{
+                        let dataModel = GoogleMapsGeocodeAddress(JSON(data)["results"])
+                        completed(dataModel)
                     }else{
                         completed(nil)
                     }
@@ -118,6 +147,9 @@ class TripsServices{
     
     static func confirmRide(completed: @escaping (Bool)->Void){
         
+        print(UserDefaults.init().double(forKey: "trip_total"))
+        
+        
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
             multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "lat")
@@ -128,6 +160,7 @@ class TripsServices{
             multipartFormData.append("\(SharedData.userDestinationLng ?? 0)".data(using: .utf8)!, withName: "to_lng")
             multipartFormData.append("\(SharedData.userFromAddress ?? "")".data(using: .utf8)!, withName: "address_from")
             multipartFormData.append("\(SharedData.userToAddress ?? "")".data(using: .utf8)!, withName: "address_to")
+            multipartFormData.append("\(UserDefaults.init().double(forKey: "trip_total") > 9999.0 ? 9999.0 : UserDefaults.init().double(forKey: "trip_total"))".data(using: .utf8)!, withName: "total")
             
         }, to: URL(string: CONFIRM_TRIP_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
             
@@ -142,6 +175,9 @@ class TripsServices{
                     case .success(let data):
                         
                         print("confirmRide", try! JSON(data: data))
+                        
+                        
+                        UserDefaults.init().setValue(1, forKey: "ride_type")
                         completed(true)
 //                        do{
 //

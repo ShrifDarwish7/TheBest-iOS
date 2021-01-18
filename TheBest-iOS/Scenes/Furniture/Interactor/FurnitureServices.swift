@@ -78,15 +78,15 @@ class FurnitureServices{
         
     }
     
-    static func getDistance(driverId: String, completed: @escaping (Distance?)->Void){
+    static func getDistance(_ parameters: [String:Any], completed: @escaping (Distance?)->Void){
         
-        let parameters = [
-            "latitudeFrom": SharedData.userLat ?? 0.0,
-            "longitudeFrom": SharedData.userLng ?? 0.0,
-            "latitudeTo": SharedData.userDestinationLat ?? 0.0,
-            "longitudeTo": SharedData.userDestinationLng ?? 0.0,
-            "driver_id": driverId
-        ] as [String: Any]
+//        let parameters = [
+//            "latitudeFrom": SharedData.userLat ?? 0.0,
+//            "longitudeFrom": SharedData.userLng ?? 0.0,
+//            "latitudeTo": SharedData.userDestinationLat ?? 0.0,
+//            "longitudeTo": SharedData.userDestinationLng ?? 0.0,
+//            "driver_id": driverId
+//        ] as [String: Any]
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
@@ -131,17 +131,23 @@ class FurnitureServices{
         
     }
     
-    static func confirmRide(completed: @escaping (Drivers?)->Void){
+    static func confirmRide(_ formData: [String:String], completed: @escaping (Bool)->Void){
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
-            multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "lat")
-            multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "lng")
+//            multipartFormData.append("\(SharedData.userLat ?? 0)".data(using: .utf8)!, withName: "from_lat")
+//            multipartFormData.append("\(SharedData.userLng ?? 0)".data(using: .utf8)!, withName: "from_lng")
+//            multipartFormData.append("\(SharedData.userDestinationLat ?? 0)".data(using: .utf8)!, withName: "to_lat")
+//            multipartFormData.append("\(SharedData.userDestinationLng ?? 0)".data(using: .utf8)!, withName: "to_lng")
+            
+            for (key,value) in formData{
+                multipartFormData.append(value.data(using: .utf8)!, withName: key)
+            }
             
         }, to: URL(string: TRUCK_CONFIRM_RIDE_END_POINT)!, method: .post, headers: SharedData.headers) { (encodingResult) in
             
             switch encodingResult{
-                
+            
             case .success(let uploadRequest,_,_):
                 
                 uploadRequest.responseData { (response) in
@@ -149,30 +155,51 @@ class FurnitureServices{
                     switch response.result{
                         
                     case .success(let data):
-                        
-                        print("confirmRide", try! JSON(data: data))
-                        do{
-                            
-                            let dataModel = try JSONDecoder.init().decode(Drivers.self, from: data)
-                            completed(dataModel)
-                            
-                        }catch let error{
-                            print("confirmRideParsErr",error)
-                            completed(nil)
-                        }
+                        UserDefaults.init().setValue(16, forKey: "ride_type")
+                        completed(true)
+//                        print("confirmRide", try! JSON(data: data))
+//                        do{
+//
+//                            let dataModel = try JSONDecoder.init().decode(Drivers.self, from: data)
+//                            completed(dataModel)
+//
+//                        }catch let error{
+//                            print("confirmRideParsErr",error)
+//                            completed(nil)
+//                        }
                         
                     case .failure(_):
-                        completed(nil)
+                        completed(false)
                     }
                     
                 }
                 
             case .failure(_):
-                completed(nil)
+                completed(false)
             }
             
         }
         
+    }
+    
+    static func cancelRide(completed: @escaping (Bool)->Void ){
+                
+        Alamofire.request(URL(string: FURNITURE_CANCEL_RIDE)!, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+            
+            switch response.result{
+                
+            case .success(let data):
+                
+                let json = JSON(data)
+                print(json)
+                completed(true)
+                
+            case .failure(_):
+                completed(false)
+                
+            }
+            
+        }
     }
     
 }

@@ -18,6 +18,7 @@ extension FurnitureVC: GMSAutocompleteViewControllerDelegate{
             
             SharedData.userLat = place.coordinate.latitude
             SharedData.userLng = place.coordinate.longitude
+            SharedData.userFromAddress = place.formattedAddress
             self.mapView.clear()
             self.putMyMarker()
             self.fromLbl.text = place.formattedAddress ?? ""
@@ -35,6 +36,7 @@ extension FurnitureVC: GMSAutocompleteViewControllerDelegate{
             
             SharedData.userDestinationLat = place.coordinate.latitude
             SharedData.userDestinationLng = place.coordinate.longitude
+            SharedData.userToAddress = place.formattedAddress 
                         
 //            self.confirmBtn.setTitle("Confirm ride", for: .normal)
 //            self.confirmBtn.backgroundColor = UIColor(named: "SpecialNeedCarColor")

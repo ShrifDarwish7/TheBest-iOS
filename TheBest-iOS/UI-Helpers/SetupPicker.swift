@@ -20,16 +20,21 @@ extension UIViewController {
         toolbar.setItems([done], animated: true)
         toolbar.isUserInteractionEnabled = true
         textField.inputAccessoryView = toolbar
-        
-        let icon = UIImageView(frame : CGRect(x: 5, y: 5, width: 30, height: 15))
-        icon.image = UIImage(named: "drop-down-arrow")
-        icon.contentMode = .scaleAspectFit
-        icon.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        textField.rightViewMode = .always
-        textField.rightView = icon
+        textField.addArrowDownIcon()
     }
     
     @objc func dismissPick(){
         view.endEditing(true)
+    }
+}
+
+extension UITextField{
+    func addArrowDownIcon(){
+        let icon = UIImageView(frame : CGRect(x: 5, y: 5, width: 30, height: 15))
+        icon.image = UIImage(named: "drop-down-arrow")
+        icon.contentMode = .scaleAspectFit
+        icon.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        self.rightViewMode = .always
+        self.rightView = icon
     }
 }

@@ -16,19 +16,21 @@ struct Places: Codable {
 // MARK: - Item
 struct Item: Codable {
     let id: Int
-    let name: String
+    let name: String?
     let hasImage: String?
-    let deliverPrice: Int
-    let itemDescription, address: String
-    let country, government, district: String
-    let categoryID, typeID: Int
-    let createdAt, updatedAt: String
+    let deliverPrice: Int?
+    let itemDescription, address, addressEn, itemDescriptionEn: String?
+    let country, government, district: String?
+    let categoryID, typeID: Int?
+    let createdAt, updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name
         case hasImage = "has_image"
         case itemDescription = "description"
         case address
+        case itemDescriptionEn = "description_en"
+        case addressEn = "address_en"
         case country, government, district
         case categoryID = "category_id"
         case typeID = "type_id"

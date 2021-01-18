@@ -21,8 +21,8 @@ extension SpecialNeedCarVC: TaxiOrderViewDelegate{
         SVProgressHUD.dismiss()
     }
     
-    func didCompleteWithAddressFromGoogleMaps(_ address: String) {
-        self.fromLbl.text = address
+    func didCompleteWithAddressFromGoogleMaps(_ address: GoogleMapsGeocodeAddress) {
+        self.fromLbl.text = address.formattedAddress
     }
     
     func didCompleteWithDirectionFromGoogleMaps(_ polyline: GMSPolyline) {
@@ -34,6 +34,28 @@ extension SpecialNeedCarVC: TaxiOrderViewDelegate{
     
     func didFailWithErrorAddressFromGoogleMaps() {
     }
+    
+    func didAcceptRideFromDriver(_ driver: Driver?) {
+        SVProgressHUD.dismiss()
+        self.driverName.text = driver?.name
+        self.driverImage.sd_setImage(with: URL(string: driver?.hasImage ?? ""))
+        //self.carImage.sd_setImage(with: URL(string: driver?.myCar?.first!.hasImage ?? ""))
+        self.carNumber.text = driver?.myCar?.first?.carNumber
+        self.callDriver.addTapGesture { (_) in
+            TripsServices.callDriver(phoneNumber: driver?.phone ?? "")
+        }
+        self.driverView.isHidden = false
+        UIView.animate(withDuration: 0.2, animations: {
+            self.loadingView.alpha = 0
+            self.driverView.alpha = 1
+        }) { (_) in
+            self.loadingView.isHidden = true
+        }
+        
+        showAlert(title: "", message: "a7777aaaa")
+        
+    }
+    
     
     
 }

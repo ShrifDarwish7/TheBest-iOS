@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import SVProgressHUD
 
 class HomeVC: UIViewController {
 
@@ -47,7 +48,7 @@ class HomeVC: UIViewController {
         appCategories.append(AppCategory(icon: UIImage(named: "category_icon6"), name: "Monthly  Account".localized))
         appCategories.append(AppCategory(icon: UIImage(named: "category_icon7"), name: "Road rescue services".localized))
         appCategories.append(AppCategory(icon: UIImage(named: "category_icon8"), name: "Furniture transporting".localized))
-        appCategories.append(AppCategory(icon: UIImage(named: "category_icon5"), name: "Vegetable".localized))
+        appCategories.append(AppCategory(icon: UIImage(named: "category_icon5"), name: "Shera".localized))
         
         loadUI()
         loadCategoriesCollection()
@@ -87,6 +88,33 @@ class HomeVC: UIViewController {
                 self.subCategories.isHidden = true
             }
             
+        }
+        
+        SVProgressHUD.show()
+        AuthServices.getMyProfile { (result) in
+            SVProgressHUD.dismiss()
+            if let _ = result,
+               let trip = result?.currnetTrip
+               {
+                print("success current trip")
+                SharedData.currentTrip = trip
+                switch trip.rideType {
+                case 1:
+                    Router.toTaxiOrder(sender: self)
+                case 4:
+                    Router.toSpecialNeedCar(sender: self)
+                case 16:
+                    Router.toFurniture(sender: self)
+                case 21:
+                    Router.toCarRent(sender: self)
+                case 15:
+                    Router.toRoadService(sender: self, id: UserDefaults.init().integer(forKey: "road_services_selected_ids"))
+                case 17:
+                    Router.toSubscription(sender: self)
+                default:
+                    break
+                }
+            }
         }
         
     }
@@ -165,6 +193,14 @@ class HomeVC: UIViewController {
             case 4:
                 
                 self.homeViwPresenter?.getAllMarketsCategories()
+                
+            case 5:
+                
+                Router.toSubscription(sender: self)
+                
+            case 6:
+                
+                self.homeViwPresenter?.getRoadServicesCategories()
                 
             case 7:
                 
@@ -245,6 +281,11 @@ class HomeVC: UIViewController {
                     self.askForLocationAlert()
                 }
                 
+            case .roadServices:
+                
+                UserDefaults.init().setValue(self.categories?[index.row].id, forKey: "road_services_selected_id")
+                Router.toRoadService(sender: self, id: (self.categories?[index.row].id)!)
+                
             default:
                 break
                 
@@ -261,6 +302,7 @@ enum Next{
     case restaurants
     case markets
     case vegetable
+    case roadServices
     case none
     
 }

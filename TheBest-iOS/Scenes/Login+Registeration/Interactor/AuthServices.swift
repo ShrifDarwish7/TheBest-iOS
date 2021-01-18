@@ -222,4 +222,24 @@ class AuthServices{
         }
     }
     
+    static func getMyProfile(completed: @escaping (MyProfileResponse?)->Void){
+        Alamofire.request(MY_PROFILE, method: .get, parameters: nil, headers: SharedData.headers).responseData { (res) in
+            switch res.result{
+            case .success(let data):
+                do{
+                    print(JSON(data))
+                    
+                    let dataModel = try JSONDecoder.init().decode(MyProfileResponse.self, from: data)
+                    self.instance.user = dataModel.myProfile
+                    completed(dataModel)
+                }catch let err{
+                    print(err)
+                    completed(nil)
+                }
+            case .failure(_):
+                completed(nil)
+            }
+        }
+    }
+    
 }

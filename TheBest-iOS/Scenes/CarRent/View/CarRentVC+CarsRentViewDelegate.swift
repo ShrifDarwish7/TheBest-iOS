@@ -8,6 +8,7 @@
 
 import Foundation
 import SVProgressHUD
+import GoogleMaps
 
 extension CarRentVC: CarsRentViewDelegate{
     func ShowProgress() {
@@ -33,16 +34,31 @@ extension CarRentVC: CarsRentViewDelegate{
     
     func didCompleteWithNearesrCars(_ result: NearestCars) {
         
-        self.nearestCars = result.data
-        self.nearestTableView.isHidden = false
-        self.confirmBtn.tag = 1
-        self.confirmBtn.setTitle("Get distance", for: .normal)
-        self.loadTableView()
-        self.nearestTableView.reloadData()
+        for i in 0...(result.data.count)-1{
+            if let lat = result.data[i].lat,
+               let lng = result.data[i].lng{
+                let marker = GMSMarker()
+                marker.icon = Images.imageWithImage(image: UIImage(named: "car-marker")!, scaledToSize: CGSize(width: 40, height: 55))
+                marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+                marker.map = mapView
+                                    
+            }
+        }
         UIView.animate(withDuration: 0.5) {
-            self.nearestTableViewHeight.constant = CGFloat((self.nearestCars?.count)! * 60 + 60)
+            self.confirmBtn.isHidden = false
             self.view.layoutIfNeeded()
         }
+        
+       // self.nearestCars = result.data
+        //self.nearestTableView.isHidden = false
+        self.confirmBtn.tag = 1
+        self.confirmBtn.setTitle("Get distance", for: .normal)
+      //  self.loadTableView()
+        //self.nearestTableView.reloadData()
+//        UIView.animate(withDuration: 0.5) {
+//            self.nearestTableViewHeight.constant = CGFloat((self.nearestCars?.count)! * 60 + 60)
+//            self.view.layoutIfNeeded()
+//        }
         
     }
     
@@ -52,6 +68,7 @@ extension CarRentVC: CarsRentViewDelegate{
     
     func didCompleteWithDistance(_ result: Distance) {
         self.startRide.tag = 1
+        UserDefaults.init().setValue(result.cost, forKey: "trip_total")
         self.startRide.setTitle("Confirm ride", for: .normal)
         self.distanceLbl.text = "\(result.distance )" + " Km"
         self.costLbl.text = "\(result.cost )" + " KWD"
@@ -66,18 +83,12 @@ extension CarRentVC: CarsRentViewDelegate{
         
     }
     
-    func didCompleteConfirmRide(_ driver: Drivers) {
-        self.driverName.text = " " + (driver.drivers.name ?? "")
-        self.driverImage.sd_setImage(with: URL(string: driver.drivers.hasImage ?? ""))
-        //  self.carImage.sd_setImage(with: URL(string: driver.drivers.myCar.first!.image))
-        self.carNumber.text = driver.drivers.myCar?.first?.carNumber
-          self.callDriver.onTap {
-            TripsServices.callDriver(phoneNumber: driver.drivers.phone ?? "")
-          }
-          self.driverView.isHidden = false
-          UIView.animate(withDuration: 0.5) {
-              self.driverView.alpha = 1
-          }
+    func didCompleteConfirmRide() {
+        loadingView.isHidden = false
+        UIView.animate(withDuration: 0.2) {
+            self.loadingView.alpha = 1
+        }
+        self.lottieContainerView.addLottieLoader()
     }
     
     func didFailConfirmRide() {

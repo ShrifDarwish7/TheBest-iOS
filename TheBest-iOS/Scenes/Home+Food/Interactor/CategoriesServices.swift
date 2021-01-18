@@ -127,4 +127,101 @@ class CategoriesServices{
         
     }
     
+    static func getSheraTypes(completed: @escaping ([MainCategory]?)->Void){
+     
+        Alamofire.request(URL(string: SHERA_TYPES)!, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+
+            switch response.result{
+
+            case .success(let data):
+
+                print("types",try! JSON(data: data))
+
+                do {
+                    let dataModel = try JSONDecoder().decode([MainCategory].self, from: JSON(data: data)["Shabratypes"].rawData())
+                    print("markettypesModel",dataModel)
+                    completed(dataModel)
+                } catch let error {
+                    print("parseErr",error)
+                    completed(nil)
+                }
+
+            case .failure(_):
+
+                completed(nil)
+
+            }
+
+        }
+        
+    }
+    
+    static func getRoadServicesCategories(completed: @escaping (RoadServicesCategoriesResponse?)->Void){
+            
+        Alamofire.request(URL(string: ROAD_SERVICES_CATEGORIES_END_POINT)!, method: .get, parameters: nil, headers: SharedData
+            .headers).responseData { (response) in
+
+            switch response.result{
+
+            case .success(let data):
+
+                do {
+                    let dataModel = try JSONDecoder().decode(RoadServicesCategoriesResponse.self, from: data)
+                    print("mainCATs",dataModel)
+                    completed(dataModel)
+                } catch let error {
+                    print("parseErr",error)
+                    completed(nil)
+                }
+
+            case .failure(_):
+
+                completed(nil)
+
+            }
+
+        }
+        
+    }
+    
+    static func getCities(completed: @escaping ([District]?)->Void){
+        Alamofire.request(CITIES_API, method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+            switch response.result{
+            case .success(let data):
+                do{
+                    let dataModel = try JSONDecoder.init().decode([District].self, from: JSON(data)["Cities"].rawData())
+                    completed(dataModel)
+                }catch let err{
+                    print(err)
+                    completed(nil)
+                }
+            default:
+                completed(nil)
+            }
+        }
+    }
+    
+    static func getDistricts(id: Int, completed: @escaping ([District]?)->Void){
+        Alamofire.request(DISTRICTS_API + "\(id)", method: .get, parameters: nil, headers: SharedData.headers).responseData { (response) in
+            switch response.result{
+            case .success(let data):
+                print("her dists",JSON(data))
+                do{
+                    let dataModel = try JSONDecoder.init().decode([District].self, from: JSON(data)["Districts"].rawData())
+                    completed(dataModel)
+                }catch let err{
+                    print(err)
+                    completed(nil)
+                }
+            default:
+                completed(nil)
+            }
+        }
+    }
+    
+}
+
+struct District: Codable {
+    let id: Int
+    let name: String
 }

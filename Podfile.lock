@@ -107,6 +107,7 @@ PODS:
   - SwiftyGif (5.3.0)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.1)
+  - UITextField-Navigation (4.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -127,6 +128,7 @@ DEPENDENCIES:
   - SwiftyGif
   - SwiftyJSON
   - Toast-Swift
+  - UITextField-Navigation
 
 SPEC REPOS:
   trunk:
@@ -164,6 +166,7 @@ SPEC REPOS:
     - SwiftyGif
     - SwiftyJSON
     - Toast-Swift
+    - UITextField-Navigation
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -200,7 +203,8 @@ SPEC CHECKSUMS:
   SwiftyGif: e466e86c660d343357ab944a819a101c4127cb40
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  UITextField-Navigation: 25c2614b41096ade830fe015961dd2dbc4e108cb
 
-PODFILE CHECKSUM: bbcd0347b1536e354ae8bacea6ce5dfe2c73ff1c
+PODFILE CHECKSUM: bed189413e20ff7ea886aa94f135937d1ce6b18d
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0

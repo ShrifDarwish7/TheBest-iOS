@@ -17,7 +17,7 @@ protocol FurnitureViewDelegate {
     func didFailFethTrucksResult()
     func didCompleteWithDistance(_ result: Distance)
     func didFailFetchDistance()
-    func didCompleteConfirmRide(_ result: Drivers)
+    func didCompleteConfirmRide()
     func didFailConfirmRide()
 }
 
@@ -53,9 +53,9 @@ class FurnitureVCPresenter{
         }
     }
     
-    func getDistance(driverId: String){
+    func getDistance(_ parameters: [String:Any]){
         self.furnitureViewDelegate?.ShowProgress()
-        FurnitureServices.getDistance(driverId: driverId) { (distance) in
+        FurnitureServices.getDistance(parameters) { (distance) in
             self.furnitureViewDelegate?.dismissProgress()
             if let _ = distance{
                 self.furnitureViewDelegate?.didCompleteWithDistance(distance!)
@@ -65,12 +65,12 @@ class FurnitureVCPresenter{
         }
     }
     
-    func confirmRide(){
+    func confirmRide(formData: [String:String]){
         self.furnitureViewDelegate?.ShowProgress()
-        FurnitureServices.confirmRide { (driver) in
+        FurnitureServices.confirmRide(formData) { (done) in
             self.furnitureViewDelegate?.dismissProgress()
-            if let _ = driver{
-                self.furnitureViewDelegate?.didCompleteConfirmRide(driver!)
+            if done{
+                self.furnitureViewDelegate?.didCompleteConfirmRide()
             }else{
                 self.furnitureViewDelegate?.didFailConfirmRide()
             }

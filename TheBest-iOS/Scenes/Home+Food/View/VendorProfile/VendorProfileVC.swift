@@ -21,11 +21,14 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var emptyProductLabel: UILabel!
     @IBOutlet weak var menuContainerViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var menuCategories: MenuCategories?
     var idReceived: Int?
     var vendorViewPresenter: VendorProfilePresenter?
     var menuItems: MenuIems?
+    var tempMenuItems = [RestaurantMenuItem]()
+    var searchResultMenuItems = [RestaurantMenuItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +52,7 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
         filterBtnView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         filterBtnView.layer.borderWidth = 1
         
-        menuContainerViewHeight.constant = self.view.frame.height - UIApplication.shared.statusBarFrame.height - 280
+        menuContainerViewHeight.constant = self.view.frame.height - UIApplication.shared.statusBarFrame.height - 320
     }
     
     func loadMenuCollection(){
@@ -156,6 +159,7 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
                 self.menuContainerViewHeight.constant = newViewHeight
                 scroller.contentOffset.y = 0
             }
+            self.view.endEditing(true)
         }.didScrollToTop { (_) in
             self.menuContainerViewHeight.constant = self.view.frame.height - UIApplication.shared.statusBarFrame.height - 280
             UIView.animate(withDuration: 0.2) {
@@ -168,4 +172,28 @@ class VendorProfileVC: UIViewController , UIGestureRecognizerDelegate{
     }
     
     
+}
+
+extension VendorProfileVC: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("textDidChange")
+        if !searchText.isEmpty{
+            guard ((self.menuItems?.restaurantMenu) != nil) else {
+                return
+            }
+            //self.tempMenuItems = self.menuItems!.restaurantMenu
+            
+            
+            self.searchResultMenuItems = (self.menuItems?.restaurantMenu.filter({return ($0.name?.contains(searchBar.text!))! || ($0.nameEn?.contains(searchBar.text!))!}))!
+            self.menuItems?.restaurantMenu = self.searchResultMenuItems
+            self.loadMenuTable()
+            
+            
+        }else{
+            self.menuItems!.restaurantMenu = self.tempMenuItems
+            self.loadMenuTable()
+            self.view.endEditing(true)
+        }
+    }
+   
 }

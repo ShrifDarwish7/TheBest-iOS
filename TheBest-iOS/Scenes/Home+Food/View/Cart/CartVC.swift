@@ -53,7 +53,9 @@ class CartVC: UIViewController , UIGestureRecognizerDelegate{
         deliveryFees.text = UserDefaults.init().string(forKey: "cart_associated_vendor_delivery_fees")
         
         checkOutView.addTapGesture { (_) in
-            Router.toCheckout(sender: self, total: self.total)
+           // Router.toCheckout(sender: self, total: self.total)
+            SharedData.total = self.total
+            Router.toMap(sender: self)
         }
         
         

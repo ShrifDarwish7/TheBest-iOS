@@ -13,6 +13,7 @@ import SwiftyJSON
 class PlaceOrder{
     
     static func place(parameters: [String: Any], completed: @escaping (Bool)->Void){
+        print("PlaceOrder", parameters)
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             

@@ -150,7 +150,7 @@ class StoresVC: UIViewController , UIGestureRecognizerDelegate{
             
             let cell = self.storeTableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: index) as! PlacesTableViewCell
             cell.placeImage.sd_setImage(with: URL(string: (self.places?.items[index.row].hasImage) ?? ""))
-            cell.deliveryTime.text = "1 Hour"
+            cell.deliveryTime.text = self.places?.items[index.row].address ?? ""
             cell.placeName.text = self.places?.items[index.row].name
             cell.placeImage.layer.cornerRadius = cell.placeImage.frame.height/2
             cell.container.layer.cornerRadius = 15 

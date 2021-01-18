@@ -44,12 +44,14 @@ extension VendorProfileVC: VendorViewDelegate{
     func didSuccessfullyFetchMenuItems(_ result: MenuIems) {
         
         self.menuItems = result
+        self.tempMenuItems = self.menuItems!.restaurantMenu
         if (self.menuItems?.restaurantMenu.isEmpty)!{
             self.emptyProductLabel.isHidden = false
             self.menuTableView.isHidden = true
         }else{
             self.emptyProductLabel.isHidden = true
             self.menuTableView.isHidden = false
+            self.searchBar.isUserInteractionEnabled = true
             self.loadMenuTable()
         }
          

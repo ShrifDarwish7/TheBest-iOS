@@ -128,11 +128,13 @@ class Router{
         sender.navigationController?.pushViewController(vc, animated: true)
     }
     
-    static func toFilterMarkets(sender: UIViewController){
+    static func toFilterMarkets(sender: UIViewController, type: String, cat: Int){
         
         let storyboard = UIStoryboard(name: "Markets", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "FilterVC") as! FilterVC
         vc.modalPresentationStyle = .fullScreen
+        vc.type = type
+        vc.cat = cat
         sender.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -223,4 +225,59 @@ class Router{
         
     }
     
+    static func toMap(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+        vc.modalPresentationStyle = .fullScreen
+        guard !(sender.navigationController?.topViewController?.isKind(of: MapVC.self))! else { return }
+        sender.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    static func toCompleteAddress(sender: UIViewController, googleAddress: GoogleMapsGeocodeAddress){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CompleteAddressVC") as! CompleteAddressVC
+        vc.modalPresentationStyle = .fullScreen
+        vc.receivedGoogleAddress = googleAddress
+        guard !(sender.navigationController?.topViewController?.isKind(of: CompleteAddressVC.self))! else { return }
+        sender.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    static func toRoadService(sender: UIViewController, id: Int){
+        
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RoadServicesVC") as! RoadServicesVC
+        vc.receivedId = id
+        guard !(sender.navigationController?.topViewController?.isKind(of: RoadServicesVC.self))! else { return }
+        sender.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    static func toSubscription(sender: UIViewController){
+        
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SubscriptVC") as! SubscriptVC
+        guard !(sender.navigationController?.topViewController?.isKind(of: SubscriptVC.self))! else { return }
+        sender.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    static func toTripInfo(_ sender: UIViewController, trip:
+    Trip){
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TripInfoVC") as! TripInfoVC
+        vc.trip = trip
+        sender.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    static func toCancelation(_ sender: UIViewController){
+        let storyboard = UIStoryboard(name: "Taxi", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CancelationVC") as! CancelationVC
+        vc.modalPresentationStyle = .formSheet
+       // vc.tripID = tripId
+        sender.present(vc, animated: true, completion: nil)
+    }
 }

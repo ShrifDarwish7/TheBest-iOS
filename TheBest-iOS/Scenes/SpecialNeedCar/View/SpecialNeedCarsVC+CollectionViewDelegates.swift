@@ -55,9 +55,10 @@ extension SpecialNeedCarVC: UICollectionViewDataSource, UICollectionViewDelegate
             self.carsTypes![i].selected = false
         }
         self.carsTypes![indexPath.row].selected = true
+        self.selectedCarTypeId = self.carsTypes![indexPath.row].id
+        self.selectedCarType = self.carsTypes![indexPath.row].name
         self.carsTypesCollectionView.reloadData()
         self.carsTypesCollectionView.scrollToItem(at: IndexPath(row: indexPath.row, section: 0), at: .centeredHorizontally, animated: true  )
-        self.selectedDriverID = nil
         self.specialNeedCarsPresenter?.getSpecialCarWith(id: "\(self.carsTypes![indexPath.row].id)", eq: "\(self.selectedEquipmentID ?? 0)")
     
     }

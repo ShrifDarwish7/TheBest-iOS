@@ -40,18 +40,32 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
     @IBOutlet weak var tripInfoStackHeight: NSLayoutConstraint!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var lottieContainerView: UIView!
+    @IBOutlet weak var whatsappBtn: UIButton!
     
-     let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
     var taxiOrderPresenter: TaxiOrderPresenter?
     var marker = GMSMarker()
     var camera: GMSCameraPosition?
     var fromAutoCompleteController: GMSAutocompleteViewController?
     var toAutoCompleteController: GMSAutocompleteViewController?
-    var lottie: AnimationView?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let trip = SharedData.currentTrip{
+            switch trip.status {
+            case SharedData.arrivedStatus, SharedData.inProgressStatus:
+                SVProgressHUD.show()
+                TripsServices.getDriverBy(id: trip.driverID!) { (response) in
+                    SVProgressHUD.dismiss()
+                    if let _ = response?.driver{
+                        NotificationCenter.default.post(name: NSNotification.Name("ReceivedConfirmationFromDriver"), object: nil, userInfo: ["driver": response!.driver as Driver])
+                    }
+                }
+            default:
+                break
+            }
+        }
 
         NotificationCenter.default.addObserver(self, selector: #selector(receivedDriverId(sender:)), name: NSNotification.Name("ReceivedConfirmationFromDriver"), object: nil)
         
@@ -61,7 +75,7 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
         UINavigationBar.appearance().barTintColor = UIColor(named: "TaxiGoldColor")
         UINavigationBar.appearance().tintColor = UIColor.white
         
-        mapView.setStyle()
+//        mapView.setStyle()
         
         taxiOrderPresenter = TaxiOrderPresenter(taxiOrderViewDelegate: self)
         taxiOrderPresenter?.getNearByTaxies()
@@ -85,17 +99,8 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
         driverImage.layer.cornerRadius = 35
         cancelTripBtn.layer.cornerRadius = 10
         
-        lottie = AnimationView(name: "wait_driver_acceptance")
-        lottie!.loopMode = .loop
-        let width = self.lottieContainerView.frame.width
-        let height = self.lottieContainerView.frame.height
-        lottie!.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        lottie!.contentMode = .scaleToFill
-        lottie?.sizeToFit()
-        lottieContainerView.addSubview(lottie!)
-        lottie?.play()
-        self.lottieContainerView.isHidden = false
-                
+        //lottieContainerView.addLottieLoader()
+        
         marker.isDraggable = true
                 
         mapView.delegate = self
@@ -115,25 +120,62 @@ class TaxiOrderVC: UIViewController, CLLocationManagerDelegate , UIGestureRecogn
             self.toAutoCompleteController?.modalPresentationStyle = .fullScreen
             self.present(self.toAutoCompleteController!, animated: true, completion: nil)
         }
-        
-        cancelTripBtn.onTap {
-            self.taxiOrderPresenter?.cancelRide()
-        }
+//
+//        cancelTripBtn.onTap {
+//            self.taxiOrderPresenter?.cancelRide()
+//        }
         
         tripInfoStackHeight.constant = 0
         
-        if let _ = SharedData.receivedDriverId{
-            SVProgressHUD.show()
-            taxiOrderPresenter?.getDriverBy(id: Int(SharedData.receivedDriverId!)!)
-        }
+//        if let _ = SharedData.receivedDriverId{
+//            SVProgressHUD.show()
+//            taxiOrderPresenter?.getDriverBy(id: Int(SharedData.receivedDriverId!)!)
+//            SharedData.receivedDriverId = nil
+//        }
         
     }
     
+    @IBAction func cancelRide(_ sender: Any) {
+        Router.toCancelation(self)
+    }
+    
+    
     @objc func receivedDriverId(sender: NSNotification){
         
-        guard let _ = sender.userInfo else { return }
-        taxiOrderPresenter?.getDriverBy(id: Int(sender.userInfo!["driver_id"] as! String)!)
+        guard let userInfo = sender.userInfo else { return }
+//        taxiOrderPresenter?.getDriverBy(id: Int(sender.userInfo!["driver_id"] as! String)!)
+//        SharedData.receivedDriverId = nil
+        let driver = userInfo["driver"] as! Driver
+        loadDriver(driver: driver)
         
+    }
+    
+    func loadDriver(driver: Driver){
+        self.driverName.text = driver.name
+        if let image = driver.hasImage,
+           !image.contains("no-image"),
+           !image.isEmpty
+           {
+            self.driverImage.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "driver_temp"))
+        }else{
+            self.driverImage.image = UIImage(named: "driver_temp")
+        }
+        
+        self.carImage.sd_setImage(with: URL(string: driver.myCar?.first!.hasImage ?? ""))
+        self.carNumber.text = driver.myCar?.first?.carNumber
+        self.callDriver.addTapGesture { (_) in
+            TripsServices.callDriver(phoneNumber: driver.phone ?? "")
+        }
+        whatsappBtn.onTap {
+            SharedData.forwardToWhatsapp(driver.phone?.replacingOccurrences(of: " ", with: "") ?? "")
+        }
+        self.driverView.isHidden = false
+        UIView.animate(withDuration: 0.2, animations: {
+            self.loadingView.alpha = 0
+            self.driverView.alpha = 1
+        }) { (_) in
+            self.loadingView.isHidden = true
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

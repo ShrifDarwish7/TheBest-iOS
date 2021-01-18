@@ -24,26 +24,27 @@ extension CheckoutVC: CheckoutViewDelegate{
         self.cartItems = result
         self.itemsCount.text = "\(result.count)"
         
-        var addressToSend: String?
+//        var addressToSend: String?
         var totalToSend = 0.0
         
-        if let _ = SharedData.userLat, let _ = SharedData.userLng{
-            SVProgressHUD.show()
-            TripsServices.getAddressFromGoogleMapsAPI(location: "\(SharedData.userLat ?? 0),\(SharedData.userLng ?? 0)") { (address) in
-                SVProgressHUD.dismiss()
-                if let _ = address{
-                    addressToSend = address!
-                }
-            }
-        }
+//        if let _ = SharedData.userLat, let _ = SharedData.userLng{
+//            SVProgressHUD.show()
+//            TripsServices.getAddressFromGoogleMapsAPI(location: "\(SharedData.userLat ?? 0),\(SharedData.userLng ?? 0)") { (address) in
+//                SVProgressHUD.dismiss()
+//                if let _ = address{
+//                    addressToSend = address?.formattedAddress
+//                }
+//            }
+//        }
+        
         
         var parameters = [
 
-            "lat": "\(SharedData.userLat ?? 0.0)" ,
-            "lng": "\(SharedData.userLng ?? 0.0)",
-            "address": addressToSend ?? "",
+            "lat": userAddress!.coordinates.split(separator: ",")[0] ,
+            "lng": userAddress!.coordinates.split(separator: ",")[1],
+            "address": String(data: try! JSONEncoder.init().encode(userAddress!), encoding: .utf8)!,
             "phone": AuthServices.instance.user.phone ?? "" ,
-            "comment": "any comment for the order",
+            "comment": self.notesTV.text!,
          //   "count": "\(result.count)",
             "cat_id": UserDefaults.init().string(forKey: "food_markets_flag")!
 

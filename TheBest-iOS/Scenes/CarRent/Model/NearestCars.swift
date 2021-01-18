@@ -16,8 +16,8 @@ struct NearestCars: Codable {
 // MARK: - Datum
 struct NearestCar: Codable {
     let id: Int
-    let driverImage, driverName: String
-    let lat, lng, distance: Double
+    let driverImage, driverName: String?
+    let lat, lng, distance: Double?
     let cost: Int
     var selected: Bool?
     

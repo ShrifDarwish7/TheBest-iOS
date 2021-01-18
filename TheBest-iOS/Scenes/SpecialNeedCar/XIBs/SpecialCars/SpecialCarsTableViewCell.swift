@@ -30,7 +30,7 @@ class SpecialCarsTableViewCell: UITableViewCell {
         }else{
             container.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
-        carImageView.sd_setImage(with: URL(string: item.driverImage))
+        carImageView.sd_setImage(with: URL(string: item.driverImage ?? ""))
         distance.text = "\(item.distance)" + " Km "
         cost.text = "\(item.cost)" + " KWD "
     }
@@ -44,7 +44,7 @@ class SpecialCarsTableViewCell: UITableViewCell {
         }else{
             container.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
-        carImageView.sd_setImage(with: URL(string: item.driverImage))
+        carImageView.sd_setImage(with: URL(string: item.driverImage ?? ""))
         distance.text = "\(item.distance)" + " Km "
         cost.text = "\(item.cost)" + " KWD "
     }
@@ -58,7 +58,7 @@ class SpecialCarsTableViewCell: UITableViewCell {
         }else{
             container.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
-        carImageView.sd_setImage(with: URL(string: item.driverImage))
+        carImageView.sd_setImage(with: URL(string: item.driverImage ?? ""))
         distance.text = "\(item.distance)" + " Km "
         cost.text = "\(item.cost)" + " KWD "
     }
